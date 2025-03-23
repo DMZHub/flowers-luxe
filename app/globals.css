@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #2e7d32;
+  --primary-dark: #1b5e20;
+  --primary-light: #4caf50;
+  --secondary: #a5d6a7;
+  --accent: #f1f8e9;
+  --text-primary: #1c2026;
+  --text-secondary: #4a5568;
+  --background-light: #f9fafb;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 font-inter antialiased;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-cormorant font-medium tracking-tight;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+  
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-medium py-2.5 px-6 rounded-md transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center;
+  }
+  
+  .btn-secondary {
+    @apply bg-white border border-gray-200 text-gray-800 hover:bg-gray-50 font-medium py-2.5 px-6 rounded-md transition-all duration-300 shadow-sm flex items-center justify-center;
+  }
+  
+  .btn-outline {
+    @apply bg-transparent border border-primary text-primary hover:bg-primary/5 font-medium py-2.5 px-6 rounded-md transition-all duration-300 flex items-center justify-center;
+  }
+  
+  .section-heading {
+    @apply text-3xl md:text-4xl font-semibold mb-4 text-center font-cormorant;
+  }
+  
+  .section-subheading {
+    @apply text-lg text-gray-600 mb-10 text-center max-w-3xl mx-auto;
+  }
+
+  .card {
+    @apply bg-white rounded-lg border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300;
+  }
+  
+  .subtle-pattern {
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5c5c5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a5a5a5;
+}
+
+/* ✅ Enable Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}

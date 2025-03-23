@@ -1,0 +1,26 @@
+# robots.txt for FlowersLuxe
+
+User-agent: *
+Allow: /
+
+# Allow all bots to access all content
+Disallow: /api/
+Disallow: /admin/
+
+# Important pages should be crawled frequently
+Allow: /shop
+Allow: /blog
+Allow: /about
+
+# Sitemap location
+Sitemap: https://www.flowersluxe.com/sitemap.xml
+
+# Crawl delay for heavy bots
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
