@@ -1,0 +1,9 @@
+compatibility_date = "2023-12-01"
+compatibility_flags = ["nodejs_compat"]
+main = "workers-site/index.js"
+node_compat = true
+
+[build]
+command = "npm run build"
+[build.environment]
+NODE_VERSION = "18.18.0"
