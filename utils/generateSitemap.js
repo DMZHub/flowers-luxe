@@ -24,6 +24,9 @@ async function generateSitemap() {
     legal: { priority: 0.5, changefreq: 'yearly' }
   };
 
+  // Default priority to use if pageType is not found
+  const defaultPriority = { priority: 0.5, changefreq: 'monthly' };
+
   // Current date for lastmod
   const currentDate = new Date().toISOString().split('T')[0];
 
@@ -62,12 +65,15 @@ async function generateSitemap() {
       else if (urlPath === '/about') pageType = 'about';
       else if (urlPath.includes('/privacy-policy') || urlPath.includes('/terms-conditions')) pageType = 'legal';
       
+      // Use default priority if pageType is not found
+      const pageConfig = pagePriorities[pageType] || defaultPriority;
+      
       // Add to sitemap
       sitemap += `  <url>
     <loc>${SITE_URL}${urlPath}</loc>
     <lastmod>${currentDate}</lastmod>
-    <changefreq>${pagePriorities[pageType].changefreq}</changefreq>
-    <priority>${pagePriorities[pageType].priority}</priority>
+    <changefreq>${pageConfig.changefreq}</changefreq>
+    <priority>${pageConfig.priority}</priority>
   </url>
 `;
     }
