@@ -10,7 +10,7 @@
     "install-deps": "node scripts/install-deps.js",
     "sitemap": "node utils/generateSitemap.js",
     "prebuild": "npm run install-deps && npm run sitemap",
-    "build":   "node cloudflare.js",
+    "build":    "NEXT_IGNORE_NODE_VERSION=true SKIP_NEXTJS_NODE_VERSION_CHECK=true SKIP_NEXTJS_NODE_VERSION_WARNING=true next build",
     "lint": "next lint"
   },
   "dependencies": {
