@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "install-deps": "node scripts/install-deps.js",
-    "sitemap": "node scripts/generate-sitemap.js",
+    "sitemap":  "node utils/generateSitemap.js",
     "prebuild": "npm run install-deps && npm run sitemap",
     "build": "next build",
     "start": "next start",
