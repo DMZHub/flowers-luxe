@@ -7,10 +7,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "install-deps": "node scripts/install-deps.js",
     "sitemap": "node utils/generateSitemap.js",
-    "prebuild": "npm run install-deps && npm run sitemap",
-    "build":  "next build",
+    "prebuild": "node utils/generateSitemap.js",
+    "build": "next build",
+    "cloudflare": "node cloudflare-build.js",
     "lint": "next lint"
   },
   "dependencies": {
@@ -19,8 +19,7 @@
     "framer-motion": "^10.16.4",
     "globby": "^13.2.2",
     "lucide-react": "^0.483.0",
-    "next": "14.0.4",
-    "@cloudflare/next-on-pages": "^1.6.0",
+    "next": "^15.1.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
