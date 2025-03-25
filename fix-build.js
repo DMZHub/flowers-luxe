@@ -1,37 +1,50 @@
-{
-  "name": "flowersluxe",
-  "version": "0.1.0",
-  "engines": {
-    "node": "18.18.0"
-  },
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "sitemap": "node utils/generateSitemap.js",
-    "prebuild": "node utils/generateSitemap.js",
-    "build": "next build",
-    "cloudflare": "node cloudflare-build.js",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@emailjs/browser": "^4.1.0",
-    "emailjs-com": "^3.2.0",
-    "framer-motion": "^10.16.4",
-    "globby": "^13.2.2",
-    "lucide-react": "^0.483.0",
-    "next": "^15.1.7",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20.8.10",
-    "@types/react": "^18.2.36",
-    "@types/react-dom": "^18.2.14",
-    "autoprefixer": "^10.4.16",
-    "eslint": "^8.53.0",
-    "eslint-config-next": "^14.0.1",
-    "postcss": "^8.4.31",
-    "tailwindcss": "^3.3.5",
-    "typescript": "^5.2.2"
+#!/usr/bin/env node
+// fix-build.js - Direct approach to fix package.json and rebuild package-lock.json
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
+console.log('Starting build fix...');
+
+// Path to package.json
+const packageJsonPath = path.join(__dirname, 'package.json');
+
+// Read package.json
+try {
+  const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+  console.log('Successfully read package.json');
+  
+  // Update next version to match package-lock.json
+  packageJson.dependencies.next = "^15.1.7";
+  
+  // Remove Cloudflare dependencies that are causing conflicts
+  delete packageJson.dependencies['@cloudflare/next-on-pages'];
+  
+  // Update scripts to simplify build process
+  packageJson.scripts.build = "next build";
+  packageJson.scripts.prebuild = "npm run sitemap";
+  packageJson.scripts.cloudflare = "node cloudflare-build.js";
+  
+  // Add a special install script for Cloudflare
+  packageJson.scripts.cfinstall = "npm install --no-package-lock && npm install";
+  
+  // Write updated package.json
+  fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+  console.log('Successfully updated package.json');
+  
+  // Force install dependencies
+  console.log('Installing dependencies (this may take a minute)...');
+  try {
+    // Force clean install
+    execSync('npm install --no-package-lock', { stdio: 'inherit' });
+    execSync('npm install', { stdio: 'inherit' });
+    console.log('Successfully installed dependencies');
+  } catch (error) {
+    console.error('Error installing dependencies:', error.message);
   }
+  
+  console.log('Build fix complete!');
+} catch (error) {
+  console.error('Error:', error.message);
+  process.exit(1);
 }
