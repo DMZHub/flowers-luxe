@@ -242,7 +242,7 @@ export default function Home() {
           >
             <div className="relative h-[400px] md:h-[500px] w-full rounded-2xl overflow-hidden shadow-elevated border border-white/80">
               <Image
-                src="/images/flowers-luxe-hero-image.jpg"
+                src="/images/flowers-luxe-hero-image.webp"
                 alt="FlowersLuxe - Beautiful floral designs on premium products"
                 fill
                 priority
