@@ -3,6 +3,8 @@
  * Simple build script for Cloudflare Pages
  */
 const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
 console.log('Running Cloudflare Pages build...');
 
@@ -22,7 +24,7 @@ try {
     }
   });
   
-  // Run sitemap generation if it exists
+  // Run sitemap generation to create a static sitemap file
   try {
     console.log('Generating sitemap...');
     execSync('node utils/generateSitemap.js', { stdio: 'inherit' });
@@ -40,6 +42,15 @@ try {
       SKIP_NEXTJS_NODE_VERSION_CHECK: 'true'
     }
   });
+  
+  // Copy the static sitemap to the output directory if it exists
+  const publicSitemap = path.join(process.cwd(), 'public', 'sitemap.xml');
+  const outSitemap = path.join(process.cwd(), 'out', 'sitemap.xml');
+  
+  if (fs.existsSync(publicSitemap) && !fs.existsSync(outSitemap)) {
+    console.log('Copying sitemap.xml to output directory...');
+    fs.copyFileSync(publicSitemap, outSitemap);
+  }
   
   console.log('Build completed successfully!');
 } catch (error) {
