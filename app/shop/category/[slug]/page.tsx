@@ -7,7 +7,19 @@ import { motion } from 'framer-motion'
 import { useParams } from 'next/navigation'
 import { Search, Filter, ChevronDown, Grid, List, Heart, ExternalLink, X, ArrowLeft } from 'lucide-react'
 import ProductCard from '@/components/ProductCard'
-
+// Add this export to the file
+export function generateStaticParams() {
+  // Return all possible slug values your app needs to generate
+  return [
+    { slug: 'throw-pillows' },
+    { slug: 'stickers' },
+    { slug: 'mugs' },
+    { slug: 'art' },
+    { slug: 'tote-bags' },
+    { slug: 'tapestries' },
+    { slug: 'pins' }
+  ]
+}
 export default function CategoryPage() {
   const { slug } = useParams()
   const [searchQuery, setSearchQuery] = useState('')
