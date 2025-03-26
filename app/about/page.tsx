@@ -66,7 +66,7 @@ export default function AboutPage() {
             >
               <div className="relative h-96 rounded-2xl overflow-hidden shadow-elevated">
                 <Image
-                  src="/images/flowers-luxe-hero-image.jpg"
+                  src="/images/flowers-luxe-hero-image.webp"
                   alt="Floral Products"
                   fill
                   className="object-cover"
