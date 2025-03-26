@@ -9,3 +9,7 @@ export function generateStaticParams() {
     { slug: 'pins' }
   ]
 }
+
+export default function CategoryLayout({ children }: { children: React.ReactNode }) {
+  return <>{children}</>
+}
