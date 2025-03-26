@@ -4,14 +4,20 @@ const nextConfig = {
   images: {
     unoptimized: true, // Required for static export with images
   },
-  // Keep existing configuration options
-  // Disable ESLint during build - optional but can help with builds
+  // Disable TypeScript type checking during build - helps with builds
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  // Disable ESLint during build
   eslint: {
     ignoreDuringBuilds: true,
   },
-  // Disable TypeScript type checking during build - optional but can help with builds
-  typescript: {
-    ignoreBuildErrors: true,
+  // This is important for API routes in static export
+  experimental: {
+    // This allows us to generate static API routes
+    outputFileTracingExcludes: {
+      '/api/**/*': true,
+    },
   },
 };
 
