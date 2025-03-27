@@ -74,15 +74,7 @@ export default function CategoryPage() {
       isNew: true,
       featured: true
     },
-    {
-      id: 2,
-      title: 'Spring Blossoms Sticker Pack',
-      category: 'Stickers',
-      price: 3.99,
-      imageSrc:'/images/products/stickers/sticker-1.jpg',
-      externalUrl: 'https://www.teepublic.com/user/flowersluxe',
-      featured: true
-    },
+    
     {
       id: 3,
       title: 'Rose Garden Ceramic Mug',
