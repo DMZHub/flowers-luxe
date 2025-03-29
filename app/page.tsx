@@ -110,7 +110,7 @@ export default function Home() {
       slug: 'pins',
       imageSrc: '/images/categories/flower-pins.jpg',
       count: 10
-    }
+    },
   ]
 
   // Mock data for featured products
@@ -175,7 +175,7 @@ export default function Home() {
       date: 'Oct 15, 2024',
       readTime: '6 min read',
       category: 'DIY Projects'
-    }
+    },
   ]
 
   return (
