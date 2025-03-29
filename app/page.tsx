@@ -72,43 +72,43 @@ export default function Home() {
     {
       title: 'Throw Pillows',
       slug: 'throw-pillows',
-      imageSrc: '/images/categories/flower-throw-pillows.jpg',
-      count: 24
+      imageSrc: '/images/categories/flower-throw-pillows.webp',
+      count: 50
     },
     {
       title: 'Stickers',
       slug: 'stickers',
-      imageSrc: '/images/categories/flower-stickers.jpg',
-      count: 32
+      imageSrc: '/images/categories/flower-stickers.webp',
+      count: 30
     },
     {
       title: 'Mugs',
       slug: 'mugs',
-      imageSrc: '/images/categories/flower-mugs.jpg',
-      count: 18
+      imageSrc: '/images/categories/flower-mugs.webp',
+      count: 50
     },
     {
       title: 'Art Prints',
       slug: 'art',
-      imageSrc: '/images/categories/flower-art.jpg',
-      count: 15
+      imageSrc: '/images/categories/flower-art.webp',
+      count: 50
     },
     {
       title: 'Tote Bags',
       slug: 'tote-bags',
-      imageSrc: '/images/categories/flower-tote-bags.jpg',
-      count: 12
+      imageSrc: '/images/categories/flower-tote-bags.webp',
+      count: 50
     },
     {
       title: 'Tapestries',
       slug: 'tapestries',
-      imageSrc: '/images/categories/flower-tapestries.jpg',
-      count: 8
+      imageSrc: '/images/categories/flower-tapestries.webp',
+      count: 50
     },
     {
       title: 'Pins',
       slug: 'pins',
-      imageSrc: '/images/categories/flower-pins.jpg',
+      imageSrc: '/images/categories/flower-pins.webp',
       count: 10
     },
   ]
