@@ -21,37 +21,37 @@ export default function CategoryPage() {
     'throw-pillows': {
       title: 'Flower Throw Pillows',
       description: 'Add a touch of floral elegance to your home with our premium quality throw pillows featuring unique floral designs.',
-      imageSrc: '/images/categories/flower-throw-pillows.jpg',
+      imageSrc: '/images/categories/flower-throw-pillows.webp',
     },
     'stickers': {
       title: 'Flower Stickers',
       description: 'Express yourself with our vibrant floral stickers. Perfect for laptops, water bottles, notebooks, and more.',
-      imageSrc: '/images/categories/flower-stickers.jpg',
+      imageSrc: '/images/categories/flower-stickers.webp',
     },
     'mugs': {
       title: 'Flower Mugs',
       description: 'Start your day with our beautiful floral mugs. Each sip will bring the beauty of nature to your morning routine.',
-      imageSrc: '/images/categories/flower-mugs.jpg',
+      imageSrc: '/images/categories/flower-mugs.webp',
     },
     'art': {
       title: 'Flower Art Prints',
       description: 'Refresh your walls with our vibrant floral art prints, crafted to infuse warmth and serenity into your home.',
-      imageSrc: '/images/categories/flower-art.jpg',
+      imageSrc: '/images/categories/flower-art.webp',
     },
     'tote-bags': {
       title: 'Flower Tote Bags',
       description: 'Carry your essentials in style with our durable and eco-friendly tote bags featuring elegant floral patterns.',
-      imageSrc: '/images/categories/flower-tote-bags.jpg',
+      imageSrc: '/images/categories/flower-tote-bags.webp',
     },
     'tapestries': {
       title: 'Flower Tapestries',
       description: 'Create a statement wall with our vibrant floral tapestries. Perfect for bedrooms, living spaces, and dorm rooms.',
-      imageSrc: '/images/categories/flower-tapestries.jpg',
+      imageSrc: '/images/categories/flower-tapestries.webp',
     },
     'pins': {
       title: 'Flower Pins',
       description: 'Add a touch of floral charm to your outfit, backpack, or jacket with our collection of high-quality enamel pins.',
-      imageSrc: '/images/categories/flower-pins.jpg',
+      imageSrc: '/images/categories/flower-pins.webp',
     }
   }
 
@@ -59,7 +59,7 @@ export default function CategoryPage() {
   const currentCategory = categoryData[slug as keyof typeof categoryData] || {
     title: 'Category',
     description: 'Products in this category',
-    imageSrc: '/images/categories/default.jpg',
+    imageSrc: '/images/categories/default.webp',
   }
 
   // Dummy data for products - filtered by category
