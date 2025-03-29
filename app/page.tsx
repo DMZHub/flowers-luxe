@@ -241,14 +241,34 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="relative h-[400px] md:h-[500px] w-full rounded-2xl overflow-hidden shadow-elevated border border-white/80">
-              <Image
-                src="/images/flowers-luxe-hero-image.webp"
-                alt="FlowersLuxe - Beautiful floral designs on premium products"
-                fill
-                priority
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
+  {/* Mobile image (smaller file) */}
+  <div className="md:hidden">
+    <Image
+      src="/images/flowers-luxe-hero-image-mobile.webp"
+      alt="FlowersLuxe - Beautiful floral designs on premium products"
+      fill
+      priority={true}
+      className="object-cover"
+      sizes="100vw"
+    />
+  </div>
+  
+  {/* Desktop image */}
+  <div className="hidden md:block">
+    <Image
+      src="/images/flowers-luxe-hero-image.webp"
+      alt="FlowersLuxe - Beautiful floral designs on premium products"
+      fill
+      priority={true}
+      className="object-cover"
+      sizes="50vw"
+    />
+  </div>
+  
+  {/* Keep any existing overlay divs */}
+  <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-transparent mix-blend-overlay" />
+  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-primary/10 mix-blend-overlay" />
+</div>
               
               {/* Decorative gradient overlays */}
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-transparent mix-blend-overlay" />
