@@ -240,7 +240,7 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="relative h-[400px] md:h-[500px] w-full rounded-2xl overflow-hidden shadow-elevated border border-white/80">
+        <div className="relative h-[400px] md:h-[500px] w-full rounded-2xl overflow-hidden shadow-elevated border border-white/80">
   {/* Mobile image (smaller file) */}
   <div className="md:hidden">
     <Image
@@ -265,7 +265,7 @@ export default function Home() {
     />
   </div>
   
-  {/* Keep any existing overlay divs */}
+  {/* Decorative gradient overlays */}
   <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-transparent mix-blend-overlay" />
   <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-primary/10 mix-blend-overlay" />
 </div>
