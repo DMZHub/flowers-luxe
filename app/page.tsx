@@ -269,12 +269,7 @@ export default function Home() {
   <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-transparent mix-blend-overlay" />
   <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-primary/10 mix-blend-overlay" />
 </div>
-              
-              {/* Decorative gradient overlays */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-transparent mix-blend-overlay" />
-              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-primary/10 mix-blend-overlay" />
-            </div>
-            
+               
            
             {/* Stats floating element */}
             <div className="hidden md:block absolute -top-6 -right-6 bg-white backdrop-blur-sm rounded-2xl shadow-elevated p-4 border border-border">
