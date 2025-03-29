@@ -27,9 +27,9 @@ const config: Config = {
         }
       },
       fontFamily: {
-        cormorant: ['Cormorant Garamond', 'serif'],
-        inter: ['Inter', 'sans-serif'],
-      },
+        cormorant: ['var(--font-cormorant)'],
+        inter: ['var(--font-inter)'],
+     },
       animation: {
         'fade-in': 'fadeIn 1s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
