@@ -2,6 +2,21 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { Navbar } from '../components/navbar'
 import Footer from '../components/Footer'
+import { Inter, Cormorant_Garamond } from 'next/font/google';
+
+// Configure the fonts with display: swap
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-cormorant',
+});
 
 export const metadata: Metadata = {
 title: 'FlowersLuxe - Beautiful Floral Designs on Premium Products',
@@ -66,13 +81,13 @@ title: 'FlowersLuxe - Beautiful Floral Designs on Premium Products',
   }
 }
 
-export default function RootLayout({
+ export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
       <body className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-grow pt-16 md:pt-20">
