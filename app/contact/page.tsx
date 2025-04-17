@@ -145,7 +145,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-medium text-lg mb-2">Email Us</h3>
                     <a href="mailto:hello@flowersluxe.com" className="text-gray-600 hover:text-primary transition-colors">
-                      hello@flowersluxe.com
+                      info@flowersluxe.com
                     </a>
                     <p className="text-gray-500 text-sm mt-1">
                       We'll respond within 24-48 hours
@@ -158,7 +158,7 @@ export default function ContactPage() {
                 <h3 className="font-medium text-lg mb-4">Connect With Us</h3>
                 <div className="flex gap-4">
                   <a 
-                    href="https://instagram.com" 
+                    href="https://www.instagram.com/flowersluxe1" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-white border border-gray-200 p-3 rounded-lg text-gray-500 hover:text-primary hover:border-primary transition-colors"
@@ -167,7 +167,7 @@ export default function ContactPage() {
                     <Instagram size={24} />
                   </a>
                   <a 
-                    href="https://twitter.com" 
+                    href="https://x.com/flowersluxe1" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-white border border-gray-200 p-3 rounded-lg text-gray-500 hover:text-primary hover:border-primary transition-colors"
@@ -176,7 +176,7 @@ export default function ContactPage() {
                     <Twitter size={24} />
                   </a>
                   <a 
-                    href="https://facebook.com" 
+                    href="https://facebook.com/profile.php?id=61575082658424" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-white border border-gray-200 p-3 rounded-lg text-gray-500 hover:text-primary hover:border-primary transition-colors"
