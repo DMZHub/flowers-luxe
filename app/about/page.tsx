@@ -46,14 +46,13 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-gray-600">
                 <p>
-                FlowersLuxe was founded on a deep appreciation for the beauty of flowers and their ability to transform spaces and uplift moods. What began as a creative exploration in botanical illustration evolved into a curated collection of unique floral designs, seamlessly blending artistry with functionality.
+                FlowersLuxe was born from a deep admiration for the beauty of flowers and their ability to transform spaces. What began as a passion for botanical illustration has flourished into an elegant collection of distinctive floral designs that seamlessly blend creativity with functionality.  
                 </p>
                 <p>
-                Since its humble beginnings in 2018, FlowersLuxe has grown into a brand devoted to bringing timeless elegance through floral patterns in everyday life. Each design is thoughtfully crafted to celebrate nature’s artistry, ensuring beauty remains visually captivating while adding meaning to daily experiences.
+                Each piece in our collection is thoughtfully designed to reflect nature’s exquisite details, ensuring every product enhances both aesthetics and everyday practicality.  
                 </p>
                 <p>
-                At FlowersLuxe, design is more than aesthetics—it is a balance of style and purpose. Every product is carefully selected to offer both exquisite appeal and practical use, making floral-inspired living effortlessly accessible.
-                </p>
+              At FlowersLuxe, we believe design is more than just visual appeal—it’s the perfect harmony between style and purpose. Our carefully curated selection balances refined elegance with effortless utility, making floral-inspired living more accessible than ever. 
               </div>
             </motion.div>
             
@@ -187,7 +186,7 @@ export default function AboutPage() {
                   <Instagram size={28} className="text-primary" />
                 </div>
                 <h3 className="font-medium mb-1">Instagram</h3>
-                <p className="text-gray-500 text-sm">@flowersluxe</p>
+                <p className="text-gray-500 text-sm">@flowersluxe1</p>
               </a>
               
               <a 
@@ -200,7 +199,7 @@ export default function AboutPage() {
                   <Twitter size={28} className="text-primary" />
                 </div>
                 <h3 className="font-medium mb-1">Twitter</h3>
-                <p className="text-gray-500 text-sm">@flowersluxe</p>
+                <p className="text-gray-500 text-sm">@flowersluxe1</p>
               </a>
               
               <a 
@@ -224,7 +223,7 @@ export default function AboutPage() {
                   <Mail size={28} className="text-primary" />
                 </div>
                 <h3 className="font-medium mb-1">Email</h3>
-                <p className="text-gray-500 text-sm">hello@flowersluxe.com</p>
+                <p className="text-gray-500 text-sm">info@flowersluxe.com</p>
               </a>
             </div>
           </div>
