@@ -98,7 +98,7 @@ const Footer = () => {
             
             <div className="flex items-center gap-3 mb-6">
               <a 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/flowersluxe1" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-primary transition-colors p-2 bg-white rounded-full shadow-sm"
@@ -107,7 +107,7 @@ const Footer = () => {
                 <Instagram size={18} />
               </a>
               <a 
-                href="https://twitter.com" 
+                href="https://x.com/flowersluxe1" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-primary transition-colors p-2 bg-white rounded-full shadow-sm"
@@ -116,7 +116,7 @@ const Footer = () => {
                 <Twitter size={18} />
               </a>
               <a 
-                href="https://facebook.com" 
+                href="https://facebook.com/profile.php?id=61575082658424" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-primary transition-colors p-2 bg-white rounded-full shadow-sm"
@@ -129,7 +129,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <Mail size={18} className="text-primary flex-shrink-0" />
-                <span className="text-gray-600 text-sm">hello@flowersluxe.com</span>
+                <span className="text-gray-600 text-sm">info@flowersluxe.com</span>
               </div>
             </div>
           </div>
@@ -190,7 +190,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://www.teepublic.com" 
+                  href="https://store.flowersluxe.com/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-primary transition-colors hover:underline text-sm"
