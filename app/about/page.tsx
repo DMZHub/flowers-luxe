@@ -53,6 +53,7 @@ export default function AboutPage() {
                 </p>
                 <p>
               At FlowersLuxe, we believe design is more than just visual appeal—it’s the perfect harmony between style and purpose. Our carefully curated selection balances refined elegance with effortless utility, making floral-inspired living more accessible than ever. 
+               </p>
               </div>
             </motion.div>
             
