@@ -204,7 +204,7 @@ export default function BlogPostPage() {
     "@type": "BlogPosting",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://https://flowersluxe.com/blog/${slug}`
+      "@id": `https://https://flowersluxe.com/blog/${slug}`,
     },
     "headline": blogPost.title,
     "description": blogPost.excerpt,
@@ -228,7 +228,7 @@ export default function BlogPostPage() {
     "datePublished": new Date(blogPost.date).toISOString(),
     "dateModified": new Date(blogPost.date).toISOString(),
     "articleSection": blogPost.category,
-    "timeRequired": "PT13M",
+    "timeRequired": "PT12M",
     "keywords": "magnolia flower meaning, magnolia symbolism, white magnolia meaning, pink magnolia, magnolia in culture, magnolia flower symbolism",
     "articleBody": blogPost.excerpt,
     "speakable": {
@@ -306,9 +306,12 @@ export default function BlogPostPage() {
               </span>
             </div>
             
-            <h1 className="font-cormorant text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              {blogPost.title}
-            </h1>
+              <h1 className="font-cormorant text-3xl md:text-4xl lg:text-5xl font-bold mb-6 article-title">
+               {blogPost.title}
+               </h1>
+              <p className="text-lg text-gray-700 mb-6 article-summary">
+                {blogPost.excerpt}
+              </p>
             
             <div className="flex items-center gap-4 text-sm text-gray-600 mb-8">
               <div className="flex items-center gap-1">
