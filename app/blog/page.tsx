@@ -23,25 +23,17 @@ export default function BlogPage() {
   // Mock data for blog posts
   const blogPosts = [
     {
-      title: 'The Meaning Behind Different Flower Patternsssss',
-      excerpt: 'Discover the symbolic meanings and cultural significance behind popular flower patterns used in home decor and fashion throughout history.',
-      slug: 'flower-patterns-meaning',
-      imageSrc: '/images/blog/blog-2.jpg',
-      date: 'Oct 28, 2024',
-      readTime: '8 min read',
-      category: 'Flower Symbolism',
+      title: 'Magnolia Flower Meaning and Symbolism Explained',
+      excerpt: 'Learn why magnolias are symbols of grace and endurance across the world. Read on to explore the rich meanings and cultural importance of these iconic blooms.',
+      slug: 'Magnolia-Flower-Meaning',
+      imageSrc: '/images/blog/magnolia-flower-white-pink-yellow-purple-symbolism.webp',
+      date: 'April 18, 2025',
+      readTime: '12 min read',
+      category: 'Flower Meanings',
       featured: true
     },
   
-    {
-      title: 'DIY: Creating a Floral Themed Workspace',
-      excerpt: 'Transform your workspace with these creative ideas for incorporating floral elements that boost productivity and create a calming environment.',
-      slug: 'floral-themed-workspace',
-      imageSrc: '/images/blog/blog-3.jpg',
-      date: 'Oct 15, 2024',
-      readTime: '6 min read',
-      category: 'DIY Projects'
-    },
+
     
 
    
@@ -217,62 +209,62 @@ export default function BlogPage() {
       )}
 
       {/* Blog Posts Grid */}
-      <section className="py-12 md:py-16">
-        <div className="container-custom">
-          <div className="mb-8">
-            <h2 className="font-cormorant text-2xl md:text-3xl font-bold">
-              All Articles {activeCategory !== 'All' && <span>in <span className="text-primary">{activeCategory}</span></span>}
-            </h2>
-            <p className="text-gray-500 mt-2">
-              {filteredPosts.length} articles {searchQuery && `matching "${searchQuery}"`}
-            </p>
-          </div>
 
-          {filteredPosts.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredPosts.map((post) => (
-                <motion.div
-                  key={post.slug}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <BlogCard
-                    title={post.title}
-                    excerpt={post.excerpt}
-                    slug={post.slug}
-                    imageSrc={post.imageSrc}
-                    date={post.date}
-                    readTime={post.readTime}
-                    category={post.category}
-                  />
-                </motion.div>
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-16">
-              <div className="text-gray-400 mb-4">
-                <Search size={48} className="mx-auto" />
-              </div>
-              <h3 className="text-xl font-medium mb-2">No articles found</h3>
-              <p className="text-gray-500 mb-6">
-                We couldn't find any articles matching your search criteria.
-              </p>
-              <button
-                onClick={() => {
-                  setSearchQuery('')
-                  setActiveCategory('All')
-                }}
-                className="btn-secondary inline-flex"
-              >
-                Clear filters
-              </button>
-            </div>
-          )}
+<section className="py-12 md:py-16" aria-labelledby="blog-posts-heading">
+  <div className="container-custom">
+    <div className="mb-8">
+      <h2 id="blog-posts-heading" className="font-cormorant text-2xl md:text-3xl font-bold">
+        All Articles {activeCategory !== 'All' && <span>in <span className="text-primary">{activeCategory}</span></span>}
+      </h2>
+      <p className="text-gray-500 mt-2" aria-live="polite">
+        {filteredPosts.length} articles {searchQuery && `matching "${searchQuery}"`}
+      </p>
+    </div>
+
+    {filteredPosts.length > 0 ? (
+      <div role="feed" aria-label="Blog posts" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {filteredPosts.map((post) => (
+          <motion.article
+            key={post.slug}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <BlogCard
+              title={post.title}
+              excerpt={post.excerpt}
+              slug={post.slug}
+              imageSrc={post.imageSrc}
+              date={post.date}
+              readTime={post.readTime}
+              category={post.category}
+            />
+          </motion.article>
+        ))}
+      </div>
+    ) : (
+      <div className="text-center py-16" role="status">
+        <div className="text-gray-400 mb-4">
+          <Search size={48} className="mx-auto" aria-hidden="true" />
         </div>
-      </section>
-
+        <h3 className="text-xl font-medium mb-2">No articles found</h3>
+        <p className="text-gray-500 mb-6">
+          We couldn't find any articles matching your search criteria.
+        </p>
+        <button
+          onClick={() => {
+            setSearchQuery('')
+            setActiveCategory('All')
+          }}
+          className="btn-secondary inline-flex"
+        >
+          Clear filters
+        </button>
+      </div>
+    )}
+  </div>
+</section>
       {/* Newsletter Section */}
       <section className="py-16 bg-surface-muted">
         <div className="container-custom">
