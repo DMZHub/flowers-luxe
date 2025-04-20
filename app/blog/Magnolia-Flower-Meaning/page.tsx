@@ -262,22 +262,22 @@ export default function BlogPostPage() {
     });
   }, []);
 
-  <Head>
-  <title>{blogPost.title} | FlowersLuxe</title>
-  <meta name="description" content={blogPost.excerpt} />
-  <meta property="og:title" content={blogPost.title} />
-  <meta property="og:description" content={blogPost.excerpt} />
-  <meta property="og:image" content={`https://yourwebsite.com${blogPost.imageSrc}`} />
-  <meta property="og:url" content={`https://yourwebsite.com/blog/${slug}`} />
-  <meta property="og:type" content="article" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="canonical" href={`https://yourwebsite.com/blog/${slug}`} />
-</Head>
+ 
 
   return (
-
-  
     <>
+        <Head>
+        <title>{blogPost.title} | FlowersLuxe</title>
+        <meta name="description" content={blogPost.excerpt} />
+        <meta property="og:title" content={blogPost.title} />
+        <meta property="og:description" content={blogPost.excerpt} />
+        <meta property="og:image" content={`https://flowersluxe.com${blogPost.imageSrc}`} />
+        <meta property="og:url" content={`https://flowersluxe.com/blog/${slug}`} />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href={`https://flowersluxe.com/blog/${slug}`} />
+      </Head>
+      
       {/* Add schema markup directly */}
       <script
         type="application/ld+json"
