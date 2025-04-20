@@ -35,11 +35,11 @@ export default function SitemapPage() {
       title: 'Blog Categories',
       icon: BookOpen,
       links: [
-        { name: 'Decor Tips', path: '/blog?category=Decor%20Tips' },
-        { name: 'DIY Projects', path: '/blog?category=DIY%20Projects' },
-        { name: 'Flower Symbolism', path: '/blog?category=Flower%20Symbolism' },
+        { name: 'Home Decor', path: '/blog?category=Home%20Decor' },
+        { name: 'gardening', path: '/blog?category=gardening' },
+        { name: 'Flower Meanings', path: '/blog?category=Flower%20SMeanings' },
         { name: 'Trends', path: '/blog?category=Trends' },
-        { name: 'Product Care', path: '/blog?category=Product%20Care' },
+        { name: 'Gift Ideas', path: '/blog?category=Gift%20Ideas' },
       ]
     },
     {
