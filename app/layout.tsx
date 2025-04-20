@@ -20,7 +20,7 @@ const cormorant = Cormorant_Garamond({
 
 export const metadata: Metadata = {
 title: 'FlowersLuxe - Beautiful Floral Designs on Premium Products',
-  description: 'Discover unique floral designs on stickers, mugs, pillows, art, tote bags, tapestries, and pins. Premium quality floral products for your home and lifestyle.',
+  description: 'Discover unique floral designs on stickers, mugs, pillows, art, tote bags, tapestries. Premium quality floral products for your home and lifestyle.',
   keywords: 'floral designs, flower art, floral stickers, flower mugs, flower throw pillows, flower tapestries',
   icons: {
     icon: 'public/favicon.ico', // Path to your favicon file
