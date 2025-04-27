@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import Head from 'next/head'
 import { ChevronRight, ArrowRight, ShoppingBag, BookOpen, TrendingUp, ExternalLink } from 'lucide-react'
 import CategoryCard from '@/components/CategoryCard'
 import ProductCard from '@/components/ProductCard'
@@ -180,6 +181,16 @@ export default function Home() {
 
   return (
     <>
+<Head>
+  <title>FlowersLuxe - Beautiful Floral Designs for Every Space</title>
+  <meta name="description" content="Discover unique floral designs on premium products like throw pillows, mugs, stickers, and more. Transform your space with our handcrafted collection." />
+  <link rel="canonical" href="https://flowersluxe.com/" />
+  <meta property="og:title" content="FlowersLuxe - Beautiful Floral Designs for Every Space" />
+  <meta property="og:description" content="Discover unique floral designs on premium products like throw pillows, mugs, stickers, and more. Transform your space with our handcrafted collection." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://flowersluxe.com/" />
+  <meta property="og:image" content="https://flowersluxe.com/images/flowers-luxe-hero-image.webp" />
+</Head>
       {/* Hero Section */}
       <section className="relative bg-surface-muted overflow-hidden">
         {/* Decorative elements */}
@@ -243,16 +254,15 @@ export default function Home() {
         <div className="relative h-[400px] md:h-[500px] w-full rounded-2xl overflow-hidden shadow-elevated border border-white/80">
   {/* Mobile image (smaller file) */}
   <div className="md:hidden">
-    <Image
-      src="/images/flowers-luxe-hero-image-mobile.webp"
-      alt="FlowersLuxe - Beautiful floral designs on premium products"
-      fill
-      priority={true}
-      className="object-cover"
-      sizes="100vw"
-    />
-  </div>
-  
+  <Image
+    src="/images/flowers-luxe-hero-image-mobile.webp"
+    alt="FlowersLuxe - Beautiful floral designs on premium products"
+    fill
+    priority={true}
+    className="object-cover"
+    sizes="(max-width: 768px) 100vw, 50vw"
+  />
+        
   {/* Desktop image */}
   <div className="hidden md:block">
     <Image
