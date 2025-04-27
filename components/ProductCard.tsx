@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { ExternalLink, Heart } from 'lucide-react'
+import { ExternalLink, Heart, Paintbrush } from 'lucide-react'
 
 interface ProductCardProps {
   title: string
@@ -10,6 +10,7 @@ interface ProductCardProps {
   imageSrc: string
   externalUrl: string
   isNew?: boolean
+  isCustom?: boolean
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({
@@ -18,7 +19,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
   price,
   imageSrc,
   externalUrl,
-  isNew = false
+  isNew = false,
+  isCustom = false
 }) => {
   return (
     <motion.div 
@@ -55,15 +57,23 @@ const ProductCard: React.FC<ProductCardProps> = ({
           </div>
         )}
         
+        {/* Custom badge */}
+        {isCustom && (
+          <div className="absolute top-3 left-3 px-2 py-1 bg-purple-600 text-white text-xs font-medium rounded flex items-center gap-1">
+            <Paintbrush size={12} />
+            <span>Custom</span>
+          </div>
+        )}
+        
         {/* Quick shop button */}
         <div className="absolute bottom-4 left-0 right-0 flex justify-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
           <a 
             href={externalUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+            target={isCustom ? "_self" : "_blank"}
+            rel={isCustom ? undefined : "noopener noreferrer"}
             className="bg-white/90 backdrop-blur-sm text-primary hover:text-primary-dark text-sm font-medium py-2 px-4 rounded-md shadow-sm hover:shadow-md transition-all"
           >
-             Shop Now
+            {isCustom ? 'Customize' : 'Shop Now'}
           </a>
         </div>
       </div>
@@ -79,11 +89,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <div className="mt-auto pt-3 border-t border-gray-100">
           <a 
             href={externalUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+            target={isCustom ? "_self" : "_blank"}
+            rel={isCustom ? undefined : "noopener noreferrer"}
             className="flex items-center justify-between text-sm font-medium text-gray-700 hover:text-primary transition-colors"
           >
-            <span>View on TeePublic</span>
+            <span>{isCustom ? 'Customize This Product' : 'View on TeePublic'}</span>
             <ExternalLink size={14} />
           </a>
         </div>
