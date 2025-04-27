@@ -1,6 +1,8 @@
 "use client"
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
+import Head from 'next/head'
+import Script from 'next/script'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Search, Filter, ChevronDown, Grid, List, Heart, ExternalLink, X } from 'lucide-react'
@@ -14,8 +16,9 @@ export default function ShopPage() {
   const [viewMode, setViewMode] = useState('grid')
   const [priceRange, setPriceRange] = useState([0, 50])
   const [isFilterOpen, setIsFilterOpen] = useState(false)
+  
 
-  // Dummy data for categories
+  // Updated categories to include Custom Items
   const categories = [
     {
       title: 'Throw Pillows',
@@ -58,10 +61,11 @@ export default function ShopPage() {
       slug: 'pins',
       imageSrc: '/images/categories/flower-pins.webp',
       count: 10
-    }
+    },
+   
   ]
 
-  // Dummy data for products
+  // Updated products data with custom field
   const products = [
     {
       id: 1,
@@ -70,10 +74,23 @@ export default function ShopPage() {
       price: 24.99,
       imageSrc: '/images/products/throw-pillows/pillow-1.jpg',
       externalUrl: 'https://www.teepublic.com/user/flowersluxe',
+      customUrl: '/custom/1', // Add this for consistency
       isNew: true,
-      featured: true
+      featured: true,
+      isCustom: false
     },
-
+    {
+    id: 2,
+      title: 'Custom Flower Mug for Mom| Best Gift for New Moms',
+      category: 'Mug',
+      price: 29.99,
+      imageSrc: '/images/products/mugs/custom-flower-mug-best-gift-for-new-moms.webp',
+      customUrl: '/custom/custom-flower-mug-best-gift-for-new-moms',
+      externalUrl: 'https://www.teepublic.com/user/flowersluxe', // Add this for consistency
+      isNew: true,
+      featured: true,
+      isCustom: true
+    },
     {
       id: 3,
       title: 'Rose Garden Ceramic Mug',
@@ -81,7 +98,9 @@ export default function ShopPage() {
       price: 19.99,
       imageSrc: '/images/products/mugs/mug-1.jpg',
       externalUrl: 'https://www.teepublic.com/user/flowersluxe',
-      isNew: true
+      customUrl: '/custom/3', // Add this for consistency
+      isNew: true,
+      isCustom: false
     },
     {
       id: 4,
@@ -89,7 +108,9 @@ export default function ShopPage() {
       category: 'Art Print',
       price: 15.99,
       imageSrc: '/images/products/art/art.jpg',
-      externalUrl: 'https://www.teepublic.com/user/flowersluxe'
+      externalUrl: 'https://www.teepublic.com/user/flowersluxe',
+      customUrl: '/custom/4', // Add this for consistency
+      isCustom: false
     },
     {
       id: 5,
@@ -98,10 +119,11 @@ export default function ShopPage() {
       price: 29.99,
       imageSrc:  '/images/products/tote-bags/tote-1.jpg',
       externalUrl: 'https://www.teepublic.com/user/flowersluxe',
+      customUrl: '/custom/5', // Add this for consistency
       isNew: true,
-      featured: true
+      featured: true,
+      isCustom: false
     },
-
     {
       id: 6,
       title: 'Watercolor Peonies Art Print',
@@ -109,7 +131,9 @@ export default function ShopPage() {
       price: 16.99,
       imageSrc: '/images/products/pins/pins-1.jpg',
       externalUrl: 'https://www.teepublic.com/user/flowersluxe',
-      featured: true
+      customUrl: '/custom/6', // Add this for consistency
+      featured: true,
+      isCustom: false
     },
     {
       id: 7,
@@ -117,14 +141,30 @@ export default function ShopPage() {
       category: 'Tapestry',
       price: 27.99,
       imageSrc: '/images/products/tapestries/tapestry-1.jpg',
-      externalUrl: 'https://www.teepublic.com/user/flowersluxe'
+      externalUrl: 'https://www.teepublic.com/user/flowersluxe',
+      customUrl: '/custom/7', // Add this for consistency
+      isCustom: false
     },
-
-
-  
-
-  
+    {
+      id: 8,
+      title: 'Personalized Name Floral Mug',
+      category: 'Throw Pillow',
+      price: 34.99,
+      imageSrc: '/images/products/mugs/personalized-name-floral-mug.jpg',
+      customUrl: '/custom/personalized-name-floral-mug',
+      externalUrl: 'https://www.teepublic.com/user/flowersluxe', // Add this for consistency
+      isNew: false,
+      featured: true,
+      isCustom: false
+    },
+    
   ]
+
+  // Add inside ShopPage component, after useState declarations
+const pageTitle = activeCategory === 'All' ? 'Shop Our Flower Collection | FlowersLuxe' : `${activeCategory} | FlowersLuxe Shop`
+const pageDescription = activeCategory === 'All' 
+  ? 'Discover our unique floral designs on premium quality products, including personalized custom items.'
+  : `Shop our unique ${activeCategory.toLowerCase()} collection featuring beautiful floral designs and personalized options.`
 
   // Filter products based on search, category, and price range
   const filteredProducts = products.filter(product => {
@@ -133,7 +173,8 @@ export default function ShopPage() {
     const matchesCategory = activeCategory === 'All' || 
       product.category === activeCategory || 
       (activeCategory === 'Featured' && product.featured) ||
-      (activeCategory === 'New Arrivals' && product.isNew)
+      (activeCategory === 'New Arrivals' && product.isNew) ||
+      (activeCategory === 'Custom Items' && product.isCustom)
     
     const matchesPrice = product.price >= priceRange[0] && product.price <= priceRange[1]
     
@@ -158,7 +199,7 @@ export default function ShopPage() {
   })
 
   // Extract all unique product categories
-  const productCategories = ['All', 'Featured', 'New Arrivals', ...new Set(products.map(product => product.category))]
+  const productCategories = ['All', 'Featured', 'New Arrivals', 'Custom Items', ...new Set(products.map(product => product.category))]
 
   // Close filter sidebar when screen becomes larger
   useEffect(() => {
@@ -172,8 +213,43 @@ export default function ShopPage() {
     return () => window.removeEventListener('resize', handleResize)
   }, [isFilterOpen])
 
-  return (
+  const productSchema = {
+    "@context": "https://schema.org/",
+    "@type": "ItemList",
+    "itemListElement": sortedProducts.map((product, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Product",
+        "name": product.title,
+        "description": product.isCustom 
+          ? 'Customizable floral design product.' 
+          : 'Beautiful floral design on premium quality material.',
+        "image": product.imageSrc,
+        "offers": {
+          "@type": "Offer",
+          "price": product.price.toFixed(2),
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    }))
+  };
+
+  return (    
     <>
+
+
+<Head>
+  <title>{pageTitle}</title>
+  <meta name="description" content={pageDescription} />
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={pageDescription} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={`https://flowersluxe.com/shop${activeCategory !== 'All' ? `/${activeCategory.toLowerCase().replace(/\s+/g, '-')}` : ''}`} />
+  <meta property="og:image" content="https://flowersluxe.com/images/shop-og-image.jpg" />
+  <link rel="canonical" href={`https://flowersluxe.com/shop${activeCategory !== 'All' ? `/${activeCategory.toLowerCase().replace(/\s+/g, '-')}` : ''}`} />
+</Head>
       {/* Shop Header */}
       <section className="bg-surface-muted py-12 md:py-16 relative overflow-hidden">
         {/* Decorative elements */}
@@ -189,7 +265,7 @@ export default function ShopPage() {
               Shop Our Collection
             </h1>
             <p className="text-gray-600 text-lg mb-8">
-              Discover our unique floral designs on premium quality products. Express your love for nature through our artistic collections.
+              Discover our unique floral designs on premium quality products, including personalized custom items.
             </p>
             
             <div className="relative max-w-xl mx-auto">
@@ -214,17 +290,20 @@ export default function ShopPage() {
           <h2 className="font-cormorant text-2xl font-bold mb-8">Shop by Category</h2>
           
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
-            {categories.map((category) => (
+          {categories.map((category, index) => (
               <div key={category.slug} className="relative group">
                 <Link href={`/shop/category/${category.slug}`}>
                   <div className="relative h-32 rounded-lg overflow-hidden">
+                    {/* Image component here */}
                     <Image
-                      src={category.imageSrc}
-                      alt={category.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      sizes="(max-width: 768px) 50vw, 14vw"
-                    />
+          src={category.imageSrc}
+          alt={category.title}
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          sizes="(max-width: 768px) 50vw, 12.5vw"
+          priority={index < 3} // Now index is properly defined
+          loading={index < 3 ? "eager" : "lazy"} // Now index is properly defined
+        />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-3 text-white">
@@ -294,7 +373,7 @@ export default function ShopPage() {
                   {/* External Link Notice */}
                   <div className="mt-8 bg-primary/5 p-4 rounded-lg">
                     <p className="text-sm text-gray-700">
-                      Products link to our TeePublic store where you can complete your purchase.
+                      Products link to our TeePublic store. Custom items require personalization before purchase.
                     </p>
                     <a 
                       href="https://www.teepublic.com/user/flowersluxe" 
@@ -454,10 +533,11 @@ export default function ShopPage() {
                         key={product.id}
                         title={product.title}
                         category={product.category}
-                        price={`$${product.price.toFixed(2)}`}
+                        price={`${product.price.toFixed(2)}`}
                         imageSrc={product.imageSrc}
-                        externalUrl={product.externalUrl}
+                        externalUrl={product.isCustom ? (product.customUrl || '') : (product.externalUrl || '')}
                         isNew={product.isNew}
+                        isCustom={product.isCustom}
                       />
                     ))}
                   </div>
@@ -488,7 +568,10 @@ export default function ShopPage() {
                             <span className="text-xs text-primary-dark uppercase tracking-wide">{product.category}</span>
                             <h3 className="font-cormorant text-xl font-medium mt-1 mb-2">{product.title}</h3>
                             <p className="text-gray-600 text-sm mb-4">
-                              Beautiful floral design on premium quality material. Perfect for adding a touch of nature to your space.
+                              {product.isCustom 
+                                ? 'Customize this product with your name or special message.'
+                                : 'Beautiful floral design on premium quality material. Perfect for adding a touch of nature to your space.'
+                              }
                             </p>
                           </div>
                           
@@ -503,12 +586,12 @@ export default function ShopPage() {
                                 <Heart size={18} />
                               </button>
                               <a 
-                                href={product.externalUrl}
-                                target="_blank" 
-                                rel="noopener noreferrer"
+                                href={product.isCustom ? product.customUrl : product.externalUrl}
+                                target={product.isCustom ? "_self" : "_blank"}
+                                rel={product.isCustom ? undefined : "noopener noreferrer"}
                                 className="inline-flex items-center gap-1 bg-primary hover:bg-primary-dark text-white font-medium py-2 px-4 rounded"
                               >
-                                <span>Shop on TeePublic</span>
+                                <span>{product.isCustom ? 'Customize' : 'Shop on TeePublic'}</span>
                                 <ExternalLink size={16} />
                               </a>
                             </div>
@@ -551,27 +634,29 @@ export default function ShopPage() {
             <div className="max-w-3xl mx-auto text-center">
               <span className="bg-primary/10 text-primary text-sm font-medium px-4 py-1.5 rounded-full inline-block mb-4">Custom Designs</span>
               <h2 className="font-cormorant text-3xl md:text-4xl font-bold mb-4">
-                Looking for a Custom Design?
+                Want Something Special?
               </h2>
               <p className="text-gray-600 mb-8">
-                We can create custom floral designs for your specific needs. Contact us to discuss your requirements and we'll bring your vision to life.
+                We offer personalized products that can be customized with names, dates, or special messages. Create a unique gift or treat yourself to something truly one-of-a-kind.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="mailto:contact@flowersluxe.com"
-                  className="btn-primary"
-                >
+                <Link href="/shop?category=Custom Items" className="btn-primary">
+                  Browse Custom Items
+                </Link>
+                <Link href="/contact" className="btn-outline">
                   Contact for Custom Orders
-                </a>
-                <Link href="/blog" className="btn-outline">
-                  Read Blog
                 </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <Script 
+        id="product-schema" 
+        type="application/ld+json" 
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} 
+      />
     </>
   )
 }
