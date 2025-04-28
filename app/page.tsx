@@ -1,5 +1,4 @@
 "use client"
-
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -244,14 +243,15 @@ export default function Home() {
             
   <div className="relative h-[400px] md:h-[500px] w-full rounded-2xl overflow-hidden shadow-elevated border border-white/80">
    <Image
-       src="/images/flowers-luxe-hero-image-mobile.webp"
-       alt="FlowersLuxe - Beautiful floral designs on premium products"
-       fill
-       priority={true}
-       className="object-cover"
-       sizes="100vw"
-     />
+      src="/images/flowers-luxe-hero-image-mobile.webp"
+      alt="FlowersLuxe - Beautiful floral designs on premium products"
+      fill
+      priority={true}
+      className="object-cover"
+      sizes="100vw"
+    />
   </div>
+            
   {/* Desktop image */}
   <div className="hidden md:block">
     <Image
