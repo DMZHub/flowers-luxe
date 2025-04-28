@@ -179,7 +179,11 @@ export default function Home() {
     },
   ]
 
- <Head>
+
+
+  return (
+    <>
+  <Head>
   <title>FlowersLuxe - Beautiful Floral Designs for Every Space</title>
   <meta name="description" content="Discover unique floral designs on premium products like throw pillows, mugs, stickers, and more. Transform your space with our handcrafted collection." />
   <link rel="canonical" href="https://flowersluxe.com/" />
@@ -189,9 +193,6 @@ export default function Home() {
   <meta property="og:url" content="https://flowersluxe.com/" />
   <meta property="og:image" content="https://flowersluxe.com/images/flowers-luxe-hero-image.webp" />
 </Head>
-
-  return (
-    <>
 
       {/* Hero Section */}
       <section className="relative bg-surface-muted overflow-hidden">
