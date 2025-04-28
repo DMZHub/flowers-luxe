@@ -246,14 +246,14 @@ export default function Home() {
   {/* Mobile image (smaller file) */}
   <div className="md:hidden">
   <Image
-    src="/images/flowers-luxe-hero-image-mobile.webp"
-    alt="FlowersLuxe - Beautiful floral designs on premium products"
-    fill
-    priority={true}
-    className="object-cover"
-    sizes="(max-width: 768px) 100vw, 50vw"
-  />
-        
+      src="/images/flowers-luxe-hero-image-mobile.webp"
+      alt="FlowersLuxe - Beautiful floral designs on premium products"
+      fill
+      priority={true}
+      className="object-cover"
+      sizes="100vw"
+    />
+  </div>  
   {/* Desktop image */}
   <div className="hidden md:block">
     <Image
