@@ -242,18 +242,16 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-        <div className="relative h-[400px] md:h-[500px] w-full rounded-2xl overflow-hidden shadow-elevated border border-white/80">
-  {/* Mobile image (smaller file) */}
-  <div className="md:hidden">
+    {/* phone image */}       
+   <div className="relative h-[400px] md:h-[500px] w-full rounded-2xl overflow-hidden shadow-elevated border border-white/80">
   <Image
-      src="/images/flowers-luxe-hero-image-mobile.webp"
-      alt="FlowersLuxe - Beautiful floral designs on premium products"
-      fill
-      priority={true}
-      className="object-cover"
-      sizes="100vw"
-    />
-  </div>  
+    src="/images/flowers-luxe-hero-image.webp"
+    alt="FlowersLuxe - Beautiful floral designs on premium products"
+    fill
+    priority={true}
+    className="object-cover"
+    sizes="(max-width: 768px) 100vw, 50vw"
+  />
   {/* Desktop image */}
   <div className="hidden md:block">
     <Image
