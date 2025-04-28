@@ -178,8 +178,6 @@ export default function Home() {
     },
   ]
 
-
-
   return (
     <>
       {/* Hero Section */}
@@ -242,7 +240,8 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-    {/* phone image */}       
+    {/* phone image */}   
+            
   <div className="relative h-[400px] md:h-[500px] w-full rounded-2xl overflow-hidden shadow-elevated border border-white/80">
    <Image
        src="/images/flowers-luxe-hero-image-mobile.webp"
