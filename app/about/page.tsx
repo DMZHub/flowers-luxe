@@ -178,7 +178,7 @@ export default function AboutPage() {
             
             <div className="flex flex-wrap justify-center gap-6">
               <a 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/flowersluxe1" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex flex-col items-center p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all"
@@ -191,7 +191,7 @@ export default function AboutPage() {
               </a>
               
               <a 
-                href="https://twitter.com" 
+                href="https://x.com/flowersluxe1"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex flex-col items-center p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all"
@@ -204,7 +204,7 @@ export default function AboutPage() {
               </a>
               
               <a 
-                href="https://facebook.com" 
+                href="https://facebook.com/profile.php?id=61575082658424"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex flex-col items-center p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all"
@@ -217,7 +217,7 @@ export default function AboutPage() {
               </a>
               
               <a 
-                href="mailto:hello@flowersluxe.com"
+                href="mailto:info@flowersluxe.com"
                 className="flex flex-col items-center p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all"
               >
                 <div className="bg-primary/10 p-4 rounded-full mb-4">
