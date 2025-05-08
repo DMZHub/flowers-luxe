@@ -1,14 +1,15 @@
 // app/custom/[slug]/layout.tsx
 export function generateStaticParams() {
   return [
- 
-    // New custom products from your document
-    { slug: 'custom-cat-pillow-unique-cat-gift' },
-    { slug: 'custom-cat-mug-personalized-mug-for-cat-lovers' },
-    { slug: 'custom-cat-stickers-personalized-gifts' },
-    { slug: 'custom-cat-tote-bag-unique-tote-bag' },
-
+    // Existing products
+    { slug: 'custom-flower-mug-best-gift-for-new-moms' },
+    { slug: 'personalized-name-floral-mug' },
     
+    // New custom products from the document
+    //{ slug: 'custom-cat-pillow-unique-cat-gift' },
+    //{ slug: 'custom-cat-mug-personalized-mug-for-cat-lovers' },
+    //{ slug: 'custom-cat-stickers-personalized-gifts' },
+    //{ slug: 'custom-cat-tote-bag-unique-tote-bag' }
   ]
 }
 
