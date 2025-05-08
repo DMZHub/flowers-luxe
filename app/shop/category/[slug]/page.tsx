@@ -1,166 +1,95 @@
 "use client"
 
-import React, { useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { useParams } from 'next/navigation'
-import { Search, Filter, ChevronDown, Grid, List, Heart, ExternalLink, X, ArrowLeft } from 'lucide-react'
-import ProductCard from '@/components/ProductCard'
+import React, { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { useParams } from 'next/navigation';
+import { Search, Filter, ChevronDown, Grid, List, Heart, ExternalLink, X, ArrowLeft } from 'lucide-react';
+import ProductCard from '@/components/ProductCard';
+import SchemaMarkup from '@/components/SchemaMarkup';
+import DiscountedPrice from '@/components/DiscountedPrice';
+import ProductDiscount from '@/components/ProductDiscount';
+import { 
+  getProductsByCategorySlug, 
+  categoryMappings, 
+  categoryProperties,
+  getDiscountedProducts,
+  type Product 
+} from '@/utils/products';
+import { generateProductCollectionSchema, generateBreadcrumbSchema } from '@/utils/schema';
 
 export default function CategoryPage() {
-  const { slug } = useParams()
-  const [searchQuery, setSearchQuery] = useState('')
-  const [sortOption, setSortOption] = useState('featured')
-  const [viewMode, setViewMode] = useState('grid')
-  const [priceRange, setPriceRange] = useState([0, 50])
-  const [isFilterOpen, setIsFilterOpen] = useState(false)
+  const { slug } = useParams() as { slug: string };
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortOption, setSortOption] = useState('featured');
+  const [viewMode, setViewMode] = useState('grid');
+  const [priceRange, setPriceRange] = useState([0, 50]);
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
 
-  // Data mapping for categories
-  const categoryData = {
-    'throw-pillows': {
-      title: 'Flower Throw Pillows',
-      description: 'Add a touch of floral elegance to your home with our premium quality throw pillows featuring unique floral designs.',
-      imageSrc: '/images/categories/flower-throw-pillows.webp',
-    },
-    'stickers': {
-      title: 'Flower Stickers',
-      description: 'Express yourself with our vibrant floral stickers. Perfect for laptops, water bottles, notebooks, and more.',
-      imageSrc: '/images/categories/flower-stickers.webp',
-    },
-    'mugs': {
-      title: 'Flower Mugs',
-      description: 'Start your day with our beautiful floral mugs. Each sip will bring the beauty of nature to your morning routine.',
-      imageSrc: '/images/categories/flower-mugs.webp',
-    },
-    'art': {
-      title: 'Flower Art Prints',
-      description: 'Refresh your walls with our vibrant floral art prints, crafted to infuse warmth and serenity into your home.',
-      imageSrc: '/images/categories/flower-art.webp',
-    },
-    'tote-bags': {
-      title: 'Flower Tote Bags',
-      description: 'Carry your essentials in style with our durable and eco-friendly tote bags featuring elegant floral patterns.',
-      imageSrc: '/images/categories/flower-tote-bags.webp',
-    },
-    'tapestries': {
-      title: 'Flower Tapestries',
-      description: 'Create a statement wall with our vibrant floral tapestries. Perfect for bedrooms, living spaces, and dorm rooms.',
-      imageSrc: '/images/categories/flower-tapestries.webp',
-    },
-    'pins': {
-      title: 'Flower Pins',
-      description: 'Add a touch of floral charm to your outfit, backpack, or jacket with our collection of high-quality enamel pins.',
-      imageSrc: '/images/categories/flower-pins.webp',
-    }
-  }
+  // Get category data
+  const category = categoryMappings[slug];
+  const categoryInfo = category ? categoryProperties[category] : null;
+  
+  // Get products for this category
+  const categoryProducts = getProductsByCategorySlug(slug);
+  
+  // Check if any products in this category have discounts
+  const discountedProducts = categoryProducts.filter(product => product.discount);
 
-  // Get current category from slug
-  const currentCategory = categoryData[slug as keyof typeof categoryData] || {
-    title: 'Category',
-    description: 'Products in this category',
-    imageSrc: '/images/categories/default.webp',
-  }
+  // Current category data
+  const currentCategory = {
+    title: category || 'Category',
+    description: categoryInfo?.description || 'Products in this category',
+    imageSrc: `/images/categories/flower-${slug}.webp`,
+  };
 
-  // Dummy data for products - filtered by category
-  const allProducts = [
-    {
-      id: 1,
-      title: 'Wildflower Bouquet Throw Pillow',
-      category: 'Throw Pillow',
-      price: 24.99,
-      imageSrc: '/images/products/throw-pillows/pillow-1.jpg',
-      externalUrl: 'https://www.teepublic.com/user/flowersluxe',
-      isNew: true,
-      featured: true
-    },
+  // Filter products based on search and price range
+  const filteredProducts = categoryProducts.filter(product => {
+    const matchesSearch = product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                          product.description.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesPrice = product.price >= priceRange[0] && product.price <= priceRange[1];
     
-    {
-      id: 3,
-      title: 'Rose Garden Ceramic Mug',
-      category: 'Mug',
-      price: 19.99,
-      imageSrc: '/images/products/mugs/mug-1.jpg',
-      externalUrl: 'https://www.teepublic.com/user/flowersluxe',
-      isNew: true
-    },
-    {
-      id: 4,
-      title: 'Botanical Dreams Art Print',
-      category: 'Art Print',
-      price: 15.99,
-      imageSrc: '/images/products/art/art.jpg',
-      externalUrl: 'https://www.teepublic.com/user/flowersluxe'
-    },
-    {
-      id: 5,
-      title: 'Vintage Floral Canvas Tote Bag',
-      category: 'Tote Bag',
-      price: 29.99,
-      imageSrc:'/images/products/tote-bags/tote-1.jpg',
-      externalUrl: 'https://www.teepublic.com/user/flowersluxe',
-      isNew: true,
-      featured: true
-    },
-    {
-      id: 6,
-      title: 'Sunflower Field Wall Tapestry',
-      category: 'Tapestry',
-      price: 39.99,
-      imageSrc: '/images/products/tapestries/tapestry-1.jpg',
-      externalUrl: 'https://www.teepublic.com/user/flowersluxe'
-    },
-    {
-      id: 7,
-      title: 'Cherry Blossom Enamel Pin Set',
-      category: 'Pins',
-      price: 12.99,
-      imageSrc: '/images/products/pins/pins-1.jpg',  
-      externalUrl: 'https://www.teepublic.com/user/flowersluxe',
-      featured: true
-    },
-    
-  ]
-
-  // Map category slug to product category
-  const categoryMapping = {
-    'throw-pillows': 'Throw Pillow',
-    'stickers': 'Stickers',
-    'mugs': 'Mug',
-    'art': 'Art Print',
-    'tote-bags': 'Tote Bag',
-    'tapestries': 'Tapestry',
-    'pins': 'Pins'
-  }
-
-  // Filter products based on category, search, and price range
-  const categoryProducts = allProducts.filter(product => {
-    const matchesCategory = product.category === categoryMapping[slug as keyof typeof categoryMapping]
-    const matchesSearch = product.title.toLowerCase().includes(searchQuery.toLowerCase())
-    const matchesPrice = product.price >= priceRange[0] && product.price <= priceRange[1]
-    
-    return matchesCategory && matchesSearch && matchesPrice
-  })
+    return matchesSearch && matchesPrice;
+  });
 
   // Sort products based on selected option
-  const sortedProducts = [...categoryProducts].sort((a, b) => {
+  const sortedProducts = [...filteredProducts].sort((a, b) => {
     switch(sortOption) {
       case 'price-low':
-        return a.price - b.price
+        return a.price - b.price;
       case 'price-high':
-        return b.price - a.price
+        return b.price - a.price;
       case 'name-asc':
-        return a.title.localeCompare(b.title)
+        return a.title.localeCompare(b.title);
       case 'name-desc':
-        return b.title.localeCompare(a.title)
+        return b.title.localeCompare(a.title);
       case 'featured':
       default:
-        return (b.featured ? 1 : 0) - (a.featured ? 1 : 0)
+        return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
     }
-  })
+  });
+
+  // Generate schema markup
+  const productCollectionSchema = generateProductCollectionSchema(
+    sortedProducts,
+    category || 'Products',
+    `/shop/category/${slug}`
+  );
+  
+  // Generate breadcrumb schema
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Shop', url: '/shop' },
+    { name: category || 'Category', url: `/shop/category/${slug}` }
+  ]);
 
   return (
     <>
+      {/* SEO Schema Markup */}
+      <SchemaMarkup schema={productCollectionSchema} />
+      <SchemaMarkup schema={breadcrumbSchema} />
+
       {/* Category Header */}
       <section className="relative bg-surface-muted py-16 overflow-hidden">
         {/* Decorative elements */}
@@ -191,6 +120,7 @@ export default function CategoryPage() {
                 </div>
                 <input
                   type="text"
+            
                   className="w-full py-3 pl-12 pr-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
                   placeholder={`Search ${currentCategory.title.toLowerCase()}...`}
                   value={searchQuery}
@@ -271,8 +201,31 @@ export default function CategoryPage() {
                         />
                         <span className="text-gray-700">Featured</span>
                       </label>
+                      {discountedProducts.length > 0 && (
+                        <label className="flex items-center gap-2 cursor-pointer">
+                          <input
+                            type="checkbox"
+                            className="w-4 h-4 text-primary focus:ring-primary border-gray-300 rounded"
+                          />
+                          <span className="text-gray-700">On Sale</span>
+                        </label>
+                      )}
                     </div>
                   </div>
+                  
+                  {/* Product specifications based on category */}
+                  {categoryInfo?.specifications && (
+                    <div className="mb-6">
+                      <h4 className="text-sm font-medium mb-3">Product Features</h4>
+                      <ul className="space-y-1">
+                        {categoryInfo.specifications.slice(0, 3).map((spec, index) => (
+                          <li key={index} className="text-xs text-gray-600">
+                            • {spec}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                   
                   {/* External Link Notice */}
                   <div className="mt-8 bg-primary/5 p-4 rounded-lg">
@@ -363,6 +316,15 @@ export default function CategoryPage() {
                         />
                         <span className="text-gray-700">Featured</span>
                       </label>
+                      {discountedProducts.length > 0 && (
+                        <label className="flex items-center gap-2 cursor-pointer">
+                          <input
+                            type="checkbox"
+                            className="w-4 h-4 text-primary focus:ring-primary border-gray-300 rounded"
+                          />
+                          <span className="text-gray-700">On Sale</span>
+                        </label>
+                      )}
                     </div>
                   </div>
                   
@@ -434,12 +396,8 @@ export default function CategoryPage() {
                     {sortedProducts.map((product) => (
                       <ProductCard
                         key={product.id}
-                        title={product.title}
-                        category={product.category}
-                        price={`$${product.price.toFixed(2)}`}
-                        imageSrc={product.imageSrc}
-                        externalUrl={product.externalUrl}
-                        isNew={product.isNew}
+                        product={product}
+                        showDescription={false}
                       />
                     ))}
                   </div>
@@ -463,6 +421,14 @@ export default function CategoryPage() {
                               New
                             </div>
                           )}
+                          {product.discount && (
+                            <div className="absolute top-2 right-2">
+                              <ProductDiscount 
+                                percentage={product.discount.percentage}
+                                size="sm"
+                              />
+                            </div>
+                          )}
                         </div>
                         
                         <div className="flex-grow flex flex-col">
@@ -470,12 +436,25 @@ export default function CategoryPage() {
                             <span className="text-xs text-primary-dark uppercase tracking-wide">{product.category}</span>
                             <h3 className="font-cormorant text-xl font-medium mt-1 mb-2">{product.title}</h3>
                             <p className="text-gray-600 text-sm mb-4">
-                              Beautiful floral design on premium quality material. Perfect for adding a touch of nature to your space.
+                              {product.description.substring(0, 120)}...
                             </p>
+                            
+                            {/* Display first 2 specifications */}
+                            <ul className="mb-4">
+                              {product.specifications.slice(0, 2).map((spec, index) => (
+                                <li key={index} className="text-sm text-gray-600 flex items-start">
+                                  <span className="mr-2 text-primary">•</span> {spec}
+                                </li>
+                              ))}
+                            </ul>
                           </div>
                           
                           <div className="mt-auto flex flex-wrap items-center justify-between gap-4">
-                            <span className="text-lg font-medium">${product.price.toFixed(2)}</span>
+                            <DiscountedPrice 
+                              price={product.price}
+                              discount={product.discount}
+                              className="text-lg font-medium"
+                            />
                             
                             <div className="flex gap-2">
                               <button 
@@ -485,12 +464,12 @@ export default function CategoryPage() {
                                 <Heart size={18} />
                               </button>
                               <a 
-                                href={product.externalUrl}
-                                target="_blank" 
-                                rel="noopener noreferrer"
+                                href={product.isCustom ? product.customUrl : product.externalUrl}
+                                target={product.isCustom ? "_self" : "_blank"}
+                                rel={product.isCustom ? undefined : "noopener noreferrer"}
                                 className="inline-flex items-center gap-1 bg-primary hover:bg-primary-dark text-white font-medium py-2 px-4 rounded"
                               >
-                                <span>Shop on TeePublic</span>
+                                <span>{product.isCustom ? 'Customize' : 'Shop on TeePublic'}</span>
                                 <ExternalLink size={16} />
                               </a>
                             </div>
@@ -531,16 +510,16 @@ export default function CategoryPage() {
           <h2 className="font-cormorant text-2xl font-bold mb-8">Related Categories</h2>
           
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-            {Object.entries(categoryData)
+            {Object.entries(categoryMappings)
               .filter(([key]) => key !== slug)
               .slice(0, 4)
-              .map(([key, category]) => (
+              .map(([key, categoryName]) => (
                 <div key={key} className="relative group">
                   <Link href={`/shop/category/${key}`}>
                     <div className="relative h-32 rounded-lg overflow-hidden">
                       <Image
-                        src={category.imageSrc}
-                        alt={category.title}
+                        src={`/images/categories/flower-${key}.webp`}
+                        alt={categoryName}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                         sizes="(max-width: 768px) 50vw, 25vw"
@@ -548,7 +527,7 @@ export default function CategoryPage() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 p-3 text-white">
-                      <h3 className="text-sm font-medium">{category.title}</h3>
+                      <h3 className="text-sm font-medium">{categoryName}</h3>
                     </div>
                   </Link>
                 </div>
@@ -557,5 +536,5 @@ export default function CategoryPage() {
         </div>
       </section>
     </>
-  )
+  );
 }
