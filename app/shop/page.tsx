@@ -1,3 +1,5 @@
+// app/shop/page.tsx
+
 "use client"
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
@@ -8,6 +10,21 @@ import { motion } from 'framer-motion'
 import { Search, Filter, ChevronDown, Grid, List, Heart, ExternalLink, X } from 'lucide-react'
 import ProductCard from '@/components/ProductCard'
 import CategoryCard from '@/components/CategoryCard'
+import SchemaMarkup from '@/components/SchemaMarkup'
+import ProductDiscount from '@/components/ProductDiscount'
+import DiscountedPrice from '@/components/DiscountedPrice'
+import { 
+  getAllProducts, 
+  getFeaturedProducts, 
+  getNewProducts, 
+  getCustomProducts,
+  getDiscountedProducts,
+  categoryMappings, 
+  reverseCategoryMappings,
+  type Product,
+  type ProductCategory
+} from '@/utils/products'
+import { generateShopPageSchema, generateProductCollectionSchema } from '@/utils/schema'
 
 export default function ShopPage() {
   const [searchQuery, setSearchQuery] = useState('')
@@ -17,164 +34,35 @@ export default function ShopPage() {
   const [priceRange, setPriceRange] = useState([0, 50])
   const [isFilterOpen, setIsFilterOpen] = useState(false)
   
+  // Get products from centralized store
+  const allProducts = getAllProducts()
+  const discountedProducts = getDiscountedProducts()
 
-  // Updated categories to include Custom Items
-  const categories = [
-    {
-      title: 'Throw Pillows',
-      slug: 'throw-pillows',
-      imageSrc: '/images/categories/flower-throw-pillows.webp',
-      count: 50
-    },
-    {
-      title: 'Stickers',
-      slug: 'stickers',
-      imageSrc: '/images/categories/flower-stickers.webp',
-      count: 30
-    },
-    {
-      title: 'Mugs',
-      slug: 'mugs',
-      imageSrc: '/images/categories/flower-mugs.webp',
-      count: 50
-    },
-    {
-      title: 'Art Prints',
-      slug: 'art',
-      imageSrc: '/images/categories/flower-art.webp',
-      count: 50
-    },
-    {
-      title: 'Tote Bags',
-      slug: 'tote-bags',
-      imageSrc: '/images/categories/flower-tote-bags.webp',
-      count: 50
-    },
-    {
-      title: 'Tapestries',
-      slug: 'tapestries',
-      imageSrc: '/images/categories/flower-tapestries.webp',
-      count: 50
-    },
-    {
-      title: 'Pins',
-      slug: 'pins',
-      imageSrc: '/images/categories/flower-pins.webp',
-      count: 10
-    },
-   
-  ]
+  // Updated categories with links to category pages
+  const categories = Object.entries(categoryMappings).map(([slug, category]) => ({
+    title: category,
+    slug: slug,
+    imageSrc: `/images/categories/flower-${slug}.webp`,
+    count: allProducts.filter(product => product.category === category).length
+  }))
 
-  // Updated products data with custom field
-  const products = [
-    {
-      id: 1,
-      title: 'Wildflower Bouquet Throw Pillow',
-      category: 'Throw Pillow',
-      price: 24.99,
-      imageSrc: '/images/products/throw-pillows/pillow-1.jpg',
-      externalUrl: 'https://www.teepublic.com/user/flowersluxe',
-      customUrl: '/custom/1', // Add this for consistency
-      isNew: true,
-      featured: true,
-      isCustom: false
-    },
-    {
-    id: 2,
-      title: 'Custom Flower Mug for Mom| Best Gift for New Moms',
-      category: 'Mug',
-      price: 29.99,
-      imageSrc: '/images/products/mugs/custom-flower-mug-best-gift-for-new-moms.webp',
-      customUrl: '/custom/custom-flower-mug-best-gift-for-new-moms',
-      externalUrl: 'https://www.teepublic.com/user/flowersluxe', // Add this for consistency
-      isNew: true,
-      featured: true,
-      isCustom: true
-    },
-    {
-      id: 3,
-      title: 'Rose Garden Ceramic Mug',
-      category: 'Mug',
-      price: 19.99,
-      imageSrc: '/images/products/mugs/mug-1.jpg',
-      externalUrl: 'https://www.teepublic.com/user/flowersluxe',
-      customUrl: '/custom/3', // Add this for consistency
-      isNew: true,
-      isCustom: false
-    },
-    {
-      id: 4,
-      title: 'Botanical Dreams Art Print',
-      category: 'Art Print',
-      price: 15.99,
-      imageSrc: '/images/products/art/art.jpg',
-      externalUrl: 'https://www.teepublic.com/user/flowersluxe',
-      customUrl: '/custom/4', // Add this for consistency
-      isCustom: false
-    },
-    {
-      id: 5,
-      title: 'Vintage Floral Canvas Tote Bag',
-      category: 'Tote Bag',
-      price: 29.99,
-      imageSrc:  '/images/products/tote-bags/tote-1.jpg',
-      externalUrl: 'https://www.teepublic.com/user/flowersluxe',
-      customUrl: '/custom/5', // Add this for consistency
-      isNew: true,
-      featured: true,
-      isCustom: false
-    },
-    {
-      id: 6,
-      title: 'Watercolor Peonies Art Print',
-      category:  'Pins',
-      price: 16.99,
-      imageSrc: '/images/products/pins/pins-1.jpg',
-      externalUrl: 'https://www.teepublic.com/user/flowersluxe',
-      customUrl: '/custom/6', // Add this for consistency
-      featured: true,
-      isCustom: false
-    },
-    {
-      id: 7,
-      title: 'Tropical Leaves Eco Tote',
-      category: 'Tapestry',
-      price: 27.99,
-      imageSrc: '/images/products/tapestries/tapestry-1.jpg',
-      externalUrl: 'https://www.teepublic.com/user/flowersluxe',
-      customUrl: '/custom/7', // Add this for consistency
-      isCustom: false
-    },
-    {
-      id: 8,
-      title: 'Personalized Name Floral Mug',
-      category: 'Throw Pillow',
-      price: 34.99,
-      imageSrc: '/images/products/mugs/personalized-name-floral-mug.jpg',
-      customUrl: '/custom/personalized-name-floral-mug',
-      externalUrl: 'https://www.teepublic.com/user/flowersluxe', // Add this for consistency
-      isNew: false,
-      featured: true,
-      isCustom: false
-    },
-    
-  ]
-
-  // Add inside ShopPage component, after useState declarations
-const pageTitle = activeCategory === 'All' ? 'Shop Our Flower Collection | FlowersLuxe' : `${activeCategory} | FlowersLuxe Shop`
-const pageDescription = activeCategory === 'All' 
-  ? 'Discover our unique floral designs on premium quality products, including personalized custom items.'
-  : `Shop our unique ${activeCategory.toLowerCase()} collection featuring beautiful floral designs and personalized options.`
+  // Page title and description for SEO
+  const pageTitle = activeCategory === 'All' ? 'Shop Our Flower Collection | FlowersLuxe' : `${activeCategory} | FlowersLuxe Shop`
+  const pageDescription = activeCategory === 'All' 
+    ? 'Discover our unique floral designs on premium quality products, including personalized custom items.'
+    : `Shop our unique ${activeCategory.toLowerCase()} collection featuring beautiful floral designs and personalized options.`
 
   // Filter products based on search, category, and price range
-  const filteredProducts = products.filter(product => {
-    const matchesSearch = product.title.toLowerCase().includes(searchQuery.toLowerCase())
+  const filteredProducts = allProducts.filter(product => {
+    const matchesSearch = product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         product.description.toLowerCase().includes(searchQuery.toLowerCase())
     
     const matchesCategory = activeCategory === 'All' || 
       product.category === activeCategory || 
       (activeCategory === 'Featured' && product.featured) ||
       (activeCategory === 'New Arrivals' && product.isNew) ||
-      (activeCategory === 'Custom Items' && product.isCustom)
+      (activeCategory === 'Custom Items' && product.isCustom) ||
+      (activeCategory === 'On Sale' && product.discount)
     
     const matchesPrice = product.price >= priceRange[0] && product.price <= priceRange[1]
     
@@ -198,8 +86,15 @@ const pageDescription = activeCategory === 'All'
     }
   })
 
-  // Extract all unique product categories
-  const productCategories = ['All', 'Featured', 'New Arrivals', 'Custom Items', ...new Set(products.map(product => product.category))]
+  // Extract all unique product categories for filters
+  const productCategories = [
+    'All', 
+    'Featured', 
+    'New Arrivals', 
+    'Custom Items', 
+    'On Sale', 
+    ...Object.values(categoryMappings)
+  ]
 
   // Close filter sidebar when screen becomes larger
   useEffect(() => {
@@ -213,43 +108,32 @@ const pageDescription = activeCategory === 'All'
     return () => window.removeEventListener('resize', handleResize)
   }, [isFilterOpen])
 
-  const productSchema = {
-    "@context": "https://schema.org/",
-    "@type": "ItemList",
-    "itemListElement": sortedProducts.map((product, index) => ({
-      "@type": "ListItem",
-      "position": index + 1,
-      "item": {
-        "@type": "Product",
-        "name": product.title,
-        "description": product.isCustom 
-          ? 'Customizable floral design product.' 
-          : 'Beautiful floral design on premium quality material.',
-        "image": product.imageSrc,
-        "offers": {
-          "@type": "Offer",
-          "price": product.price.toFixed(2),
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock"
-        }
-      }
-    }))
-  };
+  // Generate schema for products collection
+  const shopSchema = generateShopPageSchema('/shop')
+  const productCollectionSchema = generateProductCollectionSchema(
+    sortedProducts,
+    activeCategory,
+    `/shop${activeCategory !== 'All' ? `?category=${activeCategory}` : ''}`
+  )
 
   return (    
     <>
+      {/* SEO Schema Markup */}
+      <SchemaMarkup schema={shopSchema} />
+      <SchemaMarkup schema={productCollectionSchema} />
 
-
-<Head>
-  <title>{pageTitle}</title>
-  <meta name="description" content={pageDescription} />
-  <meta property="og:title" content={pageTitle} />
-  <meta property="og:description" content={pageDescription} />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content={`https://flowersluxe.com/shop${activeCategory !== 'All' ? `/${activeCategory.toLowerCase().replace(/\s+/g, '-')}` : ''}`} />
-  <meta property="og:image" content="https://flowersluxe.com/images/shop-og-image.jpg" />
-  <link rel="canonical" href={`https://flowersluxe.com/shop${activeCategory !== 'All' ? `/${activeCategory.toLowerCase().replace(/\s+/g, '-')}` : ''}`} />
-</Head>
+      {/* SEO Meta Tags */}
+      <Head>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://flowersluxe.com/shop${activeCategory !== 'All' ? `?category=${activeCategory.toLowerCase().replace(/\s+/g, '-')}` : ''}`} />
+        <meta property="og:image" content="https://flowersluxe.com/images/shop-og-image.jpg" />
+        <link rel="canonical" href={`https://flowersluxe.com/shop${activeCategory !== 'All' ? `?category=${activeCategory.toLowerCase().replace(/\s+/g, '-')}` : ''}`} />
+      </Head>
+      
       {/* Shop Header */}
       <section className="bg-surface-muted py-12 md:py-16 relative overflow-hidden">
         {/* Decorative elements */}
@@ -278,6 +162,7 @@ const pageDescription = activeCategory === 'All'
                 placeholder="Search products..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
+                aria-label="Search products"
               />
             </div>
           </div>
@@ -290,20 +175,19 @@ const pageDescription = activeCategory === 'All'
           <h2 className="font-cormorant text-2xl font-bold mb-8">Shop by Category</h2>
           
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
-          {categories.map((category, index) => (
+            {categories.map((category, index) => (
               <div key={category.slug} className="relative group">
                 <Link href={`/shop/category/${category.slug}`}>
                   <div className="relative h-32 rounded-lg overflow-hidden">
-                    {/* Image component here */}
                     <Image
-          src={category.imageSrc}
-          alt={category.title}
-          fill
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
-          sizes="(max-width: 768px) 50vw, 12.5vw"
-          priority={index < 3} // Now index is properly defined
-          loading={index < 3 ? "eager" : "lazy"} // Now index is properly defined
-        />
+                      src={category.imageSrc}
+                      alt={category.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 50vw, 12.5vw"
+                      priority={index < 3}
+                      loading={index < 3 ? "eager" : "lazy"}
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-3 text-white">
@@ -366,6 +250,7 @@ const pageDescription = activeCategory === 'All'
                         value={priceRange[1]}
                         onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
                         className="w-full accent-primary"
+                        aria-label="Maximum price range"
                       />
                     </div>
                   </div>
@@ -459,11 +344,13 @@ const pageDescription = activeCategory === 'All'
                         value={priceRange[1]}
                         onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
                         className="w-full accent-primary"
+                        aria-label="Mobile price range"
                       />
                     </div>
                   </div>
                   
-                  <button
+                
+                    <button
                     onClick={() => setIsFilterOpen(false)}
                     className="w-full bg-primary text-white font-medium py-2 rounded-lg mt-6"
                   >
@@ -494,6 +381,7 @@ const pageDescription = activeCategory === 'All'
                       value={sortOption}
                       onChange={(e) => setSortOption(e.target.value)}
                       className="pl-3 pr-8 py-2 border border-gray-200 rounded bg-white text-sm appearance-none focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                      aria-label="Sort products"
                     >
                       <option value="featured">Featured</option>
                       <option value="price-low">Price: Low to High</option>
@@ -531,13 +419,7 @@ const pageDescription = activeCategory === 'All'
                     {sortedProducts.map((product) => (
                       <ProductCard
                         key={product.id}
-                        title={product.title}
-                        category={product.category}
-                        price={`${product.price.toFixed(2)}`}
-                        imageSrc={product.imageSrc}
-                        externalUrl={product.isCustom ? (product.customUrl || '') : (product.externalUrl || '')}
-                        isNew={product.isNew}
-                        isCustom={product.isCustom}
+                        product={product}
                       />
                     ))}
                   </div>
@@ -561,6 +443,14 @@ const pageDescription = activeCategory === 'All'
                               New
                             </div>
                           )}
+                          {product.discount && (
+                            <div className="absolute top-2 right-2">
+                              <ProductDiscount 
+                                percentage={product.discount.percentage}
+                                size="sm"
+                              />
+                            </div>
+                          )}
                         </div>
                         
                         <div className="flex-grow flex flex-col">
@@ -568,15 +458,16 @@ const pageDescription = activeCategory === 'All'
                             <span className="text-xs text-primary-dark uppercase tracking-wide">{product.category}</span>
                             <h3 className="font-cormorant text-xl font-medium mt-1 mb-2">{product.title}</h3>
                             <p className="text-gray-600 text-sm mb-4">
-                              {product.isCustom 
-                                ? 'Customize this product with your name or special message.'
-                                : 'Beautiful floral design on premium quality material. Perfect for adding a touch of nature to your space.'
-                              }
+                              {product.description.substring(0, 120)}...
                             </p>
                           </div>
                           
                           <div className="mt-auto flex flex-wrap items-center justify-between gap-4">
-                            <span className="text-lg font-medium">${product.price.toFixed(2)}</span>
+                            <DiscountedPrice 
+                              price={product.price}
+                              discount={product.discount}
+                              className="text-lg font-medium"
+                            />
                             
                             <div className="flex gap-2">
                               <button 
@@ -652,11 +543,6 @@ const pageDescription = activeCategory === 'All'
           </div>
         </div>
       </section>
-      <Script 
-        id="product-schema" 
-        type="application/ld+json" 
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} 
-      />
     </>
   )
 }
