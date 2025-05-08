@@ -1,40 +1,26 @@
-// app/custom/[slug]/page.tsx
 "use client"
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import Head from 'next/head'     
+import Head from 'next/head'
 import { motion } from 'framer-motion'
 import { ArrowLeft, CheckCircle, AlertCircle, Shield, ChevronRight } from 'lucide-react'
 import { useParams } from 'next/navigation'
 import emailjs from '@emailjs/browser'
 import ProductCard from '@/components/ProductCard'
-
-// Product data
-const customProducts = {
-  'custom-flower-mug-best-gift-for-new-moms': {
-    id: 2,
-    slug: 'custom-flower-mug-best-gift-for-new-moms',
-    title: 'Custom Flower Mug for Mom| Best Gift for New Moms',
-    category: 'Mug',
-    price: 29.99,
-    imageSrc: '/images/products/mugs/Custom-Flower-Mug-Best-Gift-for-New-Moms.webp',
-    description: `Celebrate motherhood with the Mom Mug, the perfect gift idea for new mothers. This elegant ceramic mug features delicate floral designs and a space for your mom's name or a special message. Perfect for Mother's Day, baby showers, or as a special gift for new mothers, it's both practical and sentimental. Handmade and custom-printed, this mug makes a high-quality keepsake for birthdays, anniversaries, and special celebrations.`,
-    features: [
-      'High-Quality Premium Ceramic: Crafted from durable, premium ceramic for a luxurious feel and long-lasting use.',
-      '11oz Capacity: Perfectly sized (3.75" tall x 3.25" diameter) to hold your favorite hot or cold beverages.',
-      'Microwave & Dishwasher Safe: No need to worry about melting, bubbling, or cracking—this mug is top-shelf dishwasher safe and heats evenly in the microwave.',
-      'Embedded Image with Gloss Finish: The design is embedded into the mug with a glossy protective layer, ensuring it won’t fade, scratch, or peel over time. ',
-      'Vacuum-Form Printed for a Complete Wrap: Enjoy a seamless, Proudly made in the USA using advanced printing technology for superior quality. ',
-    ],
-    returnPolicy: `Our custom products are made especially for you. If there are any defects or quality issues, we'll gladly replace your order. However, due to the personalized nature of custom items, we cannot accept returns for customization errors if the text matches what you submitted. Please double-check your personalization text before submitting.`,
-  },
-  
- 
-}
+import SchemaMarkup from '@/components/SchemaMarkup'
+import ProductDiscount from '@/components/ProductDiscount'
+import DiscountedPrice from '@/components/DiscountedPrice'
+import { 
+  getProductBySlug, 
+  getCustomProducts, 
+  getRelatedProducts, 
+  Product 
+} from '@/utils/products'
+import { generateProductSchema, generateBreadcrumbSchema } from '@/utils/schema'
 
 export default function CustomProductPage() {
-  const { slug } = useParams()
+  const { slug } = useParams() as { slug: string };
   const [customizationText, setCustomizationText] = useState('')
   const [email, setEmail] = useState('')
   const [submitting, setSubmitting] = useState(false)
@@ -49,7 +35,7 @@ export default function CustomProductPage() {
   const publicKey = "yvJpeo6ujp2VaM2rX"
 
   // Get product data
-  const customProduct = customProducts[slug  as keyof typeof customProducts]
+  const customProduct = getProductBySlug(slug);
 
   // Handle case where product is not found
   if (!customProduct) {
@@ -64,22 +50,32 @@ export default function CustomProductPage() {
     )
   }
 
-  // Similar custom products
-  const similarProducts = [
-    {
-      id: 8,
-      slug: 'personalized-name-floral-mug',
-      title: 'Personalized Name Floral Mug',
-      category: 'Mug',
-      price: 24.99,
-      imageSrc: '/images/products/mugs/personalized-name-floral-mug.jpg',
-      customUrl: '/custom/personalized-name-floral-mug',
-      isNew: true,
-      isCustom: true
-    },
+  // Get related custom products
+  const relatedProducts = getRelatedProducts(customProduct, 3).filter(p => p.isCustom);
   
-   
-  ].filter(product => product.id !== customProduct.id)
+  // If there aren't enough related products in same category, get other custom products
+  const allCustomProducts = getCustomProducts();
+  if (relatedProducts.length < 3) {
+    const additionalProducts = allCustomProducts
+      .filter(p => p.id !== customProduct.id && !relatedProducts.some(r => r.id === p.id))
+      .slice(0, 3 - relatedProducts.length);
+    relatedProducts.push(...additionalProducts);
+  }
+
+  // Generate schema for this product
+  const productSchema = generateProductSchema(customProduct, `/custom/${slug}`);
+  
+  // Generate breadcrumb schema
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Shop', url: '/shop' },
+    { name: 'Custom Items', url: '/shop?category=Custom Items' },
+    { name: customProduct.title, url: `/custom/${slug}` }
+  ]);
+
+  // Meta data for SEO
+  const pageTitle = `${customProduct.title} | FlowersLuxe Custom Print`;
+  const pageDescription = `${customProduct.description.substring(0, 150)}... Personalize this ${customProduct.category.toLowerCase()} with your own text.`;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -130,33 +126,24 @@ export default function CustomProductPage() {
 
   return (
     <>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({
-    "@context": "https://schema.org/",
-    "@type": "Product",
-    "name": customProduct.title,
-    "image": `https://flowersluxe.com${customProduct.imageSrc}`,
-    "description": customProduct.description,
-    "brand": {
-      "@type": "Brand",
-      "name": "FlowersLuxe"
-    },
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "USD",
-      "price": customProduct.price,
-      "availability": "https://schema.org/InStock",
-      "url": `https://flowersluxe.com/custom/${customProduct.slug}`
-    }
-  })
-}} />
+      {/* SEO Schema Markup */}
+      <SchemaMarkup schema={productSchema} />
+      <SchemaMarkup schema={breadcrumbSchema} />
 
-  <Head>
-  <title>{customProduct.title} | FlowersLuxe Custom Print</title>
-  <meta name="description" content={`Buy a personalized ${customProduct.category.toLowerCase()} - ${customProduct.title}. ${customProduct.description.slice(0, 150)}...`} />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href={`https://flowersluxe.com/custom/${customProduct.slug}`} />
-  </Head>
+      {/* SEO Meta Tags */}
+      <Head>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={`https://flowersluxe.com/custom/${slug}`} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:type" content="product" />
+        <meta property="og:url" content={`https://flowersluxe.com/custom/${slug}`} />
+        <meta property="og:image" content={`https://flowersluxe.com${customProduct.imageSrc}`} />
+        <meta property="product:price:amount" content={customProduct.price.toString()} />
+        <meta property="product:price:currency" content="USD" />
+      </Head>
 
       {/* Breadcrumb */}
       <section className="bg-surface-muted py-4">
@@ -185,27 +172,36 @@ export default function CustomProductPage() {
 
       {/* Product Details */}
       <section className="py-12" aria-labelledby="product-heading">
-  <div className="container-custom">
-    <h2 id="product-heading" className="sr-only">Product Details for {customProduct.title}</h2>
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="container-custom">
+          <h2 id="product-heading" className="sr-only">Product Details for {customProduct.title}</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Product Image */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               className="relative aspect-square rounded-2xl overflow-hidden shadow-elevated"
             >
-<Image
-  src={customProduct.imageSrc}
-  alt={customProduct.title}
-  fill
-  className="object-cover"
-  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
-  priority
-  loading="eager"
-/>
+              <Image
+                src={customProduct.imageSrc}
+                alt={customProduct.title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
+                priority
+                loading="eager"
+              />
               <div className="absolute top-4 left-4 bg-primary text-white text-sm font-medium px-3 py-1 rounded-full">
                 Customizable
               </div>
+              
+              {customProduct.discount && (
+                <div className="absolute top-4 right-4">
+                  <ProductDiscount 
+                    percentage={customProduct.discount.percentage}
+                    size="md"
+                  />
+                </div>
+              )}
             </motion.div>
 
             {/* Product Info */}
@@ -224,26 +220,29 @@ export default function CustomProductPage() {
                 {customProduct.title}
               </h1>
               
-              <p className="text-2xl font-medium text-gray-900 mb-6">
-                ${customProduct.price.toFixed(2)}
-              </p>
+              <div className="mb-6">
+                <DiscountedPrice 
+                  price={customProduct.price}
+                  discount={customProduct.discount}
+                  className="text-2xl font-medium text-gray-900"
+                />
+              </div>
               
               <p className="text-gray-600 mb-8">
-  {customProduct.description} This handcrafted {customProduct.category.toLowerCase()} is a perfect custom printed gift idea for birthdays, anniversaries, weddings, and special occasions. Our personalized {customProduct.category.toLowerCase()} collection offers high-quality custom print products with beautiful floral designs that make memorable keepsakes for every celebration.
-</p>
-
+                {customProduct.description}
+              </p>
               
               <div className="mb-8">
                 <h3 className="font-cormorant text-xl font-semibold mb-4">Features:</h3>
                 <ul className="space-y-2" itemProp="additionalProperty" itemScope itemType="https://schema.org/PropertyValue">
-               {customProduct.features.map((feature, index) => (
-               <li key={index} className="flex items-center gap-2" itemProp="value">
-               <CheckCircle size={16} className="text-primary flex-shrink-0" />
-               <span className="text-gray-700">{feature}</span>
-             </li>
-             ))}
-        </ul>
-    </div>
+                  {customProduct.features.map((feature, index) => (
+                    <li key={index} className="flex items-center gap-2" itemProp="value">
+                      <CheckCircle size={16} className="text-primary flex-shrink-0" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
               {/* Customization Form */}
               <div className="bg-surface-muted rounded-xl p-6 mb-8">
@@ -316,6 +315,21 @@ export default function CustomProductPage() {
                 )}
               </div>
 
+              {/* Product Specifications */}
+              <div className="mb-8">
+                <h3 className="font-cormorant text-xl font-semibold mb-4 flex items-center gap-2">
+                  Product Specifications
+                </h3>
+                <ul className="space-y-3">
+                  {customProduct.specifications.map((spec, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      <span className="text-primary font-bold">•</span>
+                      <span className="text-gray-700">{spec}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
               {/* Return Policy */}
               <div className="bg-surface-muted rounded-xl p-6">
                 <h3 className="font-cormorant text-xl font-semibold mb-4 flex items-center gap-2">
@@ -323,7 +337,7 @@ export default function CustomProductPage() {
                   Return Policy for Custom Items
                 </h3>
                 <p className="text-gray-600">
-                  {customProduct.returnPolicy}
+                  Our custom products are made especially for you. If there are any defects or quality issues, we'll gladly replace your order. However, due to the personalized nature of custom items, we cannot accept returns for customization errors if the text matches what you submitted. Please double-check your personalization text before submitting.
                 </p>
               </div>
             </motion.div>
@@ -337,16 +351,10 @@ export default function CustomProductPage() {
           <h2 className="font-cormorant text-2xl md:text-3xl font-bold mb-8">Similar Custom Products</h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {similarProducts.map((product) => (
+            {relatedProducts.map((product) => (
               <ProductCard
                 key={product.id}
-                title={product.title}
-                category={product.category}
-                price={`$${product.price.toFixed(2)}`}
-                imageSrc={product.imageSrc}
-                externalUrl={product.customUrl}
-                isNew={product.isNew}
-                isCustom={true}
+                product={product}
               />
             ))}
           </div>
