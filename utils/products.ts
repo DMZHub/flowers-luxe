@@ -211,7 +211,7 @@ const products: Product[] = [
     category: 'Throw Pillow',
     price: 29.00,
     imageSrc: '/images/products/throw-pillows/custom-cat-pillow-unique-cat-gift.jpg',
-    description: 'Celebrate your bond with your cat using this bold Custom Cat Pillow! Featuring a unique fist bump design with your personal cat's name, this personalized cat pillow is perfect for custom cat gifts, memorials, or stylish decor. Our cat pillows custom made from striking artwork bring attitude, love, and flair to any space — ideal for true cat lovers who want a one-of-a-kind keepsake.',
+    description: "Celebrate your bond with your cat using this bold Custom Cat Pillow! Featuring a unique fist bump design with your personal cat's name, this personalized cat pillow is perfect for custom cat gifts, memorials, or stylish decor. Our cat pillows custom made from striking artwork bring attitude, love, and flair to any space — ideal for true cat lovers who want a one-of-a-kind keepsake.",
     features: [
       'Personalized with your cat\'s name',
       'Bold fist bump design',
@@ -236,7 +236,7 @@ const products: Product[] = [
     category: 'Mug',
     price: 18.00,
     imageSrc: '/images/products/mugs/custom-cat-mug-personalized-mug-for-cat-lovers.jpg',
-    description: 'Custom Cat Mug – Bold Fist Bump Design for Cat Lovers. Show off your bond with your custom cat using this unique mug featuring a cool fist bump illustration and your pet's name. Perfect for morning coffee or as a special custom cat gift. you're looking for custom cat mugs, this bold design adds personality to every sip.',
+    description: "Custom Cat Mug – Bold Fist Bump Design for Cat Lovers. Show off your bond with your custom cat using this unique mug featuring a cool fist bump illustration and your pet's name. Perfect for morning coffee or as a special custom cat gift. If you're looking for custom cat mugs, this bold design adds personality to every sip.",
     features: [
       'Personalized with your cat\'s name',
       'Bold fist bump design',
@@ -261,7 +261,7 @@ const products: Product[] = [
     category: 'Sticker',
     price: 6.50,
     imageSrc: '/images/products/stickers/custom-cat-stickers-personalized-gifts.jpg',
-    description: 'Make your laptop, water bottle, or journal pop with these bold custom cat stickers featuring your cat's name in a one-of-a-kind fist bump design. Perfect for gifting or personal use, these high-quality vinyl stickers are a fun way to show off your custom cat. Great for custom cat gifts, cat customes, and anyone who loves custom cats with attitude.',
+    description: "Make your laptop, water bottle, or journal pop with these bold custom cat stickers featuring your cat's name in a one-of-a-kind fist bump design. Perfect for gifting or personal use, these high-quality vinyl stickers are a fun way to show off your custom cat. Great for custom cat gifts, cat customes, and anyone who loves custom cats with attitude.",
     features: [
       'Personalized with your cat\'s name',
       'Durable vinyl construction',
@@ -286,7 +286,7 @@ const products: Product[] = [
     category: 'Tote Bag',
     price: 27.00,
     imageSrc: '/images/products/tote-bags/custom-cat-tote-bag-unique-tote-bag.jpg',
-    description: 'Carry your love for your custom cat everywhere with this bold and stylish cat tote bag. Featuring a unique fist bump design with your pet's name, it's perfect for daily errands, gifts, or showing off your feline pride. A fun and functional choice for custom cat gifts, cat customes, and anyone who adores custom cats with personality.',
+    description: "Carry your love for your custom cat everywhere with this bold and stylish cat tote bag. Featuring a unique fist bump design with your pet's name, it's perfect for daily errands, gifts, or showing off your feline pride. A fun and functional choice for custom cat gifts, cat customes, and anyone who adores custom cats with personality.",
     features: [
       'Personalized with your cat\'s name',
       'Durable canvas construction',
@@ -685,7 +685,7 @@ const products: Product[] = [
     category: 'Tapestry',
     price: 26.00,
     imageSrc: '/images/products/tapestries/dusty-rose-tapestry-soft-pink-floral.jpg',
-    description: 'Add elegance to your space with this dusty rose floral tapestry. Featuring soft watercolor petals and golden accents, it's perfect for creating a peaceful, feminine atmosphere in any room.',
+    description: "Add elegance to your space with this dusty rose floral tapestry. Featuring soft watercolor petals and golden accents, it's perfect for creating a peaceful, feminine atmosphere in any room.",
     features: [
       'Soft dusty rose watercolor design',
       'Lightweight microfiber material',
@@ -707,7 +707,7 @@ const products: Product[] = [
     category: 'Throw Pillow',
     price: 25.00,
     imageSrc: '/images/products/throw-pillows/dusty-rose-throw-pillow-soft-pink-floral.jpg',
-    description: 'This dusty rose watercolor floral throw pillow brings charm and softness to your home décor. Ideal for bedrooms, living rooms, or cozy nooks with a romantic touch.',
+    description: "This dusty rose watercolor floral throw pillow brings charm and softness to your home décor. Ideal for bedrooms, living rooms, or cozy nooks with a romantic touch.",
     features: [
       'Soft dusty rose watercolor design',
       'Delicate floral pattern',
@@ -729,7 +729,7 @@ const products: Product[] = [
     category: 'Tote Bag',
     price: 23.00,
     imageSrc: '/images/products/tote-bags/dusty-rose-tote-bag-soft-rose.jpg',
-    description: 'Carry beauty with you! This dusty rose floral watercolor tote bag blends art and functionality—perfect for everyday errands or as a stylish accessory.',
+    description: "Carry beauty with you! This dusty rose floral watercolor tote bag blends art and functionality—perfect for everyday errands or as a stylish accessory.",
     features: [
       'Soft dusty rose watercolor design',
       'Durable canvas construction',
@@ -861,7 +861,7 @@ const products: Product[] = [
     category: 'Tote Bag',
     price: 23.00,
     imageSrc: '/images/products/tote-bags/tulips-tote-bag-floral-accessory.jpg',
-    description: 'Carry floral beauty wherever you go with this dusty rose tulips watercolor tote bag. Functional and stylish, it's ideal for daily errands, books, or as a chic accessory.',
+    description: "Carry floral beauty wherever you go with this dusty rose tulips watercolor tote bag. Functional and stylish, it's ideal for daily errands, books, or as a chic accessory.",
     features: [
       'Watercolor tulip design',
       'Durable canvas construction',
@@ -905,7 +905,7 @@ const products: Product[] = [
     category: 'Tapestry',
     price: 26.00,
     imageSrc: '/images/products/tapestries/tulip-tapestry-floral-wall-hanging.jpg',
-    description: 'Bring a touch of nature indoors with this elegant dusty rose tulip watercolor tapestry. Featuring hand-painted floral details and a dreamy background, it adds warmth and charm to any space.',
+    description: "Bring a touch of nature indoors with this elegant dusty rose tulip watercolor tapestry. Featuring hand-painted floral details and a dreamy background, it adds warmth and charm to any space.",
     features: [
       'Watercolor tulip design',
       'Lightweight microfiber material',
