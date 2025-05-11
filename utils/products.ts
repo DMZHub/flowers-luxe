@@ -860,7 +860,7 @@ const products: Product[] = [
     slug: 'tulips-tote-bag-floral-accessory',
     category: 'Tote Bag',
     price: 23.00,
-    imageSrc: '/images/products/tote-bags/tulips-tote-bag-floral-accessory.jpg',
+    imageSrc: '/images/products/tote-bags/tulips-tote-bag-floral-accessory.webp',
     description: "Carry floral beauty wherever you go with this dusty rose tulips watercolor tote bag. Functional and stylish, it's ideal for daily errands, books, or as a chic accessory.",
     features: [
       'Watercolor tulip design',
