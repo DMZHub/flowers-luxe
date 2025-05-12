@@ -934,6 +934,14 @@ features: [
   'Elegant, feminine aesthetic',
   'Perfect for tea, coffee, or hot chocolate'
 ],
+   specifications: generateProductSpecifications({category: 'Mug'}),
+   externalUrl: 'https://store.flowersluxe.com/products/https://store.flowersluxe.com/products/75066708-tulip-watercolor-floral-mug',
+   customUrl: '/custom/watercolor-tulip-floral-mug',
+    isNew: false,
+    featured: false,
+    isCustom: false
+  },
+  
 ];
 // Get all products
 export function getAllProducts(): Product[] {
