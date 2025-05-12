@@ -919,7 +919,8 @@ const products: Product[] = [
     isNew: true,
     featured: false,
     isCustom: false
-  }
+  },
+{  
 id: 33,
 title: 'Watercolor Tulip Floral Mug - Botanical Coffee Cup',
 slug: 'watercolor-tulip-floral-mug',
