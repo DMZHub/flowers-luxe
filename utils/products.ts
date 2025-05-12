@@ -49,7 +49,7 @@ export const categoryProperties = {
       'Available in multiple sizes',
       'Machine washable on gentle cycle'
     ]
-  },
+  },   
   'Sticker': {
     description: 'Express yourself with our vibrant floral stickers. Perfect for laptops, water bottles, notebooks, and more.',
     specifications: [
@@ -920,6 +920,20 @@ const products: Product[] = [
     featured: false,
     isCustom: false
   }
+id: 33,
+title: 'Watercolor Tulip Floral Mug - Botanical Coffee Cup',
+slug: 'watercolor-tulip-floral-mug',
+category: 'Mug',
+price: 15.00,
+imageSrc: '/images/products/mugs/watercolor-tulip-floral-mug.webp',
+description: 'Sip in style with this beautiful watercolor tulip mug. Featuring vibrant pink tulips and lush green leaves, it’s perfect for floral art lovers and nature enthusiasts.',
+features: [
+  'Vibrant watercolor tulip illustration with abstract background',
+  'Premium ceramic construction',
+  'Dishwasher and microwave safe',
+  'Elegant, feminine aesthetic',
+  'Perfect for tea, coffee, or hot chocolate'
+],
 ];
 // Get all products
 export function getAllProducts(): Product[] {
