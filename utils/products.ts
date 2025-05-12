@@ -210,7 +210,7 @@ const products: Product[] = [
     slug: 'custom-cat-pillow-unique-cat-gift',
     category: 'Throw Pillow',
     price: 29.00,
-    imageSrc: '/images/products/throw-pillows/custom-cat-pillow-unique-cat-gift.jpg',
+    imageSrc: '/images/products/throw-pillows/custom-cat-pillow-unique-cat-gift.webp',
     description: "Celebrate your bond with your cat using this bold Custom Cat Pillow! Featuring a unique fist bump design with your personal cat's name, this personalized cat pillow is perfect for custom cat gifts, memorials, or stylish decor. Our cat pillows custom made from striking artwork bring attitude, love, and flair to any space — ideal for true cat lovers who want a one-of-a-kind keepsake.",
     features: [
       'Personalized with your cat\'s name',
@@ -235,7 +235,7 @@ const products: Product[] = [
     slug: 'custom-cat-mug-personalized-mug-for-cat-lovers',
     category: 'Mug',
     price: 18.00,
-    imageSrc: '/images/products/mugs/custom-cat-mug-personalized-mug-for-cat-lovers.jpg',
+    imageSrc: '/images/products/mugs/custom-cat-mug-personalized-mug-for-cat-lovers.webp',
     description: "Custom Cat Mug – Bold Fist Bump Design for Cat Lovers. Show off your bond with your custom cat using this unique mug featuring a cool fist bump illustration and your pet's name. Perfect for morning coffee or as a special custom cat gift. If you're looking for custom cat mugs, this bold design adds personality to every sip.",
     features: [
       'Personalized with your cat\'s name',
@@ -260,7 +260,7 @@ const products: Product[] = [
     slug: 'custom-cat-stickers-personalized-gifts',
     category: 'Sticker',
     price: 6.50,
-    imageSrc: '/images/products/stickers/custom-cat-stickers-personalized-gifts.jpg',
+    imageSrc: '/images/products/stickers/custom-cat-stickers-personalized-gifts.webp',
     description: "Make your laptop, water bottle, or journal pop with these bold custom cat stickers featuring your cat's name in a one-of-a-kind fist bump design. Perfect for gifting or personal use, these high-quality vinyl stickers are a fun way to show off your custom cat. Great for custom cat gifts, cat customes, and anyone who loves custom cats with attitude.",
     features: [
       'Personalized with your cat\'s name',
@@ -285,7 +285,7 @@ const products: Product[] = [
     slug: 'custom-cat-tote-bag-unique-tote-bag',
     category: 'Tote Bag',
     price: 27.00,
-    imageSrc: '/images/products/tote-bags/custom-cat-tote-bag-unique-tote-bag.jpg',
+    imageSrc: '/images/products/tote-bags/custom-cat-tote-bag-unique-tote-bag.web',
     description: "Carry your love for your custom cat everywhere with this bold and stylish cat tote bag. Featuring a unique fist bump design with your pet's name, it's perfect for daily errands, gifts, or showing off your feline pride. A fun and functional choice for custom cat gifts, cat customes, and anyone who adores custom cats with personality.",
     features: [
       'Personalized with your cat\'s name',
@@ -310,7 +310,7 @@ const products: Product[] = [
     slug: 'wildflower-floral-mug-vintage-botanical-design',
     category: 'Mug',
     price: 15.00,
-    imageSrc: '/images/products/mugs/wildflower-floral-mug-vintage-botanical-design.jpg',
+    imageSrc: '/images/products/mugs/wildflower-floral-mug-vintage-botanical-design.webp',
     description: 'Start your mornings with floral charm. This Wildflower Floral Mug features a vintage bouquet of peonies, daisies, and eucalyptus—perfect for nature lovers and cozy sips.',
     features: [
       'Vintage botanical wildflower design',
@@ -332,7 +332,7 @@ const products: Product[] = [
     slug: 'wildflower-pillow-vintage-floral-cushion',
     category: 'Throw Pillow',
     price: 25.00,
-    imageSrc: '/images/products/throw-pillows/wildflower-pillow-vintage-floral-cushion.jpg',
+    imageSrc: '/images/products/throw-pillows/wildflower-pillow-vintage-floral-cushion.webp',
     description: 'Add a touch of vintage nature to your space. This Wildflower Pillow showcases soft peonies, daisies, and eucalyptus for a cozy, botanical accent.',
     features: [
       'Vintage botanical wildflower design',
@@ -354,7 +354,7 @@ const products: Product[] = [
     slug: 'wildflower-tapestry-vintage-floral-wall-hanging',
     category: 'Tapestry',
     price: 26.00,
-    imageSrc: '/images/products/tapestries/wildflower-tapestry-vintage-floral-wall-hanging.jpg',
+    imageSrc: '/images/products/tapestries/wildflower-tapestry-vintage-floral-wall-hanging.webp',
     description: 'Transform your wall with natural elegance. The Wildflower Tapestry displays a detailed vintage bouquet of daisies, peonies, and eucalyptus - perfect for boho and botanical decor.',
     features: [
       'Vintage botanical wildflower design',
@@ -376,7 +376,7 @@ const products: Product[] = [
     slug: 'wildflower-art-print-vintage-botanical-poster',
     category: 'Art Print',
     price: 14.00,
-    imageSrc: '/images/products/art/wildflower-art-print-vintage-botanical-poster.jpg',
+    imageSrc: '/images/products/art/wildflower-art-print-vintage-botanical-poster.webp',
     description: 'Brighten your walls with timeless blooms. This Wildflower Art Print features a vintage floral composition with daisies, peonies, and eucalyptus for a fresh, botanical touch.',
     features: [
       'Vintage botanical wildflower design',
@@ -398,7 +398,7 @@ const products: Product[] = [
     slug: 'wildflower-tote-bag-vintage-floral-botanical-bag',
     category: 'Tote Bag',
     price: 23.00,
-    imageSrc: '/images/products/tote-bags/wildflower-tote-bag-vintage-floral-botanical-bag.jpg',
+    imageSrc: '/images/products/tote-bags/wildflower-tote-bag-vintage-floral-botanical-bag.webp',
     description: 'Carry nature with you. This Wildflower Tote Bag combines vintage floral beauty with everyday function, featuring peonies, daisies, and eucalyptus in a bold botanical design.',
     features: [
       'Vintage botanical wildflower design',
@@ -420,7 +420,7 @@ const products: Product[] = [
     slug: 'wildflower-pin-vintage-floral',
     category: 'Pin',
     price: 3.25,
-    imageSrc: '/images/products/pins/wildflower-pin-vintage-floral.jpg',
+    imageSrc: '/images/products/pins/wildflower-pin-vintage-floral.webp',
     description: 'Inspired by the delicate beauty of wildflowers, this vintage floral pin is a must-have for cottagecore lovers. Bring your outfit to life with a classic blooms.',
     features: [
       'Vintage botanical wildflower design',
@@ -442,7 +442,7 @@ const products: Product[] = [
     slug: 'motivational-throw-pillow-bold-creative-inspiration',
     category: 'Throw Pillow',
     price: 25.00,
-    imageSrc: '/images/products/throw-pillows/motivational-throw-pillow-bold-creative-inspiration.jpg',
+    imageSrc: '/images/products/throw-pillows/motivational-throw-pillow-bold-creative-inspiration.webp',
     description: 'Add a spark to any room with our motivational throw pillows. A creative motivation pillow designed to uplift, inspire, and comfort every day.',
     features: [
       'Inspirational quote design',
@@ -464,7 +464,7 @@ const products: Product[] = [
     slug: 'motivational-coffee-mug-it-always-seems-impossible',
     category: 'Mug',
     price: 15.00,
-    imageSrc: '/images/products/mugs/motivational-coffee-mug-it-always-seems-impossible.jpg',
+    imageSrc: '/images/products/mugs/motivational-coffee-mug-it-always-seems-impossible.webp',
     description: 'Start your day with this motivational coffee mug featuring the quote "It always seems impossible until it\'s done"—perfect motivation in a mug!',
     features: [
       'Inspirational quote design',
@@ -486,7 +486,7 @@ const products: Product[] = [
     slug: 'motivational-tapestry-it-always-seems-impossible',
     category: 'Tapestry',
     price: 26.00,
-    imageSrc: '/images/products/tapestries/motivational-tapestry-it-always-seems-impossible.jpg',
+    imageSrc: '/images/products/tapestries/motivational-tapestry-it-always-seems-impossible.webp',
     description: 'Elevate your space with a motivational tapestry featuring an inspiring quote. This motivational quote tapestry brings daily encouragement to any wall.',
     features: [
       'Inspirational quote design',
@@ -508,7 +508,7 @@ const products: Product[] = [
     slug: 'motivational-tote-bag-it-always-seems-impossible',
     category: 'Tote Bag',
     price: 23.00,
-    imageSrc: '/images/products/tote-bags/motivational-tote-bag-it-always-seems-impossible.jpg',
+    imageSrc: '/images/products/tote-bags/motivational-tote-bag-it-always-seems-impossible.webp',
     description: 'Carry confidence with this motivational tote bag. A stylish motiv tote bag featuring an inspiring quote to keep you going wherever you are.',
     features: [
       'Inspirational quote design',
@@ -530,7 +530,7 @@ const products: Product[] = [
     slug: 'motivational-sticker-it-always-seems-impossible',
     category: 'Sticker',
     price: 3.00,
-    imageSrc: '/images/products/stickers/motivational-sticker-it-always-seems-impossible.jpg',
+    imageSrc: '/images/products/stickers/motivational-sticker-it-always-seems-impossible.webp',
     description: 'Brighten any surface with motivational stickers featuring powerful quotes. Perfect motivation stickers for laptops, or journals.',
     features: [
       'Inspirational quote design',
@@ -552,7 +552,7 @@ const products: Product[] = [
     slug: 'motivational-art-print-it-always-seems-impossible',
     category: 'Art Print',
     price: 14.00,
-    imageSrc: '/images/products/art/motivational-art-print-it-always-seems-impossible.jpg',
+    imageSrc: '/images/products/art/motivational-art-print-it-always-seems-impossible.webp',
     description: 'Inspire every space with motivational posters and art prints. This motivational quote art print is perfect for home, office, or creative workspaces.',
     features: [
       'Inspirational quote design',
@@ -574,7 +574,7 @@ const products: Product[] = [
     slug: 'sunflower-throw-pillow-bold-botanical-elegance',
     category: 'Throw Pillow',
     price: 25.00,
-    imageSrc: '/images/products/throw-pillows/sunflower-throw-pillow-bold-botanical-elegance.jpg',
+    imageSrc: '/images/products/throw-pillows/sunflower-throw-pillow-bold-botanical-elegance.webp',
     description: 'Brighten your space with a sunflower pillow featuring a detailed floral mandala. These sunflower throw pillows add charm, warmth, and nature-inspired style.',
     features: [
       'Vibrant sunflower mandala design',
@@ -596,7 +596,7 @@ const products: Product[] = [
     slug: 'sunflower-mandala-tapestry-bold-wall-art',
     category: 'Tapestry',
     price: 26.00,
-    imageSrc: '/images/products/tapestries/sunflower-mandala-tapestry-bold-wall-art.jpg',
+    imageSrc: '/images/products/tapestries/sunflower-mandala-tapestry-bold-wall-art.webp',
     description: 'Transform your space with this sunflower tapestry featuring a stunning mandala design. A perfect wall tapestry for sunflower lovers and boho-style rooms.',
     features: [
       'Vibrant sunflower mandala design',
@@ -618,7 +618,7 @@ const products: Product[] = [
     slug: 'sunflower-tote-bag-bold-floral-statement',
     category: 'Tote Bag',
     price: 23.00,
-    imageSrc: '/images/products/tote-bags/sunflower-tote-bag-bold-floral-statement.jpg',
+    imageSrc: '/images/products/tote-bags/sunflower-tote-bag-bold-floral-statement.webp',
     description: 'Carry sunshine with this sunflower tote bag featuring a vibrant floral design. A perfect tote bag for sunflower lovers and everyday style.',
     features: [
       'Vibrant sunflower mandala design',
@@ -640,7 +640,7 @@ const products: Product[] = [
     slug: 'sunflower-coffee-mug-brighten-your-mornings',
     category: 'Mug',
     price: 15.00,
-    imageSrc: '/images/products/mugs/sunflower-coffee-mug-brighten-your-mornings.jpg',
+    imageSrc: '/images/products/mugs/sunflower-coffee-mug-brighten-your-mornings.webp',
     description: 'Sip in style with this sunflower mug. A beautiful sunflower ceramic mug that brings warmth and joy to your coffee moments. Perfect for daily use or gifting.',
     features: [
       'Vibrant sunflower mandala design',
@@ -662,7 +662,7 @@ const products: Product[] = [
     slug: 'sunflower-art-print-vibrant-floral-wall-decor',
     category: 'Art Print',
     price: 14.00,
-    imageSrc: '/images/products/art/sunflower-art-print-vibrant-floral-wall-decor.jpg',
+    imageSrc: '/images/products/art/sunflower-art-print-vibrant-floral-wall-decor.webp',
     description: 'Add a touch of nature with this sunflower art print. Perfect for sunflower lovers, this poster brings warmth and charm to any home or office space.',
     features: [
       'Vibrant sunflower mandala design',
@@ -684,7 +684,7 @@ const products: Product[] = [
     slug: 'dusty-rose-tapestry-soft-pink-floral',
     category: 'Tapestry',
     price: 26.00,
-    imageSrc: '/images/products/tapestries/dusty-rose-tapestry-soft-pink-floral.jpg',
+    imageSrc: '/images/products/tapestries/dusty-rose-tapestry-soft-pink-floral.webp',
     description: "Add elegance to your space with this dusty rose floral tapestry. Featuring soft watercolor petals and golden accents, it's perfect for creating a peaceful, feminine atmosphere in any room.",
     features: [
       'Soft dusty rose watercolor design',
@@ -706,7 +706,7 @@ const products: Product[] = [
     slug: 'dusty-rose-throw-pillow-soft-pink-floral',
     category: 'Throw Pillow',
     price: 25.00,
-    imageSrc: '/images/products/throw-pillows/dusty-rose-throw-pillow-soft-pink-floral.jpg',
+    imageSrc: '/images/products/throw-pillows/dusty-rose-throw-pillow-soft-pink-floral.webp',
     description: "This dusty rose watercolor floral throw pillow brings charm and softness to your home décor. Ideal for bedrooms, living rooms, or cozy nooks with a romantic touch.",
     features: [
       'Soft dusty rose watercolor design',
@@ -728,7 +728,7 @@ const products: Product[] = [
     slug: 'dusty-rose-tote-bag-soft-rose',
     category: 'Tote Bag',
     price: 23.00,
-    imageSrc: '/images/products/tote-bags/dusty-rose-tote-bag-soft-rose.jpg',
+    imageSrc: '/images/products/tote-bags/dusty-rose-tote-bag-soft-rose.webp',
     description: "Carry beauty with you! This dusty rose floral watercolor tote bag blends art and functionality—perfect for everyday errands or as a stylish accessory.",
     features: [
       'Soft dusty rose watercolor design',
@@ -750,7 +750,7 @@ const products: Product[] = [
     slug: 'dusty-rose-floral-mug-rose-coffee-cup',
     category: 'Mug',
     price: 15.00,
-    imageSrc: '/images/products/mugs/dusty-rose-floral-mug-rose-coffee-cup.jpg',
+    imageSrc: '/images/products/mugs/dusty-rose-floral-mug-rose-coffee-cup.webp',
     description: 'Sip in style with this delicate dusty rose floral mug. A soft watercolor design makes it a perfect gift for flower lovers, artists, or anyone who loves calming aesthetics.',
     features: [
       'Soft dusty rose watercolor design',
@@ -772,7 +772,7 @@ const products: Product[] = [
     slug: 'dusty-rose-soft-pink-pin',
     category: 'Pin',
     price: 3.25,
-    imageSrc: '/images/products/pins/dusty-rose-soft-pink-pin.jpg',
+    imageSrc: '/images/products/pins/dusty-rose-soft-pink-pin.webp',
     description: 'This dusty rose watercolor flower pin is a delicate accessory for jackets, bags, or hats. A subtle touch of nature-inspired elegance you can wear anywhere.',
     features: [
       'Soft dusty rose watercolor design',
@@ -794,7 +794,7 @@ const products: Product[] = [
     slug: 'dusty-rose-soft-pink-sticker',
     category: 'Sticker',
     price: 3.00,
-    imageSrc: '/images/products/stickers/dusty-rose-soft-pink-sticker.jpg',
+    imageSrc: '/images/products/stickers/dusty-rose-soft-pink-sticker.webp',
     description: 'Decorate your laptop, journal, or water bottle with this elegant dusty rose floral sticker. Aesthetic and durable—perfect for those who love soft, botanical vibes.',
     features: [
       'Soft dusty rose watercolor design',
@@ -816,7 +816,7 @@ const products: Product[] = [
     slug: 'dusty-rose-art-print-wall-art-for-home-decor',
     category: 'Art Print',
     price: 14.00,
-    imageSrc: '/images/products/art/dusty-rose-art-print-wall-art-for-home-decor.jpg',
+    imageSrc: '/images/products/art/dusty-rose-art-print-wall-art-for-home-decor.webp',
     description: 'Elevate your wall space with this dusty rose floral watercolor art print. The soft pink tones and golden details add grace and sophistication to any gallery wall or office.',
     features: [
       'Soft dusty rose watercolor design',
@@ -838,7 +838,7 @@ const products: Product[] = [
     slug: 'tulip-throw-pillow-home-floral-decor',
     category: 'Throw Pillow',
     price: 25.00,
-    imageSrc: '/images/products/throw-pillows/tulip-throw-pillow-home-floral-decor.jpg',
+    imageSrc: '/images/products/throw-pillows/tulip-throw-pillow-home-floral-decor.webp',
     description: 'This soft, floral throw pillow showcases dusty rose tulips in a watercolor style. A perfect accent for couches, chairs, or beds, adding cozy elegance to your living space.',
     features: [
       'Watercolor tulip design',
@@ -882,7 +882,7 @@ const products: Product[] = [
     slug: 'tulip-art-print-botanical-wall-decor',
     category: 'Art Print',
     price: 14.00,
-    imageSrc: '/images/products/art/tulip-art-print-botanical-wall-decor.jpg',
+    imageSrc: '/images/products/art/tulip-art-print-botanical-wall-decor.wepb',
     description: 'This vibrant tulip watercolor art print captures the elegance of dusty rose. Perfect for brightening up your walls with botanical charm.',
     features: [
       'Watercolor tulip design',
@@ -904,7 +904,7 @@ const products: Product[] = [
     slug: 'tulip-tapestry-floral-wall-hanging',
     category: 'Tapestry',
     price: 26.00,
-    imageSrc: '/images/products/tapestries/tulip-tapestry-floral-wall-hanging.jpg',
+    imageSrc: '/images/products/tapestries/tulip-tapestry-floral-wall-hanging.webp',
     description: "Bring a touch of nature indoors with this elegant dusty rose tulip watercolor tapestry. Featuring hand-painted floral details and a dreamy background, it adds warmth and charm to any space.",
     features: [
       'Watercolor tulip design',
