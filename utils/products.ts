@@ -285,7 +285,7 @@ const products: Product[] = [
     slug: 'custom-cat-tote-bag-unique-tote-bag',
     category: 'Tote Bag',
     price: 27.00,
-    imageSrc: '/images/products/tote-bags/custom-cat-tote-bag-unique-tote-bag.web',
+    imageSrc: '/images/products/tote-bags/custom-cat-tote-bag-unique-tote-bag.webp',
     description: "Carry your love for your custom cat everywhere with this bold and stylish cat tote bag. Featuring a unique fist bump design with your pet's name, it's perfect for daily errands, gifts, or showing off your feline pride. A fun and functional choice for custom cat gifts, cat customes, and anyone who adores custom cats with personality.",
     features: [
       'Personalized with your cat\'s name',
@@ -882,7 +882,7 @@ const products: Product[] = [
     slug: 'tulip-art-print-botanical-wall-decor',
     category: 'Art Print',
     price: 14.00,
-    imageSrc: '/images/products/art/tulip-art-print-botanical-wall-decor.wepb',
+    imageSrc: '/images/products/art/tulip-art-print-botanical-wall-decor.webp',
     description: 'This vibrant tulip watercolor art print captures the elegance of dusty rose. Perfect for brightening up your walls with botanical charm.',
     features: [
       'Watercolor tulip design',
