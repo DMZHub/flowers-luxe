@@ -135,7 +135,7 @@ export default function PrivacyPolicyPage() {
                 If you have any questions or concerns about our Privacy Policy, please contact us at:
               </p>
               <p>
-                Email: <a href="mailto:privacy@flowersluxe.com" className="text-primary hover:underline">privacy@flowersluxe.com</a>
+                Email: <a href="mailto:info@flowersluxe.com" className="text-primary hover:underline">info@flowersluxe.com</a>
               </p>
             </div>
           </div>
