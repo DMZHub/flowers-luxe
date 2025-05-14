@@ -261,7 +261,7 @@ export default function ShopPage() {
                       Products link to our TeePublic store. Custom items require personalization before purchase.
                     </p>
                     <a 
-                      href="https://www.teepublic.com/user/flowersluxe" 
+                      href="https://store.flowersluxe.com/" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 text-primary text-sm font-medium mt-2 hover:underline"
