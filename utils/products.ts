@@ -226,7 +226,7 @@ const products: Product[] = [
     featured: true,
     isCustom: true,
     discount: {
-      percentage: 28.6
+      percentage: 30
     }
   },
   {
@@ -301,7 +301,7 @@ const products: Product[] = [
     featured: false,
     isCustom: true,
     discount: {
-      percentage: 20.7
+      percentage: 30
     }
   },
   {
