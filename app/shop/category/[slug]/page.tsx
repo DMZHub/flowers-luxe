@@ -233,7 +233,7 @@ export default function CategoryPage() {
                       Products link to our TeePublic store where you can complete your purchase.
                     </p>
                     <a 
-                      href="https://www.teepublic.com/user/flowersluxe" 
+                      href="https://store.flowersluxe.com/" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 text-primary text-sm font-medium mt-2 hover:underline"
