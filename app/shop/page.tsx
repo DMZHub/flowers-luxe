@@ -1,7 +1,7 @@
 // app/shop/page.tsx
 
 "use client"
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image'
 import Head from 'next/head'
 import Script from 'next/script'
@@ -33,6 +33,22 @@ export default function ShopPage() {
   const [viewMode, setViewMode] = useState('grid')
   const [priceRange, setPriceRange] = useState([0, 50])
   const [isFilterOpen, setIsFilterOpen] = useState(false)
+
+  // First, create a ref for the products section
+const productsRef = useRef(null);
+
+// Then modify your filter handlers to include scrolling
+const handleCategoryChange = (category) => {
+  setActiveCategory(category);
+  
+  // Add this scrolling logic
+  setTimeout(() => {
+    productsRef.current?.scrollIntoView({ 
+      behavior: 'smooth', 
+      block: 'start'
+    });
+  }, 100); // Small timeout to ensure state updates first
+};
   
   // Get products from centralized store
   const allProducts = getAllProducts()
@@ -221,11 +237,19 @@ export default function ShopPage() {
                             type="radio"
                             name="category"
                             checked={activeCategory === category}
-                            onChange={() => setActiveCategory(category)}
-                            className="w-4 h-4 text-primary focus:ring-primary border-gray-300"
-                          />
-                          <span className="text-gray-700">{category}</span>
-                        </label>
+                               onChange={() => {
+      setActiveCategory(category);
+      setTimeout(() => {
+        productsRef.current?.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start'
+        });
+      }, 100);
+    }}
+    className="w-4 h-4 text-primary focus:ring-primary border-gray-300"
+  />
+  <span className="text-gray-700">{category}</span>
+</label>
                       ))}
                     </div>
                   </div>
@@ -313,13 +337,19 @@ export default function ShopPage() {
                             name="category-mobile"
                             checked={activeCategory === category}
                             onChange={() => {
-                              setActiveCategory(category)
-                              setIsFilterOpen(false)
-                            }}
-                            className="w-4 h-4 text-primary focus:ring-primary border-gray-300"
-                          />
-                          <span className="text-gray-700">{category}</span>
-                        </label>
+      setActiveCategory(category);
+      setIsFilterOpen(false);
+      setTimeout(() => {
+        productsRef.current?.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start'
+        });
+      }, 100);
+    }}
+    className="w-4 h-4 text-primary focus:ring-primary border-gray-300"
+  />
+  <span className="text-gray-700">{category}</span>
+</label>
                       ))}
                     </div>
                   </div>
@@ -350,18 +380,25 @@ export default function ShopPage() {
                   </div>
                   
                 
-                    <button
-                    onClick={() => setIsFilterOpen(false)}
-                    className="w-full bg-primary text-white font-medium py-2 rounded-lg mt-6"
-                  >
-                    Apply Filters
-                  </button>
+     onClick={() => {
+    setIsFilterOpen(false);
+    setTimeout(() => {
+      productsRef.current?.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start'
+      });
+    }, 100);
+  }}
+  className="w-full bg-primary text-white font-medium py-2 rounded-lg mt-6"
+>
+  Apply Filters
+</button>
                 </div>
               </div>
             )}
             
             {/* Products Grid */}
-            <div className="flex-grow">
+           <div className="flex-grow" ref={productsRef}>
               {/* Toolbar */}
               <div className="flex flex-col sm:flex-row justify-between gap-4 mb-6">
                 <div>
