@@ -144,7 +144,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-medium text-lg mb-2">Email Us</h3>
-                    <a href="mailto:hello@flowersluxe.com" className="text-gray-600 hover:text-primary transition-colors">
+                    <a href="mailto:inof@flowersluxe.com" className="text-gray-600 hover:text-primary transition-colors">
                       info@flowersluxe.com
                     </a>
                     <p className="text-gray-500 text-sm mt-1">
