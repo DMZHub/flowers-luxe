@@ -339,7 +339,7 @@ export default function AboutPage() {
                   <div>
                     <h3 className="font-medium mb-1">Online Store</h3>
                     <a 
-                      href="https://www.teepublic.com/user/flowersluxe" 
+                      href="https://store.flowersluxe.com/" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-gray-600 hover:text-primary transition-colors"
