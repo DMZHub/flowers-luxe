@@ -209,7 +209,7 @@ const products: Product[] = [
     title: 'Custom Cat Pillow - Unique Cat Gift',
     slug: 'custom-cat-pillow-unique-cat-gift',
     category: 'Throw Pillow',
-    price: 29.00,
+    price: 35.00,
     imageSrc: '/images/products/throw-pillows/custom-cat-pillow-unique-cat-gift.webp',
     description: "Celebrate your bond with your cat using this bold Custom Cat Pillow! Featuring a unique fist bump design with your personal cat's name, this personalized cat pillow is perfect for custom cat gifts, memorials, or stylish decor. Our cat pillows custom made from striking artwork bring attitude, love, and flair to any space — ideal for true cat lovers who want a one-of-a-kind keepsake.",
     features: [
@@ -226,7 +226,7 @@ const products: Product[] = [
     featured: true,
     isCustom: true,
     discount: {
-      percentage: 15
+      percentage: 28.6
     }
   },
   {
@@ -234,7 +234,7 @@ const products: Product[] = [
     title: 'Custom Cat Mug - Personalized Mug for Cat Lovers',
     slug: 'custom-cat-mug-personalized-mug-for-cat-lovers',
     category: 'Mug',
-    price: 18.00,
+    price: 20.00,
     imageSrc: '/images/products/mugs/custom-cat-mug-personalized-mug-for-cat-lovers.webp',
     description: "Custom Cat Mug – Bold Fist Bump Design for Cat Lovers. Show off your bond with your custom cat using this unique mug featuring a cool fist bump illustration and your pet's name. Perfect for morning coffee or as a special custom cat gift. If you're looking for custom cat mugs, this bold design adds personality to every sip.",
     features: [
@@ -251,7 +251,7 @@ const products: Product[] = [
     featured: true,
     isCustom: true,
     discount: {
-      percentage: 15
+      percentage: 25
     }
   },
   {
@@ -259,7 +259,7 @@ const products: Product[] = [
     title: 'Custom Cat Stickers - Personalized Gifts',
     slug: 'custom-cat-stickers-personalized-gifts',
     category: 'Sticker',
-    price: 6.50,
+    price: 5,
     imageSrc: '/images/products/stickers/custom-cat-stickers-personalized-gifts.webp',
     description: "Make your laptop, water bottle, or journal pop with these bold custom cat stickers featuring your cat's name in a one-of-a-kind fist bump design. Perfect for gifting or personal use, these high-quality vinyl stickers are a fun way to show off your custom cat. Great for custom cat gifts, cat customes, and anyone who loves custom cats with attitude.",
     features: [
@@ -273,10 +273,10 @@ const products: Product[] = [
     externalUrl: '',
     customUrl: '/custom/custom-cat-stickers-personalized-gifts',
     isNew: true,
-    featured: false,
+    featured: true,
     isCustom: true,
     discount: {
-      percentage: 15
+      percentage: 40
     }
   },
   {
@@ -284,7 +284,7 @@ const products: Product[] = [
     title: 'Custom Cat Tote Bag - Unique Tote Bag',
     slug: 'custom-cat-tote-bag-unique-tote-bag',
     category: 'Tote Bag',
-    price: 27.00,
+    price: 29.00,
     imageSrc: '/images/products/tote-bags/custom-cat-tote-bag-unique-tote-bag.webp',
     description: "Carry your love for your custom cat everywhere with this bold and stylish cat tote bag. Featuring a unique fist bump design with your pet's name, it's perfect for daily errands, gifts, or showing off your feline pride. A fun and functional choice for custom cat gifts, cat customes, and anyone who adores custom cats with personality.",
     features: [
@@ -301,7 +301,7 @@ const products: Product[] = [
     featured: false,
     isCustom: true,
     discount: {
-      percentage: 15
+      percentage: 20.7
     }
   },
   {
