@@ -112,7 +112,7 @@ export default function TermsConditionsPage() {
                 If you have any questions about these Terms and Conditions, please contact us at:
               </p>
               <p>
-                Email: <a href="mailto:terms@flowersluxe.com" className="text-primary hover:underline">terms@flowersluxe.com</a>
+                Email: <a href="mailto:info@flowersluxe.com" className="text-primary hover:underline">info@flowersluxe.com</a>
               </p>
             </div>
           </div>
