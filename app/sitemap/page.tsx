@@ -194,7 +194,7 @@ export default function SitemapPage() {
                 </p>
               </div>
               <a 
-                href="https://www.teepublic.com/user/flowersluxe" 
+                href="https://store.flowersluxe.com/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn-primary whitespace-nowrap flex items-center gap-2"
