@@ -33,7 +33,7 @@ title: 'FlowersLuxe - Beautiful Floral Designs on Premium Products',
     description: 'Discover unique floral designs on premium products for your home and lifestyle',
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.flowersluxe.com',  
+    url: 'https://flowersluxe.com',  
     siteName: 'FlowersLuxe',
     images: [
       {
@@ -54,7 +54,7 @@ title: 'FlowersLuxe - Beautiful Floral Designs on Premium Products',
   },
 
   // Additional Metadata Enhancements
-  metadataBase: new URL('https://www.flowersluxe.com'),  
+  metadataBase: new URL('https://flowersluxe.com'),  
   alternates: {
     canonical: '/'
   },
