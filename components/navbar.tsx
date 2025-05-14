@@ -28,7 +28,7 @@ export function Navbar() {
     { name: 'Shop', url: '/shop', icon: ShoppingBag },
     { name: 'Blog', url: '/blog', icon: FileText },
     { name: 'About', url: '/about', icon: Info },
-    { name: 'TeePublic Store', url: 'store.flowersluxe.com', icon: ExternalLink, external: true }
+    { name: 'TeePublic Store', url: 'https://store.flowersluxe.com', icon: ExternalLink, external: true }
   ]
 
   useEffect(() => {
