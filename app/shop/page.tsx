@@ -1,10 +1,7 @@
-// app/shop/page.tsx
-
 "use client"
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Head from 'next/head'
-import Script from 'next/script'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Search, Filter, ChevronDown, Grid, List, Heart, ExternalLink, X } from 'lucide-react'
@@ -33,22 +30,9 @@ export default function ShopPage() {
   const [viewMode, setViewMode] = useState('grid')
   const [priceRange, setPriceRange] = useState([0, 50])
   const [isFilterOpen, setIsFilterOpen] = useState(false)
-
-  // First, create a ref for the products section
-const productsRef = useRef(null);
-
-// Then modify your filter handlers to include scrolling
-const handleCategoryChange = (category) => {
-  setActiveCategory(category);
   
-  // Add this scrolling logic
-  setTimeout(() => {
-    productsRef.current?.scrollIntoView({ 
-      behavior: 'smooth', 
-      block: 'start'
-    });
-  }, 100); // Small timeout to ensure state updates first
-};
+  // Added ref for scrolling to products section
+  const productsRef = useRef(null)
   
   // Get products from centralized store
   const allProducts = getAllProducts()
@@ -132,7 +116,7 @@ const handleCategoryChange = (category) => {
     `/shop${activeCategory !== 'All' ? `?category=${activeCategory}` : ''}`
   )
 
-  return (    
+  return (
     <>
       {/* SEO Schema Markup */}
       <SchemaMarkup schema={shopSchema} />
@@ -177,7 +161,15 @@ const handleCategoryChange = (category) => {
                 className="w-full py-3 pl-12 pr-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
                 placeholder="Search products..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value)
+                  setTimeout(() => {
+                    productsRef.current?.scrollIntoView({ 
+                      behavior: 'smooth', 
+                      block: 'start'
+                    });
+                  }, 100);
+                }}
                 aria-label="Search products"
               />
             </div>
@@ -237,19 +229,19 @@ const handleCategoryChange = (category) => {
                             type="radio"
                             name="category"
                             checked={activeCategory === category}
-                               onChange={() => {
-      setActiveCategory(category);
-      setTimeout(() => {
-        productsRef.current?.scrollIntoView({ 
-          behavior: 'smooth', 
-          block: 'start'
-        });
-      }, 100);
-    }}
-    className="w-4 h-4 text-primary focus:ring-primary border-gray-300"
-  />
-  <span className="text-gray-700">{category}</span>
-</label>
+                            onChange={() => {
+                              setActiveCategory(category);
+                              setTimeout(() => {
+                                productsRef.current?.scrollIntoView({ 
+                                  behavior: 'smooth', 
+                                  block: 'start'
+                                });
+                              }, 100);
+                            }}
+                            className="w-4 h-4 text-primary focus:ring-primary border-gray-300"
+                          />
+                          <span className="text-gray-700">{category}</span>
+                        </label>
                       ))}
                     </div>
                   </div>
@@ -272,7 +264,15 @@ const handleCategoryChange = (category) => {
                         max="50"
                         step="5"
                         value={priceRange[1]}
-                        onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
+                        onChange={(e) => {
+                          setPriceRange([priceRange[0], parseInt(e.target.value)]);
+                          setTimeout(() => {
+                            productsRef.current?.scrollIntoView({ 
+                              behavior: 'smooth', 
+                              block: 'start'
+                            });
+                          }, 100);
+                        }}
                         className="w-full accent-primary"
                         aria-label="Maximum price range"
                       />
@@ -337,19 +337,19 @@ const handleCategoryChange = (category) => {
                             name="category-mobile"
                             checked={activeCategory === category}
                             onChange={() => {
-      setActiveCategory(category);
-      setIsFilterOpen(false);
-      setTimeout(() => {
-        productsRef.current?.scrollIntoView({ 
-          behavior: 'smooth', 
-          block: 'start'
-        });
-      }, 100);
-    }}
-    className="w-4 h-4 text-primary focus:ring-primary border-gray-300"
-  />
-  <span className="text-gray-700">{category}</span>
-</label>
+                              setActiveCategory(category);
+                              setIsFilterOpen(false);
+                              setTimeout(() => {
+                                productsRef.current?.scrollIntoView({ 
+                                  behavior: 'smooth', 
+                                  block: 'start'
+                                });
+                              }, 100);
+                            }}
+                            className="w-4 h-4 text-primary focus:ring-primary border-gray-300"
+                          />
+                          <span className="text-gray-700">{category}</span>
+                        </label>
                       ))}
                     </div>
                   </div>
@@ -379,26 +379,26 @@ const handleCategoryChange = (category) => {
                     </div>
                   </div>
                   
-                
-     onClick={() => {
-    setIsFilterOpen(false);
-    setTimeout(() => {
-      productsRef.current?.scrollIntoView({ 
-        behavior: 'smooth', 
-        block: 'start'
-      });
-    }, 100);
-  }}
-  className="w-full bg-primary text-white font-medium py-2 rounded-lg mt-6"
->
-  Apply Filters
-</button>
+                  <button
+                    onClick={() => {
+                      setIsFilterOpen(false);
+                      setTimeout(() => {
+                        productsRef.current?.scrollIntoView({ 
+                          behavior: 'smooth', 
+                          block: 'start'
+                        });
+                      }, 100);
+                    }}
+                    className="w-full bg-primary text-white font-medium py-2 rounded-lg mt-6"
+                  >
+                    Apply Filters
+                  </button>
                 </div>
               </div>
             )}
             
             {/* Products Grid */}
-           <div className="flex-grow" ref={productsRef}>
+            <div className="flex-grow" ref={productsRef}>
               {/* Toolbar */}
               <div className="flex flex-col sm:flex-row justify-between gap-4 mb-6">
                 <div>
@@ -416,7 +416,15 @@ const handleCategoryChange = (category) => {
                   <div className="relative">
                     <select
                       value={sortOption}
-                      onChange={(e) => setSortOption(e.target.value)}
+                      onChange={(e) => {
+                        setSortOption(e.target.value);
+                        setTimeout(() => {
+                          productsRef.current?.scrollIntoView({ 
+                            behavior: 'smooth', 
+                            block: 'start'
+                          });
+                        }, 100);
+                      }}
                       className="pl-3 pr-8 py-2 border border-gray-200 rounded bg-white text-sm appearance-none focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
                       aria-label="Sort products"
                     >
@@ -540,9 +548,15 @@ const handleCategoryChange = (category) => {
                   </p>
                   <button
                     onClick={() => {
-                      setSearchQuery('')
-                      setActiveCategory('All')
-                      setPriceRange([0, 50])
+                      setSearchQuery('');
+                      setActiveCategory('All');
+                      setPriceRange([0, 50]);
+                      setTimeout(() => {
+                        productsRef.current?.scrollIntoView({ 
+                          behavior: 'smooth', 
+                          block: 'start'
+                        });
+                      }, 100);
                     }}
                     className="btn-secondary inline-flex"
                   >
