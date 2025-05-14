@@ -188,7 +188,7 @@ export function generateHomePageSchema(url: string): Record<string, any> {
         "https://www.instagram.com/flowersluxe1",
         "https://x.com/flowersluxe1",
         "https://facebook.com/profile.php?id=61575082658424",
-        "https://www.teepublic.com/user/flowersluxe"
+        "https://store.flowersluxe.com"
       ]
     }
   };
