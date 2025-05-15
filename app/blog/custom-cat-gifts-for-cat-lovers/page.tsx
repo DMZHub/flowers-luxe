@@ -16,7 +16,7 @@ export default function CatGiftsBlogPostPage() {
   
       <h2 id="custom-cat-pillow">Custom Cat Pillow: Cozy Up with a Personalized Touch</h2>
       <div class="relative rounded-lg overflow-hidden my-6">
-        <Link href="https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift">
+        <Link href="https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift" className="block">
           <Image
             src="/images/products/throw-pillows/custom-cat-pillow-unique-cat-gift.webp"
             alt="Custom cat pillow with personalized name - unique gift for cat lovers"
@@ -46,7 +46,7 @@ export default function CatGiftsBlogPostPage() {
   
       <h2 id="custom-cat-mug">Custom Cat Mug: Start Mornings With Pawsitive Vibes</h2>
       <div class="relative rounded-lg overflow-hidden my-6">
-        <Link href="https://flowersluxe.com/custom/custom-cat-mug-personalized-mug-for-cat-lovers">
+        <Link href="https://flowersluxe.com/custom/custom-cat-mug-personalized-mug-for-cat-lovers" className="block">
           <Image
             src="/images/products/mugs/custom-cat-mug-personalized-mug-for-cat-lovers.webp"
             alt="Custom cat mug with personalized name - unique gift for cat lovers"
@@ -76,7 +76,7 @@ export default function CatGiftsBlogPostPage() {
   
       <h2 id="custom-cat-stickers">Custom Cat Stickers: Add Your Cat to Everything</h2>
       <div class="relative rounded-lg overflow-hidden my-6">
-        <Link href="https://flowersluxe.com/custom/custom-cat-stickers-personalized-gifts">
+        <Link href="https://flowersluxe.com/custom/custom-cat-stickers-personalized-gifts" className="block">
           <Image
             src="/images/products/stickers/custom-cat-stickers-personalized-gifts.webp"
             alt="Custom cat stickers with personalized name - unique gift for cat lovers"
@@ -105,7 +105,7 @@ export default function CatGiftsBlogPostPage() {
   
       <h2 id="custom-cat-tote-bag">Custom Cat Tote Bag: Purr-sonalized Style on the Go</h2>
       <div class="relative rounded-lg overflow-hidden my-6">
-        <Link href="https://flowersluxe.com/custom/custom-cat-tote-bag-unique-tote-bag">
+        <Link href="https://flowersluxe.com/custom/custom-cat-tote-bag-unique-tote-bag" className="block">
           <Image
             src="/images/products/tote-bags/custom-cat-tote-bag-unique-tote-bag.webp"
             alt="Custom cat tote bag with personalized name - unique gift for cat lovers"
@@ -566,7 +566,7 @@ export default function CatGiftsBlogPostPage() {
                 <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
                   <h3 className="font-cormorant text-xl font-bold mb-4">Featured Products</h3>
                   <div className="space-y-4">
-                    <Link href="https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift" className="flex items-center gap-3 group">
+                    <Link href="https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift" className="block group">
                       <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
                         <Image
                           src="/images/products/throw-pillows/custom-cat-pillow-unique-cat-gift.webp"
