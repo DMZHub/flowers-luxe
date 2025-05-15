@@ -15,15 +15,17 @@ export default function CatGiftsBlogPostPage() {
       <p>Cat lovers don't just love their cats—they adore them, celebrate them, and want to see them in every part of their daily life. Whether it's a thoughtful gift for a fellow feline fanatic or a keepsake for your own furry friend, custom cat gifts make the bond between human and kitty even more special. Here are the top 4 personalized cat gift ideas for 2025 that are stylish, meaningful, and completely unique.</p>
   
       <h2 id="custom-cat-pillow">Custom Cat Pillow: Cozy Up with a Personalized Touch</h2>
-      <div class="relative rounded-lg overflow-hidden my-6">
-        <Link href="https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift" className="block">
-          <Image
-            src="/images/products/throw-pillows/custom-cat-pillow-unique-cat-gift.webp"
-            alt="Custom cat pillow with personalized name - unique gift for cat lovers"
-            width={800}
-            height={500}
-            className="w-full object-cover rounded-lg"
-          />
+      <div className="relative rounded-lg overflow-hidden my-6">
+        <Link href="https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift" passHref legacyBehavior>
+          <a className="cursor-pointer block">
+            <Image
+              src="/images/products/throw-pillows/custom-cat-pillow-unique-cat-gift.webp"
+              alt="Custom cat pillow with personalized name - unique gift for cat lovers"
+              width={800}
+              height={500}
+              className="w-full object-cover rounded-lg"
+            />
+          </a>
         </Link>
       </div>
       
@@ -45,15 +47,17 @@ export default function CatGiftsBlogPostPage() {
       </div>
   
       <h2 id="custom-cat-mug">Custom Cat Mug: Start Mornings With Pawsitive Vibes</h2>
-      <div class="relative rounded-lg overflow-hidden my-6">
-        <Link href="https://flowersluxe.com/custom/custom-cat-mug-personalized-mug-for-cat-lovers" className="block">
-          <Image
-            src="/images/products/mugs/custom-cat-mug-personalized-mug-for-cat-lovers.webp"
-            alt="Custom cat mug with personalized name - unique gift for cat lovers"
-            width={800}
-            height={500}
-            className="w-full object-cover rounded-lg"
-          />
+      <div className="relative rounded-lg overflow-hidden my-6">
+        <Link href="https://flowersluxe.com/custom/custom-cat-mug-personalized-mug-for-cat-lovers" passHref legacyBehavior>
+          <a className="cursor-pointer block">
+            <Image
+              src="/images/products/mugs/custom-cat-mug-personalized-mug-for-cat-lovers.webp"
+              alt="Custom cat mug with personalized name - unique gift for cat lovers"
+              width={800}
+              height={500}
+              className="w-full object-cover rounded-lg"
+            />
+          </a>
         </Link>
       </div>
       
@@ -75,15 +79,17 @@ export default function CatGiftsBlogPostPage() {
       </div>
   
       <h2 id="custom-cat-stickers">Custom Cat Stickers: Add Your Cat to Everything</h2>
-      <div class="relative rounded-lg overflow-hidden my-6">
-        <Link href="https://flowersluxe.com/custom/custom-cat-stickers-personalized-gifts" className="block">
-          <Image
-            src="/images/products/stickers/custom-cat-stickers-personalized-gifts.webp"
-            alt="Custom cat stickers with personalized name - unique gift for cat lovers"
-            width={800}
-            height={500}
-            className="w-full object-cover rounded-lg"
-          />
+      <div className="relative rounded-lg overflow-hidden my-6">
+        <Link href="https://flowersluxe.com/custom/custom-cat-stickers-personalized-gifts" passHref legacyBehavior>
+          <a className="cursor-pointer block">
+            <Image
+              src="/images/products/stickers/custom-cat-stickers-personalized-gifts.webp"
+              alt="Custom cat stickers with personalized name - unique gift for cat lovers"
+              width={800}
+              height={500}
+              className="w-full object-cover rounded-lg"
+            />
+          </a>
         </Link>
       </div>
       
@@ -104,15 +110,17 @@ export default function CatGiftsBlogPostPage() {
       </div>
   
       <h2 id="custom-cat-tote-bag">Custom Cat Tote Bag: Purr-sonalized Style on the Go</h2>
-      <div class="relative rounded-lg overflow-hidden my-6">
-        <Link href="https://flowersluxe.com/custom/custom-cat-tote-bag-unique-tote-bag" className="block">
-          <Image
-            src="/images/products/tote-bags/custom-cat-tote-bag-unique-tote-bag.webp"
-            alt="Custom cat tote bag with personalized name - unique gift for cat lovers"
-            width={800}
-            height={500}
-            className="w-full object-cover rounded-lg"
-          />
+      <div className="relative rounded-lg overflow-hidden my-6">
+        <Link href="https://flowersluxe.com/custom/custom-cat-tote-bag-unique-tote-bag" passHref legacyBehavior>
+          <a className="cursor-pointer block">
+            <Image
+              src="/images/products/tote-bags/custom-cat-tote-bag-unique-tote-bag.webp"
+              alt="Custom cat tote bag with personalized name - unique gift for cat lovers"
+              width={800}
+              height={500}
+              className="w-full object-cover rounded-lg"
+            />
+          </a>
         </Link>
       </div>
       
@@ -566,36 +574,40 @@ export default function CatGiftsBlogPostPage() {
                 <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
                   <h3 className="font-cormorant text-xl font-bold mb-4">Featured Products</h3>
                   <div className="space-y-4">
-                    <Link href="https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift" className="block group">
-                      <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
-                        <Image
-                          src="/images/products/throw-pillows/custom-cat-pillow-unique-cat-gift.webp"
-                          alt="Custom Cat Pillow"
-                          width={64}
-                          height={64}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                        />
-                      </div>
-                      <div>
-                        <h4 className="font-medium text-gray-900 group-hover:text-primary transition-colors">Custom Cat Pillow</h4>
-                        <p className="text-sm text-gray-500">Personalized with your cat's name</p>
-                      </div>
+                    <Link href="https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift" passHref legacyBehavior>
+                      <a className="flex items-center gap-3 group">
+                        <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
+                          <Image
+                            src="/images/products/throw-pillows/custom-cat-pillow-unique-cat-gift.webp"
+                            alt="Custom Cat Pillow"
+                            width={64}
+                            height={64}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                          />
+                        </div>
+                        <div>
+                          <h4 className="font-medium text-gray-900 group-hover:text-primary transition-colors">Custom Cat Pillow</h4>
+                          <p className="text-sm text-gray-500">Personalized with your cat's name</p>
+                        </div>
+                      </a>
                     </Link>
                     
-                    <Link href="https://flowersluxe.com/custom/custom-cat-mug-personalized-mug-for-cat-lovers" className="flex items-center gap-3 group">
-                      <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
-                        <Image
-                          src="/images/products/mugs/custom-cat-mug-personalized-mug-for-cat-lovers.webp"
-                          alt="Custom Cat Mug"
-                          width={64}
-                          height={64}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                        />
-                      </div>
-                      <div>
-                        <h4 className="font-medium text-gray-900 group-hover:text-primary transition-colors">Custom Cat Mug</h4>
-                        <p className="text-sm text-gray-500">Start mornings with pawsitive vibes</p>
-                      </div>
+                    <Link href="https://flowersluxe.com/custom/custom-cat-mug-personalized-mug-for-cat-lovers" passHref legacyBehavior>
+                      <a className="flex items-center gap-3 group">
+                        <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
+                          <Image
+                            src="/images/products/mugs/custom-cat-mug-personalized-mug-for-cat-lovers.webp"
+                            alt="Custom Cat Mug"
+                            width={64}
+                            height={64}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                          />
+                        </div>
+                        <div>
+                          <h4 className="font-medium text-gray-900 group-hover:text-primary transition-colors">Custom Cat Mug</h4>
+                          <p className="text-sm text-gray-500">Start mornings with pawsitive vibes</p>
+                        </div>
+                      </a>
                     </Link>
                   </div>
                 </div>
