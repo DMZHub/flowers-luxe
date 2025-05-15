@@ -6,102 +6,154 @@ import Head from 'next/head'
 import { ArrowLeft, Calendar, Clock, Share2, Bookmark, Facebook, Twitter, Linkedin } from 'lucide-react'
 import { useParams } from 'next/navigation'
 
-export default function CatDadMugBlogPostPage() {
+export default function CatGiftsBlogPostPage() {
   const { slug } = useParams()
   const blogPost = {
-    title: 'Cat Dad Mug – Unique Personalized Gift for Cat‑Loving Dads',
-    excerpt: 'Discover the perfect gift for cat-loving fathers with our personalized Cat Dad Mug. This custom ceramic mug features your cat's name and a playful fist-bump design that celebrates the special bond between dads and their feline friends.',
+    title: 'Top 4 Custom Cat Gifts for Cat Lovers - Personalized & Unique Ideas for 2025',
+    excerpt: 'Discover the purr-fect personalized gifts for cat lovers! Explore unique custom cat pillows, mugs, stickers, and tote bags to celebrate their furry friends in style for 2025.',
     content: `
-      <p>Every cat dad knows the scene: you're trying to sip your first coffee while your whiskered roommate winds between your feet. Why not celebrate that daily routine with a mug that's as devoted to your feline friend as you are? The <strong>Cat Dad Mug</strong> isn't just another cup—it's a <em>statement</em> for men who proudly wear the "cat dad" badge.</p>
-      
-      <h2 id="why-best-cat-dad-mug">Why This Might Be the Best Cat Dad Mug You'll Ever Own</h2>
-      <div class="relative rounded-lg overflow-hidden my-6">
-        <Link href="https://flowersluxe.com/custom/cat-dad-mug-unique-personalized-gift-for-cat-loving-dads" className="block">
-          <Image
-            src="/images/products/mug/cat-dad-mug-personalized-cat-gifts.webp"
-            alt="Cat Dad Mug with personalized name - unique gift for cat-loving fathers"
-            width={800}
-            height={500}
-            className="w-full object-cover rounded-lg"
-          />
+      <p>Cat lovers don't just love their cats—they adore them, celebrate them, and want to see them in every part of their daily life. Whether it's a thoughtful gift for a fellow feline fanatic or a keepsake for your own furry friend, custom cat gifts make the bond between human and kitty even more special. Here are the top 4 personalized cat gift ideas for 2025 that are stylish, meaningful, and completely unique.</p>
+  
+      <h2 id="custom-cat-pillow">Custom Cat Pillow: Cozy Up with a Personalized Touch</h2>
+      <div className="relative rounded-lg overflow-hidden my-6">
+        <Link href="https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift" passHref legacyBehavior>
+          <a className="cursor-pointer block">
+            <Image
+              src="/images/products/throw-pillows/custom-cat-pillow-unique-cat-gift.webp"
+              alt="Custom cat pillow with personalized name - unique gift for cat lovers"
+              width={800}
+              height={500}
+              className="w-full object-cover rounded-lg"
+            />
+          </a>
         </Link>
       </div>
       
+      <p>Celebrate your bond with a one-of-a-kind <strong>custom cat pillow</strong>. Featuring a bold fist bump design personalized with your cat's name, these pillows add warmth and attitude to any room.</p>
+      
+      <p><strong>Why You'll Love It:</strong></p>
       <ul>
-        <li><strong>Personalized Artwork:</strong> Add your cat's name (or multiple names if you're a multi‑cat household) beneath a playful fist‑bump illustration.</li>
-        <li><strong>Premium Ceramic Build:</strong> 11 oz, microwave‑safe, and ready for countless dishwasher cycles.</li>
-        <li><strong>Gloss Finish:</strong> The embedded image won't fade, even after years of caffeine‑fuelled mornings.</li>
-        <li><strong>Made in the USA:</strong> Crafted and vacuum‑form printed for sharp detail and long‑lasting color.</li>
+        <li>Personalized with your cat's name</li>
+        <li>Textured Poly "Twill" pillow cover with concealed zipper</li>
+        <li>Synthetic insert included for comfort</li>
+        <li>Machine washable and handcrafted in the USA</li>
+        <li>Makes an unforgettable gift for cat lovers or a cozy tribute to a beloved pet</li>
       </ul>
       
-      <blockquote class="bg-primary/5 p-4 border-l-4 border-primary my-6 italic">
-        If you've been hunting for <em>custom cat dad gifts</em> that feel genuine—not generic—this mug sits at the top of the list.
-      </blockquote>
+      <div class="my-6">
+        <Link href="https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift" className="inline-flex items-center bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition-colors">
+          Submit Your Cat's Name to Order
+        </Link>
+      </div>
+  
+      <h2 id="custom-cat-mug">Custom Cat Mug: Start Mornings With Pawsitive Vibes</h2>
+      <div className="relative rounded-lg overflow-hidden my-6">
+        <Link href="https://flowersluxe.com/custom/custom-cat-mug-personalized-mug-for-cat-lovers" passHref legacyBehavior>
+          <a className="cursor-pointer block">
+            <Image
+              src="/images/products/mugs/custom-cat-mug-personalized-mug-for-cat-lovers.webp"
+              alt="Custom cat mug with personalized name - unique gift for cat lovers"
+              width={800}
+              height={500}
+              className="w-full object-cover rounded-lg"
+            />
+          </a>
+        </Link>
+      </div>
+      
+      <p>This <strong>personalized cat mug</strong> features the same iconic fist bump design, making each sip a sweet reminder of your feline companion. Whether it's for coffee, tea, or cocoa, this is a daily dose of cat love.</p>
+      
+      <p><strong>Key Features:</strong></p>
+      <ul>
+        <li>Printed with your cat's name</li>
+        <li>11oz premium ceramic mug</li>
+        <li>Microwave and top-rack dishwasher safe</li>
+        <li>Gloss finish that won't fade</li>
+        <li>Designed and vacuum-form printed in the USA</li>
+      </ul>
       
       <div class="my-6">
-        <Link href="https://flowersluxe.com/custom/cat-dad-mug-unique-personalized-gift-for-cat-loving-dads" className="inline-flex items-center bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition-colors">
+        <Link href="https://flowersluxe.com/custom/custom-cat-mug-personalized-mug-for-cat-lovers" className="inline-flex items-center bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition-colors">
+          Submit Your Cat's Name to Order
+        </Link>
+      </div>
+  
+      <h2 id="custom-cat-stickers">Custom Cat Stickers: Add Your Cat to Everything</h2>
+      <div className="relative rounded-lg overflow-hidden my-6">
+        <Link href="https://flowersluxe.com/custom/custom-cat-stickers-personalized-gifts" passHref legacyBehavior>
+          <a className="cursor-pointer block">
+            <Image
+              src="/images/products/stickers/custom-cat-stickers-personalized-gifts.webp"
+              alt="Custom cat stickers with personalized name - unique gift for cat lovers"
+              width={800}
+              height={500}
+              className="w-full object-cover rounded-lg"
+            />
+          </a>
+        </Link>
+      </div>
+      
+      <p>Brighten up your gear with <strong>custom cat stickers</strong>! Featuring your cat's name and a bold floral fist bump, these stickers are waterproof and full of flair. A fun, low-cost gift that makes a big impression.</p>
+      
+      <p><strong>Why They're Awesome:</strong></p>
+      <ul>
+        <li>Individually kiss cut vinyl with semi-gloss finish</li>
+        <li>Waterproof and perfect for laptops, bottles, and planners</li>
+        <li>Printed with eco-friendly inks in the USA</li>
+        <li>3x4 inch size with white border for a polished look</li>
+      </ul>
+      
+      <div class="my-6">
+        <Link href="https://flowersluxe.com/custom/custom-cat-stickers-personalized-gifts" className="inline-flex items-center bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition-colors">
+          Submit Your Cat's Name to Order
+        </Link>
+      </div>
+  
+      <h2 id="custom-cat-tote-bag">Custom Cat Tote Bag: Purr-sonalized Style on the Go</h2>
+      <div className="relative rounded-lg overflow-hidden my-6">
+        <Link href="https://flowersluxe.com/custom/custom-cat-tote-bag-unique-tote-bag" passHref legacyBehavior>
+          <a className="cursor-pointer block">
+            <Image
+              src="/images/products/tote-bags/custom-cat-tote-bag-unique-tote-bag.webp"
+              alt="Custom cat tote bag with personalized name - unique gift for cat lovers"
+              width={800}
+              height={500}
+              className="w-full object-cover rounded-lg"
+            />
+          </a>
+        </Link>
+      </div>
+      
+      <p>Take your cat everywhere you go with this stylish and spacious <strong>custom cat tote bag</strong>. Great for shopping, the gym, or beach days, and made to last with eco-conscious materials.</p>
+      
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Personalized floral fist bump design with your cat's name</li>
+        <li>Durable poly-poplin outer & laminate-coated interior</li>
+        <li>Comfortable cotton handles</li>
+        <li>Roomy enough for groceries, books, or weekend gear</li>
+        <li>Machine washable and reusable</li>
+      </ul>
+      
+      <div class="my-6">
+        <Link href="https://flowersluxe.com/custom/custom-cat-tote-bag-unique-tote-bag" className="inline-flex items-center bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition-colors">
           Submit Your Cat's Name to Order
         </Link>
       </div>
       
-      <h2 id="design-story">The Story Behind the Design</h2>
-      <p>Our art team started with a simple idea: capture a feline's paw reaching in for a fist bump. It's the unspoken agreement every cat lover understands—respect, friendship, and maybe a request for breakfast. By adding your cat's name in a handwritten script, the mug becomes a one‑of‑a‑kind keepsake.</p>
-      
-      <h2 id="who-will-love">Who Will Love This Mug?</h2>
-      
-      <h3>New Cat Dads</h3>
-      <p>That first kitten deserves a proper introduction to morning coffee.</p>
-      
-      <h3>Veteran Cat Dads</h3>
-      <p>Because the cats, the stories, and the caffeine just keep multiplying.</p>
-      
-      <h3>Daughters & Sons Looking for Gifts for Dad Who Has Everything</h3>
-      <p>If socks and power tools feel stale, a <em>personalized cat mug</em> will score heartfelt points.</p>
-      
-      <h3>Girl Dad Cat Lovers</h3>
-      <p>For dads who juggle tea parties, homework help, and fur‑baby shenanigans all before 9 a.m.</p>
-      
-      <h2 id="how-to-order">How to Order</h2>
+      <h2 id="how-it-works">How It Works:</h2>
       <ol>
-        <li><strong>Click "Submit Your Cat's Name"</strong> below the product photo.</li>
-        <li>Enter your cat's name (or names) and your email.</li>
-        <li>We'll send your bespoke design proof within 24 hours.</li>
-        <li>Approve the artwork, receive a private TeePublic link, and complete checkout at your convenience.</li>
+        <li>Choose your favorite product from above.</li>
+        <li>Submit your cat's name using the product link.</li>
+        <li>We'll create the custom design and email you a link to purchase securely on our TeePublic store.</li>
       </ol>
       
-      <h2 id="technical-specs">Technical Specs at a Glance</h2>
-      <ul>
-        <li><strong>Capacity:</strong> 11 oz (standard)</li>
-        <li><strong>Material:</strong> Lead‑free, BPA‑free ceramic</li>
-        <li><strong>Finish:</strong> High‑gloss, fade‑resistant print</li>
-        <li><strong>Care:</strong> Microwave‑safe, top‑rack dishwasher‑safe</li>
-        <li><strong>Origin:</strong> Designed, printed, and packaged in the USA</li>
-      </ul>
-      
-      <h2 id="faqs">Frequently Asked Questions</h2>
-      <p><strong>Q: Can I put more than one cat on the mug?</strong><br />
-      A: Absolutely—just list each name when you fill out the order form.</p>
-      
-      <p><strong>Q: Is this suitable as a hot‑chocolate mug for my kids?</strong><br />
-      A: Yes! It's food‑safe and great for any hot beverage.</p>
-      
-      <p><strong>Q: I'm searching for gifts for dad from daughter—will this arrive before Father's Day?</strong><br />
-      A: We design within 24 hours and ship from the U.S.; most orders arrive in 3‑6 business days.</p>
-      
-      <h2 id="final-sips">Final Sips</h2>
-      <p>Being a cat dad is part patience, part play, and 100 percent love. With the <strong>Cat Dad Mug</strong>, every gulp of coffee—or tea, or cocoa—carries a reminder of that bond. For birthdays, Father's Day, or "just because," this is one of those <em>gifts for cat dads</em> that will never end up forgotten in the back of a cupboard.</p>
-      
-      <p>Ready to claim the <em>best cat dad mug</em> for yourself—or surprise a dad who already owns everything else?</p>
-      
-      <div class="my-6">
-        <Link href="https://flowersluxe.com/custom/cat-dad-mug-unique-personalized-gift-for-cat-loving-dads" className="inline-flex items-center bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition-colors">
-          Start Your Custom Order Here
-        </Link>
-      </div>
+      <h2 id="final-thoughts">Final Thoughts</h2>
+      <p>These custom cat gifts are more than just cute items—they're daily reminders of love, loyalty, and your cat's unique personality. Whether it's for yourself or another cat lover in your life, our personalized products turn everyday items into meaningful keepsakes.</p>
     `,
-    imageSrc: '/images/blog/cat-dad-mug-unique-personalized-gift-for-cat-loving-dads.webp',
-    date: 'May 17, 2025',
-    readTime: '5 min read',
+    imageSrc: '/images/blog/top-4-custom-cat-gifts-for-cat-lovers-custom-cat-pillow-and-mug-sticker-tote-bag-ersonalized-&-unique-ideas.webp',
+    date: 'May 15, 2025',
+    readTime: '6 min read',
     category: 'Gift Ideas',
     author: {
       name: 'Ryan John',
@@ -139,8 +191,8 @@ export default function CatDadMugBlogPostPage() {
     "datePublished": new Date(blogPost.date).toISOString(),
     "dateModified": new Date(blogPost.date).toISOString(),
     "articleSection": blogPost.category,
-    "timeRequired": "PT5M",
-    "keywords": "cat dad mug, cat dad gift, personalized cat mug, gifts for cat dads, custom cat gifts, dad gifts, cat lover gifts, father's day gifts, gifts for dad, best cat dad mug, girl dad gift",
+    "timeRequired": "PT6M",
+    "keywords": "custom cat gifts, personalized cat gifts, cat lover gifts, custom cat pillow, custom cat mug, custom cat stickers, custom cat tote bag, cat merchandise, unique cat gifts, personalized pet gifts",
     "articleBody": blogPost.excerpt,
     "speakable": {
       "@type": "SpeakableSpecification",
@@ -149,55 +201,76 @@ export default function CatDadMugBlogPostPage() {
   };
 
   // Product schema for the items
-  const productSchema = {
-    "@context": "https://schema.org/",
-    "@type": "Product",
-    "name": "Cat Dad Mug",
-    "image": "https://flowersluxe.com/images/products/mug/cat-dad-mug-personalized-cat-gifts.webp",
-    "description": "Personalized Cat Dad Mug featuring a playful fist bump design with your cat's name, perfect for cat-loving fathers",
-    "brand": {
-      "@type": "Brand",
-      "name": "FlowersLuxe"
-    },
-    "offers": {
-      "@type": "Offer",
-      "url": "https://flowersluxe.com/custom/cat-dad-mug-unique-personalized-gift-for-cat-loving-dads",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    }
-  };
-
-  // FAQ schema
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Can I put more than one cat on the mug?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Absolutely—just list each name when you fill out the order form."
-        }
+  const productSchemas = [
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Custom Cat Pillow",
+      "image": "https://flowersluxe.com/images/products/throw-pillows/custom-cat-pillow-unique-cat-gift.webp",
+      "description": "Personalized cat pillow featuring a bold fist bump design with your cat's name",
+      "brand": {
+        "@type": "Brand",
+        "name": "FlowersLuxe"
       },
-      {
-        "@type": "Question",
-        "name": "Is this suitable as a hot-chocolate mug for my kids?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes! It's food-safe and great for any hot beverage."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Will this arrive before Father's Day?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We design within 24 hours and ship from the U.S.; most orders arrive in 3-6 business days."
-        }
+      "offers": {
+        "@type": "Offer",
+        "url": "https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
       }
-    ]
-  };
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Custom Cat Mug",
+      "image": "https://flowersluxe.com/images/products/mugs/custom-cat-mug-personalized-mug-for-cat-lovers.webp",
+      "description": "Personalized cat mug with your cat's name and iconic fist bump design",
+      "brand": {
+        "@type": "Brand",
+        "name": "FlowersLuxe"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://flowersluxe.com/custom/custom-cat-mug-personalized-mug-for-cat-lovers",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Custom Cat Stickers",
+      "image": "https://flowersluxe.com/images/products/stickers/custom-cat-stickers-personalized-gifts.webp",
+      "description": "Waterproof custom cat stickers featuring your cat's name and floral fist bump design",
+      "brand": {
+        "@type": "Brand",
+        "name": "FlowersLuxe"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://flowersluxe.com/custom/custom-cat-stickers-personalized-gifts",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Custom Cat Tote Bag",
+      "image": "https://flowersluxe.com/images/products/tote-bags/custom-cat-tote-bag-unique-tote-bag.webp",
+      "description": "Spacious custom cat tote bag with personalized floral fist bump design and your cat's name",
+      "brand": {
+        "@type": "Brand",
+        "name": "FlowersLuxe"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://flowersluxe.com/custom/custom-cat-tote-bag-unique-tote-bag",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  ];
 
   // Add smooth scrolling for anchor links
   useEffect(() => {
@@ -248,13 +321,7 @@ export default function CatDadMugBlogPostPage() {
       {/* Add product schema markup */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-      />
-      
-      {/* Add FAQ schema markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchemas) }}
       />
       
       {/* Blog Post Header */}
@@ -322,7 +389,7 @@ export default function CatDadMugBlogPostPage() {
         <div className="relative h-64 md:h-96 -mt-10 mb-12 rounded-xl overflow-hidden shadow-md">
           <Image
             src={blogPost.imageSrc}
-            alt={`Personalized Cat Dad Mug with custom cat name - perfect gift for cat-loving fathers - ${blogPost.title}`}
+            alt={`Collection of custom cat gifts including pillows, mugs, stickers and tote bags - ${blogPost.title}`}
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 1200px"
@@ -350,11 +417,6 @@ export default function CatDadMugBlogPostPage() {
                   }
                   
                   .prose h3 {
-                    font-size: 1.35rem !important;
-                    margin-top: 1.75rem !important;
-                    margin-bottom: 0.75rem !important;
-                    font-weight: 600 !important;
-                    color: #2d3748 !important;
                     scroll-margin-top: 100px;
                   }
                   
@@ -368,13 +430,12 @@ export default function CatDadMugBlogPostPage() {
                     color: #1a202c !important;
                   }
                   
-                  .prose ul, .prose ol {
+                  .prose ul {
                     margin-bottom: 1.5rem !important;
                   }
                   
-                  .prose blockquote {
-                    font-style: italic !important;
-                    color: #4a5568 !important;
+                  .prose ol {
+                    margin-bottom: 1.5rem !important;
                   }
                 `}</style>
                 <div dangerouslySetInnerHTML={{ __html: blogPost.content }} />
@@ -450,76 +511,70 @@ export default function CatDadMugBlogPostPage() {
                   <nav aria-label="Article Table of Contents">
                     <ul className="space-y-2">
                       <li>
-                        <a href="#why-best-cat-dad-mug" className="text-gray-600 hover:text-primary">
-                          <span>Why This Might Be the Best Cat Dad Mug</span>
+                        <a href="#custom-cat-pillow" className="text-gray-600 hover:text-primary">
+                          <span>Custom Cat Pillow</span>
                         </a>
                       </li>
                       <li>
-                        <a href="#design-story" className="text-gray-600 hover:text-primary">
-                          <span>The Story Behind the Design</span>
+                        <a href="#custom-cat-mug" className="text-gray-600 hover:text-primary">
+                          <span>Custom Cat Mug</span>
                         </a>
                       </li>
                       <li>
-                        <a href="#who-will-love" className="text-gray-600 hover:text-primary">
-                          <span>Who Will Love This Mug</span>
+                        <a href="#custom-cat-stickers" className="text-gray-600 hover:text-primary">
+                          <span>Custom Cat Stickers</span>
                         </a>
                       </li>
                       <li>
-                        <a href="#how-to-order" className="text-gray-600 hover:text-primary">
-                          <span>How to Order</span>
+                        <a href="#custom-cat-tote-bag" className="text-gray-600 hover:text-primary">
+                          <span>Custom Cat Tote Bag</span>
                         </a>
                       </li>
                       <li>
-                        <a href="#technical-specs" className="text-gray-600 hover:text-primary">
-                          <span>Technical Specs</span>
+                        <a href="#how-it-works" className="text-gray-600 hover:text-primary">
+                          <span>How It Works</span>
                         </a>
                       </li>
                       <li>
-                        <a href="#faqs" className="text-gray-600 hover:text-primary">
-                          <span>FAQs</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#final-sips" className="text-gray-600 hover:text-primary">
-                          <span>Final Sips</span>
+                        <a href="#final-thoughts" className="text-gray-600 hover:text-primary">
+                          <span>Final Thoughts</span>
                         </a>
                       </li>
                     </ul>
                   </nav>
                 </div>
                 
-                {/* Gift Occasion Suggestions */}
+                {/* Save for Later Option */}
                 <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm mb-8">
-                  <h3 className="font-cormorant text-xl font-bold mb-4">Perfect Gift For</h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-primary rounded-full"></span>
-                      <span>Father's Day</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-primary rounded-full"></span>
-                      <span>Birthday Gifts</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-primary rounded-full"></span>
-                      <span>Christmas Gifts</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-primary rounded-full"></span>
-                      <span>"Just Because" Surprises</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-primary rounded-full"></span>
-                      <span>New Cat Parent Celebration</span>
-                    </li>
-                  </ul>
+                  <div className="flex items-center gap-3">
+                    <Bookmark size={20} className="text-primary" />
+                    <h3 className="font-medium">Save for later</h3>
+                  </div>
+                  <p className="text-sm text-gray-600 mt-2 mb-4">
+                    Want to remember these gift ideas? Bookmark this page to come back to it later.
+                  </p>
+                  <button 
+                    className="w-full py-2 px-4 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
+                    onClick={() => {
+                      if (window.sidebar && window.sidebar.addPanel) { 
+                        window.sidebar.addPanel(document.title, window.location.href, ''); 
+                      } else if (window.external && 'AddFavorite' in window.external) { 
+                        window.external.AddFavorite(window.location.href, document.title);
+                      } else { 
+                        alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') != - 1 ? 'Command/Cmd' : 'CTRL') + ' + D to bookmark this page.');
+                      }
+                    }}
+                  >
+                    <Bookmark size={16} />
+                    <span>Bookmark Page</span>
+                  </button>
                 </div>
                 
                 {/* Related Products */}
                 <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
-                  <h3 className="font-cormorant text-xl font-bold mb-4">You Might Also Like</h3>
+                  <h3 className="font-cormorant text-xl font-bold mb-4">Featured Products</h3>
                   <div className="space-y-4">
-                    <Link href="https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift" className="flex items-center gap-3 group">
+                    <Link href="https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift" className="block group">
                       <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
                         <Image
                           src="/images/products/throw-pillows/custom-cat-pillow-unique-cat-gift.webp"
@@ -531,23 +586,23 @@ export default function CatDadMugBlogPostPage() {
                       </div>
                       <div>
                         <h4 className="font-medium text-gray-900 group-hover:text-primary transition-colors">Custom Cat Pillow</h4>
-                        <p className="text-sm text-gray-500">Add a cozy touch to your home</p>
+                        <p className="text-sm text-gray-500">Personalized with your cat's name</p>
                       </div>
                     </Link>
                     
-                    <Link href="https://flowersluxe.com/custom/custom-cat-tote-bag-unique-tote-bag" className="flex items-center gap-3 group">
+                    <Link href="https://flowersluxe.com/custom/custom-cat-mug-personalized-mug-for-cat-lovers" className="flex items-center gap-3 group">
                       <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
                         <Image
-                          src="/images/products/tote-bags/custom-cat-tote-bag-unique-tote-bag.webp"
-                          alt="Custom Cat Tote Bag"
+                          src="/images/products/mugs/custom-cat-mug-personalized-mug-for-cat-lovers.webp"
+                          alt="Custom Cat Mug"
                           width={64}
                           height={64}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                         />
                       </div>
                       <div>
-                        <h4 className="font-medium text-gray-900 group-hover:text-primary transition-colors">Custom Cat Tote Bag</h4>
-                        <p className="text-sm text-gray-500">Take your cat everywhere</p>
+                        <h4 className="font-medium text-gray-900 group-hover:text-primary transition-colors">Custom Cat Mug</h4>
+                        <p className="text-sm text-gray-500">Start mornings with pawsitive vibes</p>
                       </div>
                     </Link>
                   </div>
