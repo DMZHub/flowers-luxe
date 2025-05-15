@@ -1,9 +1,9 @@
 "use client"
-import React, { useState, useRef, useEffect } from 'react';
+
+import React, { useState, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { useParams, useSearchParams } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import { Search, Filter, ChevronDown, Grid, List, Heart, ExternalLink, X, ArrowLeft } from 'lucide-react';
 import ProductCard from '@/components/ProductCard';
 import SchemaMarkup from '@/components/SchemaMarkup';
@@ -19,20 +19,18 @@ import {
 import { generateProductCollectionSchema, generateBreadcrumbSchema } from '@/utils/schema';
 
 export default function CategoryPage() {
-  const { slug } = useParams() as { slug: string };
-  const searchParams = useSearchParams();
+  // Get slug from URL params
+  const params = useParams();
+  const slug = typeof params.slug === 'string' ? params.slug : Array.isArray(params.slug) ? params.slug[0] : '';
+  
+  // State for filters and UI
   const [searchQuery, setSearchQuery] = useState('');
   const [sortOption, setSortOption] = useState('featured');
   const [viewMode, setViewMode] = useState('grid');
   const [priceRange, setPriceRange] = useState([0, 50]);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
-  const [selectedAvailability, setSelectedAvailability] = useState({
-    newArrivals: false,
-    featured: false,
-    onSale: false
-  });
-
-  // Reference for scrolling to products section
+  
+  // Reference for scrolling
   const productsRef = useRef(null);
 
   // Get category data
@@ -52,55 +50,16 @@ export default function CategoryPage() {
     imageSrc: `/images/categories/flower-${slug}.webp`,
   };
 
-  // Effect to handle URL parameters on load
-  useEffect(() => {
-    // Check for filter parameters in URL
-    const sortParam = searchParams.get('sort');
-    if (sortParam && ['featured', 'price-low', 'price-high', 'name-asc', 'name-desc'].includes(sortParam)) {
-      setSortOption(sortParam);
-    }
-
-    const viewParam = searchParams.get('view');
-    if (viewParam && ['grid', 'list'].includes(viewParam)) {
-      setViewMode(viewParam);
-    }
-
-    const queryParam = searchParams.get('query');
-    if (queryParam) {
-      setSearchQuery(queryParam);
-    }
-
-    // Parse availability filters
-    const newParam = searchParams.get('new');
-    const featuredParam = searchParams.get('featured');
-    const saleParam = searchParams.get('sale');
-
-    setSelectedAvailability({
-      newArrivals: newParam === 'true',
-      featured: featuredParam === 'true',
-      onSale: saleParam === 'true'
-    });
-  }, [searchParams]);
-
-  // Filter products based on search, price range, and availability
+  // Filter products based on search and price range
   const filteredProducts = categoryProducts.filter(product => {
-    const matchesSearch = product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          product.description.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesSearch = searchQuery 
+      ? product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        product.description.toLowerCase().includes(searchQuery.toLowerCase())
+      : true;
     
     const matchesPrice = product.price >= priceRange[0] && product.price <= priceRange[1];
     
-    // Check availability filters
-    const matchesAvailability = (
-      (!selectedAvailability.newArrivals || product.isNew) &&
-      (!selectedAvailability.featured || product.featured) &&
-      (!selectedAvailability.onSale || product.discount)
-    );
-
-    // If no availability filters are selected, show all products
-    const availabilityFiltersActive = Object.values(selectedAvailability).some(value => value);
-    const shouldCheckAvailability = availabilityFiltersActive;
-
-    return matchesSearch && matchesPrice && (!shouldCheckAvailability || matchesAvailability);
+    return matchesSearch && matchesPrice;
   });
 
   // Sort products based on selected option
@@ -120,19 +79,15 @@ export default function CategoryPage() {
     }
   });
 
-  // Toggle availability filter
-  const toggleAvailabilityFilter = (filterName) => {
-    setSelectedAvailability(prev => ({
-      ...prev,
-      [filterName]: !prev[filterName]
-    }));
-
-    // Scroll to products after filter change
+  // Scroll helper function
+  const scrollToProducts = () => {
     setTimeout(() => {
-      productsRef.current?.scrollIntoView({ 
-        behavior: 'smooth', 
-        block: 'start'
-      });
+      if (productsRef.current) {
+        productsRef.current.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start'
+        });
+      }
     }, 100);
   };
 
@@ -191,12 +146,7 @@ export default function CategoryPage() {
                   value={searchQuery}
                   onChange={(e) => {
                     setSearchQuery(e.target.value);
-                    setTimeout(() => {
-                      productsRef.current?.scrollIntoView({ 
-                        behavior: 'smooth', 
-                        block: 'start'
-                      });
-                    }, 100);
+                    scrollToProducts();
                   }}
                 />
               </div>
@@ -252,12 +202,7 @@ export default function CategoryPage() {
                         value={priceRange[1]}
                         onChange={(e) => {
                           setPriceRange([priceRange[0], parseInt(e.target.value)]);
-                          setTimeout(() => {
-                            productsRef.current?.scrollIntoView({ 
-                              behavior: 'smooth', 
-                              block: 'start'
-                            });
-                          }, 100);
+                          scrollToProducts();
                         }}
                         className="w-full accent-primary"
                       />
@@ -271,18 +216,16 @@ export default function CategoryPage() {
                       <label className="flex items-center gap-2 cursor-pointer">
                         <input
                           type="checkbox"
-                          checked={selectedAvailability.newArrivals}
-                          onChange={() => toggleAvailabilityFilter('newArrivals')}
                           className="w-4 h-4 text-primary focus:ring-primary border-gray-300 rounded"
+                          onChange={scrollToProducts}
                         />
                         <span className="text-gray-700">New Arrivals</span>
                       </label>
                       <label className="flex items-center gap-2 cursor-pointer">
                         <input
                           type="checkbox"
-                          checked={selectedAvailability.featured}
-                          onChange={() => toggleAvailabilityFilter('featured')}
                           className="w-4 h-4 text-primary focus:ring-primary border-gray-300 rounded"
+                          onChange={scrollToProducts}
                         />
                         <span className="text-gray-700">Featured</span>
                       </label>
@@ -290,9 +233,8 @@ export default function CategoryPage() {
                         <label className="flex items-center gap-2 cursor-pointer">
                           <input
                             type="checkbox"
-                            checked={selectedAvailability.onSale}
-                            onChange={() => toggleAvailabilityFilter('onSale')}
                             className="w-4 h-4 text-primary focus:ring-primary border-gray-300 rounded"
+                            onChange={scrollToProducts}
                           />
                           <span className="text-gray-700">On Sale</span>
                         </label>
@@ -392,8 +334,6 @@ export default function CategoryPage() {
                       <label className="flex items-center gap-2 cursor-pointer">
                         <input
                           type="checkbox"
-                          checked={selectedAvailability.newArrivals}
-                          onChange={() => toggleAvailabilityFilter('newArrivals')}
                           className="w-4 h-4 text-primary focus:ring-primary border-gray-300 rounded"
                         />
                         <span className="text-gray-700">New Arrivals</span>
@@ -401,8 +341,6 @@ export default function CategoryPage() {
                       <label className="flex items-center gap-2 cursor-pointer">
                         <input
                           type="checkbox"
-                          checked={selectedAvailability.featured}
-                          onChange={() => toggleAvailabilityFilter('featured')}
                           className="w-4 h-4 text-primary focus:ring-primary border-gray-300 rounded"
                         />
                         <span className="text-gray-700">Featured</span>
@@ -411,8 +349,6 @@ export default function CategoryPage() {
                         <label className="flex items-center gap-2 cursor-pointer">
                           <input
                             type="checkbox"
-                            checked={selectedAvailability.onSale}
-                            onChange={() => toggleAvailabilityFilter('onSale')}
                             className="w-4 h-4 text-primary focus:ring-primary border-gray-300 rounded"
                           />
                           <span className="text-gray-700">On Sale</span>
@@ -424,12 +360,7 @@ export default function CategoryPage() {
                   <button
                     onClick={() => {
                       setIsFilterOpen(false);
-                      setTimeout(() => {
-                        productsRef.current?.scrollIntoView({ 
-                          behavior: 'smooth', 
-                          block: 'start'
-                        });
-                      }, 100);
+                      scrollToProducts();
                     }}
                     className="w-full bg-primary text-white font-medium py-2 rounded-lg mt-6"
                   >
@@ -460,12 +391,7 @@ export default function CategoryPage() {
                       value={sortOption}
                       onChange={(e) => {
                         setSortOption(e.target.value);
-                        setTimeout(() => {
-                          productsRef.current?.scrollIntoView({ 
-                            behavior: 'smooth', 
-                            block: 'start'
-                          });
-                        }, 100);
+                        scrollToProducts();
                       }}
                       className="pl-3 pr-8 py-2 border border-gray-200 rounded bg-white text-sm appearance-none focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
                     >
@@ -601,17 +527,7 @@ export default function CategoryPage() {
                     onClick={() => {
                       setSearchQuery('');
                       setPriceRange([0, 50]);
-                      setSelectedAvailability({
-                        newArrivals: false,
-                        featured: false,
-                        onSale: false
-                      });
-                      setTimeout(() => {
-                        productsRef.current?.scrollIntoView({ 
-                          behavior: 'smooth', 
-                          block: 'start'
-                        });
-                      }, 100);
+                      scrollToProducts();
                     }}
                     className="btn-secondary inline-flex"
                   >
