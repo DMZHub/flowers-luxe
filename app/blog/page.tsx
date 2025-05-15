@@ -34,8 +34,8 @@ export default function BlogPage() {
     { 
      title: 'Top 4 Custom Cat Gifts for Cat Lovers - Personalized & Unique Ideas for 2025',
      excerpt: 'Discover the purr-fect personalized gifts for cat lovers! Explore unique custom cat pillows, mugs, stickers, and tote bags to celebrate their furry friends in style for 2025.',
-     slug: 'Top-4-Custom-Cat-Gifts-for-Cat-Lovers',
-      imageSrc: '/images/blog/Top-4-Custom-Cat-Gifts-for-Cat-Lovers-Personalized-Unique-Ideas.webp',
+     slug: 'top-4-custom-cat-gifts-for-cat-lovers',
+      imageSrc: '/images/blog/top-4-custom-cat-gifts-for-cat-lovers-custom-cat-pillow-and-mug-sticker-tote-bag-ersonalized-&-unique-ideas.webp',
       date: 'May 15, 2025',
       readTime: '5 min read',
       category: 'Gift Ideas', 
