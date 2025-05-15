@@ -1,10 +1,10 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { useParams } from 'next/navigation';
+import { useParams, useSearchParams } from 'next/navigation';
 import { Search, Filter, ChevronDown, Grid, List, Heart, ExternalLink, X, ArrowLeft } from 'lucide-react';
 import ProductCard from '@/components/ProductCard';
 import SchemaMarkup from '@/components/SchemaMarkup';
@@ -21,11 +21,20 @@ import { generateProductCollectionSchema, generateBreadcrumbSchema } from '@/uti
 
 export default function CategoryPage() {
   const { slug } = useParams() as { slug: string };
+  const searchParams = useSearchParams();
   const [searchQuery, setSearchQuery] = useState('');
   const [sortOption, setSortOption] = useState('featured');
   const [viewMode, setViewMode] = useState('grid');
   const [priceRange, setPriceRange] = useState([0, 50]);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [selectedAvailability, setSelectedAvailability] = useState({
+    newArrivals: false,
+    featured: false,
+    onSale: false
+  });
+
+  // Reference for scrolling to products section
+  const productsRef = useRef(null);
 
   // Get category data
   const category = categoryMappings[slug];
@@ -44,13 +53,55 @@ export default function CategoryPage() {
     imageSrc: `/images/categories/flower-${slug}.webp`,
   };
 
-  // Filter products based on search and price range
+  // Effect to handle URL parameters on load
+  useEffect(() => {
+    // Check for filter parameters in URL
+    const sortParam = searchParams.get('sort');
+    if (sortParam && ['featured', 'price-low', 'price-high', 'name-asc', 'name-desc'].includes(sortParam)) {
+      setSortOption(sortParam);
+    }
+
+    const viewParam = searchParams.get('view');
+    if (viewParam && ['grid', 'list'].includes(viewParam)) {
+      setViewMode(viewParam);
+    }
+
+    const queryParam = searchParams.get('query');
+    if (queryParam) {
+      setSearchQuery(queryParam);
+    }
+
+    // Parse availability filters
+    const newParam = searchParams.get('new');
+    const featuredParam = searchParams.get('featured');
+    const saleParam = searchParams.get('sale');
+
+    setSelectedAvailability({
+      newArrivals: newParam === 'true',
+      featured: featuredParam === 'true',
+      onSale: saleParam === 'true'
+    });
+  }, [searchParams]);
+
+  // Filter products based on search, price range, and availability
   const filteredProducts = categoryProducts.filter(product => {
     const matchesSearch = product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           product.description.toLowerCase().includes(searchQuery.toLowerCase());
+    
     const matchesPrice = product.price >= priceRange[0] && product.price <= priceRange[1];
     
-    return matchesSearch && matchesPrice;
+    // Check availability filters
+    const matchesAvailability = (
+      (!selectedAvailability.newArrivals || product.isNew) &&
+      (!selectedAvailability.featured || product.featured) &&
+      (!selectedAvailability.onSale || product.discount)
+    );
+
+    // If no availability filters are selected, show all products
+    const availabilityFiltersActive = Object.values(selectedAvailability).some(value => value);
+    const shouldCheckAvailability = availabilityFiltersActive;
+
+    return matchesSearch && matchesPrice && (!shouldCheckAvailability || matchesAvailability);
   });
 
   // Sort products based on selected option
@@ -69,6 +120,22 @@ export default function CategoryPage() {
         return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
     }
   });
+
+  // Toggle availability filter
+  const toggleAvailabilityFilter = (filterName) => {
+    setSelectedAvailability(prev => ({
+      ...prev,
+      [filterName]: !prev[filterName]
+    }));
+
+    // Scroll to products after filter change
+    setTimeout(() => {
+      productsRef.current?.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start'
+      });
+    }, 100);
+  };
 
   // Generate schema markup
   const productCollectionSchema = generateProductCollectionSchema(
@@ -120,11 +187,18 @@ export default function CategoryPage() {
                 </div>
                 <input
                   type="text"
-            
                   className="w-full py-3 pl-12 pr-4 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
                   placeholder={`Search ${currentCategory.title.toLowerCase()}...`}
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e) => {
+                    setSearchQuery(e.target.value);
+                    setTimeout(() => {
+                      productsRef.current?.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'start'
+                      });
+                    }, 100);
+                  }}
                 />
               </div>
             </div>
@@ -177,7 +251,15 @@ export default function CategoryPage() {
                         max="50"
                         step="5"
                         value={priceRange[1]}
-                        onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
+                        onChange={(e) => {
+                          setPriceRange([priceRange[0], parseInt(e.target.value)]);
+                          setTimeout(() => {
+                            productsRef.current?.scrollIntoView({ 
+                              behavior: 'smooth', 
+                              block: 'start'
+                            });
+                          }, 100);
+                        }}
                         className="w-full accent-primary"
                       />
                     </div>
@@ -190,6 +272,8 @@ export default function CategoryPage() {
                       <label className="flex items-center gap-2 cursor-pointer">
                         <input
                           type="checkbox"
+                          checked={selectedAvailability.newArrivals}
+                          onChange={() => toggleAvailabilityFilter('newArrivals')}
                           className="w-4 h-4 text-primary focus:ring-primary border-gray-300 rounded"
                         />
                         <span className="text-gray-700">New Arrivals</span>
@@ -197,6 +281,8 @@ export default function CategoryPage() {
                       <label className="flex items-center gap-2 cursor-pointer">
                         <input
                           type="checkbox"
+                          checked={selectedAvailability.featured}
+                          onChange={() => toggleAvailabilityFilter('featured')}
                           className="w-4 h-4 text-primary focus:ring-primary border-gray-300 rounded"
                         />
                         <span className="text-gray-700">Featured</span>
@@ -205,6 +291,8 @@ export default function CategoryPage() {
                         <label className="flex items-center gap-2 cursor-pointer">
                           <input
                             type="checkbox"
+                            checked={selectedAvailability.onSale}
+                            onChange={() => toggleAvailabilityFilter('onSale')}
                             className="w-4 h-4 text-primary focus:ring-primary border-gray-300 rounded"
                           />
                           <span className="text-gray-700">On Sale</span>
@@ -305,6 +393,8 @@ export default function CategoryPage() {
                       <label className="flex items-center gap-2 cursor-pointer">
                         <input
                           type="checkbox"
+                          checked={selectedAvailability.newArrivals}
+                          onChange={() => toggleAvailabilityFilter('newArrivals')}
                           className="w-4 h-4 text-primary focus:ring-primary border-gray-300 rounded"
                         />
                         <span className="text-gray-700">New Arrivals</span>
@@ -312,6 +402,8 @@ export default function CategoryPage() {
                       <label className="flex items-center gap-2 cursor-pointer">
                         <input
                           type="checkbox"
+                          checked={selectedAvailability.featured}
+                          onChange={() => toggleAvailabilityFilter('featured')}
                           className="w-4 h-4 text-primary focus:ring-primary border-gray-300 rounded"
                         />
                         <span className="text-gray-700">Featured</span>
@@ -320,6 +412,8 @@ export default function CategoryPage() {
                         <label className="flex items-center gap-2 cursor-pointer">
                           <input
                             type="checkbox"
+                            checked={selectedAvailability.onSale}
+                            onChange={() => toggleAvailabilityFilter('onSale')}
                             className="w-4 h-4 text-primary focus:ring-primary border-gray-300 rounded"
                           />
                           <span className="text-gray-700">On Sale</span>
@@ -329,7 +423,15 @@ export default function CategoryPage() {
                   </div>
                   
                   <button
-                    onClick={() => setIsFilterOpen(false)}
+                    onClick={() => {
+                      setIsFilterOpen(false);
+                      setTimeout(() => {
+                        productsRef.current?.scrollIntoView({ 
+                          behavior: 'smooth', 
+                          block: 'start'
+                        });
+                      }, 100);
+                    }}
                     className="w-full bg-primary text-white font-medium py-2 rounded-lg mt-6"
                   >
                     Apply Filters
@@ -339,7 +441,7 @@ export default function CategoryPage() {
             )}
             
             {/* Products Grid */}
-            <div className="flex-grow">
+            <div className="flex-grow" ref={productsRef}>
               {/* Toolbar */}
               <div className="flex flex-col sm:flex-row justify-between gap-4 mb-6">
                 <div>
@@ -357,7 +459,15 @@ export default function CategoryPage() {
                   <div className="relative">
                     <select
                       value={sortOption}
-                      onChange={(e) => setSortOption(e.target.value)}
+                      onChange={(e) => {
+                        setSortOption(e.target.value);
+                        setTimeout(() => {
+                          productsRef.current?.scrollIntoView({ 
+                            behavior: 'smooth', 
+                            block: 'start'
+                          });
+                        }, 100);
+                      }}
                       className="pl-3 pr-8 py-2 border border-gray-200 rounded bg-white text-sm appearance-none focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
                     >
                       <option value="featured">Featured</option>
@@ -490,8 +600,19 @@ export default function CategoryPage() {
                   </p>
                   <button
                     onClick={() => {
-                      setSearchQuery('')
-                      setPriceRange([0, 50])
+                      setSearchQuery('');
+                      setPriceRange([0, 50]);
+                      setSelectedAvailability({
+                        newArrivals: false,
+                        featured: false,
+                        onSale: false
+                      });
+                      setTimeout(() => {
+                        productsRef.current?.scrollIntoView({ 
+                          behavior: 'smooth', 
+                          block: 'start'
+                        });
+                      }, 100);
                     }}
                     className="btn-secondary inline-flex"
                   >
