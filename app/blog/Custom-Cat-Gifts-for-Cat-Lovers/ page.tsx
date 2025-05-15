@@ -86,14 +86,14 @@ export default function BlogPostPage() {
       <p>These custom cat gifts are more than just cute items—they’re daily reminders of love, loyalty, and your cat’s unique personality. Whether it’s for yourself or another cat lover in your life, our personalized products turn everyday items into meaningful keepsakes.</p>
       <p><strong>Ready to create your custom cat gift?</strong> <a href="/start-custom-order" style="color: #c026d3; text-decoration: underline; font-weight: bold;">Start Here</a></p>
     `,
-    imageSrc: '/images/products/throw-pillows/custom-cat-pillow-unique-cat-gift.webp', // Main image for the blog post
-    date: 'October 26, 2024', // Publication date
+    imageSrc: '/images/blog/top-4-custom-cat-gifts-for-cat-lovers-custom-cat-pillow-and-mug-sticker-tote-bag-ersonalized-&-unique-ideas.webp', // Main image for the blog post
+    date: 'May 15, 2025', // Publication date
     readTime: '6 min read', // Estimated read time
     category: 'Gift Ideas', 
     author: {
-      name:   'Feline Fiona',   // Example author
-      role:  'Chief Cat Enthusiast', // Example role
-      avatarSrc: '/author/feline-fiona.jpg', // Example avatar path, ensure this image exists in public/author
+      name:   'Ryan John',   // Example author
+      role:  'Product Writer', // Example role
+      avatarSrc: '/author/Ryan-John.jpg', // Example avatar path, ensure this image exists in public/author
     },
   };
 
