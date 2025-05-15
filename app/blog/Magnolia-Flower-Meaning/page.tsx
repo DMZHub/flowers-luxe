@@ -193,7 +193,7 @@ export default function BlogPostPage() {
     author: {
       name:   'Jack Walker',   // Replace with actual author name
       role:  'Plant & Flower Expert', // Replace with actual author role
-      avatarSrc: 'public/author/Jack-Walker.jpg', // Replace with actual author avatar path
+      avatarSrc: '/author/Jack-Walker.jpg', // Replace with actual author avatar path
     },
     
   };
