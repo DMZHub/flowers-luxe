@@ -3,21 +3,33 @@ import React, { useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Head from 'next/head'
-import { ArrowLeft, Calendar, Clock, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
+import { ArrowLeft, Calendar, Clock, Share2, Bookmark, Facebook, Twitter, Linkedin } from 'lucide-react'
 import { useParams } from 'next/navigation'
 
-export default function BlogPostPage() {
+export default function CatGiftsBlogPostPage() {
   const { slug } = useParams()
   const blogPost = {
     title: 'Top 4 Custom Cat Gifts for Cat Lovers - Personalized & Unique Ideas for 2025',
-    excerpt: 'Discover the perfect custom cat gifts for the feline enthusiast in your life. From personalized pillows and mugs to custom stickers and tote bags, these unique cat-themed gifts are sure to delight any cat lover in 2025.',
+    excerpt: 'Discover the purr-fect personalized gifts for cat lovers! Explore unique custom cat pillows, mugs, stickers, and tote bags to celebrate their furry friends in style for 2025.',
     content: `
       <p>Cat lovers don't just love their cats—they adore them, celebrate them, and want to see them in every part of their daily life. Whether it's a thoughtful gift for a fellow feline fanatic or a keepsake for your own furry friend, custom cat gifts make the bond between human and kitty even more special. Here are the top 4 personalized cat gift ideas for 2025 that are stylish, meaningful, and completely unique.</p>
   
       <h2 id="custom-cat-pillow">Custom Cat Pillow: Cozy Up with a Personalized Touch</h2>
+      <div class="relative rounded-lg overflow-hidden my-6">
+        <Link href="https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift">
+          <Image
+            src="/images/products/throw-pillows/custom-cat-pillow-unique-cat-gift.webp"
+            alt="Custom cat pillow with personalized name - unique gift for cat lovers"
+            width={800}
+            height={500}
+            className="w-full object-cover rounded-lg"
+          />
+        </Link>
+      </div>
+      
       <p>Celebrate your bond with a one-of-a-kind <strong>custom cat pillow</strong>. Featuring a bold fist bump design personalized with your cat's name, these pillows add warmth and attitude to any room.</p>
       
-      <p>Why You'll Love It:</p>
+      <p><strong>Why You'll Love It:</strong></p>
       <ul>
         <li>Personalized with your cat's name</li>
         <li>Textured Poly "Twill" pillow cover with concealed zipper</li>
@@ -25,11 +37,29 @@ export default function BlogPostPage() {
         <li>Machine washable and handcrafted in the USA</li>
         <li>Makes an unforgettable gift for cat lovers or a cozy tribute to a beloved pet</li>
       </ul>
-
+      
+      <div class="my-6">
+        <Link href="https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift" className="inline-flex items-center bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition-colors">
+          Submit Your Cat's Name to Order
+        </Link>
+      </div>
+  
       <h2 id="custom-cat-mug">Custom Cat Mug: Start Mornings With Pawsitive Vibes</h2>
+      <div class="relative rounded-lg overflow-hidden my-6">
+        <Link href="https://flowersluxe.com/custom/custom-cat-mug-personalized-mug-for-cat-lovers">
+          <Image
+            src="/images/products/mugs/custom-cat-mug-personalized-mug-for-cat-lovers.webp"
+            alt="Custom cat mug with personalized name - unique gift for cat lovers"
+            width={800}
+            height={500}
+            className="w-full object-cover rounded-lg"
+          />
+        </Link>
+      </div>
+      
       <p>This <strong>personalized cat mug</strong> features the same iconic fist bump design, making each sip a sweet reminder of your feline companion. Whether it's for coffee, tea, or cocoa, this is a daily dose of cat love.</p>
       
-      <p>Key Features:</p>
+      <p><strong>Key Features:</strong></p>
       <ul>
         <li>Printed with your cat's name</li>
         <li>11oz premium ceramic mug</li>
@@ -37,22 +67,58 @@ export default function BlogPostPage() {
         <li>Gloss finish that won't fade</li>
         <li>Designed and vacuum-form printed in the USA</li>
       </ul>
-
+      
+      <div class="my-6">
+        <Link href="https://flowersluxe.com/custom/custom-cat-mug-personalized-mug-for-cat-lovers" className="inline-flex items-center bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition-colors">
+          Submit Your Cat's Name to Order
+        </Link>
+      </div>
+  
       <h2 id="custom-cat-stickers">Custom Cat Stickers: Add Your Cat to Everything</h2>
+      <div class="relative rounded-lg overflow-hidden my-6">
+        <Link href="https://flowersluxe.com/custom/custom-cat-stickers-personalized-gifts">
+          <Image
+            src="/images/products/stickers/custom-cat-stickers-personalized-gifts.webp"
+            alt="Custom cat stickers with personalized name - unique gift for cat lovers"
+            width={800}
+            height={500}
+            className="w-full object-cover rounded-lg"
+          />
+        </Link>
+      </div>
+      
       <p>Brighten up your gear with <strong>custom cat stickers</strong>! Featuring your cat's name and a bold floral fist bump, these stickers are waterproof and full of flair. A fun, low-cost gift that makes a big impression.</p>
       
-      <p>Why They're Awesome:</p>
+      <p><strong>Why They're Awesome:</strong></p>
       <ul>
         <li>Individually kiss cut vinyl with semi-gloss finish</li>
         <li>Waterproof and perfect for laptops, bottles, and planners</li>
         <li>Printed with eco-friendly inks in the USA</li>
         <li>3x4 inch size with white border for a polished look</li>
       </ul>
-
+      
+      <div class="my-6">
+        <Link href="https://flowersluxe.com/custom/custom-cat-stickers-personalized-gifts" className="inline-flex items-center bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition-colors">
+          Submit Your Cat's Name to Order
+        </Link>
+      </div>
+  
       <h2 id="custom-cat-tote-bag">Custom Cat Tote Bag: Purr-sonalized Style on the Go</h2>
+      <div class="relative rounded-lg overflow-hidden my-6">
+        <Link href="https://flowersluxe.com/custom/custom-cat-tote-bag-unique-tote-bag">
+          <Image
+            src="/images/products/tote-bags/custom-cat-tote-bag-unique-tote-bag.webp"
+            alt="Custom cat tote bag with personalized name - unique gift for cat lovers"
+            width={800}
+            height={500}
+            className="w-full object-cover rounded-lg"
+          />
+        </Link>
+      </div>
+      
       <p>Take your cat everywhere you go with this stylish and spacious <strong>custom cat tote bag</strong>. Great for shopping, the gym, or beach days, and made to last with eco-conscious materials.</p>
       
-      <p>Features:</p>
+      <p><strong>Features:</strong></p>
       <ul>
         <li>Personalized floral fist bump design with your cat's name</li>
         <li>Durable poly-poplin outer & laminate-coated interior</li>
@@ -60,61 +126,32 @@ export default function BlogPostPage() {
         <li>Roomy enough for groceries, books, or weekend gear</li>
         <li>Machine washable and reusable</li>
       </ul>
-
-      <h2 id="how-it-works">How It Works</h2>
+      
+      <div class="my-6">
+        <Link href="https://flowersluxe.com/custom/custom-cat-tote-bag-unique-tote-bag" className="inline-flex items-center bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition-colors">
+          Submit Your Cat's Name to Order
+        </Link>
+      </div>
+      
+      <h2 id="how-it-works">How It Works:</h2>
       <ol>
         <li>Choose your favorite product from above.</li>
         <li>Submit your cat's name using the product link.</li>
         <li>We'll create the custom design and email you a link to purchase securely on our TeePublic store.</li>
       </ol>
-
+      
       <h2 id="final-thoughts">Final Thoughts</h2>
       <p>These custom cat gifts are more than just cute items—they're daily reminders of love, loyalty, and your cat's unique personality. Whether it's for yourself or another cat lover in your life, our personalized products turn everyday items into meaningful keepsakes.</p>
-      
-      <h2 id="faq">Frequently Asked Questions</h2>
-      <h3>How long does customization take?</h3>
-      <p>We typically complete customizations within 24-48 hours of receiving your cat's name.</p>
-      
-      <h3>Can I include multiple cats' names?</h3>
-      <p>Yes! We can customize designs with multiple cat names for an additional small fee.</p>
-      
-      <h3>Are these gifts suitable for all ages?</h3>
-      <p>Absolutely! Our custom cat gifts are loved by cat enthusiasts of all ages, from children to seniors.</p>
-      
-      <h3>Do you ship internationally?</h3>
-      <p>Yes, we ship worldwide. International shipping times vary by location.</p>
     `,
-    imageSrc: '/images/blog/top-4-custom-cat-gifts-for-cat-lovers-custom-cat-pillow-and-mug-sticker-tote-bag-ersonalized-&-unique-ideas.webp', 
-    date: 'May 15, 2025', 
-    readTime: '6 min read', 
-    category: 'Gift Ideas', 
+    imageSrc: '/images/blog/top-4-custom-cat-gifts-for-cat-lovers-custom-cat-pillow-and-mug-sticker-tote-bag-ersonalized-&-unique-ideas.webp',
+    date: 'May 15, 2025',
+    readTime: '6 min read',
+    category: 'Gift Ideas',
     author: {
-      name: 'Ryan John',  
-      role: 'Blogger', 
-      avatarSrc: '/author/Ryan-John.jpg', 
+      name: 'Ryan John',
+      role: 'Blogger',
+      avatarSrc: '/author/Ryan-John.jpg',
     },
-    products: [
-      {
-        name: 'Custom Cat Pillow',
-        imageSrc: '/images/products/throw-pillows/custom-cat-pillow-unique-cat-gift.webp',
-        url: 'https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift'
-      },
-      {
-        name: 'Custom Cat Mug',
-        imageSrc: '/images/products/mugs/custom-cat-mug-personalized-mug-for-cat-lovers.webp',
-        url: 'https://flowersluxe.com/custom/custom-cat-mug-personalized-mug-for-cat-lovers'
-      },
-      {
-        name: 'Custom Cat Stickers',
-        imageSrc: '/images/products/stickers/custom-cat-stickers-personalized-gifts.webp',
-        url: 'https://flowersluxe.com/custom/custom-cat-stickers-personalized-gifts'
-      },
-      {
-        name: 'Custom Cat Tote Bag',
-        imageSrc: '/images/products/tote-bags/custom-cat-tote-bag-unique-tote-bag.webp',
-        url: 'https://flowersluxe.com/custom/custom-cat-tote-bag-unique-tote-bag'
-      }
-    ]
   };
 
   // Generate schema directly in the component
@@ -127,7 +164,7 @@ export default function BlogPostPage() {
     },
     "headline": blogPost.title,
     "description": blogPost.excerpt,
-    "image": `https://flowersluxe.com${blogPost.imageSrc}`,
+    "image": `https://flowersluxe.com/${blogPost.imageSrc}`,
     "author": {
       "@type": "Person",
       "name": blogPost.author.name,
@@ -138,7 +175,7 @@ export default function BlogPostPage() {
       "name": "FlowersLuxe",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://flowersluxe.com/images/flowersluxe-logo.png",
+        "url": "https://flowersluxe.com/public/images/flowersluxe-logo.png",
         "width": "112",
         "height": "112"
       }
@@ -147,7 +184,7 @@ export default function BlogPostPage() {
     "dateModified": new Date(blogPost.date).toISOString(),
     "articleSection": blogPost.category,
     "timeRequired": "PT6M",
-    "keywords": "custom cat gifts, personalized cat gifts, cat lover gifts, custom cat pillow, custom cat mug, cat stickers, cat tote bag, personalized gifts for cat lovers",
+    "keywords": "custom cat gifts, personalized cat gifts, cat lover gifts, custom cat pillow, custom cat mug, custom cat stickers, custom cat tote bag, cat merchandise, unique cat gifts, personalized pet gifts",
     "articleBody": blogPost.excerpt,
     "speakable": {
       "@type": "SpeakableSpecification",
@@ -155,21 +192,77 @@ export default function BlogPostPage() {
     }
   };
 
-  // Product schema for each featured product
-  const productSchema = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": blogPost.products.map((product, index) => ({
-      "@type": "ListItem",
-      "position": index + 1,
-      "item": {
-        "@type": "Product",
-        "name": product.name,
-        "image": `https://flowersluxe.com${product.imageSrc}`,
-        "url": product.url
+  // Product schema for the items
+  const productSchemas = [
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Custom Cat Pillow",
+      "image": "https://flowersluxe.com/images/products/throw-pillows/custom-cat-pillow-unique-cat-gift.webp",
+      "description": "Personalized cat pillow featuring a bold fist bump design with your cat's name",
+      "brand": {
+        "@type": "Brand",
+        "name": "FlowersLuxe"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
       }
-    }))
-  };
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Custom Cat Mug",
+      "image": "https://flowersluxe.com/images/products/mugs/custom-cat-mug-personalized-mug-for-cat-lovers.webp",
+      "description": "Personalized cat mug with your cat's name and iconic fist bump design",
+      "brand": {
+        "@type": "Brand",
+        "name": "FlowersLuxe"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://flowersluxe.com/custom/custom-cat-mug-personalized-mug-for-cat-lovers",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Custom Cat Stickers",
+      "image": "https://flowersluxe.com/images/products/stickers/custom-cat-stickers-personalized-gifts.webp",
+      "description": "Waterproof custom cat stickers featuring your cat's name and floral fist bump design",
+      "brand": {
+        "@type": "Brand",
+        "name": "FlowersLuxe"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://flowersluxe.com/custom/custom-cat-stickers-personalized-gifts",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Custom Cat Tote Bag",
+      "image": "https://flowersluxe.com/images/products/tote-bags/custom-cat-tote-bag-unique-tote-bag.webp",
+      "description": "Spacious custom cat tote bag with personalized floral fist bump design and your cat's name",
+      "brand": {
+        "@type": "Brand",
+        "name": "FlowersLuxe"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://flowersluxe.com/custom/custom-cat-tote-bag-unique-tote-bag",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  ];
 
   // Add smooth scrolling for anchor links
   useEffect(() => {
@@ -208,7 +301,6 @@ export default function BlogPostPage() {
         <meta property="og:url" content={`https://flowersluxe.com/blog/${slug}`} />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="keywords" content="custom cat gifts, personalized cat gifts, cat lover gifts, unique cat gifts 2025" />
         <link rel="canonical" href={`https://flowersluxe.com/blog/${slug}`} />
       </Head>
       
@@ -218,9 +310,10 @@ export default function BlogPostPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostSchema) }}
       />
       
+      {/* Add product schema markup */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchemas) }}
       />
       
       {/* Blog Post Header */}
@@ -288,7 +381,7 @@ export default function BlogPostPage() {
         <div className="relative h-64 md:h-96 -mt-10 mb-12 rounded-xl overflow-hidden shadow-md">
           <Image
             src={blogPost.imageSrc}
-            alt={`Collection of custom cat gifts including personalized cat pillows, mugs, stickers, and tote bags - ${blogPost.title}`}
+            alt={`Collection of custom cat gifts including pillows, mugs, stickers and tote bags - ${blogPost.title}`}
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 1200px"
@@ -324,58 +417,20 @@ export default function BlogPostPage() {
                     line-height: 1.75 !important;
                     margin-bottom: 1.5rem !important;
                   }
+                  
+                  .prose strong {
+                    color: #1a202c !important;
+                  }
+                  
+                  .prose ul {
+                    margin-bottom: 1.5rem !important;
+                  }
+                  
+                  .prose ol {
+                    margin-bottom: 1.5rem !important;
+                  }
                 `}</style>
-                
-                {/* Product sections with images and links */}
-                <div dangerouslySetInnerHTML={{ __html: blogPost.content.replace(
-                  /<h2 id="custom-cat-pillow">(.*?)<\/h2>/,
-                  `<h2 id="custom-cat-pillow">$1</h2>
-                  <div class="my-6 relative">
-                    <a href="${blogPost.products[0].url}" target="_blank" rel="noopener noreferrer">
-                      <img 
-                        src="${blogPost.products[0].imageSrc}" 
-                        alt="Custom Cat Pillow - Personalized cat gift with fist bump design" 
-                        class="rounded-lg w-full h-auto"
-                      />
-                    </a>
-                  </div>`
-                ).replace(
-                  /<h2 id="custom-cat-mug">(.*?)<\/h2>/,
-                  `<h2 id="custom-cat-mug">$1</h2>
-                  <div class="my-6 relative">
-                    <a href="${blogPost.products[1].url}" target="_blank" rel="noopener noreferrer">
-                      <img 
-                        src="${blogPost.products[1].imageSrc}" 
-                        alt="Custom Cat Mug - Personalized mug for cat lovers with fist bump design" 
-                        class="rounded-lg w-full h-auto"
-                      />
-                    </a>
-                  </div>`
-                ).replace(
-                  /<h2 id="custom-cat-stickers">(.*?)<\/h2>/,
-                  `<h2 id="custom-cat-stickers">$1</h2>
-                  <div class="my-6 relative">
-                    <a href="${blogPost.products[2].url}" target="_blank" rel="noopener noreferrer">
-                      <img 
-                        src="${blogPost.products[2].imageSrc}" 
-                        alt="Custom Cat Stickers - Personalized cat stickers with floral fist bump design" 
-                        class="rounded-lg w-full h-auto"
-                      />
-                    </a>
-                  </div>`
-                ).replace(
-                  /<h2 id="custom-cat-tote-bag">(.*?)<\/h2>/,
-                  `<h2 id="custom-cat-tote-bag">$1</h2>
-                  <div class="my-6 relative">
-                    <a href="${blogPost.products[3].url}" target="_blank" rel="noopener noreferrer">
-                      <img 
-                        src="${blogPost.products[3].imageSrc}" 
-                        alt="Custom Cat Tote Bag - Personalized tote bag with cat design" 
-                        class="rounded-lg w-full h-auto"
-                      />
-                    </a>
-                  </div>`
-                )} />
+                <div dangerouslySetInnerHTML={{ __html: blogPost.content }} />
               </article>
               
               {/* Share */}
@@ -394,7 +449,6 @@ export default function BlogPostPage() {
                           'width=580,height=296'
                         );
                       }}
-                      aria-label="Share on Facebook"
                     >
                       <Facebook size={18} />
                     </a>
@@ -409,7 +463,6 @@ export default function BlogPostPage() {
                           'width=550,height=235'
                         );
                       }}
-                      aria-label="Share on Twitter"
                     >
                       <Twitter size={18} />
                     </a>
@@ -424,7 +477,6 @@ export default function BlogPostPage() {
                           'width=750,height=600'
                         );
                       }}
-                      aria-label="Share on LinkedIn"
                     >
                       <Linkedin size={18} />
                     </a>
@@ -434,7 +486,6 @@ export default function BlogPostPage() {
                         navigator.clipboard.writeText(window.location.href);
                         alert('Link copied to clipboard!');
                       }}
-                      aria-label="Copy link to clipboard"
                     >
                       <Share2 size={18} />
                     </button>
@@ -481,42 +532,71 @@ export default function BlogPostPage() {
                           <span>Final Thoughts</span>
                         </a>
                       </li>
-                      <li>
-                        <a href="#faq" className="text-gray-600 hover:text-primary">
-                          <span>FAQ</span>
-                        </a>
-                      </li>
                     </ul>
                   </nav>
                 </div>
                 
-                {/* Featured Products Sidebar */}
+                {/* Save for Later Option */}
                 <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm mb-8">
-                  <h3 className="font-cormorant text-xl font-bold mb-4">Shop Custom Cat Gifts</h3>
+                  <div className="flex items-center gap-3">
+                    <Bookmark size={20} className="text-primary" />
+                    <h3 className="font-medium">Save for later</h3>
+                  </div>
+                  <p className="text-sm text-gray-600 mt-2 mb-4">
+                    Want to remember these gift ideas? Bookmark this page to come back to it later.
+                  </p>
+                  <button 
+                    className="w-full py-2 px-4 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
+                    onClick={() => {
+                      if (window.sidebar && window.sidebar.addPanel) { 
+                        window.sidebar.addPanel(document.title, window.location.href, ''); 
+                      } else if (window.external && 'AddFavorite' in window.external) { 
+                        window.external.AddFavorite(window.location.href, document.title);
+                      } else { 
+                        alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') != - 1 ? 'Command/Cmd' : 'CTRL') + ' + D to bookmark this page.');
+                      }
+                    }}
+                  >
+                    <Bookmark size={16} />
+                    <span>Bookmark Page</span>
+                  </button>
+                </div>
+                
+                {/* Related Products */}
+                <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
+                  <h3 className="font-cormorant text-xl font-bold mb-4">Featured Products</h3>
                   <div className="space-y-4">
-                    {blogPost.products.map((product, index) => (
-                      <a 
-                        key={index}
-                        href={product.url}
-                        className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <div className="w-16 h-16 relative rounded-md overflow-hidden flex-shrink-0">
-                          <Image
-                            src={product.imageSrc}
-                            alt={product.name}
-                            fill
-                            className="object-cover"
-                            sizes="64px"
-                          />
-                        </div>
-                        <div className="ml-3">
-                          <h4 className="font-medium text-gray-900">{product.name}</h4>
-                          <p className="text-sm text-primary">Shop Now</p>
-                        </div>
-                      </a>
-                    ))}
+                    <Link href="https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift" className="flex items-center gap-3 group">
+                      <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
+                        <Image
+                          src="/images/products/throw-pillows/custom-cat-pillow-unique-cat-gift.webp"
+                          alt="Custom Cat Pillow"
+                          width={64}
+                          height={64}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-gray-900 group-hover:text-primary transition-colors">Custom Cat Pillow</h4>
+                        <p className="text-sm text-gray-500">Personalized with your cat's name</p>
+                      </div>
+                    </Link>
+                    
+                    <Link href="https://flowersluxe.com/custom/custom-cat-mug-personalized-mug-for-cat-lovers" className="flex items-center gap-3 group">
+                      <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
+                        <Image
+                          src="/images/products/mugs/custom-cat-mug-personalized-mug-for-cat-lovers.webp"
+                          alt="Custom Cat Mug"
+                          width={64}
+                          height={64}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-gray-900 group-hover:text-primary transition-colors">Custom Cat Mug</h4>
+                        <p className="text-sm text-gray-500">Start mornings with pawsitive vibes</p>
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </div>
