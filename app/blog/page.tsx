@@ -30,11 +30,17 @@ export default function BlogPage() {
       date: 'April 18, 2025',
       readTime: '12 min read',
       category: 'Flower Meanings',
+    },
+    { 
+     title: 'Top 4 Custom Cat Gifts for Cat Lovers - Personalized & Unique Ideas for 2025',
+     excerpt: 'Discover the purr-fect personalized gifts for cat lovers! Explore unique custom cat pillows, mugs, stickers, and tote bags to celebrate their furry friends in style for 2025.',
+     slug: 'Top-4-Custom-Cat-Gifts-for-Cat-Lovers',
+      imageSrc: '/images/blog/Top-4-Custom-Cat-Gifts-for-Cat-Lovers-Personalized-Unique-Ideas.webp',
+      date: 'May 15, 2025',
+      readTime: '5 min read',
+      category: 'Gift Ideas', 
       featured: true
     },
-  
-
-    
 
    
   ]
