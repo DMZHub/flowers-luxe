@@ -43,7 +43,7 @@ export default function BlogPage() {
     },
      { 
      title: ' Cat Dad Mug - Unique Personalized Gift for Cat‑Loving Dads',
-     excerpt: 'Discover the perfect gift for cat-loving fathers with our personalized Cat Dad Mug. This custom ceramic mug features your cats name and a playful fist-bump design that celebrates the special bond between dads and their feline friends.',
+     excerpt: 'Discover the perfect gift for cat-loving fathers with our personalized Cat Dad Mug. This custom ceramic mug features your cats name and a playful fist-bump design that celebrates the special bond between dads and their feline friends',
      slug: 'cat-dad-mug-unique-personalized-gift-for-cat-loving-dads',
       imageSrc: '/images/blog/cat-dad-mug.webp',
       date: 'May 15, 2025',
