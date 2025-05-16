@@ -16,7 +16,7 @@ export default function CatGiftsBlogPostPage() {
   
       <h2 id="custom-cat-pillow">Custom Cat Pillow: Cozy Up with a Personalized Touch</h2>
       <div className="relative rounded-lg overflow-hidden my-6">
-        <Link href="https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift" passHref legacyBehavior>
+        <Link href="https://flowersluxe.com/custom/custom-cat-pillow-unique-cat-gift" passHref legacyBehavior>
           <a className="cursor-pointer block">
             <Image
               src="/images/products/throw-pillows/custom-cat-pillow-unique-cat-gift.webp"
@@ -41,7 +41,7 @@ export default function CatGiftsBlogPostPage() {
       </ul>
       
       <div class="my-6">
-        <Link href="https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift" className="inline-flex items-center bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition-colors">
+        <Link href="https://flowersluxe.com/custom/custom-cat-pillow-unique-cat-gift" className="inline-flex items-center bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition-colors">
           Submit Your Cat's Name to Order
         </Link>
       </div>
@@ -214,7 +214,7 @@ export default function CatGiftsBlogPostPage() {
       },
       "offers": {
         "@type": "Offer",
-        "url": "https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift",
+        "url": "https://flowersluxe.com/custom/custom-cat-pillow-unique-cat-gift",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock"
       }
@@ -443,7 +443,7 @@ export default function CatGiftsBlogPostPage() {
                 
                 <h2 id="custom-cat-pillow">Custom Cat Pillow: Cozy Up with a Personalized Touch</h2>
                 <div className="relative rounded-lg overflow-hidden my-6">
-                  <a href="https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift" className="cursor-pointer block">
+                  <a href="https://flowersluxe.com/custom/custom-cat-pillow-unique-cat-gift" className="cursor-pointer block">
                     <Image
                       src="/images/products/throw-pillows/custom-cat-pillow-unique-cat-gift.webp"
                       alt="Custom cat pillow with personalized name - unique gift for cat lovers"
@@ -466,7 +466,7 @@ export default function CatGiftsBlogPostPage() {
                 </ul>
                 
                 <div className="my-6">
-                  <a href="https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift" className="inline-flex items-center bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition-colors">
+                  <a href="https://flowersluxe.com/custom/custom-cat-pillow-unique-cat-gift" className="inline-flex items-center bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition-colors">
                     Submit Your Cat's Name to Order
                   </a>
                 </div>
@@ -715,12 +715,31 @@ export default function CatGiftsBlogPostPage() {
                       />
                     </div>
                     <div>
-                      <h4 className="font-medium text-gray-900 group-hover:text-primary transition-colors">Custom Cat Mug</h4>
+                      <h4 className="font-medium text-gray-900 group-hover:text-primary transition-colors">Custom Cat Dad Mug</h4>
                       <p className="text-sm text-gray-500">Personalized with your cat's name</p>
                     </div>
                   </a>
                     
                   
+                {/* Related Posts */}
+                <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
+                  <h3 className="font-cormorant text-xl font-bold mb-4">Related Posts</h3>
+                  <div className="space-y-4">
+                  <a href="https://flowersluxe.com/blog/what-flowers-are-safe-for-cats" className="flex items-center gap-3 group">
+                    <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
+                      <Image
+                        src="/images/products/mug/what-flowers-are-safe-for-cats.webp"
+                        alt="10 Flowers Safe for Cats Gorgeous Pet-Friendly Picks You’ll Love"
+                        width={64}
+                        height={64}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-gray-900 group-hover:text-primary transition-colors">What Flowers Are Safe For Cats</h4>
+                      <p className="text-sm text-gray-500"> 10 Gorgeous Pet-Friendly Picks You’ll Love</p>
+                    </div>
+                  </a>
                   </div>
                 </div>
               </div>
