@@ -707,7 +707,7 @@ export default function CatGiftsBlogPostPage() {
                   <a href="https://flowersluxe.com/custom/cat-dad-mug-unique-personalized-gift-for-cat-loving-dads" className="flex items-center gap-3 group">
                     <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
                       <Image
-                        src="/images/products/mugs/cat-dad-mug-personalized-cat-gifts.webp"
+                        src="/images/blog/cat-dad-mug-personalized-cat-gifts.webp"
                         alt="Custom Cat Dad Mug"
                         width={64}
                         height={64}
