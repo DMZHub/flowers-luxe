@@ -948,7 +948,7 @@ features: [
     slug: 'cat-dad-mug-unique-personalized-gift-for-cat-loving-dads',
     category: 'Mug',
     price: 20.00,
-    imageSrc: "/images/products/mug/cat-dad-mug-personalized-cat-gifts.webp"
+    imageSrc: "/images/products/mug/cat-dad-mug-personalized-cat-gifts.webp",
     description: "Celebrate the bond between you and your feline friend with our personalized Cat Dad Mug! Featuring a touching “fist bump” design between a dad and a cat, along with your cat’s name, this mug is the perfect custom gift for any proud cat dad. Crafted from premium ceramic, it’s dishwasher and microwave safe—ideal for coffee, tea, or hot cocoa. A heartfelt Father’s Day gift, birthday surprise, or everyday reminder of your furry companion.",
     features: [
       'Vibrant watercolor tulip illustration with abstract background',
