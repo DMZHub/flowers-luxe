@@ -6,6 +6,7 @@ export function generateStaticParams() {
     { slug: 'custom-cat-mug-personalized-mug-for-cat-lovers' },
     { slug: 'custom-cat-tote-bag-unique-tote-bag' },
     { slug: 'custom-cat-stickers-personalized-gifts' },
+    {slug: 'cat-dad-mug-unique-personalized-gift-for-cat-loving-dads'},
  
   ]
 }
