@@ -19,7 +19,7 @@ export default function CatDadMugBlogPostPage() {
         <Link href="https://flowersluxe.com/custom/cat-dad-mug-unique-personalized-gift-for-cat-loving-dads" passHref legacyBehavior>
           <a className="cursor-pointer block">
             <Image
-              src="/images/products/mug/cat-dad-mug-personalized-cat-gifts.webp"
+              src="/images/products/mugs/cat-dad-mug-personalized-cat-gifts.webp"
               alt="Cat Dad Mug with personalized name - unique gift for cat-loving fathers"
               width={800}
               height={500}
