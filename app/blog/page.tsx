@@ -41,6 +41,14 @@ export default function BlogPage() {
       category: 'Gift Ideas', 
       featured: true
     },
+    { 
+     title: 'Cat Dad Mug - Unique Personalized Gift for Cat‑Loving Dads',
+     excerpt: 'Celebrate the bond between you and your feline friend with our personalized Cat Dad Mug! Featuring a touching “fist bump” design between a dad and a cat, along with your cat’s name, this mug is the perfect custom gift for any proud cat dad. Crafted from premium ceramic, it’s dishwasher and microwave safe—ideal for coffee, tea, or hot cocoa. A heartfelt Father’s Day gift, birthday surprise, or everyday reminder of your furry companion.',
+      imageSrc: '/images/blog/cat-dad-mug-unique-personalized-gift-for-cat-loving-dads.webp',
+      date: 'May 15, 2025',
+      readTime: '5 min read',
+      category: 'Gift Ideas', 
+    },
   ]
 
   // Handle newsletter subscription
