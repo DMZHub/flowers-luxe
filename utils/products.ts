@@ -961,12 +961,13 @@ features: [
     externalUrl: '',
     customUrl: '/custom/cat-dad-mug-unique-personalized-gift-for-cat-loving-dads',
     isNew: true,
-    featured: false,
-    isCustom: true
+    featured: true,
+    isCustom: true,
     discount: {
       percentage: 25
     }
    },
+
 ];
 // Get all products
 export function getAllProducts(): Product[] {
