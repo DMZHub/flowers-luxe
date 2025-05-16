@@ -707,7 +707,7 @@ export default function CatGiftsBlogPostPage() {
                   <a href="https://flowersluxe.com/custom/cat-dad-mug-unique-personalized-gift-for-cat-loving-dads" className="flex items-center gap-3 group">
                     <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
                       <Image
-                        src="/images/products/mug/cat-dad-mug-personalized-cat-gifts.webp"
+                        src="/images/products/mugs/cat-dad-mug-personalized-cat-gifts.webp"
                         alt="Custom Cat Dad Mug"
                         width={64}
                         height={64}
@@ -716,7 +716,7 @@ export default function CatGiftsBlogPostPage() {
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-900 group-hover:text-primary transition-colors">Custom Cat Dad Mug</h4>
-                      <p className="text-sm text-gray-500">Personalized with your cat's name</p>
+                      <p className="text-sm text-gray-500">Personalized with your cat name</p>
                     </div>
                   </a>
                     
@@ -728,7 +728,7 @@ export default function CatGiftsBlogPostPage() {
                   <a href="https://flowersluxe.com/blog/what-flowers-are-safe-for-cats" className="flex items-center gap-3 group">
                     <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
                       <Image
-                        src="/images/products/mug/what-flowers-are-safe-for-cats.webp"
+                        src="/images/products/mugs/what-flowers-are-safe-for-cats.webp"
                         alt="10 Flowers Safe for Cats Gorgeous Pet-Friendly Picks You’ll Love"
                         width={64}
                         height={64}
