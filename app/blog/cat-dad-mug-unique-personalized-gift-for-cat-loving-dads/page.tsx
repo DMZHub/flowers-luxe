@@ -10,7 +10,7 @@ export default function CatDadMugBlogPostPage() {
   const { slug } = useParams()
   const blogPost = {
     title: 'Cat Dad Mug – Unique Personalized Gift for Cat‑Loving Dads',
-    excerpt: 'Discover the perfect gift for cat-loving fathers with our personalized Cat Dad Mug. This custom ceramic mug features your cat's name and a playful fist-bump design that celebrates the special bond between dads and their feline friends.',
+    excerpt: 'Discover the perfect gift for cat-loving fathers with our personalized Cat Dad Mug. This custom ceramic mug features your cats name and a playful fist-bump design that celebrates the special bond between dads and their feline friends.',
     content: `
       <p>Every cat dad knows the scene: you're trying to sip your first coffee while your whiskered roommate winds between your feet. Why not celebrate that daily routine with a mug that's as devoted to your feline friend as you are? The <strong>Cat Dad Mug</strong> isn't just another cup—it's a <em>statement</em> for men who proudly wear the "cat dad" badge.</p>
       
@@ -380,7 +380,7 @@ export default function CatDadMugBlogPostPage() {
                   }
                 `}</style>
                 
-                <p>Every cat dad knows the scene: you're trying to sip your first coffee while your whiskered roommate winds between your feet. Why not celebrate that daily routine with a mug that's as devoted to your feline friend as you are? The <strong>Cat Dad Mug</strong> isn't just another cup—it's a <em>statement</em> for men who proudly wear the "cat dad" badge.</p>
+                <p>Every cat dad knows the scene: youre trying to sip your first coffee while your whiskered roommate winds between your feet. Why not celebrate that daily routine with a mug thats as devoted to your feline friend as you are? The <strong>Cat Dad Mug</strong> isnt just another cup—its a <em>statement</em> for men who proudly wear the "cat dad" badge.</p>
                 
                 <h2 id="why-best-cat-dad-mug">Why This Might Be the Best Cat Dad Mug You'll Ever Own</h2>
                 <div className="relative rounded-lg overflow-hidden my-6">
