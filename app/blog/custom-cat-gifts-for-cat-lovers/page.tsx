@@ -702,29 +702,13 @@ export default function CatGiftsBlogPostPage() {
                 
                 {/* Related Products */}
                 <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
-                  <h3 className="font-cormorant text-xl font-bold mb-4">Featured Products</h3>
+                  <h3 className="font-cormorant text-xl font-bold mb-4">Related Products</h3>
                   <div className="space-y-4">
-                  <a href="https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift" className="flex items-center gap-3 group">
+                  <a href="https://flowersluxe.com/custom/cat-dad-mug-unique-personalized-gift-for-cat-loving-dads" className="flex items-center gap-3 group">
                     <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
                       <Image
-                        src="/images/products/throw-pillows/custom-cat-pillow-unique-cat-gift.webp"
-                        alt="Custom Cat Pillow"
-                        width={64}
-                        height={64}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900 group-hover:text-primary transition-colors">Custom Cat Pillow</h4>
-                      <p className="text-sm text-gray-500">Personalized with your cat's name</p>
-                    </div>
-                  </a>
-                    
-                  <a href="https://flowersluxe.com/custom/custom-cat-mug-personalized-mug-for-cat-lovers" className="flex items-center gap-3 group">
-                    <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
-                      <Image
-                        src="/images/products/mugs/custom-cat-mug-personalized-mug-for-cat-lovers.webp"
-                        alt="Custom Cat Mug"
+                        src="/images/products/mug/cat-dad-mug-personalized-cat-gifts.webp"
+                        alt="Custom Cat Dad Mug"
                         width={64}
                         height={64}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
@@ -732,9 +716,11 @@ export default function CatGiftsBlogPostPage() {
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-900 group-hover:text-primary transition-colors">Custom Cat Mug</h4>
-                      <p className="text-sm text-gray-500">Start mornings with pawsitive vibes</p>
+                      <p className="text-sm text-gray-500">Personalized with your cat's name</p>
                     </div>
                   </a>
+                    
+                  
                   </div>
                 </div>
               </div>
