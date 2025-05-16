@@ -10,7 +10,7 @@ export default function CatDadMugBlogPostPage() {
   const { slug } = useParams()
   const blogPost = {
     title: 'Cat Dad Mug – Unique Personalized Gift for Cat‑Loving Dads',
-    excerpt: 'Discover the perfect gift for cat-loving fathers with our personalized Cat Dad Mug. This custom ceramic mug features your cats name and a playful fist-bump design that celebrates the special bond between dads and their feline friends.',
+    excerpt: 'Discover the perfect gift for cat-loving fathers with our personalized Cat Dad Mug. This custom ceramic mug features your cat\'s name and a playful fist-bump design that celebrates the special bond between dads and their feline friends.',
     content: `
       <p>Every cat dad knows the scene: you're trying to sip your first coffee while your whiskered roommate winds between your feet. Why not celebrate that daily routine with a mug that's as devoted to your feline friend as you are? The <strong>Cat Dad Mug</strong> isn't just another cup—it's a <em>statement</em> for men who proudly wear the "cat dad" badge.</p>
       
@@ -85,7 +85,7 @@ export default function CatDadMugBlogPostPage() {
       A: Absolutely—just list each name when you fill out the order form.</p>
       
       <p><strong>Q: Is this suitable as a hot‑chocolate mug for my kids?</strong><br />
-      A: Yes! It's food‑safe and great for any hot beverage.</p>
+      A: Yes! It's food-safe and great for any hot beverage.</p>
       
       <p><strong>Q: I'm searching for gifts for dad from daughter—will this arrive before Father's Day?</strong><br />
       A: We design within 24 hours and ship from the U.S.; most orders arrive in 3‑6 business days.</p>
@@ -203,7 +203,6 @@ export default function CatDadMugBlogPostPage() {
 
   // Add smooth scrolling for anchor links
   useEffect(() => {
-    // Fix for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', (e) => {
         e.preventDefault();
@@ -215,11 +214,9 @@ export default function CatDadMugBlogPostPage() {
           
           if (targetElement) {
             window.scrollTo({
-              top: targetElement.offsetTop - 100, // Offset for fixed headers
+              top: targetElement.offsetTop - 100, 
               behavior: 'smooth'
             });
-            
-            // Update URL without refresh
             history.pushState(undefined, '', `#${targetId}`);
           }
         }
@@ -241,27 +238,20 @@ export default function CatDadMugBlogPostPage() {
         <link rel="canonical" href={`https://flowersluxe.com/blog/${slug}`} />
       </Head>
       
-      {/* Add schema markup directly */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostSchema) }}
       />
-      
-      {/* Add product schema markup */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
       />
-      
-      {/* Add FAQ schema markup */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       
-      {/* Blog Post Header */}
       <section className="bg-surface-muted py-16 md:py-24 relative overflow-hidden">
-        {/* Decorative elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute w-96 h-96 -top-48 -right-48 bg-primary/5 rounded-full blur-3xl" />
           <div className="absolute w-64 h-64 bottom-0 left-1/4 bg-primary/5 rounded-full blur-2xl" />
@@ -299,7 +289,6 @@ export default function CatDadMugBlogPostPage() {
               </div>
             </div>
             
-            {/* Author info */}
             <div className="flex items-center gap-4 mb-8">
               <div className="relative w-12 h-12 rounded-full overflow-hidden">
                 <Image
@@ -319,7 +308,6 @@ export default function CatDadMugBlogPostPage() {
         </div>
       </section>
 
-      {/* Featured Image */}
       <div className="container-custom">
         <div className="relative h-64 md:h-96 -mt-10 mb-12 rounded-xl overflow-hidden shadow-md">
           <Image
@@ -333,11 +321,9 @@ export default function CatDadMugBlogPostPage() {
         </div>
       </div>
 
-      {/* Blog Content */}
       <section className="py-8 md:py-12">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            {/* Main Content */}
             <div className="lg:col-span-8">
               <article className="prose prose-lg max-w-none">
                 <style jsx global>{`
@@ -350,7 +336,6 @@ export default function CatDadMugBlogPostPage() {
                     color: #1a202c !important;
                     scroll-margin-top: 100px;
                   }
-                  
                   .prose h3 {
                     font-size: 1.35rem !important;
                     margin-top: 1.75rem !important;
@@ -359,28 +344,24 @@ export default function CatDadMugBlogPostPage() {
                     color: #2d3748 !important;
                     scroll-margin-top: 100px;
                   }
-                  
                   .prose p {
                     font-size: 1.125rem !important;
                     line-height: 1.75 !important;
                     margin-bottom: 1.5rem !important;
                   }
-                  
                   .prose strong {
                     color: #1a202c !important;
                   }
-                  
                   .prose ul, .prose ol {
                     margin-bottom: 1.5rem !important;
                   }
-                  
                   .prose blockquote {
                     font-style: italic !important;
                     color: #4a5568 !important;
                   }
                 `}</style>
                 
-                <p>Every cat dad knows the scene: youre trying to sip your first coffee while your whiskered roommate winds between your feet. Why not celebrate that daily routine with a mug thats as devoted to your feline friend as you are? The <strong>Cat Dad Mug</strong> isnt just another cup—its a <em>statement</em> for men who proudly wear the "cat dad" badge.</p>
+                <p>Every cat dad knows the scene: you're trying to sip your first coffee while your whiskered roommate winds between your feet. Why not celebrate that daily routine with a mug that's as devoted to your feline friend as you are? The <strong>Cat Dad Mug</strong> isn't just another cup—it's a <em>statement</em> for men who proudly wear the "cat dad" badge.</p>
                 
                 <h2 id="why-best-cat-dad-mug">Why This Might Be the Best Cat Dad Mug You'll Ever Own</h2>
                 <div className="relative rounded-lg overflow-hidden my-6">
@@ -451,7 +432,7 @@ export default function CatDadMugBlogPostPage() {
                 A: Absolutely—just list each name when you fill out the order form.</p>
                 
                 <p><strong>Q: Is this suitable as a hot‑chocolate mug for my kids?</strong><br />
-                A: Yes! It's food‑safe and great for any hot beverage.</p>
+                A: Yes! It's food-safe and great for any hot beverage.</p>
                 
                 <p><strong>Q: I'm searching for gifts for dad from daughter—will this arrive before Father's Day?</strong><br />
                 A: We design within 24 hours and ship from the U.S.; most orders arrive in 3‑6 business days.</p>
@@ -468,7 +449,6 @@ export default function CatDadMugBlogPostPage() {
                 </div>
               </article>
               
-              {/* Share */}
               <div className="mt-8 pt-6 border-t border-gray-100">
                 <div className="flex items-center gap-4">
                   <span className="text-gray-700 font-medium">Share:</span>
@@ -478,11 +458,13 @@ export default function CatDadMugBlogPostPage() {
                       className="p-2 bg-gray-100 hover:bg-gray-200 rounded-full text-gray-700"
                       onClick={(e) => {
                         e.preventDefault();
-                        window.open(
-                          `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`,
-                          'facebook-share',
-                          'width=580,height=296'
-                        );
+                        if (typeof window !== "undefined") {
+                            window.open(
+                            `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`,
+                            'facebook-share',
+                            'width=580,height=296'
+                            );
+                        }
                       }}
                     >
                       <Facebook size={18} />
@@ -492,11 +474,13 @@ export default function CatDadMugBlogPostPage() {
                       className="p-2 bg-gray-100 hover:bg-gray-200 rounded-full text-gray-700"
                       onClick={(e) => {
                         e.preventDefault();
-                        window.open(
-                          `https://twitter.com/intent/tweet?text=${encodeURIComponent(blogPost.title)}&url=${encodeURIComponent(window.location.href)}`,
-                          'twitter-share',
-                          'width=550,height=235'
-                        );
+                        if (typeof window !== "undefined") {
+                            window.open(
+                            `https://twitter.com/intent/tweet?text=${encodeURIComponent(blogPost.title)}&url=${encodeURIComponent(window.location.href)}`,
+                            'twitter-share',
+                            'width=550,height=235'
+                            );
+                        }
                       }}
                     >
                       <Twitter size={18} />
@@ -506,11 +490,13 @@ export default function CatDadMugBlogPostPage() {
                       className="p-2 bg-gray-100 hover:bg-gray-200 rounded-full text-gray-700"
                       onClick={(e) => {
                         e.preventDefault();
-                        window.open(
-                          `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`,
-                          'linkedin-share',
-                          'width=750,height=600'
-                        );
+                        if (typeof window !== "undefined") {
+                            window.open(
+                            `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`,
+                            'linkedin-share',
+                            'width=750,height=600'
+                            );
+                        }
                       }}
                     >
                       <Linkedin size={18} />
@@ -518,8 +504,10 @@ export default function CatDadMugBlogPostPage() {
                     <button 
                       className="p-2 bg-gray-100 hover:bg-gray-200 rounded-full text-gray-700"
                       onClick={() => {
-                        navigator.clipboard.writeText(window.location.href);
-                        alert('Link copied to clipboard!');
+                        if (typeof window !== "undefined" && navigator.clipboard) {
+                           navigator.clipboard.writeText(window.location.href);
+                           alert('Link copied to clipboard!');
+                        }
                       }}
                     >
                       <Share2 size={18} />
@@ -529,126 +517,67 @@ export default function CatDadMugBlogPostPage() {
               </div>
             </div>
             
-            {/* Sidebar */}
             <div className="lg:col-span-4">
               <div className="sticky top-24">
-                {/* Table of Contents */}
                 <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm mb-8">
                   <h3 className="font-cormorant text-xl font-bold mb-4">Table of Contents</h3>
                   <nav aria-label="Article Table of Contents">
                     <ul className="space-y-2">
-                      <li>
-                        <a href="#why-best-cat-dad-mug" className="text-gray-600 hover:text-primary">
-                          <span>Why This Might Be the Best Cat Dad Mug</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#design-story" className="text-gray-600 hover:text-primary">
-                          <span>The Story Behind the Design</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#who-will-love" className="text-gray-600 hover:text-primary">
-                          <span>Who Will Love This Mug</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#how-to-order" className="text-gray-600 hover:text-primary">
-                          <span>How to Order</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#technical-specs" className="text-gray-600 hover:text-primary">
-                          <span>Technical Specs</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#faqs" className="text-gray-600 hover:text-primary">
-                          <span>FAQs</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#final-sips" className="text-gray-600 hover:text-primary">
-                          <span>Final Sips</span>
-                        </a>
-                      </li>
+                      <li><a href="#why-best-cat-dad-mug" className="text-gray-600 hover:text-primary">Why This Might Be the Best Cat Dad Mug</a></li>
+                      <li><a href="#design-story" className="text-gray-600 hover:text-primary">The Story Behind the Design</a></li>
+                      <li><a href="#who-will-love" className="text-gray-600 hover:text-primary">Who Will Love This Mug</a></li>
+                      <li><a href="#how-to-order" className="text-gray-600 hover:text-primary">How to Order</a></li>
+                      <li><a href="#technical-specs" className="text-gray-600 hover:text-primary">Technical Specs</a></li>
+                      <li><a href="#faqs" className="text-gray-600 hover:text-primary">FAQs</a></li>
+                      <li><a href="#final-sips" className="text-gray-600 hover:text-primary">Final Sips</a></li>
                     </ul>
                   </nav>
                 </div>
                 
-                {/* Gift Occasion Suggestions */}
                 <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm mb-8">
                   <h3 className="font-cormorant text-xl font-bold mb-4">Perfect Gift For</h3>
                   <ul className="space-y-2">
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-primary rounded-full"></span>
-                      <span>Father's Day</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-primary rounded-full"></span>
-                      <span>Birthday Gifts</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-primary rounded-full"></span>
-                      <span>Christmas Gifts</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-primary rounded-full"></span>
-                      <span>"Just Because" Surprises</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-primary rounded-full"></span>
-                      <span>New Cat Parent Celebration</span>
-                    </li>
+                    <li className="flex items-center gap-2"><span className="w-2 h-2 bg-primary rounded-full"></span>Father's Day</li>
+                    <li className="flex items-center gap-2"><span className="w-2 h-2 bg-primary rounded-full"></span>Birthday Gifts</li>
+                    <li className="flex items-center gap-2"><span className="w-2 h-2 bg-primary rounded-full"></span>Christmas Gifts</li>
+                    <li className="flex items-center gap-2"><span className="w-2 h-2 bg-primary rounded-full"></span>"Just Because" Surprises</li>
+                    <li className="flex items-center gap-2"><span className="w-2 h-2 bg-primary rounded-full"></span>New Cat Parent Celebration</li>
                   </ul>
                 </div>
                 
-                {/* Related Products */}
                 <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
                   <h3 className="font-cormorant text-xl font-bold mb-4">You Might Also Like</h3>
                   <div className="space-y-4">
-                  <a href="https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift" className="flex items-center gap-3 group">
-                    <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
-                      <Image
-                        src="/images/products/throw-pillows/custom-cat-pillow-unique-cat-gift.webp"
-                        alt="Custom Cat Pillow"
-                        width={64}
-                        height={64}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900 group-hover:text-primary transition-colors">Custom Cat Pillow</h4>
-                      <p className="text-sm text-gray-500">Add a cozy touch to your home</p>
-                    </div>
-                  </a>
-                    
-                  <a href="https://flowersluxe.com/custom/custom-cat-tote-bag-unique-tote-bag" className="flex items-center gap-3 group">
-                    <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
-                      <Image
-                        src="/images/products/tote-bags/custom-cat-tote-bag-unique-tote-bag.webp"
-                        alt="Custom Cat Tote Bag"
-                        width={64}
-                        height={64}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900 group-hover:text-primary transition-colors">Custom Cat Tote Bag</h4>
-                      <p className="text-sm text-gray-500">Take your cat everywhere</p>
-                    </div>
-                  </a> Bag"
-                            width={64}
-                            height={64}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                          />
-                        </div>
-                        <div>
-                          <h4 className="font-medium text-gray-900 group-hover:text-primary transition-colors">Custom Cat Tote Bag</h4>
-                          <p className="text-sm text-gray-500">Take your cat everywhere</p>
-                        </div>
-                      </a>
-                    </Link>
+                    <a href="https://flowers-luxe.pages.dev/custom/custom-cat-pillow-unique-cat-gift" className="flex items-center gap-3 group">
+                      <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
+                        <Image
+                          src="/images/products/throw-pillows/custom-cat-pillow-unique-cat-gift.webp"
+                          alt="Custom Cat Pillow"
+                          width={64}
+                          height={64}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-gray-900 group-hover:text-primary transition-colors">Custom Cat Pillow</h4>
+                        <p className="text-sm text-gray-500">Add a cozy touch to your home</p>
+                      </div>
+                    </a>
+                    <a href="https://flowersluxe.com/custom/custom-cat-tote-bag-unique-tote-bag" className="flex items-center gap-3 group">
+                      <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
+                        <Image
+                          src="/images/products/tote-bags/custom-cat-tote-bag-unique-tote-bag.webp"
+                          alt="Custom Cat Tote Bag"
+                          width={64}
+                          height={64}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-gray-900 group-hover:text-primary transition-colors">Custom Cat Tote Bag</h4>
+                        <p className="text-sm text-gray-500">Take your cat everywhere</p>
+                      </div>
+                    </a>
                   </div>
                 </div>
               </div>
