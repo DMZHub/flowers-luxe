@@ -870,11 +870,11 @@ export default function CatSafeFlowersBlogPostPage() {
                 <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
                   <h3 className="font-cormorant text-xl font-bold mb-4">Related Posts</h3>
                   <div className="space-y-4">
-                    <a href="https://flowersluxe.com/blog/top-4-custom-cat-gifts-for-cat-lovers-personalized-unique-ideas-for-2025" className="flex items-center gap-3 group">
+                    <a href="https://flowersluxe.com/blog/cat-dad-mug-unique-personalized-gift-for-cat-loving-dads" className="flex items-center gap-3 group">
                       <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
                         <Image
                           src="/images/blog/top-4-custom-cat-gifts-for-cat-lovers-custom-cat-pillow-and-mug-sticker-tote-bag-ersonalized-&-unique-ideas.webp"
-                          alt="Top 4 Custom Cat Gifts for Cat Lovers"
+                          alt="Custom Cat Gifts for Cat Lovers"
                           width={64}
                           height={64}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
