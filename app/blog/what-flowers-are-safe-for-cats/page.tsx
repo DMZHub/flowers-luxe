@@ -435,11 +435,11 @@ const blogPostSchema = {
 "@type": "BlogPosting",
 "mainEntityOfPage": {
 "@type": "WebPage",
-"@id": https://flowersluxe.com/blog/${slug},
+"@id": 'https://flowersluxe.com/blog/${slug}',
 },
 "headline": blogPost.title,
 "description": blogPost.excerpt,
-"image": https://flowersluxe.com/${blogPost.imageSrc},
+"image": 'https://flowersluxe.com/${blogPost.imageSrc}',
 "author": {
 "@type": "Person",
 "name": blogPost.author.name,
