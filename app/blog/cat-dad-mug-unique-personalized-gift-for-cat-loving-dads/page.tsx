@@ -155,7 +155,7 @@ export default function CatDadMugBlogPostPage() {
     "@context": "https://schema.org/",
     "@type": "Product",
     "name": "Cat Dad Mug",
-    "image": "https://flowersluxe.com/images/products/mug/cat-dad-mug-personalized-cat-gifts.webp",
+    "image": "https://flowersluxe.com/images/products/mugs/cat-dad-mug-personalized-cat-gifts.webp",
     "description": "Personalized Cat Dad Mug featuring a playful fist bump design with your cat's name, perfect for cat-loving fathers",
     "brand": {
       "@type": "Brand",
@@ -367,7 +367,7 @@ export default function CatDadMugBlogPostPage() {
                 <div className="relative rounded-lg overflow-hidden my-6">
                   <a href="https://flowersluxe.com/custom/cat-dad-mug-unique-personalized-gift-for-cat-loving-dads" className="cursor-pointer block">
                     <Image
-                      src="/images/products/mug/cat-dad-mug-personalized-cat-gifts.webp"
+                      src="/images/products/mugs/cat-dad-mug-personalized-cat-gifts.webp"
                       alt="Cat Dad Mug with personalized name - unique gift for cat-loving fathers"
                       width={800}
                       height={500}
