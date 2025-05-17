@@ -1,3 +1,5 @@
+--- START OF FILE page (1).tsx ---
+
 "use client"
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
@@ -9,7 +11,7 @@ import FeatureBadge from '@/components/FeatureBadge'
 import CategoryIcon from '@/components/CategoryIcon'
 import { 
   getProductBySlug,
-  getProductById,
+  getProductById, // Intending to use this imported function
   getAllProducts, 
   getFeaturedProducts, 
   getNewProducts, 
@@ -32,6 +34,7 @@ type BlogPost = {
 
 export default function HomePage() {
   // Get the specific products by ID for the Featured Products section
+  // These calls will now use the imported getProductById
   const customCatPillow = getProductById(1);
   const customCatMug = getProductById(2);
   const tulipThrowPillow = getProductById(29);
@@ -59,7 +62,8 @@ export default function HomePage() {
     },
     { 
       title: 'Cat Dad Mug - Unique Personalized Gift for Cat‑Loving Dads',
-      excerpt: 'Celebrate the bond between you and your feline friend with our personalized Cat Dad Mug! Featuring a touching "fist bump" design between a dad and a cat, along with your cat's name, this mug is the perfect custom gift for any proud cat dad.',
+      // Fixed unescaped apostrophe in "cat's name"
+      excerpt: 'Celebrate the bond between you and your feline friend with our personalized Cat Dad Mug! Featuring a touching "fist bump" design between a dad and a cat, along with your cat\'s name, this mug is the perfect custom gift for any proud cat dad.',
       slug: 'cat-dad-mug-unique-personalized-gift-for-cat-loving-dads',
       imageSrc: '/images/blog/cat-dad-mug-unique-personalized-gift-for-cat-loving-dads.webp',
       date: 'May 15, 2025',
@@ -529,8 +533,5 @@ export default function HomePage() {
   )
 }
 
-// Helper function to get a product by ID
-function getProductById(id: number): Product | undefined {
-  const allProducts = getAllProducts();
-  return allProducts.find(product => product.id === id);
-}
+// Removed redundant local getProductById function definition.
+// The imported getProductById from '@/utils/products' will be used.
