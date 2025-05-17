@@ -728,7 +728,7 @@ export default function CatGiftsBlogPostPage() {
                   <a href="https://flowersluxe.com/blog/what-flowers-are-safe-for-cats" className="flex items-center gap-3 group">
                     <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
                       <Image
-                        src="/images/products/blog/what-flowers-are-safe-for-cats.webp"
+                        src="/images/blog/what-flowers-are-safe-for-cats.webp"
                         alt="10 Flowers Safe for Cats Gorgeous Pet-Friendly Picks You’ll Love"
                         width={64}
                         height={64}
