@@ -3,20 +3,25 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { ChevronRight, Star, ExternalLink } from 'lucide-react'
+import { ChevronRight, ArrowRight, CheckCircle } from 'lucide-react'
 import ProductCard from '@/components/ProductCard'
-import FeatureBadge from '@/components/FeatureBadge'
-import CategoryIcon from '@/components/CategoryIcon'
+import BlogCard from '@/components/BlogCard'
+import TestimonialSlider from '@/components/TestimonialSlider'
 import { 
-  getProductBySlug,
-  getProductById,
   getAllProducts, 
-  getFeaturedProducts, 
-  getNewProducts, 
-  getCustomProducts,
-  getDiscountedProducts,
-  type Product
+  getProductBySlug,
+  getFeaturedProducts,
+  categoryMappings, 
+  type Product 
 } from '@/utils/products'
+
+// Get the specific products by ID for featured section
+const getFeaturedProductsById = (ids: number[]): Product[] => {
+  const allProducts = getAllProducts();
+  return ids
+    .map(id => allProducts.find(product => product.id === id))
+    .filter((product): product is Product => product !== undefined);
+};
 
 // Blog post type definition
 type BlogPost = {
@@ -28,212 +33,176 @@ type BlogPost = {
   readTime: string;
   category: string;
   featured?: boolean;
-}
+};
 
-export default function HomePage() {
-  // Get the specific products by ID for the Featured Products section
-  const customCatPillow = getProductById(1);
-  const customCatMug = getProductById(2);
-  const tulipThrowPillow = getProductById(29);
-  const catDadMug = getProductById(34);
+// Featured blog posts data
+const blogPosts: BlogPost[] = [
+  { 
+    title: 'Top 4 Custom Cat Gifts for Cat Lovers - Personalized & Unique Ideas for 2025',
+    excerpt: 'Discover the purr-fect personalized gifts for cat lovers! Explore unique custom cat pillows, mugs, stickers, and tote bags to celebrate their furry friends in style for 2025.',
+    slug: 'custom-cat-gifts-for-cat-lovers',
+    imageSrc: '/images/blog/top-4-custom-cat-gifts-for-cat-lovers-custom-cat-pillow-and-mug-sticker-tote-bag-ersonalized-&-unique-ideas.webp',
+    date: 'May 15, 2025',
+    readTime: '5 min read',
+    category: 'Gift Ideas', 
+    featured: true
+  },
+  { 
+    title: 'Cat Dad Mug - Unique Personalized Gift for Cat‑Loving Dads',
+    excerpt: 'Celebrate the bond between you and your feline friend with our personalized Cat Dad Mug! Featuring a touching "fist bump" design between a dad and a cat, along with your cat's name, this mug is the perfect custom gift for any proud cat dad.',
+    slug: 'cat-dad-mug-unique-personalized-gift-for-cat-loving-dads',
+    imageSrc: '/images/blog/cat-dad-mug-unique-personalized-gift-for-cat-loving-dads.webp',
+    date: 'May 15, 2025',
+    readTime: '5 min read',
+    category: 'Gift Ideas',
+  },
+  { 
+    title: 'What Flowers Are Safe for Cats? 10 Gorgeous Pet-Friendly Picks Youll Love',
+    excerpt: 'Discover which beautiful blooms are completely safe for your feline friends. Our guide to cat-friendly flowers ensures both your decor and your kitty stay happy and healthy.',
+    slug: 'what-flowers-are-safe-for-cats',
+    imageSrc: '/images/blog/what-flowers-are-safe-for-cats.webp',
+    date: 'May 12, 2025',
+    readTime: '7 min read',
+    category: 'Gardening',
+  },
+];
+
+export default function Home() {
+  // Get specific featured products by ID (1, 2, 29, 34)
+  const featuredProducts = getFeaturedProductsById([1, 2, 29, 34]);
   
-  // Combine into featured products array
-  const featuredProducts = [
-    customCatPillow,
-    customCatMug, 
-    tulipThrowPillow,
-    catDadMug
-  ].filter(Boolean) as Product[];
-
-  // Mock blog posts for the From Our Blog section
-  const blogPosts: BlogPost[] = [
-    { 
-      title: 'Top 4 Custom Cat Gifts for Cat Lovers - Personalized & Unique Ideas for 2025',
-      excerpt: 'Discover the purr-fect personalized gifts for cat lovers! Explore unique custom cat pillows, mugs, stickers, and tote bags to celebrate their furry friends in style for 2025.',
-      slug: 'custom-cat-gifts-for-cat-lovers',
-      imageSrc: '/images/blog/top-4-custom-cat-gifts-for-cat-lovers-custom-cat-pillow-and-mug-sticker-tote-bag-ersonalized-&-unique-ideas.webp',
-      date: 'May 15, 2025',
-      readTime: '5 min read',
-      category: 'Gift Ideas', 
-      featured: true
-    },
-    { 
-      title: 'Cat Dad Mug - Unique Personalized Gift for Cat‑Loving Dads',
-      excerpt: 'Celebrate the bond between you and your feline friend with our personalized Cat Dad Mug! Featuring a touching \'fist bump\' design between a dad and a cat, along with your cat\'s name, this mug is the perfect custom gift for any proud cat dad.',
-      slug: 'cat-dad-mug-unique-personalized-gift-for-cat-loving-dads',
-      imageSrc: '/images/blog/cat-dad-mug-unique-personalized-gift-for-cat-loving-dads.webp',
-      date: 'May 15, 2025',
-      readTime: '5 min read',
-      category: 'Gift Ideas', 
-    },
-    { 
-      title: 'What Flowers Are Safe for Cats? 10 Gorgeous Pet-Friendly Picks Youll Love',
-      excerpt: 'Keep your feline friends safe while enjoying beautiful flowers. Discover our list of cat-safe flowers that bring beauty to your home without endangering your pets.',
-      slug: 'what-flowers-are-safe-for-cats',
-      imageSrc: '/images/blog/what-flowers-are-safe-for-cats.webp',
-      date: 'May 15, 2025',
-      readTime: '5 min read',
-      category: 'Gardening', 
-    },
-  ];
-
-  // Performance optimization: Load hero image based on device width
-  const [heroImage, setHeroImage] = useState('/images/flowers-luxe-hero-image-desktop.webp');
+  // State for the newsletter form
+  const [email, setEmail] = useState('');
+  const [submitted, setSubmitted] = useState(false);
   
-  useEffect(() => {
-    // Check if window exists (client-side only)
-    if (typeof window !== 'undefined') {
-      // Set hero image based on screen width
-      const updateHeroImage = () => {
-        setHeroImage(
-          window.innerWidth < 768 
-            ? '/images/flowers-luxe-hero-image-mobile.webp' 
-            : '/images/flowers-luxe-hero-image-desktop.webp'
-        );
-      };
-      
-      // Set initial image
-      updateHeroImage();
-      
-      // Update on resize
-      window.addEventListener('resize', updateHeroImage);
-      
-      // Cleanup
-      return () => window.removeEventListener('resize', updateHeroImage);
-    }
-  }, []);
-
-  // Categories data for the shop categories section
-  const categories = [
-    { 
-      name: 'Throw Pillows', 
-      icon: 'pillow',
-      description: 'Premium quality pillows with beautiful floral designs',
-      link: '/shop/category/throw-pillows'
-    },
-    { 
-      name: 'Art Prints', 
-      icon: 'art',
-      description: 'Wall art featuring our unique floral illustrations',
-      link: '/shop/category/art'
-    },
-    { 
-      name: 'Mugs', 
-      icon: 'mug',
-      description: 'Start your day with a beautiful floral mug',
-      link: '/shop/category/mugs'
-    },
-    { 
-      name: 'Stickers', 
-      icon: 'sticker',
-      description: 'Vibrant stickers to express your style',
-      link: '/shop/category/stickers'
-    }
-  ];
-
-  // Preload critical images to improve performance
-  const preloadImages = () => {
-    const imagesToPreload = [
-      '/images/flowers-luxe-hero-image-mobile.webp',
-      '/images/flowers-luxe-hero-image-desktop.webp',
-      featuredProducts[0]?.imageSrc,
-      blogPosts[0]?.imageSrc
-    ];
-    
-    imagesToPreload.forEach(src => {
-      if (src) {
-        const img = new Image();
-        img.src = src;
-      }
-    });
+  // Handle newsletter submission
+  const handleNewsletterSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Here you would typically send the email to your newsletter service
+    console.log('Subscribing email:', email);
+    setSubmitted(true);
+    // Reset the form after 3 seconds
+    setTimeout(() => {
+      setEmail('');
+      setSubmitted(false);
+    }, 3000);
   };
 
+  // For performance optimization - only load images when visible
+  const [isImagesLoaded, setIsImagesLoaded] = useState(false);
+  
   useEffect(() => {
+    // Set images to load after component mounts
+    setIsImagesLoaded(true);
+    
+    // Preload important images for faster LCP
+    const preloadImages = () => {
+      const imageUrls = [
+        '/images/flowers-luxe-hero-image-mobile.webp',
+        '/images/flowers-luxe-hero-image.webp'
+      ];
+      
+      imageUrls.forEach(src => {
+        const img = new Image();
+        img.src = src;
+      });
+    };
+    
     preloadImages();
   }, []);
 
   return (
     <>
-      {/* Hero Section - Performance optimized */}
-      <section className="relative h-[80vh] min-h-[600px] max-h-[800px] w-full overflow-hidden">
-        {/* Hero Background */}
-        <div className="absolute inset-0">
-          <Image
-            src={heroImage}
-            alt="FlowersLuxe - Beautiful floral designs on premium products"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-            loading="eager"
-            placeholder="blur"
-            blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJyZ2JhKDI0NSwgMjQyLCAyMzgsIDAuOCkiPjwvc3ZnPg=="
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/10" />
+      {/* Hero Section - Optimized for performance */}
+      <section className="relative h-[80vh] min-h-[600px] flex items-center">
+        {/* Hero image with responsive handling for better LCP */}
+        <div className="absolute inset-0 z-0">
+          {isImagesLoaded && (
+            <>
+              {/* Mobile image */}
+              <div className="block md:hidden h-full">
+                <Image
+                  src="/images/flowers-luxe-hero-image-mobile.webp"
+                  alt="FlowersLuxe - Beautiful floral designs on premium products"
+                  fill
+                  priority={true}
+                  className="object-cover"
+                  sizes="100vw"
+                  // Display a placeholder color until image loads
+                  style={{ backgroundColor: '#f8f8f8' }}
+                />
+              </div>
+              
+              {/* Desktop image */}
+              <div className="hidden md:block h-full">
+                <Image
+                  src="/images/flowers-luxe-hero-image.webp"
+                  alt="FlowersLuxe - Beautiful floral designs on premium products"
+                  fill
+                  priority={true}
+                  className="object-cover"
+                  sizes="100vw"
+                  // Display a placeholder color until image loads
+                  style={{ backgroundColor: '#f8f8f8' }}
+                />
+              </div>
+            </>
+          )}
+          {/* Simple colored background shown before images load for perceived performance */}
+          {!isImagesLoaded && (
+            <div className="absolute inset-0 bg-gradient-to-br from-pink-50 to-gray-100"></div>
+          )}
+          <div className="absolute inset-0 bg-black/30" />
         </div>
         
-        {/* Hero Content */}
-        <div className="container-custom relative h-full flex flex-col justify-center items-center text-center text-white">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="font-cormorant text-4xl md:text-6xl lg:text-7xl font-bold mb-4 max-w-3xl"
-          >
-            Beautiful Floral Designs on Premium Products
-          </motion.h1>
-          
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl"
-          >
-            Discover our collection of unique floral artwork on high-quality home decor, accessories, and personalized gifts
-          </motion.p>
-          
+        <div className="container-custom relative z-10">
           <motion.div 
+            className="max-w-2xl text-white"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4"
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <Link href="/shop" className="btn-primary-light">
-              Shop Collection
-            </Link>
-            <Link href="/custom" className="btn-outline-light">
-              Custom Designs
-            </Link>
+            <h1 className="font-cormorant text-4xl md:text-6xl font-bold mb-4">
+              Beautiful Floral Designs on Premium Products
+            </h1>
+            <p className="text-lg md:text-xl mb-8 text-white/90">
+              Discover our unique collection of floral-inspired goods for your home, office, or as the perfect gift.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="/shop" className="btn-primary">
+                Shop Collection
+              </Link>
+              <Link href="/custom" className="btn-outline-light">
+                Customize Your Own
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
       
       {/* Featured Products Section */}
-      <section className="py-16 md:py-24 bg-surface-muted">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container-custom">
-          <div className="flex flex-col sm:flex-row justify-between items-center mb-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
             <div>
-              <h2 className="font-cormorant text-3xl md:text-4xl font-bold mb-2">
+              <span className="bg-primary/10 text-primary text-sm font-medium px-4 py-1.5 rounded-full inline-block mb-3">
                 Featured Products
+              </span>
+              <h2 className="font-cormorant text-3xl md:text-4xl font-bold">
+                Our Most Popular Items
               </h2>
-              <p className="text-gray-600">
-                Explore our most popular designs and custom items
-              </p>
             </div>
-            <Link 
-              href="/shop" 
-              className="mt-4 sm:mt-0 inline-flex items-center gap-1 text-primary hover:text-primary-dark font-medium"
-            >
+            <Link href="/shop" className="group flex items-center text-primary font-medium hover:underline">
               <span>View all products</span>
-              <ChevronRight size={16} />
+              <ChevronRight size={18} className="ml-1 group-hover:ml-2 transition-all" />
             </Link>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredProducts.map((product) => (
-              <ProductCard 
-                key={product.id} 
-                product={product} 
+              <ProductCard
+                key={product.id}
+                product={product}
               />
             ))}
           </div>
@@ -241,38 +210,49 @@ export default function HomePage() {
       </section>
       
       {/* Categories Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-surface-muted">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="font-cormorant text-3xl md:text-4xl font-bold mb-3">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="bg-primary/10 text-primary text-sm font-medium px-4 py-1.5 rounded-full inline-block mb-3">
+              Product Categories
+            </span>
+            <h2 className="font-cormorant text-3xl md:text-4xl font-bold mb-4">
               Shop by Category
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Discover our beautiful floral designs across a range of high-quality products
+            <p className="text-gray-600">
+              Browse our diverse collection of floral-inspired products, from wall art to mugs and apparel.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {categories.map((category, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {Object.entries(categoryMappings).slice(0, 8).map(([slug, category], index) => (
               <motion.div
-                key={category.name}
+                key={slug}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm hover:shadow-md transition-shadow"
               >
-                <div className="mb-4 text-primary">
-                  <CategoryIcon type={category.icon} size={48} />
-                </div>
-                <h3 className="font-cormorant text-xl font-bold mb-2">{category.name}</h3>
-                <p className="text-gray-600 text-sm mb-4">{category.description}</p>
-                <Link 
-                  href={category.link}
-                  className="inline-flex items-center gap-1 text-primary hover:text-primary-dark font-medium"
-                >
-                  <span>Shop now</span>
-                  <ChevronRight size={16} />
+                <Link href={`/shop/category/${slug}`} className="group block">
+                  <div className="relative h-64 rounded-xl overflow-hidden">
+                    <Image
+                      src={`/images/categories/flower-${slug}.webp`}
+                      alt={category}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                      // Only eagerly load the first few categories
+                      loading={index < 4 ? "eager" : "lazy"}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-6">
+                      <h3 className="font-cormorant text-2xl font-bold text-white">{category}</h3>
+                      <div className="flex items-center mt-2 text-white">
+                        <span className="text-sm font-medium">Shop now</span>
+                        <ArrowRight size={16} className="ml-2 group-hover:ml-3 transition-all" />
+                      </div>
+                    </div>
+                  </div>
                 </Link>
               </motion.div>
             ))}
@@ -280,257 +260,191 @@ export default function HomePage() {
         </div>
       </section>
       
-      {/* Custom Products Feature */}
-      <section className="py-16 md:py-24 bg-surface-muted relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute w-96 h-96 -top-48 -right-48 bg-primary/5 rounded-full blur-3xl" />
-          <div className="absolute w-64 h-64 bottom-0 left-1/4 bg-primary/5 rounded-full blur-2xl" />
-          <div className="subtle-pattern absolute inset-0 opacity-30" />
-        </div>
-        
-        <div className="container-custom relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="bg-primary/10 text-primary text-sm font-medium px-4 py-1.5 rounded-full inline-block mb-4">
-                Personalized Items
-              </span>
-              <h2 className="font-cormorant text-3xl md:text-4xl font-bold mb-4">
-                Create Your Custom Design
-              </h2>
-              <p className="text-gray-600 mb-6">
-                Our custom products make perfect gifts for pet lovers, plant enthusiasts, or anyone who wants something truly unique. Add names, special messages, or custom text to create a one-of-a-kind item.
-              </p>
-              
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start gap-3">
-                  <div className="text-primary mt-1">
-                    <Star size={20} />
-                  </div>
-                  <div>
-                    <h3 className="font-medium mb-1">Personalized Details</h3>
-                    <p className="text-gray-600 text-sm">Add names, dates, or special messages to make it truly yours</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <div className="text-primary mt-1">
-                    <Star size={20} />
-                  </div>
-                  <div>
-                    <h3 className="font-medium mb-1">Premium Quality</h3>
-                    <p className="text-gray-600 text-sm">Enjoy the same high-quality materials as our standard products</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <div className="text-primary mt-1">
-                    <Star size={20} />
-                  </div>
-                  <div>
-                    <h3 className="font-medium mb-1">Perfect Gifts</h3>
-                    <p className="text-gray-600 text-sm">Create meaningful presents for loved ones and special occasions</p>
-                  </div>
-                </div>
-              </div>
-              
-              <Link href="/shop?category=Custom Items" className="btn-primary">
-                Explore Custom Items
-              </Link>
-            </div>
-            
-            <div className="relative">
-              <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-elevated">
-                <Image
-                  src="/images/custom-cat-products-showcase.webp"
-                  alt="Custom products showcase"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-              </div>
-              
-              {/* Floating badges */}
-              <div className="absolute -top-6 -right-6 bg-white rounded-lg p-3 shadow-md border border-gray-100">
-                <FeatureBadge type="personalized" />
-              </div>
-              
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-lg p-3 shadow-md border border-gray-100">
-                <FeatureBadge type="highQuality" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Blog Section */}
-      <section className="py-16 md:py-24">
+      {/* From Our Blog Section */}
+      <section className="py-16 md:py-24 bg-white">
         <div className="container-custom">
-          <div className="flex flex-col sm:flex-row justify-between items-center mb-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
             <div>
-              <h2 className="font-cormorant text-3xl md:text-4xl font-bold mb-2">
+              <span className="bg-primary/10 text-primary text-sm font-medium px-4 py-1.5 rounded-full inline-block mb-3">
                 From Our Blog
+              </span>
+              <h2 className="font-cormorant text-3xl md:text-4xl font-bold">
+                Latest Articles
               </h2>
-              <p className="text-gray-600">
-                Tips, inspiration, and insights from the world of flowers and design
-              </p>
             </div>
-            <Link 
-              href="/blog" 
-              className="mt-4 sm:mt-0 inline-flex items-center gap-1 text-primary hover:text-primary-dark font-medium"
-            >
-              <span>View all posts</span>
-              <ChevronRight size={16} />
+            <Link href="/blog" className="group flex items-center text-primary font-medium hover:underline">
+              <span>View all articles</span>
+              <ChevronRight size={18} className="ml-1 group-hover:ml-2 transition-all" />
             </Link>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {blogPosts.map((post, index) => (
-              <motion.article
+              <motion.div
                 key={post.slug}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow"
               >
-                <Link href={`/blog/${post.slug}`} className="block relative aspect-[16/9]">
-                  <Image
-                    src={post.imageSrc}
-                    alt={post.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    loading={index === 0 ? "eager" : "lazy"}
-                  />
-                </Link>
-                
-                <div className="p-6">
-                  <span className="inline-block bg-primary/10 text-primary text-xs font-medium px-2 py-1 rounded-full mb-3">
-                    {post.category}
-                  </span>
-                  
-                  <h3 className="font-cormorant text-xl font-bold mb-3 line-clamp-2">
-                    <Link href={`/blog/${post.slug}`} className="hover:text-primary">
-                      {post.title}
-                    </Link>
-                  </h3>
-                  
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                    {post.excerpt}
-                  </p>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-500 text-sm">{post.date}</span>
-                    <Link 
-                      href={`/blog/${post.slug}`} 
-                      className="inline-flex items-center gap-1 text-primary hover:text-primary-dark text-sm font-medium"
-                    >
-                      <span>Read more</span>
-                      <ChevronRight size={14} />
-                    </Link>
-                  </div>
-                </div>
-              </motion.article>
+                <BlogCard
+                  title={post.title}
+                  excerpt={post.excerpt}
+                  slug={post.slug}
+                  imageSrc={post.imageSrc}
+                  date={post.date}
+                  readTime={post.readTime}
+                  category={post.category}
+                />
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
       
-      {/* Newsletter Section */}
+      {/* Customer Testimonials */}
       <section className="py-16 md:py-24 bg-surface-muted">
         <div className="container-custom">
-          <div className="bg-white rounded-2xl shadow-elevated border border-border p-8 md:p-12">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="bg-primary/10 text-primary text-sm font-medium px-4 py-1.5 rounded-full inline-block mb-3">
+              Testimonials
+            </span>
+            <h2 className="font-cormorant text-3xl md:text-4xl font-bold mb-4">
+              What Our Customers Say
+            </h2>
+            <p className="text-gray-600">
+              Don't just take our word for it — see what our customers have to say about our products and service.
+            </p>
+          </div>
+          
+          {/* Testimonial Slider Component (you would need to implement this) */}
+          <TestimonialSlider />
+        </div>
+      </section>
+      
+      {/* Newsletter Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container-custom">
+          <div className="bg-surface-muted rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12">
             <div className="max-w-3xl mx-auto text-center">
-              <span className="bg-primary/10 text-primary text-sm font-medium px-4 py-1.5 rounded-full inline-block mb-4">
-                Join Our Community
+              <span className="bg-primary/10 text-primary text-sm font-medium px-4 py-1.5 rounded-full inline-block mb-3">
+                Newsletter
               </span>
               <h2 className="font-cormorant text-3xl md:text-4xl font-bold mb-4">
-                Subscribe to Our Newsletter
+                Subscribe for Updates
               </h2>
               <p className="text-gray-600 mb-8">
-                Stay updated with our latest products, exclusive offers, and floral inspiration delivered straight to your inbox.
+                Join our newsletter to receive updates on new products, special promotions, and floral inspiration.
               </p>
               
-              <form className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
-                <input
-                  type="email"
-                  placeholder="Your email address"
-                  className="flex-grow px-4 py-3 rounded-md border border-border focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition-colors whitespace-nowrap"
+              {!submitted ? (
+                <form 
+                  onSubmit={handleNewsletterSubmit} 
+                  className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto"
                 >
-                  Subscribe
-                </button>
-              </form>
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Your email address"
+                    className="flex-grow px-4 py-3 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    className="bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition-colors"
+                  >
+                    Subscribe
+                  </button>
+                </form>
+              ) : (
+                <div className="bg-green-50 border border-green-100 rounded-lg p-6 max-w-lg mx-auto">
+                  <CheckCircle size={32} className="text-green-500 mx-auto mb-2" />
+                  <h3 className="text-xl font-medium mb-2">Thanks for subscribing!</h3>
+                  <p className="text-gray-600">
+                    We've added your email to our newsletter. Watch your inbox for upcoming promotions and updates.
+                  </p>
+                </div>
+              )}
               
-              <p className="text-sm text-gray-500 mt-4">
-                We respect your privacy. Unsubscribe at any time.
+              <p className="text-xs text-gray-500 mt-4">
+                By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.
               </p>
             </div>
           </div>
         </div>
       </section>
       
-      {/* Trust Badges Section */}
-      <section className="py-12">
+      {/* Features Section */}
+      <section className="py-16 md:py-24 bg-surface-muted border-t border-gray-100">
         <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div>
-              <div className="text-primary mb-3 flex justify-center">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor" />
-                </svg>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
+                <Image
+                  src="/images/icons/shipping.svg"
+                  alt="Fast Shipping"
+                  width={32}
+                  height={32}
+                  loading="lazy"
+                />
               </div>
-              <h3 className="font-medium mb-1">Premium Quality</h3>
-              <p className="text-gray-600 text-sm">Carefully crafted products made to last</p>
+              <h3 className="font-medium text-lg mb-2">Fast Shipping</h3>
+              <p className="text-gray-600 text-sm">
+                Quick delivery on all orders with tracking provided
+              </p>
             </div>
             
-            <div>
-              <div className="text-primary mb-3 flex justify-center">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M7.5 12L10.5 15L16.5 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+            <div className="text-center">
+              <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
+                <Image
+                  src="/images/icons/quality.svg"
+                  alt="Premium Quality"
+                  width={32}
+                  height={32}
+                  loading="lazy"
+                />
               </div>
-              <h3 className="font-medium mb-1">Secure Shopping</h3>
-              <p className="text-gray-600 text-sm">Safe transactions & protected data</p>
+              <h3 className="font-medium text-lg mb-2">Premium Quality</h3>
+              <p className="text-gray-600 text-sm">
+                High-quality materials and printing for lasting beauty
+              </p>
             </div>
             
-            <div>
-              <div className="text-primary mb-3 flex justify-center">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 12V3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M19.7942 7.5C19.7942 7.5 17.5 15 12 15C6.5 15 4.20577 7.5 4.20577 7.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M4.5 16.5C4.5 16.5 7.5 20.5 12 20.5C16.5 20.5 19.5 16.5 19.5 16.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+            <div className="text-center">
+              <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
+                <Image
+                  src="/images/icons/custom.svg"
+                  alt="Custom Options"
+                  width={32}
+                  height={32}
+                  loading="lazy"
+                />
               </div>
-              <h3 className="font-medium mb-1">Exclusive Designs</h3>
-              <p className="text-gray-600 text-sm">Unique floral patterns you'll love</p>
+              <h3 className="font-medium text-lg mb-2">Custom Options</h3>
+              <p className="text-gray-600 text-sm">
+                Personalize many items with names or special messages
+              </p>
             </div>
             
-            <div>
-              <div className="text-primary mb-3 flex justify-center">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16 4H18C18.5304 4 19.0391 4.21071 19.4142 4.58579C19.7893 4.96086 20 5.46957 20 6V20C20 20.5304 19.7893 21.0391 19.4142 21.4142C19.0391 21.7893 18.5304 22 18 22H6C5.46957 22 4.96086 21.7893 4.58579 21.4142C4.21071 21.0391 4 20.5304 4 20V6C4 5.46957 4.21071 4.96086 4.58579 4.58579C4.96086 4.21071 5.46957 4 6 4H8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  <path d="M15 2H9C8.44772 2 8 2.44772 8 3V5C8 5.55228 8.44772 6 9 6H15C15.5523 6 16 5.55228 16 5V3C16 2.44772 15.5523 2 15 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+            <div className="text-center">
+              <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
+                <Image
+                  src="/images/icons/support.svg"
+                  alt="Customer Support"
+                  width={32}
+                  height={32}
+                  loading="lazy"
+                />
               </div>
-              <h3 className="font-medium mb-1">Dedicated Support</h3>
-              <p className="text-gray-600 text-sm">Here for you every step of the way</p>
+              <h3 className="font-medium text-lg mb-2">Customer Support</h3>
+              <p className="text-gray-600 text-sm">
+                Friendly support team available to answer your questions
+              </p>
             </div>
           </div>
         </div>
       </section>
     </>
   )
-}
-
-// Helper function to get a product by ID
-function getProductById(id: number): Product | undefined {
-  const allProducts = getAllProducts();
-  return allProducts.find(product => product.id === id);
 }
