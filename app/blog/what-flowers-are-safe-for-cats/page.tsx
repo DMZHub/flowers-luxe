@@ -56,29 +56,29 @@ export default function CatSafeFlowersBlogPostPage() {
       
       <p><strong>Pro Tip:</strong> Rose petals that have fallen onto your table or counter are also safe, so no need to panic if your cat investigates them. After years of testing different flowers, I've found that most cats actually aren't very interested in roses once they give them an initial sniff.</p>
       
-      <table className="w-full border-collapse my-6">
+      <table className="w-full border-collapse my-6 border-2 border-gray-300 rounded-lg overflow-hidden">
         <thead>
-          <tr className="bg-primary/10">
-            <th className="border p-2 text-left text-lg font-semibold">Rose Type</th>
-            <th className="border p-2 text-left text-lg font-semibold">Best Features</th>
-            <th className="border p-2 text-left text-lg font-semibold">Longevity</th>
+          <tr className="bg-primary/20 border-b-2 border-gray-300">
+            <th className="border border-gray-300 p-3 text-left text-lg font-semibold">Rose Type</th>
+            <th className="border border-gray-300 p-3 text-left text-lg font-semibold">Best Features</th>
+            <th className="border border-gray-300 p-3 text-left text-lg font-semibold">Longevity</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td className="border p-2 text-base">Garden Roses</td>
-            <td className="border p-2 text-base">Fuller blooms, stronger fragrance</td>
-            <td className="border p-2 text-base">4-5 days</td>
+          <tr className="hover:bg-gray-50">
+            <td className="border border-gray-300 p-3 text-base font-medium">Garden Roses</td>
+            <td className="border border-gray-300 p-3 text-base">Fuller blooms, stronger fragrance</td>
+            <td className="border border-gray-300 p-3 text-base">4-5 days</td>
           </tr>
-          <tr>
-            <td className="border p-2 text-base">Spray Roses</td>
-            <td className="border p-2 text-base">Multiple blooms per stem, fewer thorns</td>
-            <td className="border p-2 text-base">7-10 days</td>
+          <tr className="bg-gray-50 hover:bg-gray-100">
+            <td className="border border-gray-300 p-3 text-base font-medium">Spray Roses</td>
+            <td className="border border-gray-300 p-3 text-base">Multiple blooms per stem, fewer thorns</td>
+            <td className="border border-gray-300 p-3 text-base">7-10 days</td>
           </tr>
-          <tr>
-            <td className="border p-2 text-base">Standard Roses</td>
-            <td className="border p-2 text-base">Classic look, widely available</td>
-            <td className="border p-2 text-base">5-7 days</td>
+          <tr className="hover:bg-gray-50">
+            <td className="border border-gray-300 p-3 text-base font-medium">Standard Roses</td>
+            <td className="border border-gray-300 p-3 text-base">Classic look, widely available</td>
+            <td className="border border-gray-300 p-3 text-base">5-7 days</td>
           </tr>
         </tbody>
       </table>
@@ -281,45 +281,45 @@ export default function CatSafeFlowersBlogPostPage() {
       
       <p><strong>Gardener's note:</strong> When established, coneflowers are remarkably drought-tolerant, making them excellent low-maintenance options for outdoor gardens. If you deadhead spent blooms promptly, they'll continue flowering from early summer through fall, providing months of cat-safe cut flower opportunities.</p>
       
-      <table className="w-full border-collapse my-6">
+      <table className="w-full border-collapse my-6 border-2 border-gray-300 rounded-lg overflow-hidden">
         <thead>
-          <tr className="bg-primary/10">
-            <th className="border p-2 text-left text-lg font-semibold">Flower</th>
-            <th className="border p-2 text-left text-lg font-semibold">Best Use</th>
-            <th className="border p-2 text-left text-lg font-semibold">Vase Life</th>
-            <th className="border p-2 text-left text-lg font-semibold">Special Features</th>
+          <tr className="bg-primary/20 border-b-2 border-gray-300">
+            <th className="border border-gray-300 p-3 text-left text-lg font-semibold">Flower</th>
+            <th className="border border-gray-300 p-3 text-left text-lg font-semibold">Best Use</th>
+            <th className="border border-gray-300 p-3 text-left text-lg font-semibold">Vase Life</th>
+            <th className="border border-gray-300 p-3 text-left text-lg font-semibold">Special Features</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td className="border p-2 text-base">Roses</td>
-            <td className="border p-2 text-base">Formal arrangements</td>
-            <td className="border p-2 text-base">5-7 days</td>
-            <td className="border p-2 text-base">Classic beauty, variety of colors</td>
+          <tr className="hover:bg-gray-50">
+            <td className="border border-gray-300 p-3 text-base font-medium">Roses</td>
+            <td className="border border-gray-300 p-3 text-base">Formal arrangements</td>
+            <td className="border border-gray-300 p-3 text-base">5-7 days</td>
+            <td className="border border-gray-300 p-3 text-base">Classic beauty, variety of colors</td>
           </tr>
-          <tr>
-            <td className="border p-2 text-base">Sunflowers</td>
-            <td className="border p-2 text-base">Statement pieces</td>
-            <td className="border p-2 text-base">7-10 days</td>
-            <td className="border p-2 text-base">Cheerful, sturdy stems</td>
+          <tr className="bg-gray-50 hover:bg-gray-100">
+            <td className="border border-gray-300 p-3 text-base font-medium">Sunflowers</td>
+            <td className="border border-gray-300 p-3 text-base">Statement pieces</td>
+            <td className="border border-gray-300 p-3 text-base">7-10 days</td>
+            <td className="border border-gray-300 p-3 text-base">Cheerful, sturdy stems</td>
           </tr>
-          <tr>
-            <td className="border p-2 text-base">Gerbera Daisies</td>
-            <td className="border p-2 text-base">Colorful accents</td>
-            <td className="border p-2 text-base">7-10 days</td>
-            <td className="border p-2 text-base">Bold colors, graphic shapes</td>
+          <tr className="hover:bg-gray-50">
+            <td className="border border-gray-300 p-3 text-base font-medium">Gerbera Daisies</td>
+            <td className="border border-gray-300 p-3 text-base">Colorful accents</td>
+            <td className="border border-gray-300 p-3 text-base">7-10 days</td>
+            <td className="border border-gray-300 p-3 text-base">Bold colors, graphic shapes</td>
           </tr>
-          <tr>
-            <td className="border p-2 text-base">Zinnias</td>
-            <td className="border p-2 text-base">Cottage-style bouquets</td>
-            <td className="border p-2 text-base">7-10 days</td>
-            <td className="border p-2 text-base">Multi-colored options, various forms</td>
+          <tr className="bg-gray-50 hover:bg-gray-100">
+            <td className="border border-gray-300 p-3 text-base font-medium">Zinnias</td>
+            <td className="border border-gray-300 p-3 text-base">Cottage-style bouquets</td>
+            <td className="border border-gray-300 p-3 text-base">7-10 days</td>
+            <td className="border border-gray-300 p-3 text-base">Multi-colored options, various forms</td>
           </tr>
-          <tr>
-            <td className="border p-2 text-base">Orchids</td>
-            <td className="border p-2 text-base">Elegant focal points</td>
-            <td className="border p-2 text-base">2-4 weeks</td>
-            <td className="border p-2 text-base">Sophisticated, long-lasting</td>
+          <tr className="hover:bg-gray-50">
+            <td className="border border-gray-300 p-3 text-base font-medium">Orchids</td>
+            <td className="border border-gray-300 p-3 text-base">Elegant focal points</td>
+            <td className="border border-gray-300 p-3 text-base">2-4 weeks</td>
+            <td className="border border-gray-300 p-3 text-base">Sophisticated, long-lasting</td>
           </tr>
         </tbody>
       </table>
@@ -851,7 +851,7 @@ export default function CatSafeFlowersBlogPostPage() {
                     <a href="https://flowersluxe.com/custom/cat-dad-mug-unique-personalized-gift-for-cat-loving-dads" className="flex items-center gap-3 group">
                       <div className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
                         <Image
-                          src="/images/blog/cat-dad-mug-personalized-cat-gifts.webp"
+                          src="/images/products/mugs/cat-dad-mug-personalized-cat-gifts.webp"
                           alt="Custom Cat Dad Mug"
                           width={64}
                           height={64}
