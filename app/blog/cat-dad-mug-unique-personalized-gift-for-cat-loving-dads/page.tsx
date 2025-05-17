@@ -20,10 +20,10 @@ export default function CatDadMugBlogPostPage() {
           <a className="cursor-pointer block">
             <Image
               src='/images/products/mugs/cat-dad-mug-personalized-cat-gifts.webp',
-              alt="Cat Dad Mug with personalized name - unique gift for cat-loving fathers"
+              alt='Cat Dad Mug with personalized name - unique gift for cat-loving fathers',
               width={800}
               height={500}
-              className="w-full object-cover rounded-lg"
+              className='w-full object-cover rounded-lg'
             />
           </a>
         </Link>
