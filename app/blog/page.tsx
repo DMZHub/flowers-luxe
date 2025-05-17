@@ -50,6 +50,15 @@ export default function BlogPage() {
       readTime: '5 min read',
       category: 'Gift Ideas', 
     },
+    { 
+     title: 'What Flowers Are Safe for Cats? 10 Gorgeous Pet-Friendly Picks Youll Love',
+     excerpt: 'Celebrate the bond between you and your feline friend with our personalized Cat Dad Mug! Featuring a touching “fist bump” design between a dad and a cat, along with your cat’s name, this mug is the perfect custom gift for any proud cat dad. Crafted from premium ceramic, it’s dishwasher and microwave safe—ideal for coffee, tea, or hot cocoa. A heartfelt Father’s Day gift, birthday surprise, or everyday reminder of your furry companion.',
+      slug: 'what-flowers-are-safe-for-cats',
+      imageSrc: '/images/blog//what-flowers-are-safe-for-cats.webp',
+      date: 'May 15, 2025',
+      readTime: '5 min read',
+      category: 'Gardening', 
+    },
   ]
 
   // Handle newsletter subscription
