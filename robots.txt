@@ -13,7 +13,7 @@ Allow: /blog
 Allow: /about
 
 # Sitemap location
-Sitemap: https://www.flowersluxe.com/sitemap.xml
+Sitemap: https://flowersluxe.com/sitemap.xml
 
 # Crawl delay for heavy bots
 User-agent: AhrefsBot
