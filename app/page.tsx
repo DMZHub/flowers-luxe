@@ -393,7 +393,7 @@ export default function Home() {
                   Transform your space with our premium floral products. Shop now on our TeePublic store and enjoy exclusive discounts on selected items.
                 </p>
                 <a 
-                  href="https://www.teepublic.com/user/flowersluxe" 
+                  href="https://store.flowersluxe.com/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center bg-white text-primary hover:bg-gray-100 font-medium py-2.5 px-6 rounded-md transition-all duration-300"
