@@ -493,31 +493,6 @@ export default function Home() {
   )
 }
 
-// Performance improvement notes:
-// 1. For the LCP image issue:
-// - Added priority={true} to hero images 
-// - Implemented responsive images with different sizes for mobile/desktop
-// - Added preloading for critical hero images
-// - Added backgroundColor placeholder to improve perceived performance
-// - Used a simple gradient background while images load
-
-// 2. For the JavaScript polyfills issue:
-// - This needs to be handled in your build configuration
-// - Add to your next.config.js:
-/*
-module.exports = {
-  swcMinify: true,
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
-  // Target modern browsers to avoid unnecessary polyfills
-  // This helps reduce JavaScript bundle size
-  webpack: (config) => {
-    config.resolve.fallback = { fs: false, path: false };
-    return config;
-  },
-}
-*/
         </div>
       </section>
       
