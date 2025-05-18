@@ -2,55 +2,36 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import { ChevronRight, ArrowRight, CheckCircle } from 'lucide-react'
 import ProductCard from '@/components/ProductCard'
 import BlogCard from '@/components/BlogCard'
-import { 
-  getAllProducts, 
-  type Product 
-} from '@/utils/products'
+import { getAllProducts, type Product } from '@/utils/products'
 
-// Get the specific products by ID for featured section
-const getFeaturedProductsById = (ids: number[]): Product[] => {
+// Helper function to get products by ID
+function getProductsByIds(ids) {
   const allProducts = getAllProducts();
-  return ids
-    .map(id => allProducts.find(product => product.id === id))
-    .filter((product): product is Product => product !== undefined);
-};
+  return ids.map(id => allProducts.find(product => product.id === id)).filter(Boolean);
+}
 
-// Blog post type definition
-type BlogPost = {
-  title: string;
-  excerpt: string;
-  slug: string;
-  imageSrc: string;
-  date: string;
-  readTime: string;
-  category: string;
-  featured?: boolean;
-};
-
-// Featured blog posts data
-const blogPosts: BlogPost[] = [
+// Blog posts data
+const blogPosts = [
   { 
     title: 'Top 4 Custom Cat Gifts for Cat Lovers - Personalized & Unique Ideas for 2025',
-    excerpt: 'Discover the purr-fect personalized gifts for cat lovers! Explore unique custom cat pillows, mugs, stickers, and tote bags to celebrate their furry friends in style for 2025.',
+    excerpt: 'Discover the purr-fect personalized gifts for cat lovers! Explore unique custom cat pillows, mugs, stickers, and tote bags to celebrate their furry friends in style.',
     slug: 'custom-cat-gifts-for-cat-lovers',
     imageSrc: '/images/blog/top-4-custom-cat-gifts-for-cat-lovers-custom-cat-pillow-and-mug-sticker-tote-bag-ersonalized-&-unique-ideas.webp',
     date: 'May 15, 2025',
     readTime: '5 min read',
-    category: 'Gift Ideas', 
-    featured: true
+    category: 'Gift Ideas'
   },
   { 
     title: 'Cat Dad Mug - Unique Personalized Gift for Cat‑Loving Dads',
-    excerpt: 'Celebrate the bond between you and your feline friend with our personalized Cat Dad Mug! Featuring a touching fist bump design between a dad and a cat, along with your cat name, this mug is the perfect custom gift for any proud cat dad.',
+    excerpt: 'Celebrate the bond between you and your feline friend with our personalized Cat Dad Mug! Featuring a touching fist bump design between a dad and a cat.',
     slug: 'cat-dad-mug-unique-personalized-gift-for-cat-loving-dads',
     imageSrc: '/images/blog/cat-dad-mug-unique-personalized-gift-for-cat-loving-dads.webp',
     date: 'May 15, 2025',
     readTime: '5 min read',
-    category: 'Gift Ideas',
+    category: 'Gift Ideas'
   },
   { 
     title: 'What Flowers Are Safe for Cats? 10 Gorgeous Pet-Friendly Picks Youll Love',
@@ -59,103 +40,83 @@ const blogPosts: BlogPost[] = [
     imageSrc: '/images/blog/what-flowers-are-safe-for-cats.webp',
     date: 'May 12, 2025',
     readTime: '7 min read',
-    category: 'Gardening',
-  },
+    category: 'Gardening'
+  }
+];
+
+// Product categories
+const categories = [
+  { slug: 'throw-pillows', title: 'Throw Pillow' },
+  { slug: 'stickers', title: 'Sticker' },
+  { slug: 'mugs', title: 'Mug' },
+  { slug: 'art', title: 'Art Print' },
+  { slug: 'tote-bags', title: 'Tote Bag' },
+  { slug: 'tapestries', title: 'Tapestry' },
+  { slug: 'pins', title: 'Pin' }
 ];
 
 export default function Home() {
-  // Get specific featured products by ID (1, 2, 29, 34)
-  const featuredProducts = getFeaturedProductsById([1, 2, 29, 34]);
-  
-  // State for the newsletter form
+  // State for newsletter form
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
   
+  // Get featured products (IDs: 1, 2, 29, 34)
+  const [featuredProducts, setFeaturedProducts] = useState([]);
+  
+  useEffect(() => {
+    try {
+      const products = getProductsByIds([1, 2, 29, 34]);
+      setFeaturedProducts(products);
+    } catch (error) {
+      console.error('Error loading products:', error);
+      setFeaturedProducts([]);
+    }
+  }, []);
+  
   // Handle newsletter submission
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
+  const handleNewsletterSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send the email to your newsletter service
     console.log('Subscribing email:', email);
     setSubmitted(true);
-    // Reset the form after 3 seconds
     setTimeout(() => {
       setEmail('');
       setSubmitted(false);
     }, 3000);
   };
 
-  // For performance optimization - only load images when visible
-  const [isImagesLoaded, setIsImagesLoaded] = useState(false);
-  
-  useEffect(() => {
-    // Set images to load after component mounts
-    setIsImagesLoaded(true);
-    
-    // Preload important images for faster LCP
-    const preloadImages = () => {
-      const imageUrls = [
-        '/images/flowers-luxe-hero-image-mobile.webp',
-        '/images/flowers-luxe-hero-image.webp'
-      ];
-      
-      imageUrls.forEach(src => {
-        const img = new Image();
-        img.src = src;
-      });
-    };
-    
-    preloadImages();
-  }, []);
-
   return (
     <>
-      {/* Hero Section - Optimized for performance */}
+      {/* Hero Section */}
       <section className="relative h-[80vh] min-h-[600px] flex items-center">
-        {/* Hero image with responsive handling for better LCP */}
         <div className="absolute inset-0 z-0">
-          {isImagesLoaded && (
-            <>
-              {/* Mobile image */}
-              <div className="block md:hidden h-full">
-                <Image
-                  src="/images/flowers-luxe-hero-image-mobile.webp"
-                  alt="FlowersLuxe - Beautiful floral designs on premium products"
-                  fill
-                  priority={true}
-                  className="object-cover"
-                  sizes="100vw"
-                  style={{ backgroundColor: '#f8f8f8' }}
-                />
-              </div>
-              
-              {/* Desktop image */}
-              <div className="hidden md:block h-full">
-                <Image
-                  src="/images/flowers-luxe-hero-image.webp"
-                  alt="FlowersLuxe - Beautiful floral designs on premium products"
-                  fill
-                  priority={true}
-                  className="object-cover"
-                  sizes="100vw"
-                  style={{ backgroundColor: '#f8f8f8' }}
-                />
-              </div>
-            </>
-          )}
-          {/* Simple colored background shown before images load for perceived performance */}
-          {!isImagesLoaded && (
-            <div className="absolute inset-0 bg-gradient-to-br from-pink-50 to-gray-100"></div>
-          )}
+          <div className="block md:hidden h-full">
+            <Image
+              src="/images/flowers-luxe-hero-image-mobile.webp"
+              alt="FlowersLuxe - Beautiful floral designs on premium products"
+              fill
+              priority={true}
+              className="object-cover"
+              sizes="100vw"
+              style={{ backgroundColor: '#f8f8f8' }}
+            />
+          </div>
+          
+          <div className="hidden md:block h-full">
+            <Image
+              src="/images/flowers-luxe-hero-image.webp"
+              alt="FlowersLuxe - Beautiful floral designs on premium products"
+              fill
+              priority={true}
+              className="object-cover"
+              sizes="100vw"
+              style={{ backgroundColor: '#f8f8f8' }}
+            />
+          </div>
           <div className="absolute inset-0 bg-black/30" />
         </div>
         
         <div className="container-custom relative z-10">
-          <motion.div 
-            className="max-w-2xl text-white"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
+          <div className="max-w-2xl text-white">
             <h1 className="font-cormorant text-4xl md:text-6xl font-bold mb-4">
               Beautiful Floral Designs on Premium Products
             </h1>
@@ -170,7 +131,7 @@ export default function Home() {
                 Customize Your Own
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
       
@@ -219,27 +180,13 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {Object.entries({
-              'throw-pillows': 'Throw Pillow',
-              'stickers': 'Sticker',
-              'mugs': 'Mug',
-              'art': 'Art Print',
-              'tote-bags': 'Tote Bag',
-              'tapestries': 'Tapestry',
-              'pins': 'Pin'
-            }).slice(0, 8).map(([slug, category], index) => (
-              <motion.div
-                key={slug}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <Link href={`/shop/category/${slug}`} className="group block">
+            {categories.map((category, index) => (
+              <div key={category.slug}>
+                <Link href={`/shop/category/${category.slug}`} className="group block">
                   <div className="relative h-64 rounded-xl overflow-hidden">
                     <Image
-                      src={`/images/categories/flower-${slug}.webp`}
-                      alt={category as string}
+                      src={`/images/categories/flower-${category.slug}.webp`}
+                      alt={category.title}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                       sizes="(max-width: 768px) 50vw, 25vw"
@@ -247,7 +194,7 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <h3 className="font-cormorant text-2xl font-bold text-white">{category}</h3>
+                      <h3 className="font-cormorant text-2xl font-bold text-white">{category.title}</h3>
                       <div className="flex items-center mt-2 text-white">
                         <span className="text-sm font-medium">Shop now</span>
                         <ArrowRight size={16} className="ml-2 group-hover:ml-3 transition-all" />
@@ -255,7 +202,7 @@ export default function Home() {
                     </div>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -281,13 +228,7 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {blogPosts.map((post, index) => (
-              <motion.div
-                key={post.slug}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
+              <div key={post.slug}>
                 <BlogCard
                   title={post.title}
                   excerpt={post.excerpt}
@@ -297,13 +238,13 @@ export default function Home() {
                   readTime={post.readTime}
                   category={post.category}
                 />
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
       </section>
       
-      {/* Basic Testimonials Section */}
+      {/* Testimonials Section */}
       <section className="py-16 md:py-24 bg-surface-muted">
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto mb-12">
