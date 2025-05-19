@@ -470,24 +470,7 @@ export default function CatSafeFlowersBlogPostPage() {
     }
   };
 
-  // Product schema for the related item
-  const productSchema = {
-    "@context": "https://schema.org/",
-    "@type": "Product",
-    "name": "Sunflower Throw Pillow - Bold Botanical Elegance",
-    "image": "https://flowersluxe.com/images/products/throw-pillows/sunflower-throw-pillow-bold-botanical-elegance.webp",
-    "description": "Brighten your space with a sunflower pillow featuring a detailed floral mandala. These sunflower throw pillows add charm, warmth, and nature-inspired style.",
-    "brand": {
-      "@type": "Brand",
-      "name": "FlowersLuxe"
-    },
-    "offers": {
-      "@type": "Offer",
-      "url": "https://store.flowersluxe.com/products/75001625-sunflower-mandala-vibrant-floral-boho-design-throw-pillow",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    }
-  };
+  
 
   // Add smooth scrolling for anchor links
   useEffect(() => {
@@ -535,11 +518,7 @@ export default function CatSafeFlowersBlogPostPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostSchema) }}
       />
       
-      {/* Add product schema markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-      />
+    
       
       {/* Blog Post Header */}
       <section className="bg-surface-muted py-16 md:py-24 relative overflow-hidden">
