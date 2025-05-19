@@ -218,7 +218,7 @@ export default function CatDadMugBlogPostPage() {
         <meta property="og:url" content={`https://flowersluxe.com/blog/${slug}`} />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href={`https://flowersluxe.com/blog/${slug}`} />
+        <link rel="canonical" href="https://flowersluxe.com/blog/cat-dad-mug-unique-personalized-gift-for-cat-loving-dads" />
       </Head>
       
       <script
