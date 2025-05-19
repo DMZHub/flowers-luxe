@@ -150,24 +150,7 @@ export default function CatDadMugBlogPostPage() {
     }
   };
 
-  // Product schema for the items
-  const productSchema = {
-    "@context": "https://schema.org/",
-    "@type": "Product",
-    "name": "Cat Dad Mug",
-    "image": "https://flowersluxe.com/images/products/mugs/cat-dad-mug-personalized-cat-gifts.webp",
-    "description": "Personalized Cat Dad Mug featuring a playful fist bump design with your cat's name, perfect for cat-loving fathers",
-    "brand": {
-      "@type": "Brand",
-      "name": "FlowersLuxe"
-    },
-    "offers": {
-      "@type": "Offer",
-      "url": "https://flowersluxe.com/custom/cat-dad-mug-unique-personalized-gift-for-cat-loving-dads",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock"
-    }
-  };
+ 
 
   // FAQ schema
   const faqSchema = {
@@ -241,11 +224,7 @@ export default function CatDadMugBlogPostPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-      />
+     
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
