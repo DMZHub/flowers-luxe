@@ -200,77 +200,7 @@ export default function CatGiftsBlogPostPage() {
     }
   };
 
-  // Product schema for the items
-  const productSchemas = [
-    {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "Custom Cat Pillow",
-      "image": "https://flowersluxe.com/images/products/throw-pillows/custom-cat-pillow-unique-cat-gift.webp",
-      "description": "Personalized cat pillow featuring a bold fist bump design with your cat's name",
-      "brand": {
-        "@type": "Brand",
-        "name": "FlowersLuxe"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://flowersluxe.com/custom/custom-cat-pillow-unique-cat-gift",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
-      }
-    },
-    {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "Custom Cat Mug",
-      "image": "https://flowersluxe.com/images/products/mugs/custom-cat-mug-personalized-mug-for-cat-lovers.webp",
-      "description": "Personalized cat mug with your cat's name and iconic fist bump design",
-      "brand": {
-        "@type": "Brand",
-        "name": "FlowersLuxe"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://flowersluxe.com/custom/custom-cat-mug-personalized-mug-for-cat-lovers",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
-      }
-    },
-    {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "Custom Cat Stickers",
-      "image": "https://flowersluxe.com/images/products/stickers/custom-cat-stickers-personalized-gifts.webp",
-      "description": "Waterproof custom cat stickers featuring your cat's name and floral fist bump design",
-      "brand": {
-        "@type": "Brand",
-        "name": "FlowersLuxe"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://flowersluxe.com/custom/custom-cat-stickers-personalized-gifts",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
-      }
-    },
-    {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "Custom Cat Tote Bag",
-      "image": "https://flowersluxe.com/images/products/tote-bags/custom-cat-tote-bag-unique-tote-bag.webp",
-      "description": "Spacious custom cat tote bag with personalized floral fist bump design and your cat's name",
-      "brand": {
-        "@type": "Brand",
-        "name": "FlowersLuxe"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://flowersluxe.com/custom/custom-cat-tote-bag-unique-tote-bag",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
-      }
-    }
-  ];
+
 
   // Add smooth scrolling for anchor links
   useEffect(() => {
