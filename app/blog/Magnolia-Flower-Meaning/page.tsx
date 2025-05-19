@@ -275,7 +275,7 @@ export default function BlogPostPage() {
         <meta property="og:url" content={`https://flowersluxe.com/blog/${slug}`} />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href={`https://flowersluxe.com/blog/${slug}`} />
+        <link rel="canonical" href="https://flowersluxe.com/blog/Magnolia-Flower-Meaning" />
       </Head>
       
       {/* Add schema markup directly */}
