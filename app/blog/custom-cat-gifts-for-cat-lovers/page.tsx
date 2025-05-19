@@ -248,11 +248,7 @@ export default function CatGiftsBlogPostPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostSchema) }}
       />
       
-      {/* Add product schema markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchemas) }}
-      />
+     
       
       {/* Blog Post Header */}
       <section className="bg-surface-muted py-16 md:py-24 relative overflow-hidden">
