@@ -509,7 +509,7 @@ export default function CatSafeFlowersBlogPostPage() {
         <meta property="og:url" content={`https://flowersluxe.com/blog/${slug}`} />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href={`https://flowersluxe.com/blog/${slug}`} />
+        <link rel="canonical" href="https://flowersluxe.com/blog/what-flowers-are-safe-for-cats" />
       </Head>
       
       {/* Add schema markup directly */}
