@@ -468,8 +468,7 @@ export default function CatSafeFlowersBlogPostPage() {
       "cssSelector": [".article-title", ".article-summary"]
     }
   };
-const canonicalUrl = currentSlug ? `https://flowersluxe.com/blog/${currentSlug}` : 'https://flowersluxe.com/blog'; // Fallback or handle error if slug is missing
-
+ 
   
 
   // Add smooth scrolling for anchor links
@@ -509,8 +508,9 @@ const canonicalUrl = currentSlug ? `https://flowersluxe.com/blog/${currentSlug}`
         <meta property="og:url" content={`https://flowersluxe.com/blog/${slug}`} />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href={canonicalUrl} />
-      </Head>
+        <link rel="canonical" href={`https://flowersluxe.com/blog/${slug}`} />
+
+       </Head>
       
       {/* Add schema markup directly */}
       <script
