@@ -55,7 +55,6 @@ title: 'FlowersLuxe - Beautiful Floral Designs on Premium Products',
 
   // Additional Metadata Enhancements
   metadataBase: new URL('https://flowersluxe.com'),  
-
   robots: {
     index: true,
     follow: true,
