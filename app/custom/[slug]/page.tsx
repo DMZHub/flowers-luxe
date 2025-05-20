@@ -127,9 +127,8 @@ export default function CustomProductPage() {
   return (
     <>
       {/* SEO Schema Markup */}
-      <SchemaMarkup schema={productSchema} />
-      <SchemaMarkup schema={breadcrumbSchema} />
-
+      <SchemaMarkup schema={productSchema} schemaType="Product" />
+      <SchemaMarkup schema={breadcrumbSchema} schemaType="BreadcrumbList" />
       {/* SEO Meta Tags */}
       <Head>
         <title>{pageTitle}</title>
