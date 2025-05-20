@@ -28,6 +28,7 @@ export interface SEOMetadata {
 /**
  * Generates structured data schema for products
  */
+// In utils/schema.ts, your generateProductSchema function
 export function generateProductSchema(product: Product, url: string): Record<string, any> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://flowersluxe.com';
   const productUrl = `${baseUrl}${url}`;
@@ -35,20 +36,15 @@ export function generateProductSchema(product: Product, url: string): Record<str
     ? product.imageSrc
     : `${baseUrl}${product.imageSrc}`;
 
-  // Calculate offers data including discount if available
-  const offerData: Record<string, any> = {
+  const offerData = {
     "@type": "Offer",
-    "price": product.price.toFixed(2),
+    "price": product.discount 
+      ? (product.price * (1 - product.discount.percentage / 100)).toFixed(2)
+      : product.price.toFixed(2),
     "priceCurrency": "USD",
     "availability": "https://schema.org/InStock",
     "url": productUrl
   };
-
-  // Add discount information if available
-  if (product.discount) {
-    const discountedPrice = (product.price * (1 - product.discount.percentage / 100)).toFixed(2);
-    offerData.price = discountedPrice;
-  }
 
   // Basic product schema
   return {
@@ -61,60 +57,18 @@ export function generateProductSchema(product: Product, url: string): Record<str
       "@type": "Brand",
       "name": "FlowersLuxe"
     },
-    "offers": offerData,
+    "offers": offerData,  // This is the critical part Google needs
     "sku": `FL-${product.id}`,
     "mpn": `FLOWLUX-${product.category.replace(/\s+/g, '')}${product.id}`,
     "category": `Floral ${product.category}`,
     "material": getMaterialByCategory(product.category),
     "itemCondition": "https://schema.org/NewCondition",
-    "review": generateReviews(product)
+    "review": generateReviews(product)  // Make sure this is also returning valid data
   };
 }
-
 /**
  * Generates schema markup for a product collection (category)
  */
-export function generateProductCollectionSchema(
-  products: Product[],
-  categoryName: string,
-  url: string
-): Record<string, any> {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://flowersluxe.com';
-  const categoryUrl = `${baseUrl}${url}`;
-
-  return {
-    "@context": "https://schema.org/",
-    "@type": "CollectionPage",
-    "name": `${categoryName} Collection | FlowersLuxe`,
-    "description": `Browse our beautiful collection of floral ${categoryName.toLowerCase()} featuring unique designs and premium quality materials.`,
-    "url": categoryUrl,
-    "mainEntity": {
-      "@type": "ItemList",
-      "itemListElement": products.map((product, index) => ({
-        "@type": "ListItem",
-        "position": index + 1,
-        "item": {
-          "@type": "Product",
-          "name": product.title,
-          // Ensure product.slug is available and correct for your routing
-          "url": product.slug ? `${baseUrl}/shop/product/${product.slug}` : `${baseUrl}${product.isCustom && product.customUrl ? product.customUrl : '/shop'}`,
-          "image": product.imageSrc.startsWith('http')
-            ? product.imageSrc
-            : `${baseUrl}${product.imageSrc}`,
-          "description": product.description.substring(0, 150) + '...',
-          "offers": {
-            "@type": "Offer",
-            "price": product.discount
-              ? (product.price * (1 - product.discount.percentage / 100)).toFixed(2)
-              : product.price.toFixed(2),
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock"
-          }
-        }
-      }))
-    }
-  };
-}
 
 /**
  * Generates schema markup for the entire shop page
