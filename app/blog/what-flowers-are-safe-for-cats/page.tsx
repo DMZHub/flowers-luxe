@@ -431,7 +431,7 @@ export default function CatSafeFlowersBlogPostPage() {
       avatarSrc: '/author/Jack-Walker.jpg',
     },
   };
-
+  const canonicalUrl = currentSlug ? `https://flowersluxe.com/blog/${currentSlug}` : 'https://flowersluxe.com/blog'; // Fallback or handle error if slug is missing
   // Generate schema directly in the component
   const blogPostSchema = {
     "@context": "https://schema.org",
@@ -509,7 +509,7 @@ export default function CatSafeFlowersBlogPostPage() {
         <meta property="og:url" content={`https://flowersluxe.com/blog/${slug}`} />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://flowersluxe.com/blog/what-flowers-are-safe-for-cats" />
+        <link rel="canonical" href={canonicalUrl} />
       </Head>
       
       {/* Add schema markup directly */}
