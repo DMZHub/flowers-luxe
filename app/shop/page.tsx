@@ -131,7 +131,7 @@ export default function ShopPage() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://flowersluxe.com/shop${activeCategory !== 'All' ? `?category=${activeCategory.toLowerCase().replace(/\s+/g, '-')}` : ''}`} />
         <meta property="og:image" content="https://flowersluxe.com/images/shop-og-image.jpg" />
-        <link rel="canonical" href={`https://flowersluxe.com/shop${activeCategory !== 'All' ? `?category=${activeCategory.toLowerCase().replace(/\s+/g, '-')}` : ''}`} />
+        <link rel="canonical" href="https://flowersluxe.com/shop" />
       </Head>
       
       {/* Shop Header */}
