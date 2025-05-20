@@ -239,7 +239,7 @@ export default function CatGiftsBlogPostPage() {
         <meta property="og:url" content={`https://flowersluxe.com/blog/${slug}`} />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://flowersluxe.com/blog/custom-cat-gifts-for-cat-lovers" />
+        <link rel="canonical" href={`https://flowersluxe.com/blog/${slug}`} />
       </Head>
       
       {/* Add schema markup directly */}
