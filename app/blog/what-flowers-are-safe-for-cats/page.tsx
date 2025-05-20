@@ -8,7 +8,6 @@ import { useParams } from 'next/navigation'
 
 export default function CatSafeFlowersBlogPostPage() {
   const { slug } = useParams()
-  const canonicalUrl = currentSlug ? `https://flowersluxe.com/blog/${currentSlug}` : 'https://flowersluxe.com/blog'; // Fallback or handle error if slug is missing
   const blogPost = {
     title: "What Flowers Are Safe for Cats? 10 Gorgeous Pet-Friendly Picks You'll Love",
     excerpt: 'Discover beautiful flowers that are safe for your feline friends! Our expert guide covers 10 non-toxic flowers for cat-friendly homes, with care tips and styling advice.',
@@ -469,6 +468,7 @@ export default function CatSafeFlowersBlogPostPage() {
       "cssSelector": [".article-title", ".article-summary"]
     }
   };
+const canonicalUrl = currentSlug ? `https://flowersluxe.com/blog/${currentSlug}` : 'https://flowersluxe.com/blog'; // Fallback or handle error if slug is missing
 
   
 
