@@ -1,6 +1,4 @@
 // utils/schema.ts
-import { Product } from './products'; // Ensure this path is correct
-
 export interface SEOMetadata {
   title: string;
   description: string;
@@ -28,7 +26,6 @@ export interface SEOMetadata {
 /**
  * Generates structured data schema for products
  */
-// In utils/schema.ts, your generateProductSchema function
 export function generateProductSchema(product: Product, url: string): Record<string, any> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://flowersluxe.com';
   const productUrl = `${baseUrl}${url}`;
@@ -36,6 +33,7 @@ export function generateProductSchema(product: Product, url: string): Record<str
     ? product.imageSrc
     : `${baseUrl}${product.imageSrc}`;
 
+  // Calculate offers data including discount if available
   const offerData = {
     "@type": "Offer",
     "price": product.discount 
@@ -57,18 +55,59 @@ export function generateProductSchema(product: Product, url: string): Record<str
       "@type": "Brand",
       "name": "FlowersLuxe"
     },
-    "offers": offerData,  // This is the critical part Google needs
+    "offers": offerData,  // This is critical for rich results
     "sku": `FL-${product.id}`,
     "mpn": `FLOWLUX-${product.category.replace(/\s+/g, '')}${product.id}`,
     "category": `Floral ${product.category}`,
     "material": getMaterialByCategory(product.category),
     "itemCondition": "https://schema.org/NewCondition",
-    "review": generateReviews(product)  // Make sure this is also returning valid data
+    "review": generateReviews(product)
   };
 }
+
 /**
  * Generates schema markup for a product collection (category)
  */
+export function generateProductCollectionSchema(
+  products: Product[],
+  categoryName: string,
+  url: string
+): Record<string, any> {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://flowersluxe.com';
+  const categoryUrl = `${baseUrl}${url}`;
+
+  return {
+    "@context": "https://schema.org/",
+    "@type": "CollectionPage",
+    "name": `${categoryName} Collection | FlowersLuxe`,
+    "description": `Browse our beautiful collection of floral ${categoryName.toLowerCase()} featuring unique designs and premium quality materials.`,
+    "url": categoryUrl,
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": products.map((product, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "Product",
+          "name": product.title,
+          "url": product.slug ? `${baseUrl}/shop/product/${product.slug}` : `${baseUrl}${product.isCustom && product.customUrl ? product.customUrl : '/shop'}`,
+          "image": product.imageSrc.startsWith('http')
+            ? product.imageSrc
+            : `${baseUrl}${product.imageSrc}`,
+          "description": product.description.substring(0, 150) + '...',
+          "offers": {
+            "@type": "Offer",
+            "price": product.discount
+              ? (product.price * (1 - product.discount.percentage / 100)).toFixed(2)
+              : product.price.toFixed(2),
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      }))
+    }
+  };
+}
 
 /**
  * Generates schema markup for the entire shop page
@@ -83,11 +122,11 @@ export function generateShopPageSchema(url: string): Record<string, any> {
     "name": "FlowersLuxe Shop",
     "description": "Discover beautiful floral designs on premium products including throw pillows, stickers, mugs, art prints, and more.",
     "url": shopUrl,
-    "logo": `${baseUrl}/images/logo.png`, // Ensure this logo exists
-    "image": `${baseUrl}/images/shop-og-image.jpg`, // Ensure this image exists
-    "telephone": "+1-800-FLOWERS", // Replace with actual phone if available
+    "logo": `${baseUrl}/images/logo.png`,
+    "image": `${baseUrl}/images/shop-og-image.jpg`,
+    "telephone": "+1-800-FLOWERS",
     "email": "info@flowersluxe.com",
-    "priceRange": "$", // Typically $, $$, $$$ or $$$$
+    "priceRange": "$",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": [
@@ -103,7 +142,7 @@ export function generateShopPageSchema(url: string): Record<string, any> {
       "closes": "23:59"
     },
     "acceptsReservations": false,
-    "paymentAccepted": "Credit Card, PayPal", // Be more specific if possible
+    "paymentAccepted": "Credit Card, PayPal",
     "currenciesAccepted": "USD"
   };
 }
@@ -112,9 +151,8 @@ export function generateShopPageSchema(url: string): Record<string, any> {
  * Generates schema markup for home page
  */
 export function generateHomePageSchema(url: string): Record<string, any> {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://flowersluxe.com'; // Corrected 'https:' to 'https://'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://flowersluxe.com'; 
   const homeUrl = `${baseUrl}${url === '/' ? '' : url }`;
-
 
   return {
     "@context": "https://schema.org/",
@@ -123,7 +161,7 @@ export function generateHomePageSchema(url: string): Record<string, any> {
     "url": homeUrl,
     "potentialAction": {
       "@type": "SearchAction",
-      "target": { // Target should be an object with urlTemplate
+      "target": {
         "@type": "EntryPoint",
         "urlTemplate": `${baseUrl}/shop?search={search_term_string}`
       },
@@ -134,9 +172,9 @@ export function generateHomePageSchema(url: string): Record<string, any> {
       "name": "FlowersLuxe",
       "logo": {
         "@type": "ImageObject",
-        "url": `${baseUrl}/images/logo.png`, // Ensure this logo exists
-        "width": 112, // Specify actual width
-        "height": 112 // Specify actual height
+        "url": `${baseUrl}/images/logo.png`,
+        "width": 112,
+        "height": 112
       },
       "sameAs": [
         "https://www.instagram.com/flowersluxe1",
@@ -152,7 +190,7 @@ export function generateHomePageSchema(url: string): Record<string, any> {
  * Generates breadcrumb schema markup
  */
 export function generateBreadcrumbSchema(breadcrumbs: Array<{name: string, url: string}>): Record<string, any> {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://flowersluxe.com'; // Corrected 'https:' to 'https://'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://flowersluxe.com';
 
   return {
     "@context": "https://schema.org/",
@@ -187,7 +225,7 @@ export function generateBlogPostSchema(post: any, url: string): Record<string, a
     "description": post.excerpt,
     "image": imageUrl,
     "author": {
-      "@type": "Person", // Or Organization if it's a team account
+      "@type": "Person",
       "name": post.author?.name || "FlowersLuxe Team",
       "jobTitle": post.author?.role || "Writer"
     },
@@ -196,18 +234,25 @@ export function generateBlogPostSchema(post: any, url: string): Record<string, a
       "name": "FlowersLuxe",
       "logo": {
         "@type": "ImageObject",
-        "url": `${baseUrl}/images/logo.png`, // Ensure this logo exists
-        "width": 112, // Specify actual width
-        "height": 112 // Specify actual height
+        "url": `${baseUrl}/images/logo.png`,
+        "width": 112,
+        "height": 112
       }
     },
     "datePublished": formatDate(post.date),
-    "dateModified": formatDate(post.modifiedDate || post.date), // Use modifiedDate if available, else fallback to publish date
-    "keywords": generateKeywords(post)
+    "dateModified": formatDate(post.modifiedDate || post.date),
+    "articleSection": post.category,
+    "timeRequired": "PT12M",
+    "keywords": generateKeywords(post),
+    "articleBody": post.excerpt,
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".article-title", ".article-summary"]
+    }
   };
 }
 
-// Utility functions (internal to this module, not exported)
+// Utility functions
 
 /**
  * Get material information based on product category
@@ -215,7 +260,8 @@ export function generateBlogPostSchema(post: any, url: string): Record<string, a
 function getMaterialByCategory(category: string): string {
   const materials: Record<string, string> = {
     'Throw Pillow': 'Poly Twill Fabric',
-    'Stickers': 'Vinyl', // Assuming 'Stickers' is the category name
+    'Stickers': 'Vinyl',
+    'Sticker': 'Vinyl',
     'Mug': 'Ceramic',
     'Art Print': 'Premium Paper',
     'Tote Bag': 'Poly-Poplin',
@@ -230,8 +276,7 @@ function getMaterialByCategory(category: string): string {
  * Generate sample reviews for structured data
  */
 function generateReviews(product: Product): Record<string, any>[] {
-  // For schema purposes only - these are sample reviews
-  // In a real application, these would come from a database or review service
+  // Sample reviews for schema purposes
   const reviewTemplates = [
     {
       reviewRating: { ratingValue: 5 },
@@ -254,7 +299,7 @@ function generateReviews(product: Product): Record<string, any>[] {
     "@type": "Review",
     "reviewRating": {
       "@type": "Rating",
-      "ratingValue": template.reviewRating.ratingValue.toString(), // Schema.org expects string for ratingValue
+      "ratingValue": template.reviewRating.ratingValue.toString(),
       "bestRating": "5"
     },
     "author": {
@@ -262,7 +307,7 @@ function generateReviews(product: Product): Record<string, any>[] {
       "name": template.author.name
     },
     "reviewBody": template.reviewBody,
-    "itemReviewed": { // Good practice to link review to the product
+    "itemReviewed": {
         "@type": "Product",
         "name": product.title,
         "image": product.imageSrc.startsWith('http') ? product.imageSrc : `${process.env.NEXT_PUBLIC_SITE_URL || 'https://flowersluxe.com'}${product.imageSrc}`
@@ -275,16 +320,15 @@ function generateReviews(product: Product): Record<string, any>[] {
  */
 function formatDate(dateString: string | Date | undefined): string {
   if (!dateString) {
-    return new Date().toISOString(); // Fallback to current date if undefined
+    return new Date().toISOString();
   }
   try {
     const date = new Date(dateString);
-    if (isNaN(date.getTime())) { // Check if date is invalid
+    if (isNaN(date.getTime())) {
         throw new Error("Invalid date string");
     }
     return date.toISOString();
   } catch (e) {
-    // If date format is invalid, return current date as a fallback
     console.warn(`Invalid date string encountered: ${dateString}. Falling back to current date.`);
     return new Date().toISOString();
   }
@@ -296,30 +340,18 @@ function formatDate(dateString: string | Date | undefined): string {
 function generateKeywords(post: any): string {
   const baseKeywords = ["FlowersLuxe", "floral design", post.category?.toLowerCase() || "decor"];
 
-  // Add title words as keywords (simple approach)
+  // Add title words as keywords
   const titleWords = post.title
     .toLowerCase()
-    .replace(/[^a-z0-9\s]/gi, '') // Remove special characters
+    .replace(/[^a-z0-9\s]/gi, '')
     .split(' ')
-    .filter((word: string) => word.length > 3 && !["the", "and", "for", "with", "your"].includes(word)); // Filter short/common words
+    .filter((word: string) => word.length > 3 && !["the", "and", "for", "with", "your"].includes(word));
 
-  // Add tags if available from post data
+  // Add tags if available
   const postTags = Array.isArray(post.tags) ? post.tags.map((tag: string) => tag.toLowerCase()) : [];
 
   return [...new Set([...baseKeywords, ...titleWords, ...postTags])].join(", ");
 }
 
-// The block export below was causing the "Duplicate export" error
-// and has been removed because all functions are already exported individually.
-//
-// /*
-// // Make sure to export all the functions
-// export {
-//   generateProductSchema,
-//   generateProductCollectionSchema,
-//   generateShopPageSchema,
-//   generateHomePageSchema,
-//   generateBreadcrumbSchema,
-//   generateBlogPostSchema
-// };
-// */
+// Required type import
+import { Product } from './products';
