@@ -9,8 +9,8 @@ import { useParams } from 'next/navigation'
 export default function CatSafeFlowersBlogPostPage() {
   const { slug } = useParams()
   const blogPost = {
-    title: "What Flowers Are Safe for Cats? 10 Gorgeous Pet-Friendly Picks You'll Love",
-    excerpt: 'Discover beautiful flowers that are safe for your feline friends! Our expert guide covers 10 non-toxic flowers for cat-friendly homes, with care tips and styling advice.',
+    title: " What Flowers Are Safe for Cats? 10 Beautiful Non-Toxic Options",
+    excerpt: 'Discover 10 beautiful, non-toxic flowers safe for cats. Style your home with feline-friendly blooms—plus expert care tips and decorating ideas!',
     content: `
       <p>As a cat parent and plant enthusiast, I've spent years navigating the delicate balance of keeping gorgeous flowers in my home without endangering my curious feline companions. Many popular blooms can be toxic to cats, causing everything from mild digestive upset to serious health emergencies when nibbled on. But don't worry – you absolutely can enjoy beautiful flowers while keeping your kitties safe!</p>
 
@@ -422,7 +422,7 @@ export default function CatSafeFlowersBlogPostPage() {
       <p>What's your experience with cats and flowers? Have you discovered other cat-safe varieties that work well in your home? Share your stories and tips in the comments below!</p>
     `,
     imageSrc: '/images/blog/what-flowers-are-safe-for-cats.webp',
-    date: 'May 14, 2025',
+    date: 'May 23, 2025',
     readTime: '12 min read',
     category: 'Cat-Friendly Plants',
     author: {
