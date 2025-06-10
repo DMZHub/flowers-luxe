@@ -17,9 +17,7 @@ import { generateCollectionPageSchema } from '../../../utils/schema'
 import { generateStylePageMetadata } from '../../../utils/seo'
 
 interface StylePageProps {
-  params: {
-    style: string
-  }
+  params: Promise<{ style: string }>  // This is the key fix
 }
 
 const validStyles: ProductStyle[] = ['watercolor', 'floral', 'solid-color', 'abstract', 'vintage', 'modern', 'boho', 'farmhouse']
@@ -98,22 +96,22 @@ const styleInfo: Record<ProductStyle, {
   }
 }
 
-export default function StylePage({ params }: StylePageProps) {
-  const style = params.style as ProductStyle
+function StylePageContent({ style }: { style: string }) {
+  const styleTyped = style as ProductStyle
   
   // Validate style
-  if (!validStyles.includes(style)) {
+  if (!validStyles.includes(styleTyped)) {
     notFound()
   }
 
   // Get products for this style
-  const styleProducts = getProductsByFilters({ style })
+  const styleProducts = getProductsByFilters({ style: styleTyped })
   
   if (styleProducts.length === 0) {
     notFound()
   }
 
-  const info = styleInfo[style]
+  const info = styleInfo[styleTyped]
   const metadata = generateStylePageMetadata(style, styleProducts.length)
   const styleSchema = generateCollectionPageSchema(styleProducts, style)
 
@@ -340,5 +338,13 @@ export default function StylePage({ params }: StylePageProps) {
         </div>
       </section>
     </>
+  )
+}
+
+export default function StylePage({ params }: StylePageProps) {
+  return (
+    <ParamsWrapper params={params}>
+      {({ style }) => <StylePageContent style={style} />}
+    </ParamsWrapper>
   )
 }
