@@ -4,17 +4,17 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { FiArrowRight, FiFilter, FiGrid, FiList } from 'react-icons/fi'
-import ProductCard from '../../../components/ProductCard'
-import SchemaMarkup from '../../../components/SchemaMarkup'
-import Breadcrumbs from '../../../components/Breadcrumbs'
-import ParamsWrapper from '../../../components/ParamsWrapper'
+import ProductCard from '../../../../components/ProductCard'
+import SchemaMarkup from '../../../../components/SchemaMarkup'
+import Breadcrumbs from '../../../../components/Breadcrumbs'
+import ParamsWrapper from '../../../../components/ParamsWrapper'
 
 import { 
   getProductsByFilters, 
   type ProductStyle 
-} from '../../../data/products'
-import { generateCollectionPageSchema } from '../../../utils/schema'
-import { generateStylePageMetadata } from '../../../utils/seo'
+} from '../../../../data/products'
+import { generateCollectionPageSchema } from '../../../../utils/schema'
+import { generateStylePageMetadata } from '../../../../utils/seo'
 
 interface StylePageProps {
   params: Promise<{ style: string }>  // This is the key fix
