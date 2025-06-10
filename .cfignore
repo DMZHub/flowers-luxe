@@ -1,7 +1,0 @@
-# Ignore files that aren't needed for the build
-node_modules/
-.next/
-.git/
-scripts/
-.github/
-*.log
