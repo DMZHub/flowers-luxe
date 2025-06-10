@@ -3,361 +3,337 @@ import React from 'react'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { FiExternalLink, FiHeart, FiShare2, FiTruck, FiShield, FiRotateCcw } from 'react-icons/fi'
-import ProductImageGallery from '../../../../components/ProductImageGallery'
-import ProductSpecifications from '../../../../components/ProductSpecifications'
-import ProductCard from '../../../../components/ProductCard'
-import SchemaMarkup from '../../../../components/SchemaMarkup'
-import Breadcrumbs from '../../../../components/Breadcrumbs'
+import { FiArrowRight, FiFilter, FiGrid, FiList } from 'react-icons/fi'
+import ProductCard from '../../../components/ProductCard'
+import SchemaMarkup from '../../../components/SchemaMarkup'
+import Breadcrumbs from '../../../components/Breadcrumbs'
+import ParamsWrapper from '../../../components/ParamsWrapper'
 
 import { 
-  products, 
-  getProductBySlug, 
-  getRelatedProducts,
-  type Product
-} from '../../../../data/products'
-import { generateProductSchema, generateBreadcrumbSchema } from '../../../../utils/schema'
-import { generateProductMetadata } from '../../../../utils/seo'
+  getProductsByFilters, 
+  type ProductStyle 
+} from '../../../data/products'
+import { generateCollectionPageSchema } from '../../../utils/schema'
+import { generateStylePageMetadata } from '../../../utils/seo'
 
-interface ProductPageProps {
-  params: Promise<{
-    style: string
-    product: string
-  }>
+interface StylePageProps {
+  params: Promise<{ style: string }>  // This is the key fix
 }
 
-export default function ProductPage({ params }: ProductPageProps) {
-  const resolvedParams = React.use(params)
-  const product = getProductBySlug(resolvedParams.product)
+const validStyles: ProductStyle[] = ['watercolor', 'floral', 'solid-color', 'abstract', 'vintage', 'modern', 'boho', 'farmhouse']
+
+const styleInfo: Record<ProductStyle, {
+  title: string
+  description: string
+  longDescription: string
+  characteristics: string[]
+  gradient: string
+  textColor: string
+}> = {
+  vintage: {
+    title: 'Vintage Style Flower Throw Pillows',
+    description: 'Timeless botanical designs with classic charm and elegant vintage aesthetics',
+    longDescription: 'Our vintage style flower throw pillows capture the timeless beauty of botanical illustrations from bygone eras. These designs feature classic floral motifs with muted color palettes and intricate details that evoke a sense of nostalgia and elegance. Perfect for traditional, shabby chic, or eclectic home décor.',
+    characteristics: ['Muted color palettes', 'Classic botanical motifs', 'Intricate vintage details', 'Timeless appeal'],
+    gradient: 'from-amber-50 to-orange-50',
+    textColor: 'text-amber-700'
+  },
+  modern: {
+    title: 'Modern Style Flower Throw Pillows',
+    description: 'Contemporary floral patterns perfect for today\'s minimalist and modern homes',
+    longDescription: 'Our modern style flower throw pillows feature clean lines, bold graphics, and contemporary interpretations of botanical elements. These designs embrace simplicity and sophistication, making them ideal for minimalist, Scandinavian, or mid-century modern interiors.',
+    characteristics: ['Clean, minimalist designs', 'Bold color contrasts', 'Geometric elements', 'Contemporary aesthetics'],
+    gradient: 'from-blue-50 to-indigo-50',
+    textColor: 'text-blue-700'
+  },
+  boho: {
+    title: 'Boho Style Flower Throw Pillows',
+    description: 'Free-spirited designs with artistic flair and bohemian elegance',
+    longDescription: 'Our boho style flower throw pillows embrace the free-spirited nature of bohemian design with eclectic patterns, rich textures, and artistic interpretations of floral motifs. These pieces celebrate creativity and individuality, perfect for layered, eclectic spaces.',
+    characteristics: ['Eclectic patterns', 'Rich, earthy colors', 'Artistic freedom', 'Textural variety'],
+    gradient: 'from-purple-50 to-pink-50',
+    textColor: 'text-purple-700'
+  },
+  farmhouse: {
+    title: 'Farmhouse Style Flower Throw Pillows',
+    description: 'Rustic charm meets floral beauty in cozy, country-inspired designs',
+    longDescription: 'Our farmhouse style flower throw pillows combine rustic charm with delicate floral elements, creating the perfect balance of country comfort and botanical beauty. These designs feature warm, welcoming colors and patterns that embody the cozy farmhouse aesthetic.',
+    characteristics: ['Rustic charm', 'Warm, welcoming colors', 'Country-inspired motifs', 'Cozy comfort'],
+    gradient: 'from-green-50 to-emerald-50',
+    textColor: 'text-green-700'
+  },
+  abstract: {
+    title: 'Abstract Style Flower Throw Pillows',
+    description: 'Artistic interpretations of botanical elements with creative modern flair',
+    longDescription: 'Our abstract style flower throw pillows transform traditional floral motifs into contemporary art pieces. These designs feature bold colors, geometric interpretations, and creative compositions that make botanical elements feel fresh and modern.',
+    characteristics: ['Bold artistic interpretations', 'Vibrant color schemes', 'Creative compositions', 'Contemporary art appeal'],
+    gradient: 'from-rose-50 to-red-50',
+    textColor: 'text-rose-700'
+  },
+  watercolor: {
+    title: 'Watercolor Style Flower Throw Pillows',
+    description: 'Soft, dreamy floral designs with gentle watercolor aesthetics',
+    longDescription: 'Our watercolor style flower throw pillows capture the delicate beauty of watercolor paintings with soft, flowing designs and gentle color transitions. These pillows bring a serene, artistic quality to any space with their dreamy, painted aesthetic.',
+    characteristics: ['Soft color transitions', 'Dreamy, painted quality', 'Gentle aesthetics', 'Serene beauty'],
+    gradient: 'from-teal-50 to-cyan-50',
+    textColor: 'text-teal-700'
+  },
+  floral: {
+    title: 'Floral Style Flower Throw Pillows',
+    description: 'Classic flower patterns in rich detail and vibrant colors',
+    longDescription: 'Our floral style flower throw pillows celebrate the pure beauty of flowers with detailed, realistic patterns and vibrant colors. These designs showcase various flower types in their full glory, perfect for those who love traditional floral décor.',
+    characteristics: ['Realistic floral details', 'Vibrant color palettes', 'Traditional appeal', 'Rich botanical accuracy'],
+    gradient: 'from-pink-50 to-rose-50',
+    textColor: 'text-pink-700'
+  },
+  'solid-color': {
+    title: 'Solid Color Flower Throw Pillows',
+    description: 'Minimalist floral designs with single-color sophistication',
+    longDescription: 'Our solid color flower throw pillows offer elegant simplicity with botanical motifs rendered in single, sophisticated color schemes. These designs provide subtle floral beauty that complements any décor without overwhelming the space.',
+    characteristics: ['Minimalist elegance', 'Single-color sophistication', 'Subtle botanical beauty', 'Versatile styling'],
+    gradient: 'from-gray-50 to-slate-50',
+    textColor: 'text-gray-700'
+  }
+}
+
+function StylePageContent({ style }: { style: string }) {
+  const styleTyped = style as ProductStyle
   
-  if (!product || product.style !== resolvedParams.style) {
+  // Validate style
+  if (!validStyles.includes(styleTyped)) {
     notFound()
   }
-  
-  // Get related products
-  const relatedProducts = getRelatedProducts(product, 4)
-  
-  // Calculate current price
-  const currentPrice = product.discount 
-    ? product.price * (1 - product.discount.percentage / 100)
-    : product.price
 
-  // Generate schemas
-  const productSchema = generateProductSchema(product)
+  // Get products for this style
+  const styleProducts = getProductsByFilters({ style: styleTyped })
+  
+  if (styleProducts.length === 0) {
+    notFound()
+  }
+
+  const info = styleInfo[styleTyped]
+  const metadata = generateStylePageMetadata(style, styleProducts.length)
+  const styleSchema = generateCollectionPageSchema(styleProducts, style)
+
   const breadcrumbItems = [
     { name: 'Flower Throw Pillows', url: '/flower-throw-pillows' },
-    { name: `${product.style.charAt(0).toUpperCase() + product.style.slice(1)} Style`, url: `/flower-throw-pillows/${product.style}` },
-    { name: product.title, url: `/flower-throw-pillows/${product.style}/${product.slug}` }
+    { name: info.title, url: `/flower-throw-pillows/${style}` }
   ]
-  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems)
-
-  // Format price
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-    }).format(price);
-  };
 
   return (
     <>
-      <SchemaMarkup schema={productSchema} />
-      <SchemaMarkup schema={breadcrumbSchema} />
+      <SchemaMarkup schema={styleSchema} />
       
       {/* Breadcrumbs */}
       <div className="container-custom">
         <Breadcrumbs items={breadcrumbItems} />
       </div>
 
-      {/* Product Details Section */}
-      <section className="py-8 md:py-16">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Product Images */}
-            <div className="group">
-              <ProductImageGallery 
-                images={product.images} 
-                productTitle={product.title} 
-              />
-            </div>
+      {/* Style Header */}
+      <section className={`bg-gradient-to-br ${info.gradient} py-16 md:py-24 relative overflow-hidden`}>
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute w-96 h-96 -top-48 -right-48 bg-primary/5 rounded-full blur-3xl" />
+          <div className="absolute w-64 h-64 bottom-0 left-1/4 bg-primary/5 rounded-full blur-2xl" />
+          <div className="subtle-pattern absolute inset-0 opacity-30" />
+        </div>
 
-            {/* Product Info */}
-            <div className="space-y-6">
-              <div>
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">
-                    {product.style.charAt(0).toUpperCase() + product.style.slice(1)} Style
-                  </span>
-                  <span className="text-sm text-gray-500 capitalize">
-                    {product.flowerType}
-                  </span>
-                  {product.featured && (
-                    <span className="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">
-                      Featured
-                    </span>
-                  )}
-                </div>
-                
-                <h1 className="font-cormorant text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  {product.title}
-                </h1>
-                
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="flex items-center gap-2">
-                    <span className="text-3xl font-bold text-gray-900">
-                      {formatPrice(currentPrice)}
-                    </span>
-                    {product.discount && (
-                      <>
-                        <span className="text-xl text-gray-500 line-through">
-                          {formatPrice(product.price)}
-                        </span>
-                        <span className="bg-red-100 text-red-800 text-sm font-medium px-2 py-1 rounded">
-                          Save {product.discount.percentage}%
-                        </span>
-                      </>
-                    )}
-                  </div>
-                </div>
+        <div className="container-custom relative">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h1 className="font-cormorant text-4xl md:text-6xl font-bold mb-6 text-gray-900">
+                {info.title}
+              </h1>
+              <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                {info.longDescription}
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                <Link href="#products" className="btn-primary text-lg px-8 py-4">
+                  Shop {styleProducts.length} Designs
+                </Link>
+                <Link href="/flower-throw-pillows" className="btn-outline text-lg px-8 py-4">
+                  Browse Other Styles
+                  <FiArrowRight className="ml-2" size={20} />
+                </Link>
+              </div>
 
-                <div className="flex items-center gap-4 mb-6">
-                  {/* Stock Status */}
-                  <div className="flex items-center gap-2">
-                    <div className={`w-3 h-3 rounded-full ${product.inStock ? 'bg-green-500' : 'bg-red-500'}`}></div>
-                    <span className={`text-sm font-medium ${product.inStock ? 'text-green-700' : 'text-red-700'}`}>
-                      {product.inStock ? 'In Stock' : 'Out of Stock'}
-                    </span>
-                  </div>
-                  
-                  {/* Colors */}
-                  <div className="flex items-center gap-2">
-                    <span className="text-sm text-gray-600">Colors:</span>
-                    <div className="flex gap-1">
-                      {product.colors.slice(0, 4).map((color: string, index: number) => (
-                        <div
-                          key={index}
-                          className={`w-4 h-4 rounded-full border border-gray-200 ${getColorClass(color)}`}
-                          title={color}
-                        />
-                      ))}
-                      {product.colors.length > 4 && (
-                        <span className="text-sm text-gray-500 ml-1">
-                          +{product.colors.length - 4} more
-                        </span>
-                      )}
+              {/* Style Characteristics */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+                {info.characteristics.map((characteristic, index) => (
+                  <div key={index} className="bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-sm border border-white/50">
+                    <div className={`text-sm font-medium ${info.textColor}`}>
+                      {characteristic}
                     </div>
                   </div>
-                </div>
+                ))}
               </div>
-
-              {/* Description */}
-              <div className="prose prose-gray max-w-none">
-                <p className="text-gray-700 leading-relaxed">
-                  {product.description}
-                </p>
-              </div>
-
-              {/* Features */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
-                  <FiTruck className="text-primary flex-shrink-0" size={20} />
-                  <div>
-                    <div className="font-medium text-sm">Free Shipping</div>
-                    <div className="text-xs text-gray-600">On orders over $80</div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
-                  <FiShield className="text-primary flex-shrink-0" size={20} />
-                  <div>
-                    <div className="font-medium text-sm">Quality Guarantee</div>
-                    <div className="text-xs text-gray-600">Premium materials</div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
-                  <FiRotateCcw className="text-primary flex-shrink-0" size={20} />
-                  <div>
-                    <div className="font-medium text-sm">Easy Returns</div>
-                    <div className="text-xs text-gray-600">30-day policy</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* CTA Buttons */}
-              <div className="space-y-4">
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <a
-                    href={product.externalUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 bg-primary hover:bg-primary-dark text-white font-medium py-4 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
-                  >
-                    <span>Shop on TeePublic</span>
-                    <FiExternalLink size={18} />
-                  </a>
-                  
-                  
-                  <button 
-                    className="flex items-center justify-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-4 px-6 rounded-lg transition-colors"
-                    aria-label="Share product"
-                  >
-                    <FiShare2 size={18} />
-                    <span>Share</span>
-                  </button>
-                </div>
-                
-             
-              </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Product Specifications */}
-      <section className="py-12 md:py-16 bg-surface-muted">
+      {/* Products Section */}
+      <section id="products" className="py-16 md:py-24">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <ProductSpecifications specifications={product.specifications} />
-          </div>
-        </div>
-      </section>
-
-      {/* Product Details & Care Instructions */}
-      <section className="py-12 md:py-16">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                <h3 className="font-cormorant text-2xl font-bold mb-4">Product Details</h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Style:</span>
-                    <span className="font-medium capitalize">{product.style}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Flower Type:</span>
-                    <span className="font-medium capitalize">{product.flowerType}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Colors:</span>
-                    <span className="font-medium">{product.colors.length} options</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Material:</span>
-                    <span className="font-medium">Textured Poly Twill</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Made In:</span>
-                    <span className="font-medium">USA</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">SKU:</span>
-                    <span className="font-medium text-sm">{product.id}</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-                <h3 className="font-cormorant text-2xl font-bold mb-4">Care Instructions</h3>
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-medium text-primary mb-2">Pillow Cover:</h4>
-                    <ul className="text-gray-600 text-sm space-y-1">
-                      <li>• Machine wash separately in cold water</li>
-                      <li>• Use gentle cycle with mild detergent</li>
-                      <li>• No bleach or harsh chemicals</li>
-                      <li>• Tumble dry on low heat</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-primary mb-2">Insert:</h4>
-                    <ul className="text-gray-600 text-sm space-y-1">
-                      <li>• Spot clean only</li>
-                      <li>• Professional dry cleaning recommended</li>
-                      <li>• Air dry thoroughly</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Related Products */}
-      {relatedProducts.length > 0 && (
-        <section className="py-12 md:py-16 bg-surface-muted">
-          <div className="container-custom">
-            <div className="text-center mb-12">
-              <h2 className="font-cormorant text-3xl font-bold mb-4">You Might Also Like</h2>
+          <div className="flex justify-between items-center mb-8">
+            <div>
+              <h2 className="font-cormorant text-3xl font-bold mb-2">
+                {info.title}
+              </h2>
               <p className="text-gray-600">
-                Similar flower throw pillows that complement your style
+                {styleProducts.length} unique designs available
               </p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {relatedProducts.map((relatedProduct) => (
+            <Link 
+              href="/shop"
+              className="hidden md:inline-flex items-center gap-2 text-primary hover:text-primary-dark font-medium"
+            >
+              View in Shop
+              <FiArrowRight size={16} />
+            </Link>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {styleProducts.map((product, index) => (
+              <motion.div
+                key={product.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
                 <ProductCard
-                  key={relatedProduct.id}
-                  product={relatedProduct}
+                  product={product}
                   showQuickView={true}
                 />
-              ))}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Style Guide Section */}
+      <section className="py-16 md:py-24 bg-surface-muted">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="font-cormorant text-3xl md:text-4xl font-bold mb-4">
+                Styling Your {style.charAt(0).toUpperCase() + style.slice(1)} Pillows
+              </h2>
+              <p className="text-gray-600">
+                Get the most out of your {style} flower throw pillows with these expert styling tips
+              </p>
             </div>
             
-            <div className="text-center mt-8">
-              <Link href={`/flower-throw-pillows/${product.style}`} className="btn-secondary inline-flex items-center gap-2">
-                <span>View All {product.style.charAt(0).toUpperCase() + product.style.slice(1)} Pillows</span>
-                <FiExternalLink size={16} />
-              </Link>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white rounded-xl p-8 shadow-sm">
+                <h3 className="font-cormorant text-xl font-bold mb-4">Perfect Pairings</h3>
+                <div className="space-y-3">
+                  {style === 'vintage' && (
+                    <>
+                      <p className="text-gray-600">• Pair with antique furniture and lace accents</p>
+                      <p className="text-gray-600">• Combine with neutral linens and vintage brass</p>
+                      <p className="text-gray-600">• Layer with textured throws in cream or sage</p>
+                    </>
+                  )}
+                  {style === 'modern' && (
+                    <>
+                      <p className="text-gray-600">• Match with clean-lined furniture and minimal décor</p>
+                      <p className="text-gray-600">• Pair with geometric patterns and bold colors</p>
+                      <p className="text-gray-600">• Combine with sleek metal and glass accents</p>
+                    </>
+                  )}
+                  {style === 'boho' && (
+                    <>
+                      <p className="text-gray-600">• Layer with mixed patterns and rich textures</p>
+                      <p className="text-gray-600">• Combine with macramé and natural materials</p>
+                      <p className="text-gray-600">• Pair with warm lighting and plants</p>
+                    </>
+                  )}
+                  {style === 'farmhouse' && (
+                    <>
+                      <p className="text-gray-600">• Match with distressed wood and galvanized metal</p>
+                      <p className="text-gray-600">• Pair with gingham and buffalo check patterns</p>
+                      <p className="text-gray-600">• Combine with mason jars and vintage signs</p>
+                    </>
+                  )}
+                  {(style === 'abstract' || style === 'watercolor' || style === 'floral' || style === 'solid-color') && (
+                    <>
+                      <p className="text-gray-600">• Mix with complementary colors and textures</p>
+                      <p className="text-gray-600">• Layer with solid-colored throws and blankets</p>
+                      <p className="text-gray-600">• Pair with natural materials like wood and rattan</p>
+                    </>
+                  )}
+                </div>
+              </div>
+              
+              <div className="bg-white rounded-xl p-8 shadow-sm">
+                <h3 className="font-cormorant text-xl font-bold mb-4">Color Coordination</h3>
+                <div className="space-y-3">
+                  <p className="text-gray-600">• Choose 2-3 main colors from the pillow design</p>
+                  <p className="text-gray-600">• Use the 60-30-10 rule for color distribution</p>
+                  <p className="text-gray-600">• Add metallic accents for extra sophistication</p>
+                  <p className="text-gray-600">• Consider seasonal color swaps for variety</p>
+                </div>
+              </div>
             </div>
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
-      {/* FAQ Section */}
-      <section className="py-12 md:py-16">
+      {/* Related Styles Section */}
+      <section className="py-16 md:py-24">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-cormorant text-3xl font-bold text-center mb-12">
-              Frequently Asked Questions
-            </h2>
-            
-            <div className="space-y-6">
-              <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <h3 className="font-medium text-lg mb-3">Can I wash my pillows?</h3>
-                <p className="text-gray-600">
-                  Yes! All pillows consist of an outer cover and an insert. The cover can be machine washed 
-                  separately in cold water on a gentle cycle with mild detergent and no bleach. Tumble dry low. 
-                  The insert should be spot cleaned or dry cleaned only.
-                </p>
-              </div>
-              
-              <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <h3 className="font-medium text-lg mb-3">What material is this item made of?</h3>
-                <p className="text-gray-600">
-                  Textured Poly "Twill" pillow cover with concealed zipper and synthetic insert included. 
-                  A soft, comfortable accent for the home. Individually cut and sewn by hand in America.
-                </p>
-              </div>
-              
-              <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <h3 className="font-medium text-lg mb-3">What is the Return/Exchange policy?</h3>
-                <p className="text-gray-600">
-                  We want you to love your order! If for any reason you don't, let us know and we'll make things right. 
-                  Our return policy follows TeePublic's standard 30-day return window.
-                </p>
-              </div>
-              
-              <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <h3 className="font-medium text-lg mb-3">How is product quality ensured?</h3>
-                <p className="text-gray-600">
-                  Our Production Team establishes the highest quality standards for third-party printers who 
-                  participate in the marketplace to ensure that every product sold is perfect.
-                </p>
-              </div>
-            </div>
+          <div className="text-center mb-12">
+            <h2 className="font-cormorant text-3xl font-bold mb-4">Explore Other Styles</h2>
+            <p className="text-gray-600">
+              Discover more flower throw pillow styles to complete your home décor
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {validStyles
+              .filter(s => s !== style)
+              .slice(0, 3)
+              .map((otherStyle) => {
+                const otherProducts = getProductsByFilters({ style: otherStyle })
+                const otherInfo = styleInfo[otherStyle]
+                
+                return (
+                  <Link 
+                    key={otherStyle}
+                    href={`/flower-throw-pillows/${otherStyle}`}
+                    className="group"
+                  >
+                    <div className={`bg-gradient-to-br ${otherInfo.gradient} rounded-xl p-6 shadow-sm hover:shadow-md transition-all group-hover:scale-105`}>
+                      <h3 className={`font-cormorant text-xl font-bold mb-2 ${otherInfo.textColor}`}>
+                        {otherInfo.title.split(' ')[0]} Style
+                      </h3>
+                      <p className="text-gray-700 text-sm mb-4">
+                        {otherInfo.description}
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm font-medium text-gray-600">
+                          {otherProducts.length} designs
+                        </span>
+                        <FiArrowRight className="text-gray-600 group-hover:translate-x-1 transition-transform" size={16} />
+                      </div>
+                    </div>
+                  </Link>
+                )
+              })}
+          </div>
+          
+          <div className="text-center mt-8">
+            <Link href="/flower-throw-pillows" className="btn-secondary inline-flex items-center gap-2">
+              <span>View All Styles</span>
+              <FiArrowRight size={16} />
+            </Link>
           </div>
         </div>
       </section>
@@ -365,23 +341,10 @@ export default function ProductPage({ params }: ProductPageProps) {
   )
 }
 
-// Helper function to get Tailwind color classes
-function getColorClass(color: string): string {
-  const colorMap: Record<string, string> = {
-    'multicolor': 'bg-gradient-to-r from-red-400 via-yellow-400 to-blue-400',
-    'blue': 'bg-blue-500',
-    'green': 'bg-green-500',
-    'purple': 'bg-purple-500',
-    'black': 'bg-black',
-    'pink': 'bg-pink-500',
-    'white': 'bg-white border-2',
-    'black-and-white': 'bg-gradient-to-r from-black to-white',
-    'orange': 'bg-orange-500',
-    'gold': 'bg-yellow-400',
-    'red': 'bg-red-500',
-    'yellow': 'bg-yellow-500',
-    'navy': 'bg-blue-900',
-  };
-  
-  return colorMap[color] || 'bg-gray-400';
+export default function StylePage({ params }: StylePageProps) {
+  return (
+    <ParamsWrapper params={params}>
+      {({ style }) => <StylePageContent style={style} />}
+    </ParamsWrapper>
+  )
 }
