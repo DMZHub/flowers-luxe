@@ -9,8 +9,6 @@ import ProductSpecifications from '../../../../components/ProductSpecifications'
 import ProductCard from '../../../../components/ProductCard'
 import SchemaMarkup from '../../../../components/SchemaMarkup'
 import Breadcrumbs from '../../../../components/Breadcrumbs'
-import ParamsWrapper from '../../../components/ParamsWrapper'
-
 import { 
   products, 
   getProductBySlug, 
