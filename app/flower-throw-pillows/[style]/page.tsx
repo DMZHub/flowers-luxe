@@ -7,6 +7,8 @@ import { FiArrowRight, FiFilter, FiGrid, FiList } from 'react-icons/fi'
 import ProductCard from '../../../components/ProductCard'
 import SchemaMarkup from '../../../components/SchemaMarkup'
 import Breadcrumbs from '../../../components/Breadcrumbs'
+import ParamsWrapper from '../../../components/ParamsWrapper'
+
 import { 
   getProductsByFilters, 
   type ProductStyle 
