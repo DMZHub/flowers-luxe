@@ -9,6 +9,7 @@ import ProductSpecifications from '../../../../components/ProductSpecifications'
 import ProductCard from '../../../../components/ProductCard'
 import SchemaMarkup from '../../../../components/SchemaMarkup'
 import Breadcrumbs from '../../../../components/Breadcrumbs'
+
 import { 
   products, 
   getProductBySlug, 
@@ -17,21 +18,6 @@ import {
 } from '../../../../data/products'
 import { generateProductSchema, generateBreadcrumbSchema } from '../../../../utils/schema'
 import { generateProductMetadata } from '../../../../utils/seo'
-{/*
-interface ProductPageProps {
-  params: {
-    style: string
-    product: string
-  }
-}
-
-export default function ProductPage({ params }: ProductPageProps) {
-  const product = getProductBySlug(params.product)
-  
-  if (!product || product.style !== params.style) {
-    notFound()
-  }
-*/}
 
 interface ProductPageProps {
   params: Promise<{
