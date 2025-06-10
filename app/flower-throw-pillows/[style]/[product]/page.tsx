@@ -133,7 +133,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                   <div className="flex items-center gap-2">
                     <span className="text-sm text-gray-600">Colors:</span>
                     <div className="flex gap-1">
-                      {product.colors.slice(0, 4).map((color: string, index) => (
+                      {product.colors.slice(0, 4).map((color: string, index: number) => (
                         <div
                           key={index}
                           className={`w-4 h-4 rounded-full border border-gray-200 ${getColorClass(color)}`}
