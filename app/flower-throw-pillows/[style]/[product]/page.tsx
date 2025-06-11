@@ -25,8 +25,6 @@ interface ProductPageProps {
   }>
 }
 
-
-
 export default function ProductPage({ params }: ProductPageProps) {
   const resolvedParams = React.use(params)
   const product = getProductBySlug(resolvedParams.product)
