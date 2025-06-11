@@ -20,7 +20,6 @@ import { ProductPageParams } from '../../../../components/ParamsWrapper'
 
 export default function ProductPageContent({ params }: { params: ProductPageParams }) {
   const { style, product: productSlug } = params;
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   
   // Get the product
   const product = getProductBySlug(productSlug);
@@ -66,8 +65,6 @@ export default function ProductPageContent({ params }: { params: ProductPagePara
               <ProductImageGallery
                 images={product.images}
                 productTitle={product.title}
-                selectedIndex={selectedImageIndex}
-                onImageSelect={setSelectedImageIndex}
               />
             </div>
             
@@ -156,7 +153,7 @@ export default function ProductPageContent({ params }: { params: ProductPagePara
               {/* Action Buttons */}
               <div className="space-y-4">
                 <div className="flex gap-3">
-                  <a
+                  
                     href={product.externalUrl}
                     target="_blank"
                     rel="noopener noreferrer"
