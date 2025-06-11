@@ -13,12 +13,7 @@ import {
 } from '../../../data/products'
 import { generateCollectionPageSchema } from '../../../utils/schema'
 import { generateStylePageMetadata } from '../../../utils/seo'
-
-interface StylePageProps {
-  params: Promise<{
-    style: string
-  }>
-}
+import { StylePageParams } from '../../../components/ParamsWrapper'
 
 const validStyles: ProductStyle[] = ['watercolor', 'floral', 'solid-color', 'abstract', 'vintage', 'modern', 'boho', 'farmhouse']
 
@@ -96,9 +91,8 @@ const styleInfo: Record<ProductStyle, {
   }
 }
 
-export default function StylePage({ params }: StylePageProps) {
-  const resolvedParams = React.use(params)
-  const style = resolvedParams.style as ProductStyle
+export default function StylePageComponent({ params }: { params: StylePageParams }) {
+  const style = params.style as ProductStyle
   
   // Validate style
   if (!validStyles.includes(style)) {
@@ -118,7 +112,7 @@ export default function StylePage({ params }: StylePageProps) {
 
   const breadcrumbItems = [
     { name: 'Flower Throw Pillows', url: '/flower-throw-pillows' },
-    { name: info.title, url: `/flower-throw-pillows/${resolvedParams.style}` }
+    { name: info.title, url: `/flower-throw-pillows/${style}` }
   ]
 
   return (
