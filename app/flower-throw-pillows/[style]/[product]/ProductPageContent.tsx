@@ -37,7 +37,7 @@ export default function ProductPageContent({ params }: { params: ProductPagePara
   ];
 
   return (
-    <React.Fragment>
+    <div>
       <SchemaMarkup schema={productSchema} />
       
       <div className="container-custom">
@@ -73,9 +73,11 @@ export default function ProductPageContent({ params }: { params: ProductPagePara
                 
                 <div className="flex items-center gap-2 mb-4">
                   <div className="flex items-center">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <FiStar key={i} className="text-yellow-400 fill-current" size={16} />
-                    ))}
+                    <FiStar className="text-yellow-400 fill-current" size={16} />
+                    <FiStar className="text-yellow-400 fill-current" size={16} />
+                    <FiStar className="text-yellow-400 fill-current" size={16} />
+                    <FiStar className="text-yellow-400 fill-current" size={16} />
+                    <FiStar className="text-yellow-400 fill-current" size={16} />
                   </div>
                   <span className="text-sm text-gray-600">(127 reviews)</span>
                 </div>
@@ -85,14 +87,14 @@ export default function ProductPageContent({ params }: { params: ProductPagePara
                     ${currentPrice.toFixed(2)}
                   </span>
                   {product.discount && (
-                    <React.Fragment>
+                    <div className="flex items-center gap-2">
                       <span className="text-xl text-gray-500 line-through">
                         ${product.price.toFixed(2)}
                       </span>
                       <span className="bg-red-100 text-red-800 text-sm font-medium px-2 py-1 rounded">
                         Save {product.discount.percentage}%
                       </span>
-                    </React.Fragment>
+                    </div>
                   )}
                 </div>
               </div>
@@ -214,6 +216,6 @@ export default function ProductPageContent({ params }: { params: ProductPagePara
           </div>
         </div>
       </section>
-    </React.Fragment>
+    </div>
   );
 }
