@@ -1,9 +1,8 @@
 "use client"
-import React, { useState } from 'react'
+import React from 'react'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { FiShoppingBag, FiHeart, FiShare2, FiChevronLeft, FiChevronRight, FiStar, FiCheck, FiTruck, FiShield, FiRotateCcw } from 'react-icons/fi'
+import { FiShoppingBag, FiHeart, FiShare2, FiChevronRight, FiStar, FiCheck, FiTruck, FiShield, FiRotateCcw } from 'react-icons/fi'
 import ProductCard from '../../../../components/ProductCard'
 import SchemaMarkup from '../../../../components/SchemaMarkup'
 import Breadcrumbs from '../../../../components/Breadcrumbs'
@@ -15,7 +14,6 @@ import {
   type ProductStyle 
 } from '../../../../data/products'
 import { generateProductSchema } from '../../../../utils/schema'
-import { generateProductMetadata, generateImageAlt } from '../../../../utils/seo'
 import { ProductPageParams } from '../../../../components/ParamsWrapper'
 
 export default function ProductPageContent({ params }: { params: ProductPageParams }) {
@@ -48,19 +46,16 @@ export default function ProductPageContent({ params }: { params: ProductPagePara
   ];
 
   return (
-    <>
+    <div>
       <SchemaMarkup schema={productSchema} />
       
-      {/* Breadcrumbs */}
       <div className="container-custom">
         <Breadcrumbs items={breadcrumbItems} />
       </div>
 
-      {/* Product Details Section */}
       <section className="py-8 md:py-12">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-            {/* Product Images */}
             <div className="space-y-4">
               <ProductImageGallery
                 images={product.images}
@@ -68,9 +63,7 @@ export default function ProductPageContent({ params }: { params: ProductPagePara
               />
             </div>
             
-            {/* Product Info */}
             <div className="space-y-6">
-              {/* Product Header */}
               <div>
                 <div className="flex items-center gap-2 mb-2">
                   <span className="bg-primary/10 text-primary text-xs font-medium px-2 py-1 rounded">
@@ -87,7 +80,6 @@ export default function ProductPageContent({ params }: { params: ProductPagePara
                   {product.title}
                 </h1>
                 
-                {/* Rating */}
                 <div className="flex items-center gap-2 mb-4">
                   <div className="flex items-center">
                     {[...Array(5)].map((_, i) => (
@@ -97,32 +89,29 @@ export default function ProductPageContent({ params }: { params: ProductPagePara
                   <span className="text-sm text-gray-600">(127 reviews)</span>
                 </div>
                 
-                {/* Price */}
                 <div className="flex items-center gap-3 mb-6">
                   <span className="text-3xl font-bold text-gray-900">
                     ${currentPrice.toFixed(2)}
                   </span>
                   {product.discount && (
-                    <>
+                    <React.Fragment>
                       <span className="text-xl text-gray-500 line-through">
                         ${product.price.toFixed(2)}
                       </span>
                       <span className="bg-red-100 text-red-800 text-sm font-medium px-2 py-1 rounded">
                         Save {product.discount.percentage}%
                       </span>
-                    </>
+                    </React.Fragment>
                   )}
                 </div>
               </div>
               
-              {/* Product Description */}
               <div>
                 <p className="text-gray-600 leading-relaxed">
                   {product.shortDescription || product.description.substring(0, 200)}...
                 </p>
               </div>
               
-              {/* Key Features */}
               <div className="space-y-2">
                 <div className="flex items-center gap-2 text-sm text-gray-700">
                   <FiCheck className="text-green-600" size={16} />
@@ -142,7 +131,6 @@ export default function ProductPageContent({ params }: { params: ProductPagePara
                 </div>
               </div>
               
-              {/* Stock Status */}
               <div className="flex items-center gap-2">
                 <div className={`w-3 h-3 rounded-full ${product.inStock ? 'bg-green-500' : 'bg-red-500'}`}></div>
                 <span className={`text-sm font-medium ${product.inStock ? 'text-green-700' : 'text-red-700'}`}>
@@ -150,7 +138,6 @@ export default function ProductPageContent({ params }: { params: ProductPagePara
                 </span>
               </div>
               
-              {/* Action Buttons */}
               <div className="space-y-4">
                 <div className="flex gap-3">
                   
@@ -171,7 +158,6 @@ export default function ProductPageContent({ params }: { params: ProductPagePara
                   </button>
                 </div>
                 
-                {/* Guarantee Badges */}
                 <div className="grid grid-cols-3 gap-3 pt-4 border-t border-gray-100">
                   <div className="text-center">
                     <FiTruck className="mx-auto mb-1 text-primary" size={20} />
@@ -192,7 +178,6 @@ export default function ProductPageContent({ params }: { params: ProductPagePara
         </div>
       </section>
 
-      {/* Product Details Tabs */}
       <section className="py-12 bg-surface-muted">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
@@ -211,7 +196,6 @@ export default function ProductPageContent({ params }: { params: ProductPagePara
         </div>
       </section>
 
-      {/* Related Products */}
       <section className="py-16 md:py-24">
         <div className="container-custom">
           <div className="text-center mb-12">
@@ -239,6 +223,6 @@ export default function ProductPageContent({ params }: { params: ProductPagePara
           </div>
         </div>
       </section>
-    </>
+    </div>
   )
 }
