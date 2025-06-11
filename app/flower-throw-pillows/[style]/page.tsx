@@ -1,12 +1,12 @@
+"use client"
 import React from 'react'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { FiArrowLeft, FiGrid, FiList, FiFilter } from 'react-icons/fi'
+import { motion } from 'framer-motion'
+import { FiArrowRight, FiFilter, FiGrid, FiList } from 'react-icons/fi'
 import ProductCard from '../../../components/ProductCard'
-import ProductFilters from '../../../components/ProductFilters'
 import SchemaMarkup from '../../../components/SchemaMarkup'
 import Breadcrumbs from '../../../components/Breadcrumbs'
-
 import { 
   getProductsByFilters, 
   type ProductStyle 
@@ -14,239 +14,336 @@ import {
 import { generateCollectionPageSchema } from '../../../utils/schema'
 import { generateStylePageMetadata } from '../../../utils/seo'
 
+interface StylePageProps {
+  params: {
+    style: string
+  }
+}
+
 const validStyles: ProductStyle[] = ['watercolor', 'floral', 'solid-color', 'abstract', 'vintage', 'modern', 'boho', 'farmhouse']
 
-// Generate static params for all styles
+// Generate static params for static export
 export async function generateStaticParams() {
   return validStyles.map((style) => ({
     style: style,
   }))
 }
 
-interface StylePageProps {
-  params: Promise<{
-    style: string
-  }>
-  searchParams: Promise<{
-    sort?: string
-    filter?: string
-    view?: string
-  }>
+const styleInfo: Record<ProductStyle, {
+  title: string
+  description: string
+  longDescription: string
+  characteristics: string[]
+  gradient: string
+  textColor: string
+}> = {
+  vintage: {
+    title: 'Vintage Style Flower Throw Pillows',
+    description: 'Timeless botanical designs with classic charm and elegant vintage aesthetics',
+    longDescription: 'Our vintage style flower throw pillows capture the timeless beauty of botanical illustrations from bygone eras. These designs feature classic floral motifs with muted color palettes and intricate details that evoke a sense of nostalgia and elegance. Perfect for traditional, shabby chic, or eclectic home décor.',
+    characteristics: ['Muted color palettes', 'Classic botanical motifs', 'Intricate vintage details', 'Timeless appeal'],
+    gradient: 'from-amber-50 to-orange-50',
+    textColor: 'text-amber-700'
+  },
+  modern: {
+    title: 'Modern Style Flower Throw Pillows',
+    description: 'Contemporary floral patterns perfect for today\'s minimalist and modern homes',
+    longDescription: 'Our modern style flower throw pillows feature clean lines, bold graphics, and contemporary interpretations of botanical elements. These designs embrace simplicity and sophistication, making them ideal for minimalist, Scandinavian, or mid-century modern interiors.',
+    characteristics: ['Clean, minimalist designs', 'Bold color contrasts', 'Geometric elements', 'Contemporary aesthetics'],
+    gradient: 'from-blue-50 to-indigo-50',
+    textColor: 'text-blue-700'
+  },
+  boho: {
+    title: 'Boho Style Flower Throw Pillows',
+    description: 'Free-spirited designs with artistic flair and bohemian elegance',
+    longDescription: 'Our boho style flower throw pillows embrace the free-spirited nature of bohemian design with eclectic patterns, rich textures, and artistic interpretations of floral motifs. These pieces celebrate creativity and individuality, perfect for layered, eclectic spaces.',
+    characteristics: ['Eclectic patterns', 'Rich, earthy colors', 'Artistic freedom', 'Textural variety'],
+    gradient: 'from-purple-50 to-pink-50',
+    textColor: 'text-purple-700'
+  },
+  farmhouse: {
+    title: 'Farmhouse Style Flower Throw Pillows',
+    description: 'Rustic charm meets floral beauty in cozy, country-inspired designs',
+    longDescription: 'Our farmhouse style flower throw pillows combine rustic charm with delicate floral elements, creating the perfect balance of country comfort and botanical beauty. These designs feature warm, welcoming colors and patterns that embody the cozy farmhouse aesthetic.',
+    characteristics: ['Rustic charm', 'Warm, welcoming colors', 'Country-inspired motifs', 'Cozy comfort'],
+    gradient: 'from-green-50 to-emerald-50',
+    textColor: 'text-green-700'
+  },
+  abstract: {
+    title: 'Abstract Style Flower Throw Pillows',
+    description: 'Artistic interpretations of botanical elements with creative modern flair',
+    longDescription: 'Our abstract style flower throw pillows transform traditional floral motifs into contemporary art pieces. These designs feature bold colors, geometric interpretations, and creative compositions that make botanical elements feel fresh and modern.',
+    characteristics: ['Bold artistic interpretations', 'Vibrant color schemes', 'Creative compositions', 'Contemporary art appeal'],
+    gradient: 'from-rose-50 to-red-50',
+    textColor: 'text-rose-700'
+  },
+  watercolor: {
+    title: 'Watercolor Style Flower Throw Pillows',
+    description: 'Soft, dreamy floral designs with gentle watercolor aesthetics',
+    longDescription: 'Our watercolor style flower throw pillows capture the delicate beauty of watercolor paintings with soft, flowing designs and gentle color transitions. These pillows bring a serene, artistic quality to any space with their dreamy, painted aesthetic.',
+    characteristics: ['Soft color transitions', 'Dreamy, painted quality', 'Gentle aesthetics', 'Serene beauty'],
+    gradient: 'from-teal-50 to-cyan-50',
+    textColor: 'text-teal-700'
+  },
+  floral: {
+    title: 'Floral Style Flower Throw Pillows',
+    description: 'Classic flower patterns in rich detail and vibrant colors',
+    longDescription: 'Our floral style flower throw pillows celebrate the pure beauty of flowers with detailed, realistic patterns and vibrant colors. These designs showcase various flower types in their full glory, perfect for those who love traditional floral décor.',
+    characteristics: ['Realistic floral details', 'Vibrant color palettes', 'Traditional appeal', 'Rich botanical accuracy'],
+    gradient: 'from-pink-50 to-rose-50',
+    textColor: 'text-pink-700'
+  },
+  'solid-color': {
+    title: 'Solid Color Flower Throw Pillows',
+    description: 'Minimalist floral designs with single-color sophistication',
+    longDescription: 'Our solid color flower throw pillows offer elegant simplicity with botanical motifs rendered in single, sophisticated color schemes. These designs provide subtle floral beauty that complements any décor without overwhelming the space.',
+    characteristics: ['Minimalist elegance', 'Single-color sophistication', 'Subtle botanical beauty', 'Versatile styling'],
+    gradient: 'from-gray-50 to-slate-50',
+    textColor: 'text-gray-700'
+  }
 }
 
-export default function StylePage({ params, searchParams }: StylePageProps) {
-  const resolvedParams = React.use(params)
-  const resolvedSearchParams = React.use(searchParams)
+export default function StylePage({ params }: StylePageProps) {
+  const style = params.style as ProductStyle
   
-  if (!validStyles.includes(resolvedParams.style as ProductStyle)) {
+  // Validate style
+  if (!validStyles.includes(style)) {
     notFound()
   }
 
-  const style = resolvedParams.style as ProductStyle
-  
   // Get products for this style
-  const products = getProductsByFilters({
-    style: style,
-    sort: resolvedSearchParams.sort as any,
-    // Add other filters as needed
-  })
+  const styleProducts = getProductsByFilters({ style })
+  
+  if (styleProducts.length === 0) {
+    notFound()
+  }
 
-  // Generate schema
-  const pageSchema = generateCollectionPageSchema(
-    style,
-    products,
-    `Beautiful ${style} flower throw pillows to enhance your home decor`
-  )
+  const info = styleInfo[style]
+  const metadata = generateStylePageMetadata(style, styleProducts.length)
+  const styleSchema = generateCollectionPageSchema(styleProducts, style)
 
   const breadcrumbItems = [
     { name: 'Flower Throw Pillows', url: '/flower-throw-pillows' },
-    { name: `${style.charAt(0).toUpperCase() + style.slice(1)} Style`, url: `/flower-throw-pillows/${style}` }
+    { name: info.title, url: `/flower-throw-pillows/${style}` }
   ]
-
-  const formatStyleName = (style: string) => {
-    return style.split('-').map(word => 
-      word.charAt(0).toUpperCase() + word.slice(1)
-    ).join(' ')
-  }
-
-  const currentView = resolvedSearchParams.view || 'grid'
 
   return (
     <>
-      <SchemaMarkup schema={pageSchema} />
+      <SchemaMarkup schema={styleSchema} />
       
       {/* Breadcrumbs */}
       <div className="container-custom">
         <Breadcrumbs items={breadcrumbItems} />
       </div>
 
-      {/* Header Section */}
-      <section className="py-8 md:py-12">
-        <div className="container-custom">
-          <div className="flex items-center gap-4 mb-6">
-            <Link 
-              href="/flower-throw-pillows"
-              className="flex items-center gap-2 text-primary hover:text-primary-dark transition-colors"
+      {/* Style Header */}
+      <section className={`bg-gradient-to-br ${info.gradient} py-16 md:py-24 relative overflow-hidden`}>
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute w-96 h-96 -top-48 -right-48 bg-primary/5 rounded-full blur-3xl" />
+          <div className="absolute w-64 h-64 bottom-0 left-1/4 bg-primary/5 rounded-full blur-2xl" />
+          <div className="subtle-pattern absolute inset-0 opacity-30" />
+        </div>
+
+        <div className="container-custom relative">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
             >
-              <FiArrowLeft size={20} />
-              <span>Back to All Pillows</span>
+              <h1 className="font-cormorant text-4xl md:text-6xl font-bold mb-6 text-gray-900">
+                {info.title}
+              </h1>
+              <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                {info.longDescription}
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                <Link href="#products" className="btn-primary text-lg px-8 py-4">
+                  Shop {styleProducts.length} Designs
+                </Link>
+                <Link href="/flower-throw-pillows" className="btn-outline text-lg px-8 py-4">
+                  Browse Other Styles
+                  <FiArrowRight className="ml-2" size={20} />
+                </Link>
+              </div>
+
+              {/* Style Characteristics */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+                {info.characteristics.map((characteristic, index) => (
+                  <div key={index} className="bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-sm border border-white/50">
+                    <div className={`text-sm font-medium ${info.textColor}`}>
+                      {characteristic}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Products Section */}
+      <section id="products" className="py-16 md:py-24">
+        <div className="container-custom">
+          <div className="flex justify-between items-center mb-8">
+            <div>
+              <h2 className="font-cormorant text-3xl font-bold mb-2">
+                {info.title}
+              </h2>
+              <p className="text-gray-600">
+                {styleProducts.length} unique designs available
+              </p>
+            </div>
+            
+            <Link 
+              href="/shop"
+              className="hidden md:inline-flex items-center gap-2 text-primary hover:text-primary-dark font-medium"
+            >
+              View in Shop
+              <FiArrowRight size={16} />
             </Link>
           </div>
           
-          <div className="text-center mb-12">
-            <h1 className="font-cormorant text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              {formatStyleName(style)} Flower Throw Pillows
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover our beautiful collection of {formatStyleName(style).toLowerCase()} flower throw pillows, 
-              perfect for adding elegance and comfort to any room.
-            </p>
-            <div className="flex items-center justify-center gap-2 mt-4">
-              <span className="text-sm text-gray-500">{products.length} products</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Filters and Products */}
-      <section className="py-8">
-        <div className="container-custom">
-          {/* Filter Bar */}
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
-            <div className="flex items-center gap-4">
-              <ProductFilters 
-                currentStyle={style}
-                currentSort={resolvedSearchParams.sort}
-              />
-            </div>
-            
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-gray-600 mr-2">View:</span>
-              <Link
-                href={`?${new URLSearchParams({...resolvedSearchParams, view: 'grid'}).toString()}`}
-                className={`p-2 rounded ${currentView === 'grid' ? 'bg-primary text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {styleProducts.map((product, index) => (
+              <motion.div
+                key={product.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <FiGrid size={16} />
-              </Link>
-              <Link
-                href={`?${new URLSearchParams({...resolvedSearchParams, view: 'list'}).toString()}`}
-                className={`p-2 rounded ${currentView === 'list' ? 'bg-primary text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
-              >
-                <FiList size={16} />
-              </Link>
-            </div>
-          </div>
-
-          {/* Products Grid */}
-          {products.length > 0 ? (
-            <div className={`grid gap-6 ${
-              currentView === 'grid' 
-                ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4' 
-                : 'grid-cols-1'
-            }`}>
-              {products.map((product) => (
                 <ProductCard
-                  key={product.id}
                   product={product}
                   showQuickView={true}
-                  layout={currentView as 'grid' | 'list'}
                 />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-12">
-              <div className="max-w-md mx-auto">
-                <h3 className="text-xl font-medium text-gray-900 mb-2">
-                  No products found
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  We couldn't find any {formatStyleName(style).toLowerCase()} flower throw pillows 
-                  matching your current filters.
-                </p>
-                <Link
-                  href="/flower-throw-pillows"
-                  className="btn-primary"
-                >
-                  View All Pillows
-                </Link>
-              </div>
-            </div>
-          )}
-
-          {/* Load More Button (if needed) */}
-          {products.length >= 12 && (
-            <div className="text-center mt-12">
-              <button className="btn-secondary">
-                Load More Products
-              </button>
-            </div>
-          )}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Style Description */}
-      <section className="py-12 md:py-16 bg-surface-muted">
+      {/* Style Guide Section */}
+      <section className="py-16 md:py-24 bg-surface-muted">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-cormorant text-3xl font-bold mb-6">
-              About {formatStyleName(style)} Style
-            </h2>
-            <div className="prose prose-lg mx-auto text-gray-700">
-              {getStyleDescription(style)}
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="font-cormorant text-3xl md:text-4xl font-bold mb-4">
+                Styling Your {style.charAt(0).toUpperCase() + style.slice(1)} Pillows
+              </h2>
+              <p className="text-gray-600">
+                Get the most out of your {style} flower throw pillows with these expert styling tips
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white rounded-xl p-8 shadow-sm">
+                <h3 className="font-cormorant text-xl font-bold mb-4">Perfect Pairings</h3>
+                <div className="space-y-3">
+                  {style === 'vintage' && (
+                    <>
+                      <p className="text-gray-600">• Pair with antique furniture and lace accents</p>
+                      <p className="text-gray-600">• Combine with neutral linens and vintage brass</p>
+                      <p className="text-gray-600">• Layer with textured throws in cream or sage</p>
+                    </>
+                  )}
+                  {style === 'modern' && (
+                    <>
+                      <p className="text-gray-600">• Match with clean-lined furniture and minimal décor</p>
+                      <p className="text-gray-600">• Pair with geometric patterns and bold colors</p>
+                      <p className="text-gray-600">• Combine with sleek metal and glass accents</p>
+                    </>
+                  )}
+                  {style === 'boho' && (
+                    <>
+                      <p className="text-gray-600">• Layer with mixed patterns and rich textures</p>
+                      <p className="text-gray-600">• Combine with macramé and natural materials</p>
+                      <p className="text-gray-600">• Pair with warm lighting and plants</p>
+                    </>
+                  )}
+                  {style === 'farmhouse' && (
+                    <>
+                      <p className="text-gray-600">• Match with distressed wood and galvanized metal</p>
+                      <p className="text-gray-600">• Pair with gingham and buffalo check patterns</p>
+                      <p className="text-gray-600">• Combine with mason jars and vintage signs</p>
+                    </>
+                  )}
+                  {(style === 'abstract' || style === 'watercolor' || style === 'floral' || style === 'solid-color') && (
+                    <>
+                      <p className="text-gray-600">• Mix with complementary colors and textures</p>
+                      <p className="text-gray-600">• Layer with solid-colored throws and blankets</p>
+                      <p className="text-gray-600">• Pair with natural materials like wood and rattan</p>
+                    </>
+                  )}
+                </div>
+              </div>
+              
+              <div className="bg-white rounded-xl p-8 shadow-sm">
+                <h3 className="font-cormorant text-xl font-bold mb-4">Color Coordination</h3>
+                <div className="space-y-3">
+                  <p className="text-gray-600">• Choose 2-3 main colors from the pillow design</p>
+                  <p className="text-gray-600">• Use the 60-30-10 rule for color distribution</p>
+                  <p className="text-gray-600">• Add metallic accents for extra sophistication</p>
+                  <p className="text-gray-600">• Consider seasonal color swaps for variety</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Related Styles */}
-      <section className="py-12 md:py-16">
+      {/* Related Styles Section */}
+      <section className="py-16 md:py-24">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="font-cormorant text-3xl font-bold mb-4">
-              Explore Other Styles
-            </h2>
+            <h2 className="font-cormorant text-3xl font-bold mb-4">Explore Other Styles</h2>
             <p className="text-gray-600">
-              Discover more beautiful flower throw pillow collections
+              Discover more flower throw pillow styles to complete your home décor
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {validStyles
               .filter(s => s !== style)
-              .slice(0, 4)
-              .map((relatedStyle) => (
-                <Link
-                  key={relatedStyle}
-                  href={`/flower-throw-pillows/${relatedStyle}`}
-                  className="group p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow text-center"
-                >
-                  <h3 className="font-medium text-gray-900 group-hover:text-primary transition-colors">
-                    {formatStyleName(relatedStyle)}
-                  </h3>
-                  <p className="text-sm text-gray-600 mt-1">
-                    {getProductsByFilters({ style: relatedStyle as ProductStyle }).length} products
-                  </p>
-                </Link>
-              ))}
+              .slice(0, 3)
+              .map((otherStyle) => {
+                const otherProducts = getProductsByFilters({ style: otherStyle })
+                const otherInfo = styleInfo[otherStyle]
+                
+                return (
+                  <Link 
+                    key={otherStyle}
+                    href={`/flower-throw-pillows/${otherStyle}`}
+                    className="group"
+                  >
+                    <div className={`bg-gradient-to-br ${otherInfo.gradient} rounded-xl p-6 shadow-sm hover:shadow-md transition-all group-hover:scale-105`}>
+                      <h3 className={`font-cormorant text-xl font-bold mb-2 ${otherInfo.textColor}`}>
+                        {otherInfo.title.split(' ')[0]} Style
+                      </h3>
+                      <p className="text-gray-700 text-sm mb-4">
+                        {otherInfo.description}
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm font-medium text-gray-600">
+                          {otherProducts.length} designs
+                        </span>
+                        <FiArrowRight className="text-gray-600 group-hover:translate-x-1 transition-transform" size={16} />
+                      </div>
+                    </div>
+                  </Link>
+                )
+              })}
+          </div>
+          
+          <div className="text-center mt-8">
+            <Link href="/flower-throw-pillows" className="btn-secondary inline-flex items-center gap-2">
+              <span>View All Styles</span>
+              <FiArrowRight size={16} />
+            </Link>
           </div>
         </div>
       </section>
     </>
   )
-}
-
-// Helper function to get style descriptions
-function getStyleDescription(style: ProductStyle): string {
-  const descriptions = {
-    'watercolor': 'Watercolor flower throw pillows feature soft, flowing designs with beautiful color blends that create an artistic and dreamy atmosphere in any space.',
-    'floral': 'Classic floral patterns bring timeless elegance to your home with detailed botanical designs and vibrant flower motifs.',
-    'solid-color': 'Clean and versatile solid-color pillows provide the perfect backdrop for any decor style while adding comfort and sophistication.',
-    'abstract': 'Abstract floral designs offer a modern interpretation of nature with artistic shapes and contemporary color palettes.',
-    'vintage': 'Vintage-inspired flower pillows capture the charm of bygone eras with classic patterns and nostalgic color schemes.',
-    'modern': 'Modern floral designs blend contemporary aesthetics with natural elements for a fresh, updated look.',
-    'boho': 'Bohemian flower pillows embrace free-spirited design with eclectic patterns and warm, earthy tones.',
-    'farmhouse': 'Farmhouse style flower pillows bring rustic charm and cozy comfort with traditional patterns and natural colors.'
-  }
-  
-  return descriptions[style] || 'Beautiful flower throw pillows to enhance your home decor.'
 }
