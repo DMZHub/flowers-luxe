@@ -22,13 +22,6 @@ interface StylePageProps {
 
 const validStyles: ProductStyle[] = ['watercolor', 'floral', 'solid-color', 'abstract', 'vintage', 'modern', 'boho', 'farmhouse']
 
-// Generate static params for static export
-export async function generateStaticParams() {
-  return validStyles.map((style) => ({
-    style: style,
-  }))
-}
-
 const styleInfo: Record<ProductStyle, {
   title: string
   description: string
