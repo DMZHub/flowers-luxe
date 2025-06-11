@@ -12,13 +12,11 @@ export default async function ProductPage({
 }) {
   // Resolve the async params
   const resolvedParams = await params;
-  const resolvedSearchParams = searchParams ? await searchParams : undefined;
 
-  // Render your existing component with resolved params
+  // Render your existing component with resolved params only
   return (
     <ProductPageContent 
       params={resolvedParams}
-      searchParams={resolvedSearchParams}
     />
   );
 }
