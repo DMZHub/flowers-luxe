@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
@@ -8,7 +9,6 @@ import ProductSpecifications from '../../../../components/ProductSpecifications'
 import ProductCard from '../../../../components/ProductCard'
 import SchemaMarkup from '../../../../components/SchemaMarkup'
 import Breadcrumbs from '../../../../components/Breadcrumbs'
-
 import { 
   products, 
   getProductBySlug, 
@@ -18,19 +18,25 @@ import {
 import { generateProductSchema, generateBreadcrumbSchema } from '../../../../utils/schema'
 import { generateProductMetadata } from '../../../../utils/seo'
 
-// Generate static params for all products
-export async function generateStaticParams() {
-  return products.map((product) => ({
-    style: product.style,
-    product: product.slug,
-  }))
-}
-
 interface ProductPageProps {
   params: Promise<{
     style: string
     product: string
   }>
+}
+
+// Generate static params for all products
+export async function generateStaticParams() {
+  const allParams: { style: string; product: string }[] = []
+  
+  products.forEach((product) => {
+    allParams.push({
+      style: product.style,
+      product: product.slug
+    })
+  })
+  
+  return allParams
 }
 
 export default function ProductPage({ params }: ProductPageProps) {
@@ -140,7 +146,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                   <div className="flex items-center gap-2">
                     <span className="text-sm text-gray-600">Colors:</span>
                     <div className="flex gap-1">
-                      {product.colors.slice(0, 4).map((color: string, index: number) => (
+                      {product.colors.slice(0, 4).map((color, index) => (
                         <div
                           key={index}
                           className={`w-4 h-4 rounded-full border border-gray-200 ${getColorClass(color)}`}
