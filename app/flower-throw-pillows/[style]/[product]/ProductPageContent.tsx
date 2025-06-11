@@ -1,52 +1,43 @@
-"use client"
-import React from 'react'
-import { notFound } from 'next/navigation'
-import Link from 'next/link'
-import { FiShoppingBag, FiHeart, FiShare2, FiChevronRight, FiStar, FiCheck, FiTruck, FiShield, FiRotateCcw } from 'react-icons/fi'
-import ProductCard from '../../../../components/ProductCard'
-import SchemaMarkup from '../../../../components/SchemaMarkup'
-import Breadcrumbs from '../../../../components/Breadcrumbs'
-import ProductImageGallery from '../../../../components/ProductImageGallery'
-import ProductSpecifications from '../../../../components/ProductSpecifications'
-import { 
-  getProductBySlug, 
-  getRelatedProducts,
-  type ProductStyle 
-} from '../../../../data/products'
-import { generateProductSchema } from '../../../../utils/schema'
-import { ProductPageParams } from '../../../../components/ParamsWrapper'
+"use client";
+
+import React from "react";
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import { FiShoppingBag, FiHeart, FiShare2, FiChevronRight, FiStar, FiCheck, FiTruck, FiShield, FiRotateCcw } from "react-icons/fi";
+import ProductCard from "../../../../components/ProductCard";
+import SchemaMarkup from "../../../../components/SchemaMarkup";
+import Breadcrumbs from "../../../../components/Breadcrumbs";
+import ProductImageGallery from "../../../../components/ProductImageGallery";
+import ProductSpecifications from "../../../../components/ProductSpecifications";
+import { getProductBySlug, getRelatedProducts } from "../../../../data/products";
+import { generateProductSchema } from "../../../../utils/schema";
+import { ProductPageParams } from "../../../../components/ParamsWrapper";
 
 export default function ProductPageContent({ params }: { params: ProductPageParams }) {
   const { style, product: productSlug } = params;
   
-  // Get the product
   const product = getProductBySlug(productSlug);
   
-  // Return 404 if product not found
   if (!product || product.style !== style) {
     notFound();
   }
   
-  // Get related products
   const relatedProducts = getRelatedProducts(product, 4);
   
-  // Calculate current price
   const currentPrice = product.discount 
     ? product.price * (1 - product.discount.percentage / 100)
     : product.price;
   
-  // Generate schema markup
   const productSchema = generateProductSchema(product);
   
-  // Breadcrumb items
   const breadcrumbItems = [
-    { name: 'Flower Throw Pillows', url: '/flower-throw-pillows' },
+    { name: "Flower Throw Pillows", url: "/flower-throw-pillows" },
     { name: `${style.charAt(0).toUpperCase() + style.slice(1)} Style`, url: `/flower-throw-pillows/${style}` },
     { name: product.title, url: `/flower-throw-pillows/${style}/${productSlug}` }
   ];
 
   return (
-    <div>
+    <React.Fragment>
       <SchemaMarkup schema={productSchema} />
       
       <div className="container-custom">
@@ -82,7 +73,7 @@ export default function ProductPageContent({ params }: { params: ProductPagePara
                 
                 <div className="flex items-center gap-2 mb-4">
                   <div className="flex items-center">
-                    {[...Array(5)].map((_, i) => (
+                    {Array.from({ length: 5 }).map((_, i) => (
                       <FiStar key={i} className="text-yellow-400 fill-current" size={16} />
                     ))}
                   </div>
@@ -132,9 +123,9 @@ export default function ProductPageContent({ params }: { params: ProductPagePara
               </div>
               
               <div className="flex items-center gap-2">
-                <div className={`w-3 h-3 rounded-full ${product.inStock ? 'bg-green-500' : 'bg-red-500'}`}></div>
-                <span className={`text-sm font-medium ${product.inStock ? 'text-green-700' : 'text-red-700'}`}>
-                  {product.inStock ? 'In Stock' : 'Out of Stock'}
+                <div className={`w-3 h-3 rounded-full ${product.inStock ? "bg-green-500" : "bg-red-500"}`}></div>
+                <span className={`text-sm font-medium ${product.inStock ? "text-green-700" : "text-red-700"}`}>
+                  {product.inStock ? "In Stock" : "Out of Stock"}
                 </span>
               </div>
               
@@ -145,10 +136,10 @@ export default function ProductPageContent({ params }: { params: ProductPagePara
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 btn-primary text-center"
-                    style={!product.inStock ? { pointerEvents: 'none', opacity: 0.6 } : {}}
+                    style={!product.inStock ? { pointerEvents: "none", opacity: 0.6 } : {}}
                   >
                     <FiShoppingBag className="mr-2" size={18} />
-                    {product.inStock ? 'Shop Now' : 'Out of Stock'}
+                    {product.inStock ? "Shop Now" : "Out of Stock"}
                   </a>
                   <button className="btn-outline p-3">
                     <FiHeart size={18} />
@@ -223,6 +214,6 @@ export default function ProductPageContent({ params }: { params: ProductPagePara
           </div>
         </div>
       </section>
-    </div>
-  )
+    </React.Fragment>
+  );
 }
