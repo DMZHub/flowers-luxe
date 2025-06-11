@@ -1,38 +1,70 @@
-"use client"
-import { useEffect, useState } from 'react'
+// components/ParamsWrapper.tsx
+import React from 'react';
 
-interface ParamsWrapperProps<T = any> {
-  params: Promise<T>
-  children: (resolvedParams: T) => React.ReactNode
-  loading?: React.ReactNode
+// Generic type for params - can be extended for different route types
+export interface PageParams {
+  [key: string]: string | string[] | undefined;
 }
 
-export default function ParamsWrapper<T = any>({ 
-  params, 
-  children, 
-  loading = <div className="flex items-center justify-center py-12"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div></div>
+// Props for the wrapper component
+interface ParamsWrapperProps<T extends PageParams> {
+  params: Promise<T>;
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
+  Component: React.ComponentType<{
+    params: T;
+    searchParams?: { [key: string]: string | string[] | undefined };
+  }>;
+}
+
+// Generic wrapper component that resolves async params
+export default async function ParamsWrapper<T extends PageParams>({
+  params,
+  searchParams,
+  Component
 }: ParamsWrapperProps<T>) {
-  const [resolvedParams, setResolvedParams] = useState<T | null>(null)
-  const [isLoading, setIsLoading] = useState(true)
+  // Resolve the async params and searchParams
+  const resolvedParams = await params;
+  const resolvedSearchParams = searchParams ? await searchParams : undefined;
 
-  useEffect(() => {
-    const resolveParams = async () => {
-      try {
-        const resolved = await params
-        setResolvedParams(resolved)
-      } catch (error) {
-        console.error('Error resolving params:', error)
-      } finally {
-        setIsLoading(false)
-      }
-    }
+  // Render the original component with resolved params
+  return (
+    <Component 
+      params={resolvedParams} 
+      searchParams={resolvedSearchParams}
+    />
+  );
+}
 
-    resolveParams()
-  }, [params])
+// Specific type interfaces for your routes
+export interface StylePageParams {
+  style: string;
+}
 
-  if (isLoading || !resolvedParams) {
-    return <>{loading}</>
-  }
+export interface ProductPageParams {
+  style: string;
+  product: string;
+}
 
-  return <>{children(resolvedParams)}</>
+// Helper function to create wrapped page components
+export function createWrappedPage<T extends PageParams>(
+  OriginalComponent: React.ComponentType<{
+    params: T;
+    searchParams?: { [key: string]: string | string[] | undefined };
+  }>
+) {
+  return function WrappedPage({
+    params,
+    searchParams
+  }: {
+    params: Promise<T>;
+    searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
+  }) {
+    return (
+      <ParamsWrapper
+        params={params}
+        searchParams={searchParams}
+        Component={OriginalComponent}
+      />
+    );
+  };
 }
