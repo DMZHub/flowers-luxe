@@ -1,4 +1,4 @@
-//"use client"
+"use client"
 import React from 'react'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
@@ -25,19 +25,7 @@ interface ProductPageProps {
   }>
 }
 
-// Generate static params for all products
-export async function generateStaticParams() {
-  const allParams: { style: string; product: string }[] = []
-  
-  products.forEach((product) => {
-    allParams.push({
-      style: product.style,
-      product: product.slug
-    })
-  })
-  
-  return allParams
-}
+
 
 export default function ProductPage({ params }: ProductPageProps) {
   const resolvedParams = React.use(params)
