@@ -199,3 +199,12 @@ export default function BlogCategoryPage({ params }: BlogCategoryPageProps) {
     </>
   )
 }
+
+// Generate static params for all blog categories - ADD THIS FUNCTION
+export async function generateStaticParams() {
+  const { blogCategories } = await import('../../../../data/blogCategories')
+  
+  return blogCategories.map((category) => ({
+    category: category.slug,
+  }))
+}
