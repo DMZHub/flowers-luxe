@@ -13,7 +13,12 @@ import {
 } from '../../../data/products'
 import { generateCollectionPageSchema } from '../../../utils/schema'
 import { generateStylePageMetadata } from '../../../utils/seo'
-import { StylePageParams } from '../../../components/ParamsWrapper'
+
+interface StylePageProps {
+  params: {
+    style: string
+  }
+}
 
 const validStyles: ProductStyle[] = ['watercolor', 'floral', 'solid-color', 'abstract', 'vintage', 'modern', 'boho', 'farmhouse']
 
@@ -91,7 +96,7 @@ const styleInfo: Record<ProductStyle, {
   }
 }
 
-export default function StylePageComponent({ params }: { params: StylePageParams }) {
+export default function StylePage({ params }: StylePageProps) {
   const style = params.style as ProductStyle
   
   // Validate style
