@@ -12,13 +12,11 @@ export default async function StylePage({
 }) {
   // Resolve the async params
   const resolvedParams = await params;
-  const resolvedSearchParams = searchParams ? await searchParams : undefined;
 
-  // Render your existing component with resolved params
+  // Render your existing component with resolved params only
   return (
     <StylePageContent 
       params={resolvedParams}
-      searchParams={resolvedSearchParams}
     />
   );
 }
