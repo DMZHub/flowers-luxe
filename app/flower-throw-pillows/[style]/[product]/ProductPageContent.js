@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 export default function ProductPageContent({ params }) {
-  // Ultra minimal version - no data fetching, no complex components
+  // Ultra minimal version - no client-side JavaScript
   const { style, product: productSlug } = params || {}
   
   // Basic validation
@@ -73,9 +73,11 @@ export default function ProductPageContent({ params }) {
           ),
           
           React.createElement('div', { className: 'pt-6' },
-            React.createElement('button', { 
-              className: 'w-full bg-blue-600 text-white py-4 px-8 rounded-lg font-semibold hover:bg-blue-700 transition-colors',
-              onClick: () => window.open('#', '_blank')
+            React.createElement('a', { 
+              href: 'https://example.com/shop',
+              target: '_blank',
+              rel: 'noopener noreferrer',
+              className: 'block w-full text-center bg-blue-600 text-white py-4 px-8 rounded-lg font-semibold hover:bg-blue-700 transition-colors'
             }, '🛒 Shop Now')
           )
         )
