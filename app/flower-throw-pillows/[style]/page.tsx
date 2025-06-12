@@ -35,3 +35,13 @@ export async function generateMetadata({
   const styleProducts = getProductsByFilters({ style: style as any });
   return generateStylePageMetadata(style, styleProducts.length);
 }
+
+// Generate static params for build optimization
+export async function generateStaticParams() {
+  // Define all possible style values
+  const validStyles = ['watercolor', 'floral', 'solid-color', 'abstract', 'vintage', 'modern', 'boho', 'farmhouse'];
+  
+  return validStyles.map((style) => ({
+    style: style,
+  }));
+}
