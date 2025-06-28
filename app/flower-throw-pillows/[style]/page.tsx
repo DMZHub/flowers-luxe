@@ -16,6 +16,13 @@ import { generateStylePageMetadata } from '../../../utils/seo'
 
 const validStyles: ProductStyle[] = ['watercolor', 'floral', 'solid-color', 'abstract', 'vintage', 'modern', 'boho', 'farmhouse']
 
+// Generate static params for all valid styles
+export async function generateStaticParams() {
+  return validStyles.map((style) => ({
+    style: style,
+  }))
+}
+
 const styleInfo: Record<ProductStyle, {
   title: string
   description: string
