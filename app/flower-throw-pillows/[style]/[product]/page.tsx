@@ -156,17 +156,22 @@ export default function ProductPageComponent({ params }: { params: Promise<Produ
               {/* Action Buttons */}
               <div className="space-y-4">
                 <div className="flex gap-3">
-                  <a
-                    href={product.externalUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 btn-primary text-center"
-                    disabled={!product.inStock}
-                  >
-                    <FiShoppingBag className="mr-2" size={18} />
-                    {product.inStock ? 'Shop Now' : 'Out of Stock'}
-                  </a>
-                 
+                  {product.inStock ? (
+                    <a
+                      href={product.externalUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 btn-primary text-center"
+                    >
+                      <FiShoppingBag className="mr-2" size={18} />
+                      Shop Now
+                    </a>
+                  ) : (
+                    <div className="flex-1 btn-primary text-center opacity-50 cursor-not-allowed">
+                      <FiShoppingBag className="mr-2" size={18} />
+                      Out of Stock
+                    </div>
+                  )}
                 </div>
                 
                 {/* Guarantee Badges */}
