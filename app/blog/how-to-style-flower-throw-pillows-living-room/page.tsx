@@ -153,10 +153,7 @@ export default function StylingFlowerPillowsBlogPost() {
                   How to Style Flower Throw Pillows in Your Living Room
                 </h1>
                 
-                <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                  Transform your living space into a beautiful botanical sanctuary with expert tips for incorporating flower throw pillows. 
-                  Discover professional styling techniques for color coordination, pattern mixing, and creating stunning arrangements.
-                </p>
+               
                 
                 <div className="flex justify-center items-center">
                   <button 
