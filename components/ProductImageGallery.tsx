@@ -8,18 +8,31 @@ import { ProductImage } from '../types/product';
 interface ProductImageGalleryProps {
   images: ProductImage[];
   productTitle: string;
+  selectedIndex?: number;
+  onImageSelect?: (index: number) => void;
 }
 
-export default function ProductImageGallery({ images, productTitle }: ProductImageGalleryProps) {
-  const [selectedImage, setSelectedImage] = useState(0);
+export default function ProductImageGallery({ 
+  images, 
+  productTitle, 
+  selectedIndex: externalSelectedIndex,
+  onImageSelect 
+}: ProductImageGalleryProps) {
+  const [internalSelectedIndex, setInternalSelectedIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  // Use external selectedIndex if provided, otherwise use internal state
+  const selectedImage = externalSelectedIndex !== undefined ? externalSelectedIndex : internalSelectedIndex;
+  const setSelectedImage = onImageSelect || setInternalSelectedIndex;
+
   const nextImage = () => {
-    setSelectedImage((prev) => (prev + 1) % images.length);
+    const newIndex = (selectedImage + 1) % images.length;
+    setSelectedImage(newIndex);
   };
 
   const prevImage = () => {
-    setSelectedImage((prev) => (prev - 1 + images.length) % images.length);
+    const newIndex = (selectedImage - 1 + images.length) % images.length;
+    setSelectedImage(newIndex);
   };
 
   const openModal = () => {
@@ -34,7 +47,7 @@ export default function ProductImageGallery({ images, productTitle }: ProductIma
     <>
       <div className="space-y-4">
         {/* Main Image */}
-        <div className="relative aspect-square overflow-hidden rounded-xl bg-gray-100">
+        <div className="relative aspect-square overflow-hidden rounded-xl bg-gray-100 group">
           <Image
             src={images[selectedImage].src}
             alt={images[selectedImage].alt}
