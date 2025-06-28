@@ -1,0 +1,23 @@
+{
+    "name": "FlowersLuxe - Premium Flower Throw Pillows",
+    "short_name": "FlowersLuxe",
+    "description": "Premium Flower Throw Pillows & Floral Home Decor",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#2e7d32",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "start_url": "/",
+    "orientation": "portrait-primary",
+    "categories": ["shopping", "lifestyle", "home"]
+}
