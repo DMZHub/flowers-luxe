@@ -10,12 +10,21 @@ import Breadcrumbs from '../../../../components/Breadcrumbs'
 import ProductImageGallery from '../../../../components/ProductImageGallery'
 import ProductSpecifications from '../../../../components/ProductSpecifications'
 import { 
+  products,
   getProductBySlug, 
   getRelatedProducts,
   type ProductStyle 
 } from '../../../../data/products'
 import { generateProductSchema } from '../../../../utils/schema'
 import { generateProductMetadata, generateImageAlt } from '../../../../utils/seo'
+
+// Generate static params for all products
+export async function generateStaticParams() {
+  return products.map((product) => ({
+    style: product.style,
+    product: product.slug,
+  }))
+}
 
 // Define the params type
 interface ProductPageParams {
