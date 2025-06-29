@@ -90,7 +90,7 @@ export const generateShopPageMetadata = (baseUrl: string = 'https://flowersluxe.
   return {
     title,
     description,
-    keywords: 'flower throw pillows, floral pillows, botanical cushions, decorative pillows, home decor, floral home accents',
+    keywords: 'flower throw pillows, floral pillows, botanical cushions, decorative pillows, home decor, American made pillows, vintage flower pillows, modern floral pillows, boho flower pillows, farmhouse flower pillows, watercolor flower pillows',
     openGraph: {
       title,
       description,
