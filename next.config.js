@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Required for static export to Cloudflare Pages
-  trailingSlash: true, // Recommended for static sites
+  output: 'export',
+  trailingSlash: true,
   images: {
-    unoptimized: true, // Required for static export - disables Next.js image optimization
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -17,7 +17,7 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
   },
   
-  // SEO Configuration - Fix the indexing issue
+  // Add this section to fix the indexing issue
   async headers() {
     return [
       {
@@ -26,18 +26,6 @@ const nextConfig = {
           {
             key: 'X-Robots-Tag',
             value: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff'
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY'
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block'
           }
         ]
       }
