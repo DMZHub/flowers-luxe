@@ -151,6 +151,73 @@
     <priority>0.7</priority>
   </url>
 
+
+
+  <!-- Missing Style Page -->
+<url>
+  <loc>https://flowersluxe.com/flower-throw-pillows/solid-color</loc>
+  <lastmod>2025-06-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<!-- Blog Categories -->
+<url>
+  <loc>https://flowersluxe.com/blog/category/home-decor</loc>
+  <lastmod>2025-06-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://flowersluxe.com/blog/category/design-tips</loc>
+  <lastmod>2025-06-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://flowersluxe.com/blog/category/care-guides</loc>
+  <lastmod>2025-06-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://flowersluxe.com/blog/category/styling-ideas</loc>
+  <lastmod>2025-06-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://flowersluxe.com/blog/category/seasonal-decor</loc>
+  <lastmod>2025-06-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://flowersluxe.com/blog/category/color-theory</loc>
+  <lastmod>2025-06-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://flowersluxe.com/blog/category/room-inspiration</loc>
+  <lastmod>2025-06-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://flowersluxe.com/blog/category/product-guides</loc>
+  <lastmod>2025-06-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+
   <!-- Blog Posts -->
   <url>
     <loc>https://flowersluxe.com/blog/how-to-style-flower-throw-pillows-living-room</loc>
