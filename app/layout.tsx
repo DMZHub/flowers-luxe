@@ -3,6 +3,8 @@ import { Inter, Cormorant_Garamond } from 'next/font/google'
 import './globals.css'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import { generateHomePageMetadata } from '../utils/seo'
+import { generateOrganizationSchema, generateWebsiteSchema } from '../utils/schema'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -17,10 +19,21 @@ const cormorant = Cormorant_Garamond({
   variable: '--font-cormorant',
 })
 
+// Use your existing SEO utility function
 export const metadata: Metadata = {
-  title: 'FlowersLuxe | Premium Flower Throw Pillows & Floral Home Decor',
-  description: 'Discover beautiful flower throw pillows featuring unique botanical designs. Handcrafted in America with premium materials.',
-  keywords: 'flower throw pillows, floral home decor, botanical pillows, decorative cushions',
+  ...generateHomePageMetadata(),
+  metadataBase: new URL('https://flowersluxe.com'),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -31,6 +44,10 @@ export const metadata: Metadata = {
     ],
     shortcut: '/favicon.ico',
   },
+  manifest: '/site.webmanifest',
+  other: {
+    'google-site-verification': 'your-google-verification-code-here', // Add your Google verification code when you get one
+  },
 }
 
 export default function RootLayout({
@@ -38,14 +55,36 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  // Generate schema using your existing utility functions
+  const organizationSchema = generateOrganizationSchema()
+  const websiteSchema = generateWebsiteSchema()
+
   return (
     <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
       <head>
-        {/* Additional favicon links for better compatibility */}
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        {/* Preconnect to external domains for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Additional SEO meta tags */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#2e7d32" />
+        <meta name="msapplication-TileColor" content="#2e7d32" />
+        
+        {/* Structured Data using your existing schema utilities */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema)
+          }}
+        />
+        
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema)
+          }}
+        />
       </head>
       <body className={`${inter.className} min-h-screen flex flex-col`}>
         <Header />
