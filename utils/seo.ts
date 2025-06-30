@@ -121,7 +121,7 @@ export const generateShopPageMetadata = (baseUrl: string = 'https://flowersluxe.
 
 export const generateHomePageMetadata = (baseUrl: string = 'https://flowersluxe.com') => {
   const title = 'FlowersLuxe | Premium Flower Throw Pillows & Floral Home Decor';
-  const description = 'Discover beautiful flower throw pillows featuring unique botanical designs. Handcrafted in America with premium materials. Transform your space with our vintage, modern, boho, and farmhouse styles.';
+  const description = 'Discover beautiful flower throw pillows featuring unique botanical designs. Handcrafted in America with premium materials...';
   
   return {
     title,
