@@ -83,7 +83,7 @@ export const generateOrganizationSchema = (baseUrl: string = 'https://flowerslux
     },
     "sameAs": [
       "https://www.facebook.com/profile.php?id=61575082658424",
-      "https://x.com/FlowerLxe",
+      "https://x.com/flowersluxe1",
       "https://www.instagram.com/flowersluxe1",
       "https://www.pinterest.com/FlowersLuxe1"
     ]
