@@ -75,7 +75,7 @@ export default function AboutPage() {
             >
               <div className="relative h-96 rounded-2xl overflow-hidden shadow-elevated">
                 <img
-                  src="/images/about/founder-flower-pillows.jpg"
+                  src="/images/about/founder-flower-pillows.webp"
                   alt="FlowersLuxe Founder with Flower Throw Pillows"
                   className="w-full h-full object-cover"
                 />
