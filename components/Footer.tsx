@@ -107,7 +107,7 @@ export default function Footer() {
                 <FiInstagram size={18} />
               </a>
               <a 
-                href="https://x.com/FlowerLxe" 
+                href="https://x.com/flowersluxe1" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-primary transition-colors p-2 bg-white rounded-full shadow-sm"
