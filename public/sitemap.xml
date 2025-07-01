@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <!-- Main Pages -->
   <url>
     <loc>https://flowersluxe.com/</loc>
@@ -7,57 +8,57 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
+
   <url>
     <loc>https://flowersluxe.com/shop</loc>
     <lastmod>2025-06-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
-  
+
   <url>
     <loc>https://flowersluxe.com/flower-throw-pillows</loc>
     <lastmod>2025-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  
+
   <url>
     <loc>https://flowersluxe.com/blog</loc>
     <lastmod>2025-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
   <url>
     <loc>https://flowersluxe.com/about</loc>
     <lastmod>2025-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
   <url>
     <loc>https://flowersluxe.com/contact</loc>
     <lastmod>2025-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
+
   <!-- Legal Pages -->
   <url>
     <loc>https://flowersluxe.com/privacy-policy</loc>
     <lastmod>2025-06-04</lastmod>
-    <changefreq>quarterly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
-  
+
   <url>
     <loc>https://flowersluxe.com/terms-conditions</loc>
     <lastmod>2025-06-04</lastmod>
-    <changefreq>quarterly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
-  
+
   <!-- Style Category Pages -->
   <url>
     <loc>https://flowersluxe.com/flower-throw-pillows/vintage</loc>
@@ -65,49 +66,49 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
   <url>
     <loc>https://flowersluxe.com/flower-throw-pillows/modern</loc>
     <lastmod>2025-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
   <url>
     <loc>https://flowersluxe.com/flower-throw-pillows/boho</loc>
     <lastmod>2025-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
   <url>
     <loc>https://flowersluxe.com/flower-throw-pillows/farmhouse</loc>
     <lastmod>2025-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
   <url>
     <loc>https://flowersluxe.com/flower-throw-pillows/abstract</loc>
     <lastmod>2025-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
   <url>
     <loc>https://flowersluxe.com/flower-throw-pillows/watercolor</loc>
     <lastmod>2025-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
   <url>
     <loc>https://flowersluxe.com/flower-throw-pillows/floral</loc>
     <lastmod>2025-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
   <!-- Individual Product Pages -->
   <url>
     <loc>https://flowersluxe.com/flower-throw-pillows/boho/sunflower-mandala-boho-pillow</loc>
@@ -115,118 +116,113 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
   <url>
     <loc>https://flowersluxe.com/flower-throw-pillows/watercolor/tulip-watercolor-floral-pillow</loc>
     <lastmod>2025-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
   <url>
     <loc>https://flowersluxe.com/flower-throw-pillows/modern/motivational-quote-modern-pillow</loc>
     <lastmod>2025-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
   <url>
     <loc>https://flowersluxe.com/flower-throw-pillows/watercolor/dusty-rose-soft-pink-pillow</loc>
     <lastmod>2025-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
   <url>
     <loc>https://flowersluxe.com/flower-throw-pillows/vintage/wildflower-vintage-botanical-pillow</loc>
     <lastmod>2025-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
-   <url>
+
+  <url>
     <loc>https://flowersluxe.com/flower-throw-pillows/floral/lavender-throw-pillow-botanical-illustration</loc>
     <lastmod>2025-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-
-
   <!-- Missing Style Page -->
-<url>
-  <loc>https://flowersluxe.com/flower-throw-pillows/solid-color</loc>
-  <lastmod>2025-06-04</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
+  <url>
+    <loc>https://flowersluxe.com/flower-throw-pillows/solid-color</loc>
+    <lastmod>2025-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-<!-- Blog Categories -->
-<url>
-  <loc>https://flowersluxe.com/blog/category/home-decor</loc>
-  <lastmod>2025-06-04</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.6</priority>
-</url>
+  <!-- Blog Categories -->
+  <url>
+    <loc>https://flowersluxe.com/blog/category/home-decor</loc>
+    <lastmod>2025-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
-<url>
-  <loc>https://flowersluxe.com/blog/category/design-tips</loc>
-  <lastmod>2025-06-04</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.6</priority>
-</url>
+  <url>
+    <loc>https://flowersluxe.com/blog/category/design-tips</loc>
+    <lastmod>2025-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
-<url>
-  <loc>https://flowersluxe.com/blog/category/care-guides</loc>
-  <lastmod>2025-06-04</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.6</priority>
-</url>
+  <url>
+    <loc>https://flowersluxe.com/blog/category/care-guides</loc>
+    <lastmod>2025-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
-<url>
-  <loc>https://flowersluxe.com/blog/category/styling-ideas</loc>
-  <lastmod>2025-06-04</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.6</priority>
-</url>
+  <url>
+    <loc>https://flowersluxe.com/blog/category/styling-ideas</loc>
+    <lastmod>2025-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
-<url>
-  <loc>https://flowersluxe.com/blog/category/seasonal-decor</loc>
-  <lastmod>2025-06-04</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.6</priority>
-</url>
+  <url>
+    <loc>https://flowersluxe.com/blog/category/seasonal-decor</loc>
+    <lastmod>2025-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
-<url>
-  <loc>https://flowersluxe.com/blog/category/color-theory</loc>
-  <lastmod>2025-06-04</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.6</priority>
-</url>
+  <url>
+    <loc>https://flowersluxe.com/blog/category/color-theory</loc>
+    <lastmod>2025-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
-<url>
-  <loc>https://flowersluxe.com/blog/category/room-inspiration</loc>
-  <lastmod>2025-06-04</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.6</priority>
-</url>
+  <url>
+    <loc>https://flowersluxe.com/blog/category/room-inspiration</loc>
+    <lastmod>2025-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
-<url>
-  <loc>https://flowersluxe.com/blog/category/product-guides</loc>
-  <lastmod>2025-06-04</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.6</priority>
-</url>
+  <url>
+    <loc>https://flowersluxe.com/blog/category/product-guides</loc>
+    <lastmod>2025-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
   <!-- Blog Posts -->
   <url>
     <loc>https://flowersluxe.com/blog/how-to-style-flower-throw-pillows-living-room</loc>
-    <lastmod>2025-06-7</lastmod>
+    <lastmod>2025-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
-
-
 
 </urlset>
