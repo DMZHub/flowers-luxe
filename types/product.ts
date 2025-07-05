@@ -74,6 +74,9 @@ export type FlowerType =
   | 'plumeria'
   | 'bougainvillea'
   | 'ranunculus';
+  | 'quicksand-rose';
+  | 'pampas-grass';
+
 
 
 export type ProductColor =
