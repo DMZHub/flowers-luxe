@@ -73,8 +73,8 @@ export type FlowerType =
   | 'lotus'
   | 'plumeria'
   | 'bougainvillea'
-  | 'ranunculus';
-  | 'quicksand-rose';
+  | 'ranunculus'
+  | 'quicksand-rose'
   | 'pampas-grass';
 
 
