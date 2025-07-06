@@ -486,7 +486,7 @@ export const products: Product[] = [
       title: 'Romantic Pink Peony Pillow - Accent Seating'
     }
   ],
-  description: 'Indulge in romantic elegance with our Romantic Pink Peony Watercolor Throw Pillow, featuring a single magnificent peony in full, glorious bloom. This exquisite design showcases the lush, layered petals of a pink peony rendered in delicate watercolor style, creating a soft, dreamy focal point that embodies feminine grace and natural beauty. The warm beige background (#D8CAB8) provides gentle contrast while maintaining an overall sense of warmth and sophistication. The watercolor technique brings ethereal softness to each petal, with subtle color variations and organic brushstrokes that capture the peony\'s natural texture and movement. This seamless, high-resolution design creates a timeless piece that elevates any space with its romantic charm. Crafted with premium textured poly twill fabric at 300 DPI resolution for exceptional clarity and color depth, this pillow features vibrant printing that brings the watercolor beauty to life. The concealed zipper and included synthetic insert provide both beauty and functionality. Handmade in America with careful attention to artistic detail, this romantic peony pillow is perfect for feminine bedrooms, elegant living spaces, or anywhere that calls for a touch of floral romance and sophisticated charm.',
+  description: 'Indulge in romantic elegance with our Romantic Pink Peony Watercolor Throw Pillow, featuring a single magnificent peony in full, glorious bloom. This exquisite design showcases the lush, layered petals of a pink peony rendered in delicate watercolor style, creating a soft, dreamy focal point that embodies feminine grace and natural beauty. The warm beige background provides gentle contrast while maintaining an overall sense of warmth and sophistication. The watercolor technique brings ethereal softness to each petal, with subtle color variations and organic brushstrokes that capture the peony natural texture and movement. This seamless, high-resolution design creates a timeless piece that elevates any space with its romantic charm. Crafted with premium textured poly twill fabric at 300 DPI resolution for exceptional clarity and color depth, this pillow features vibrant printing that brings the watercolor beauty to life. The concealed zipper and included synthetic insert provide both beauty and functionality. Handmade in America with careful attention to artistic detail, this romantic peony pillow is perfect for feminine bedrooms, elegant living spaces, or anywhere that calls for a touch of floral romance and sophisticated charm.',
   shortDescription: 'Indulge in romance with our Pink Peony Watercolor Pillow featuring lush layered petals on warm beige background in elegant watercolor style.',
   specifications: generateProductSpecifications(),
   externalUrl: 'https://flowersluxe.dashery.com/products/77122337-pink-peony-watercolor-bloom-throw-pillow',
@@ -537,7 +537,7 @@ export const products: Product[] = [
       title: 'Vintage Toffee Rose Pillow - Classic Elegance'
     }
   ],
-  description: 'Experience timeless elegance with our Vintage Toffee Rose Pattern Throw Pillow, where classic beauty meets warm sophistication. This exquisite seamless pattern features toffee roses in rich creamy brown and taupe tones (#B08968, #D8CAB8), each bloom carefully rendered with curled petals that evoke vintage romance. Set against a luxurious deep coffee background (#5E4B3C), the design creates a cozy, rich atmosphere perfect for traditional and transitional interiors. The roses showcase intricate detail with light shadowing that adds depth and dimension, while maintaining the elegant vintage aesthetic. This high-detail pattern at 300 DPI ensures every petal and shadow is captured with stunning clarity, creating a piece that feels both nostalgic and refined. Crafted with premium textured poly twill fabric for exceptional durability and richness, this pillow features seamless pattern printing that highlights the vintage beauty. The concealed zipper and included synthetic insert ensure lasting quality and comfort. Handmade in America with meticulous attention to vintage styling, this toffee rose pillow is ideal for creating warm, inviting spaces in traditional living rooms, cozy dens, or anywhere that celebrates classic floral elegance.',
+  description: 'Experience timeless elegance with our Vintage Toffee Rose Pattern Throw Pillow, where classic beauty meets warm sophistication. This exquisite seamless pattern features toffee roses in rich creamy brown and taupe tones, each bloom carefully rendered with curled petals that evoke vintage romance. Set against a luxurious deep coffee background, the design creates a cozy, rich atmosphere perfect for traditional and transitional interiors. The roses showcase intricate detail with light shadowing that adds depth and dimension, while maintaining the elegant vintage aesthetic. This high-detail pattern at 300 DPI ensures every petal and shadow is captured with stunning clarity, creating a piece that feels both nostalgic and refined. Crafted with premium textured poly twill fabric for exceptional durability and richness, this pillow features seamless pattern printing that highlights the vintage beauty. The concealed zipper and included synthetic insert ensure lasting quality and comfort. Handmade in America with meticulous attention to vintage styling, this toffee rose pillow is ideal for creating warm, inviting spaces in traditional living rooms, cozy dens, or anywhere that celebrates classic floral elegance.',
   shortDescription: 'Experience timeless elegance with our Vintage Toffee Rose Pillow featuring creamy brown roses on rich coffee background with vintage charm.',
   specifications: generateProductSpecifications(),
   externalUrl: 'https://flowersluxe.dashery.com/products/77122658-vintage-toffee-rose-pattern-throw-pillow',
@@ -567,7 +567,7 @@ export const products: Product[] = [
   slug: 'boho-pampas-grass-pillow',
   style: 'boho',
   flowerType: 'pampas-grass',
-  colors: ['beige', 'cream', 'tan', 'sand'],
+  colors: ['beige', 'cream', 'tan'],
   price: 25.00,
   featured: true,
   mainImage: 'boho-pampas-grass-pillow-white-background.webp',
@@ -588,7 +588,7 @@ export const products: Product[] = [
       title: 'Boho Pampas Grass Pillow - Bedroom Serenity'
     }
   ],
-  description: 'Create a serene bohemian sanctuary with our Boho Pampas Grass Natural Throw Pillow, featuring an organic seamless pattern of flowing pampas grass plumes in soothing bleached beige tones (#E6D3B3). This calming design captures the ethereal beauty of pampas grass with soft, feathery fronds that layer and overlap naturally against a warm greige background (#D4CABE), evoking the peaceful essence of nature. The boho-inspired aesthetic brings texture and movement to your space through delicate brush strokes and watercolor techniques that create depth without overwhelming. Each plume is rendered with subtle variations in tone and texture, capturing the organic beauty of dried pampas grass. The high-resolution 300 DPI printing ensures every wispy detail is preserved with stunning clarity. Crafted with premium textured poly twill fabric for lasting softness and durability, this pillow features seamless pattern printing that showcases the natural beauty. The concealed zipper and included synthetic insert provide both style and comfort. Handmade in America with attention to bohemian aesthetics, this pampas grass pillow is perfect for creating calm, nature-inspired spaces in boho bedrooms, minimalist living rooms, or any area that celebrates organic textures and neutral palettes.',
+  description: 'Create a serene bohemian sanctuary with our Boho Pampas Grass Natural Throw Pillow, featuring an organic seamless pattern of flowing pampas grass plumes in soothing bleached beige tones. This calming design captures the ethereal beauty of pampas grass with soft, feathery fronds that layer and overlap naturally against a warm greige background, evoking the peaceful essence of nature. The boho-inspired aesthetic brings texture and movement to your space through delicate brush strokes and watercolor techniques that create depth without overwhelming. Each plume is rendered with subtle variations in tone and texture, capturing the organic beauty of dried pampas grass. The high-resolution 300 DPI printing ensures every wispy detail is preserved with stunning clarity. Crafted with premium textured poly twill fabric for lasting softness and durability, this pillow features seamless pattern printing that showcases the natural beauty. The concealed zipper and included synthetic insert provide both style and comfort. Handmade in America with attention to bohemian aesthetics, this pampas grass pillow is perfect for creating calm, nature-inspired spaces in boho bedrooms, minimalist living rooms, or any area that celebrates organic textures and neutral palettes.',
   shortDescription: 'Create serenity with our Boho Pampas Grass Pillow featuring flowing plumes in bleached beige on warm greige for natural bohemian style.',
   specifications: generateProductSpecifications(),
   externalUrl: 'https://flowersluxe.dashery.com/products/77120513-boho-pampas-grass-pattern-throw-pillow',
@@ -618,14 +618,14 @@ export const products: Product[] = [
   slug: 'modern-quicksand-rose-pillow',
   style: 'modern',
   flowerType: 'quicksand-rose',
-  colors: ['beige', 'blush', 'gray', 'mauve'],
+  colors: ['beige', 'blush', 'gray'],
   price: 25.00,
   featured: true,
   mainImage: 'modern-quicksand-rose-pillow-white-background.webp',
   images: [
     {
       src: '/images/modern-quicksand-rose-pillow-white-background.webp',
-      alt: 'Modern quicksand rose throw pillow with nude-beige roses on mauve-gray background',
+      alt: 'Modern quicksand rose throw pillow with nude-beige roses on gray background',
       title: 'Modern Quicksand Rose Pillow - Elegant Floral Design'
     },
     {
@@ -639,19 +639,19 @@ export const products: Product[] = [
       title: 'Modern Quicksand Rose Pillow - Modern Elegance'
     }
   ],
-  description: 'Elevate your space with understated luxury through our Modern Quicksand Rose Elegant Throw Pillow. This sophisticated seamless pattern showcases quicksand roses in soft nude-beige tones (#D9BDAF), each bloom meticulously detailed with spiraled petals that create visual depth and interest. The natural green-gray stems add organic movement while maintaining the refined aesthetic. Set against a desaturated mauve-gray background (#BDAFA6), this design achieves perfect balance between modern minimalism and botanical beauty. The elegant layout features thoughtfully spaced roses that allow each bloom to shine while creating a harmonious overall pattern. The refined botanical style and muted color palette make this pillow a versatile accent that complements contemporary interiors without overwhelming. High-resolution 300 DPI printing ensures every petal detail is captured with exceptional clarity. Crafted with premium textured poly twill fabric for superior quality and longevity, this pillow features seamless pattern printing that highlights the sophisticated design. The concealed zipper and included synthetic insert ensure both beauty and functionality. Handmade in America with precision and care, this quicksand rose pillow is ideal for modern living rooms, sophisticated bedrooms, or any space that appreciates subtle botanical elegance and contemporary style.',
-  shortDescription: 'Elevate your space with our Modern Quicksand Rose Pillow featuring nude-beige roses on mauve-gray for sophisticated botanical elegance.',
+  description: 'Elevate your space with understated luxury through our Modern Quicksand Rose Elegant Throw Pillow. This sophisticated seamless pattern showcases quicksand roses in soft nude-beige tones, each bloom meticulously detailed with spiraled petals that create visual depth and interest. The natural green-gray stems add organic movement while maintaining the refined aesthetic. Set against a desaturated gray background, this design achieves perfect balance between modern minimalism and botanical beauty. The elegant layout features thoughtfully spaced roses that allow each bloom to shine while creating a harmonious overall pattern. The refined botanical style and muted color palette make this pillow a versatile accent that complements contemporary interiors without overwhelming. High-resolution 300 DPI printing ensures every petal detail is captured with exceptional clarity. Crafted with premium textured poly twill fabric for superior quality and longevity, this pillow features seamless pattern printing that highlights the sophisticated design. The concealed zipper and included synthetic insert ensure both beauty and functionality. Handmade in America with precision and care, this quicksand rose pillow is ideal for modern living rooms, sophisticated bedrooms, or any space that appreciates subtle botanical elegance and contemporary style.',
+  shortDescription: 'Elevate your space with our Modern Quicksand Rose Pillow featuring nude-beige roses on gray for sophisticated botanical elegance.',
   specifications: generateProductSpecifications(),
   externalUrl: 'https://flowersluxe.dashery.com/products/77126179-quicksand-rose-elegant-pattern-throw-pillow',
   metaTitle: 'Modern Quicksand Rose Elegant Pillow – Sophisticated Floral Decor',
-  metaDescription: 'Sophisticated throw pillow with quicksand roses in nude-beige on mauve-gray background. Perfect for modern and elegant home decor.',
+  metaDescription: 'Sophisticated throw pillow with quicksand roses in nude-beige on gray background. Perfect for modern and elegant home decor.',
   keywords: [
     'quicksand rose pillow',
     'modern floral pillow',
     'elegant throw pillow',
     'nude beige cushion',
     'sophisticated decor',
-    'mauve gray pillow',
+    'gray pillow',
     'contemporary rose pillow',
     'neutral floral cushion',
     'refined botanical decor',
@@ -669,7 +669,7 @@ export const products: Product[] = [
   slug: 'autumn-dahlia-luxe-pillow',
   style: 'floral',
   flowerType: 'dahlia',
-  colors: ['orange', 'brown', 'green', 'rust', 'burgundy'],
+  colors: ['orange', 'brown', 'green'],
   price: 25.00,
   featured: true,
   mainImage: 'autumn-dahlia-luxe-pillow-white-background.webp',
@@ -720,14 +720,14 @@ export const products: Product[] = [
   slug: 'tropical-hibiscus-bold-pillow',
   style: 'modern',
   flowerType: 'hibiscus',
-  colors: ['green', 'coral', 'mustard', 'navy', 'multicolor'],
+  colors: ['green', 'coral', 'multicolor'],
   price: 25.00,
   featured: true,
   mainImage: 'tropical-hibiscus-bold-pillow-white-background.webp',
   images: [
     {
       src: '/images/tropical-hibiscus-bold-pillow-white-background.webp',
-      alt: 'Tropical hibiscus throw pillow with bold emerald, coral, and mustard flowers on navy background',
+      alt: 'Tropical hibiscus throw pillow with bold emerald, coral, and yellow flowers on navy background',
       title: 'Tropical Hibiscus Bold Pillow - Vibrant Pattern Design'
     },
     {
@@ -741,12 +741,12 @@ export const products: Product[] = [
       title: 'Tropical Hibiscus Bold Pillow - Outdoor Paradise'
     }
   ],
-  description: 'Transport your space to a tropical paradise with our Tropical Hibiscus Bold Pattern Throw Pillow. This vibrant seamless design features large, flat vector-style hibiscus flowers and lush banana leaves in an explosion of tropical colors. Rich emerald greens, vivid coral, warm mustard yellow, and deep forest green create a bold color story against a sophisticated navy or charcoal background, bringing instant energy and life to any space. The modern vector style gives these tropical blooms a contemporary edge while maintaining their exotic appeal. Each element is rendered with precision at 300 DPI resolution, creating a high-impact design that commands attention. The seamless repeat pattern ensures continuous tropical beauty across the entire pillow surface. Crafted with premium textured poly twill fabric for exceptional color vibrancy and durability, this pillow features bold pattern printing that brings the tropical design to life. The concealed zipper and included synthetic insert ensure both style and comfort. Handmade in America with attention to tropical flair, this hibiscus pillow is perfect for creating vacation vibes in modern living rooms, covered patios, or any space that celebrates bold botanical beauty and island-inspired style.',
-  shortDescription: 'Transport your space with our Tropical Hibiscus Bold Pillow featuring vibrant emerald, coral, and mustard blooms on sophisticated navy.',
+  description: 'Transport your space to a tropical paradise with our Tropical Hibiscus Bold Pattern Throw Pillow. This vibrant seamless design features large, flat vector-style hibiscus flowers and lush banana leaves in an explosion of tropical colors. Rich emerald greens, vivid coral, warm yellow, and deep forest green create a bold color story against a sophisticated navy or charcoal background, bringing instant energy and life to any space. The modern vector style gives these tropical blooms a contemporary edge while maintaining their exotic appeal. Each element is rendered with precision at 300 DPI resolution, creating a high-impact design that commands attention. The seamless repeat pattern ensures continuous tropical beauty across the entire pillow surface. Crafted with premium textured poly twill fabric for exceptional color vibrancy and durability, this pillow features bold pattern printing that brings the tropical design to life. The concealed zipper and included synthetic insert ensure both style and comfort. Handmade in America with attention to tropical flair, this hibiscus pillow is perfect for creating vacation vibes in modern living rooms, covered patios, or any space that celebrates bold botanical beauty and island-inspired style.',
+  shortDescription: 'Transport your space with our Tropical Hibiscus Bold Pillow featuring vibrant emerald, coral, and yellow blooms on sophisticated navy.',
   specifications: generateProductSpecifications(),
   externalUrl: 'https://flowersluxe.dashery.com/products/77124174-tropical-hibiscus-bold-pattern-throw-pillow',
   metaTitle: 'Tropical Hibiscus Bold Pattern Pillow – Vibrant Island Decor',
-  metaDescription: 'Bold tropical throw pillow with vector-style hibiscus in emerald, coral, and mustard on navy. Perfect for modern tropical home decor.',
+  metaDescription: 'Bold tropical throw pillow with vector-style hibiscus in emerald, coral, and yellow on navy. Perfect for modern tropical home decor.',
   keywords: [
     'tropical hibiscus pillow',
     'bold pattern cushion',
@@ -756,7 +756,7 @@ export const products: Product[] = [
     'navy tropical pillow',
     'modern tropical decor',
     'emerald green pillow',
-    'mustard yellow accent',
+    'yellow accent',
     'vibrant floral cushion'
   ],
   dateAdded: '2025-01-07',
@@ -771,14 +771,14 @@ export const products: Product[] = [
   slug: 'blush-peony-bloom-pillow',
   style: 'watercolor',
   flowerType: 'peony',
-  colors: ['pink', 'mauve', 'green'],
+  colors: ['pink', 'green'],
   price: 25.00,
   featured: true,
   mainImage: 'blush-peony-bloom-pillow-white-background.webp',
   images: [
     {
       src: '/images/blush-peony-bloom-pillow-white-background.webp',
-      alt: 'Pink peony throw pillow with layered petals on soft mauve background',
+      alt: 'Pink peony throw pillow with layered petals on soft background',
       title: 'Blush Peony Bloom Pillow - Watercolor Floral Design'
     },
     {
@@ -792,7 +792,7 @@ export const products: Product[] = [
       title: 'Blush Peony Bloom Pillow - Cozy Accent Decor'
     }
   ],
-  description: 'Add romantic charm to your space with our Blush Peony Bloom Throw Pillow. This elegant design features a single lush peony in full bloom, painted in delicate watercolor style with soft pink petals and verdant green leaves. Set against a soothing mauve background (#C8A6B9), the floral illustration exudes feminine elegance and serene beauty. The subtle brushwork and fluid transitions bring depth and softness, perfect for dreamy bedrooms or graceful living spaces. Crafted with premium poly twill fabric and printed at high-resolution 300 DPI, this pillow ensures crisp detail and lasting vibrancy. With a concealed zipper and insert included, it\'s both stylish and functional. Handmade in America with artistic precision, it\'s ideal for those who love floral aesthetics with a modern romantic twist.',
+  description: 'Add romantic charm to your space with our Blush Peony Bloom Throw Pillow. This elegant design features a single lush peony in full bloom, painted in delicate watercolor style with soft pink petals and verdant green leaves. Set against a soothing background, the floral illustration exudes feminine elegance and serene beauty. The subtle brushwork and fluid transitions bring depth and softness, perfect for dreamy bedrooms or graceful living spaces. Crafted with premium poly twill fabric and printed at high-resolution 300 DPI, this pillow ensures crisp detail and lasting vibrancy. With a concealed zipper and insert included, it is both stylish and functional. Handmade in America with artistic precision, it is ideal for those who love floral aesthetics with a modern romantic twist.',
   shortDescription: 'Romantic watercolor peony pillow in soft pink — perfect for feminine and elegant decor.',
   specifications: generateProductSpecifications(),
   externalUrl: 'https://flowersluxe.dashery.com/products/77130487-blush-peony-bloom-floral-art-throw-pillow',
@@ -814,7 +814,6 @@ export const products: Product[] = [
   inStock: true,
   category: 'Flower Throw Pillows'
 }
-
 
 ];
 
