@@ -109,7 +109,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Individual Product Pages -->
+  <!-- Original Individual Product Pages -->
   <url>
     <loc>https://flowersluxe.com/flower-throw-pillows/boho/sunflower-mandala-boho-pillow</loc>
     <lastmod>2025-06-15</lastmod>
@@ -148,6 +148,77 @@
   <url>
     <loc>https://flowersluxe.com/flower-throw-pillows/floral/lavender-throw-pillow-botanical-illustration</loc>
     <lastmod>2025-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- NEW Product Pages Added -->
+  <url>
+    <loc>https://flowersluxe.com/flower-throw-pillows/watercolor/watercolor-garden-blush-pillow</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://flowersluxe.com/flower-throw-pillows/modern/modern-sunflower-minimalist-pillow</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://flowersluxe.com/flower-throw-pillows/vintage/patriotic-floral-flag-pillow</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://flowersluxe.com/flower-throw-pillows/watercolor/romantic-pink-peony-pillow</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://flowersluxe.com/flower-throw-pillows/vintage/vintage-toffee-rose-pillow</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://flowersluxe.com/flower-throw-pillows/boho/boho-pampas-grass-pillow</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://flowersluxe.com/flower-throw-pillows/modern/modern-quicksand-rose-pillow</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://flowersluxe.com/flower-throw-pillows/floral/autumn-dahlia-luxe-pillow</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://flowersluxe.com/flower-throw-pillows/modern/tropical-hibiscus-bold-pillow</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://flowersluxe.com/flower-throw-pillows/watercolor/blush-peony-bloom-pillow</loc>
+    <lastmod>2025-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
