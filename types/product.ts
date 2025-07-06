@@ -118,6 +118,7 @@ export type ProductColor =
   | 'aqua'
   | 'sand'
   | 'ivory'
+  | 'mauve';
   | 'rust';
 
 
