@@ -303,7 +303,7 @@ export const products: Product[] = [
   dateAdded: '2025-06-10',
   inStock: true,
   category: 'Flower Throw Pillows'
-}
+},
 
 // Product 1 Watercolor Floral Pattern
 {
