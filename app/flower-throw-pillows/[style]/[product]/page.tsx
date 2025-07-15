@@ -1,7 +1,6 @@
 import { use } from 'react'
 import { Metadata } from 'next'
 import { products } from '../../../../data/products'
-import { generateProductMetadata } from '../../../../utils/seo'
 import ProductPageClient from './ProductPageClient'
 
 // Generate static params for all products
@@ -28,8 +27,49 @@ export async function generateMetadata({ params }: { params: Promise<ProductPage
       title: 'Product Not Found',
     };
   }
-  
-  return generateProductMetadata(product);
+
+  const baseUrl = 'https://flowersluxe.com';
+  const productUrl = `${baseUrl}/flower-throw-pillows/${product.style}/${product.slug}`;
+  const imageUrl = `${baseUrl}/images/${product.mainImage}`;
+
+  return {
+    title: product.metaTitle || product.title,
+    description: product.metaDescription || product.description,
+    openGraph: {
+      title: product.metaTitle || product.title,
+      description: product.metaDescription || product.description,
+      url: productUrl,
+      siteName: 'FlowersLuxe',
+      images: [
+        {
+          url: imageUrl,
+          width: 800,
+          height: 800,
+          alt: product.images?.[0]?.alt || product.title,
+        },
+      ],
+      locale: 'en_US',
+      type: 'product',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: product.metaTitle || product.title,
+      description: product.metaDescription || product.description,
+      images: [imageUrl],
+    },
+    alternates: {
+      canonical: productUrl,
+    },
+    other: {
+      'keywords': product.keywords?.join(', ') || '',
+      'product:price:amount': product.price?.toString() || '',
+      'product:price:currency': 'USD',
+      'product:availability': product.inStock ? 'in stock' : 'out of stock',
+      'product:condition': 'new',
+      'product:brand': 'FlowersLuxe',
+      'product:category': 'Home & Garden > Decor > Pillows',
+    },
+  };
 }
 
 export default function ProductPageWrapper({ params }: { params: Promise<ProductPageParams> }) {
