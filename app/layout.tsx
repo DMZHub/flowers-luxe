@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Inter, Cormorant_Garamond } from 'next/font/google'
 import './globals.css'
 import Header from '../components/Header'
@@ -66,15 +67,20 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /> 
 
-     
-       <script async src="https://www.googletagmanager.com/gtag/js?id=G-FGVRG6MC02"></script>
-       <script>
-       window.dataLayer = window.dataLayer || [];
-       function gtag(){dataLayer.push(arguments);}
-       gtag('js', new Date());
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-FGVRG6MC02"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+     {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FGVRG6MC02');
+    `}
+    </Script>
 
-       gtag('config', 'G-FGVRG6MC02');
-       </script>
+      
         
         {/* Additional SEO meta tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
