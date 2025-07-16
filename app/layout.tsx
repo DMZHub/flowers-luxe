@@ -66,7 +66,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /> 
 
-        <!-- Google tag (gtag.js) -->
+     
        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FGVRG6MC02"></script>
        <script>
        window.dataLayer = window.dataLayer || [];
