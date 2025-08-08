@@ -23,8 +23,20 @@ export const blogPosts: BlogPost[] = [
     readTime: '6 min read',
     imageSrc: '/images/blog/styling-flower-pillows-living-room.webp',
     featured: true
-  }
- 
+  },
+  {
+  id: '2',
+  title: 'What Color Pillows Go With a Gray Couch? (Stylish Ideas)',
+  excerpt: 'A complete guide to choosing pillow colors for gray sofas—undertones, formulas, pattern mixing, seasonal swaps, and 8 real floral examples.',
+  slug: 'what-color-pillows-go-with-a-gray-couch',
+  category: 'Home Decor',
+  categorySlug: 'home-decor',
+  date: 'August 8, 2025',
+  readTime: '11 min read',
+  imageSrc: '/images/blog/gray-couch/gray-couch-usa-flag-floral-pillows.webp',
+  featured: true
+}
+
 ]
 
 // Helper functions
@@ -46,4 +58,5 @@ export const getBlogPostBySlug = (slug: string) => {
 
 export const getBlogCategoryCount = (categorySlug: string) => {
   return blogPosts.filter(post => post.categorySlug === categorySlug).length
+
 }
