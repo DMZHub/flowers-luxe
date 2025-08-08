@@ -41,7 +41,7 @@ const ARTICLE = {
   publishDateHuman: "August 8, 2025",
   readTime: "12 min read",
   hero: {
-    src: "/images/blog/gray-couch/gray-couch-usa-flag-floral-pillows.wepb",
+    src: "/images/blog/gray-couch/gray-couch-usa-flag-floral-pillows.webp",
     alt: "USA flag-inspired floral throw pillows styled on a gray couch, offering a bold color pairing idea for gray sofas.",
     width: 1200,
     height: 800,
@@ -326,7 +326,7 @@ export default function GrayCouchPillowsArticlePage() {
         <title>{ARTICLE.title} | FlowersLuxe Blog</title>
         <meta name="description" content={ARTICLE.description} />
         <meta name="keywords" content="what color pillows go with a gray couch, gray couch pillow colors, floral pillows gray sofa, best pillows for gray couch" />
-        <link rel="canonical" href={currentUrl} />
+        <link rel="canonical" href={`https://flowersluxe.com/blog/${ARTICLE.slug}`} />
         <meta property="og:title" content={`${ARTICLE.title} | FlowersLuxe Blog`} />
         <meta property="og:description" content={ARTICLE.description} />
         <meta property="og:type" content="article" />
