@@ -1,4 +1,5 @@
 "use client"
+
 import { useState } from 'react'
 import Link from 'next/link'
 import { FiChevronRight, FiArrowRight, FiShoppingBag, FiHeart, FiTruck } from 'react-icons/fi'
@@ -14,7 +15,8 @@ export default function Home() {
     message?: string
   }>({})
 
-  const featured = getFeaturedProducts(8)
+  // ✅ FIXED: getFeaturedProducts() takes 0 args; slice the array to 8 items.
+  const featured = getFeaturedProducts().slice(0, 8)
 
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -56,13 +58,15 @@ export default function Home() {
                 href="/flower-throw-pillows"
                 className="btn btn-primary inline-flex items-center gap-2"
               >
-                Shop Pillows <FiShoppingBag className="inline-block" />
+                Shop Pillows
+                <FiShoppingBag className="inline-block" />
               </Link>
               <Link
                 href="/blog"
                 className="btn btn-secondary inline-flex items-center gap-2"
               >
-                Read the Blog <FiArrowRight className="inline-block" />
+                Read the Blog
+                <FiArrowRight className="inline-block" />
               </Link>
             </div>
 
@@ -142,7 +146,7 @@ export default function Home() {
                   {subscribeStatus.message}
                 </div>
               )}
-              
+
               <p className="text-sm text-gray-500 mt-4">
                 We respect your privacy. Unsubscribe at any time.
               </p>
