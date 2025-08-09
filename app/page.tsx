@@ -7,6 +7,40 @@ import ProductCard from '../components/ProductCard'
 import { products, getFeaturedProducts } from '../data/products'
 import emailjs from '@emailjs/browser'
 
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'FlowersLuxe | Premium Flower Throw Pillows & Floral Home Decor',
+  description: 'Discover beautiful flower throw pillows featuring unique botanical designs. Handcrafted in America with premium materials.',
+  keywords: ['flower throw pillows', 'floral home decor', 'premium pillows', 'botanical pillows'],
+  alternates: {
+    canonical: 'https://flowersluxe.com/',
+  },
+  openGraph: {
+    title: 'FlowersLuxe | Premium Flower Throw Pillows & Floral Home Decor',
+    description: 'Discover beautiful flower throw pillows featuring unique botanical designs. Handcrafted in America with premium materials.',
+    url: 'https://flowersluxe.com/',
+    siteName: 'FlowersLuxe',
+    images: [
+      {
+        url: 'https://flowersluxe.com/images/og-home.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Premium Flower Throw Pillows',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'FlowersLuxe | Premium Flower Throw Pillows & Floral Home Decor',
+    description: 'Discover beautiful flower throw pillows featuring unique botanical designs. Handcrafted in America with premium materials.',
+    images: ['https://flowersluxe.com/images/og-home.jpg'],
+  },
+}
+
+
 export default function Home() {
   const [email, setEmail] = useState('')
   const [submitting, setSubmitting] = useState(false)
