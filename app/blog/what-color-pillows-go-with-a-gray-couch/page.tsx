@@ -326,7 +326,7 @@ export default function GrayCouchPillowsArticlePage() {
         <title>{ARTICLE.title} | FlowersLuxe Blog</title>
         <meta name="description" content={ARTICLE.description} />
         <meta name="keywords" content="what color pillows go with a gray couch, gray couch pillow colors, floral pillows gray sofa, best pillows for gray couch" />
-        <link rel="canonical" href={`https://flowersluxe.com/blog/${ARTICLE.slug}`} />
+        <link rel="canonical" href="https://flowersluxe.com/blog/what-color-pillows-go-with-a-gray-couch/" />
         <meta property="og:title" content={`${ARTICLE.title} | FlowersLuxe Blog`} />
         <meta property="og:description" content={ARTICLE.description} />
         <meta property="og:type" content="article" />
