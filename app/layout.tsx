@@ -22,6 +22,8 @@ const cormorant = Cormorant_Garamond({
 
 // Use your existing SEO utility function
 
+export const metadata: Metadata = {
+  metadataBase: new URL('https://flowersluxe.com'),
   robots: {
     index: true,
     follow: true,
