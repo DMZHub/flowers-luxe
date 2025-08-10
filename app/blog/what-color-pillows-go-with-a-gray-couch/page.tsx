@@ -1,10 +1,7 @@
-"use client"
-
 import React from "react"
-import Head from "next/head"
 import Link from "next/link"
 import Image from "next/image"
-import { usePathname } from "next/navigation"
+import type { Metadata } from 'next'
 import { FiCalendar, FiClock, FiTag, FiShare2, FiArrowRight, FiArrowLeft, FiChevronRight } from "react-icons/fi"
 import Breadcrumbs from "../../../components/Breadcrumbs"
 import SchemaMarkup from "../../../components/SchemaMarkup"
@@ -25,9 +22,7 @@ import SchemaMarkup from "../../../components/SchemaMarkup"
  * -------------------------------------------------------------
  */
 
-// ---------------------------------------------
 // Article Config
-// ---------------------------------------------
 const ARTICLE = {
   title: "What Color Pillows Go With a Gray Couch? (Stylish Ideas)",
   slug: "what-color-pillows-go-with-a-gray-couch",
@@ -48,9 +43,44 @@ const ARTICLE = {
   },
 }
 
-// ---------------------------------------------
+// Server-side metadata export (replaces the Head component)
+export const metadata: Metadata = {
+  title: `${ARTICLE.title} | FlowersLuxe Blog`,
+  description: ARTICLE.description,
+  keywords: "what color pillows go with a gray couch, gray couch pillow colors, floral pillows gray sofa, best pillows for gray couch",
+  openGraph: {
+    title: `${ARTICLE.title} | FlowersLuxe Blog`,
+    description: ARTICLE.description,
+    type: "article",
+    url: `https://flowersluxe.com/blog/${ARTICLE.slug}`,
+    images: [
+      {
+        url: `https://flowersluxe.com${ARTICLE.hero.src}`,
+        width: ARTICLE.hero.width,
+        height: ARTICLE.hero.height,
+        alt: ARTICLE.hero.alt,
+      },
+    ],
+    siteName: 'FlowersLuxe',
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${ARTICLE.title} | FlowersLuxe Blog`,
+    description: ARTICLE.description,
+    images: [`https://flowersluxe.com${ARTICLE.hero.src}`],
+  },
+  alternates: {
+    canonical: `https://flowersluxe.com/blog/${ARTICLE.slug}`,
+  },
+  other: {
+    'article:published_time': ARTICLE.publishDateISO,
+    'article:modified_time': ARTICLE.modifiedDateISO,
+    'article:section': ARTICLE.category,
+    'article:author': ARTICLE.author,
+  },
+}
+
 // Product Images (8) — Updated with correct data
-// ---------------------------------------------
 const PRODUCT_IMAGES: Array<{
   src: string
   alt: string
@@ -125,28 +155,48 @@ const PRODUCT_IMAGES: Array<{
   },
 ]
 
-// ---------------------------------------------
-// Share functionality
-// ---------------------------------------------
-async function shareArticle(title: string, description: string, url: string) {
-  const shareData = { title, text: description, url }
-  try {
-    if (navigator.share) {
-      await navigator.share(shareData)
-      return
+// Client Component for Share functionality
+function ShareButton() {
+  const [isSharing, setIsSharing] = React.useState(false)
+
+  async function shareArticle() {
+    setIsSharing(true)
+    const shareData = { 
+      title: ARTICLE.title, 
+      text: ARTICLE.description, 
+      url: window.location.href 
     }
-    await navigator.clipboard.writeText(url)
-    alert("Link copied to clipboard!")
-  } catch (err) {
-    const shareUrl = encodeURIComponent(url)
-    const shareText = encodeURIComponent(title)
-    window.open(`https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`, "_blank")
+    
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData)
+        return
+      }
+      await navigator.clipboard.writeText(window.location.href)
+      alert("Link copied to clipboard!")
+    } catch (err) {
+      const shareUrl = encodeURIComponent(window.location.href)
+      const shareText = encodeURIComponent(ARTICLE.title)
+      window.open(`https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`, "_blank")
+    } finally {
+      setIsSharing(false)
+    }
   }
+
+  return (
+    <button
+      onClick={shareArticle}
+      disabled={isSharing}
+      className="inline-flex items-center gap-2 text-gray-600 hover:text-primary transition-colors"
+      aria-label="Share this article"
+    >
+      <FiShare2 size={18} />
+      <span>{isSharing ? 'Sharing...' : 'Share'}</span>
+    </button>
+  )
 }
 
-// ---------------------------------------------
 // JSON-LD Schema Objects
-// ---------------------------------------------
 function getArticleSchema(currentUrl: string) {
   return {
     "@context": "https://schema.org",
@@ -237,7 +287,7 @@ function getFAQSchema(currentUrl: string) {
         name: "How do I arrange pillows on a large sectional without it looking cluttered?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Place larger pillows (22″ or 24″) at the back as your foundation, then layer smaller ones in front. Distribute pillows evenly but not symmetrically—this creates visual interest while maintaining balance. Leave 3–4 inches between pillow edges."
+          text: "Place larger pillows (22″ or 24″) at the back as your foundation, then layer smaller ones in front. Distribute pillows evenly but not symmetrically—this creates visual interest while maintaining balance. Leave 3-4 inches between pillow edges."
         }
       },
       {
@@ -277,10 +327,7 @@ function getFAQSchema(currentUrl: string) {
   };
 }
 
-
-// ---------------------------------------------
 // Sticky TOC styles (preloaded)
-// ---------------------------------------------
 const StickyTocStyles = () => (
   <style
     dangerouslySetInnerHTML={{
@@ -301,13 +348,10 @@ const StickyTocStyles = () => (
   />
 )
 
-// ---------------------------------------------
-// Main Component
-// ---------------------------------------------
+// Main Component (now server-side by default)
 export default function GrayCouchPillowsArticlePage() {
-  const pathname = usePathname()
-  const currentUrl = `https://flowersluxe.com${pathname ?? "/blog/what-color-pillows-go-with-a-gray-couch"}`
-
+  const currentUrl = `https://flowersluxe.com/blog/${ARTICLE.slug}`
+  
   const articleSchema = React.useMemo(() => getArticleSchema(currentUrl), [currentUrl])
   const faqSchema = React.useMemo(() => getFAQSchema(currentUrl), [currentUrl])
 
@@ -321,24 +365,6 @@ export default function GrayCouchPillowsArticlePage() {
       <StickyTocStyles />
       <SchemaMarkup schema={articleSchema} />
       <SchemaMarkup schema={faqSchema} />
-      <Head>
-        <title>{ARTICLE.title} | FlowersLuxe Blog</title>
-        <meta name="description" content={ARTICLE.description} />
-        <meta name="keywords" content="what color pillows go with a gray couch, gray couch pillow colors, floral pillows gray sofa, best pillows for gray couch" />
-        <meta property="og:title" content={`${ARTICLE.title} | FlowersLuxe Blog`} />
-        <meta property="og:description" content={ARTICLE.description} />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={currentUrl} />
-        <meta property="og:image" content={`https://flowersluxe.com${ARTICLE.hero.src}`} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${ARTICLE.title} | FlowersLuxe Blog`} />
-        <meta name="twitter:description" content={ARTICLE.description} />
-        <meta name="twitter:image" content={`https://flowersluxe.com${ARTICLE.hero.src}`} />
-        <meta property="article:published_time" content={ARTICLE.publishDateISO} />
-        <meta property="article:modified_time" content={ARTICLE.modifiedDateISO} />
-        <meta property="article:section" content={ARTICLE.category} />
-        <meta property="article:author" content={ARTICLE.author} />
-      </Head>
 
       {/* Breadcrumbs */}
       <div className="container-custom">
@@ -383,14 +409,7 @@ export default function GrayCouchPillowsArticlePage() {
 
           {/* Share */}
           <div className="flex items-center gap-3 mb-6">
-            <button
-              onClick={() => shareArticle(ARTICLE.title, ARTICLE.description, currentUrl)}
-              className="inline-flex items-center gap-2 text-gray-600 hover:text-primary transition-colors"
-              aria-label="Share this article"
-            >
-              <FiShare2 size={18} />
-              <span>Share</span>
-            </button>
+            <ShareButton />
           </div>
 
           <div className="relative rounded-2xl overflow-hidden shadow-sm border border-gray-100">
@@ -626,33 +645,33 @@ export default function GrayCouchPillowsArticlePage() {
                 <p>Rose patterns never go out of style, and this toffee-toned version proves why. The warm brown and cream color palette creates a sophisticated, timeless look that works beautifully with gray upholstery. This is perfect for women who love classic floral patterns but prefer more muted, grown-up color schemes over bright pinks.</p>
               </div>
 
-  {/* Example 8 */}
-  <div className="my-8"> 
-  <h3 className="font-cormorant text-xl font-bold mb-3">Spring Touch: Red Tulip Floral Print</h3>
-  <figure className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm bg-white mb-4">
-    <Link href="/flower-throw-pillows/floral/red-tulip-pillow" className="block">
-      <Image
-        src="/images/blog/gray-couch/red-tulip-flower-pillows-gray-sofa.webp"
-        alt="Gray fabric sofa with square throw pillows featuring red tulip flower prints on a green background, accented by an orange blanket and indoor plants."
-        width={1200}
-        height={800}
-        priority
-        sizes="100vw"
-        className="w-full h-auto object-cover"
-      />
-    </Link>
-    <figcaption className="px-4 py-3 text-sm text-gray-700 border-t border-gray-100 flex items-center justify-between">
-      <Link href="/flower-throw-pillows/floral/red-tulip-pillow" className="text-primary hover:text-primary-dark font-medium inline-flex items-center gap-2">
-        <span>Shop Red Tulip Collection</span>
-        <FiArrowRight size={16} />
-      </Link>
-    </figcaption>
-  </figure>
-  <p>This red tulip floral print pairs naturally with a gray sofa, creating a fresh, seasonal look. The green foliage in the design ties in beautifully with surrounding indoor plants, while the warm orange accent adds contrast and visual interest.</p>
-</div>
-</section>
+              {/* Example 8 */}
+              <div className="my-8"> 
+                <h3 className="font-cormorant text-xl font-bold mb-3">Spring Touch: Red Tulip Floral Print</h3>
+                <figure className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm bg-white mb-4">
+                  <Link href="/flower-throw-pillows/floral/red-tulip-pillow" className="block">
+                    <Image
+                      src="/images/blog/gray-couch/red-tulip-flower-pillows-gray-sofa.webp"
+                      alt="Gray fabric sofa with square throw pillows featuring red tulip flower prints on a green background, accented by an orange blanket and indoor plants."
+                      width={1200}
+                      height={800}
+                      priority
+                      sizes="100vw"
+                      className="w-full h-auto object-cover"
+                    />
+                  </Link>
+                  <figcaption className="px-4 py-3 text-sm text-gray-700 border-t border-gray-100 flex items-center justify-between">
+                    <Link href="/flower-throw-pillows/floral/red-tulip-pillow" className="text-primary hover:text-primary-dark font-medium inline-flex items-center gap-2">
+                      <span>Shop Red Tulip Collection</span>
+                      <FiArrowRight size={16} />
+                    </Link>
+                  </figcaption>
+                </figure>
+                <p>This red tulip floral print pairs naturally with a gray sofa, creating a fresh, seasonal look. The green foliage in the design ties in beautifully with surrounding indoor plants, while the warm orange accent adds contrast and visual interest.</p>
+              </div>
+            </section>
 
-          {/* Undertone Table */}
+            {/* Undertone Table */}
             <section id="color-coordination" className="prose prose-lg max-w-none section-anchor">
               <h2 className="font-cormorant text-3xl font-bold mb-6">Color Coordination Fundamentals</h2>
               <p className="text-lg text-gray-700 mb-8 leading-relaxed">
@@ -693,14 +712,14 @@ export default function GrayCouchPillowsArticlePage() {
               </p>
             </section>
               
-              {/* Arrangement Techniques + Size Guide Table */}
+            {/* Arrangement Techniques + Size Guide Table */}
             <section id="arrangement-techniques" className="prose prose-lg max-w-none section-anchor">
               <h2 className="font-cormorant text-3xl font-bold mb-6">Pillow Arrangement Techniques</h2>
               <p className="text-lg text-gray-700 mb-8 leading-relaxed">
                 Use size variation, consistent spacing, and a clear focal pillow (floral) to keep the look polished.
               </p>
 
-             <table className="w-full border-collapse border border-gray-200 rounded-xl overflow-hidden mb-6">
+              <table className="w-full border-collapse border border-gray-200 rounded-xl overflow-hidden mb-6">
                 <thead>
                   <tr className="bg-gray-50">
                     <th className="text-left p-4 font-semibold text-gray-900 border-b border-gray-200">Sofa Type</th>
@@ -792,7 +811,7 @@ export default function GrayCouchPillowsArticlePage() {
               </div>
             </section>
 
-           {/* Seasonal Swaps Table */}
+            {/* Seasonal Swaps Table */}
             <section id="seasonal-updates" className="prose prose-lg max-w-none section-anchor">
               <h2 className="font-cormorant text-3xl font-bold mb-6">Seasonal Styling Updates</h2>
               <table className="w-full border-collapse border border-gray-200 rounded-xl overflow-hidden mb-8">
@@ -855,7 +874,7 @@ export default function GrayCouchPillowsArticlePage() {
               </ul>
             </section>
 
-           {/* FAQ */}
+            {/* FAQ */}
             <section id="faqs" className="prose prose-lg max-w-none section-anchor">
               <h2 className="font-cormorant text-3xl font-bold mb-6">FAQs</h2>
               
@@ -939,8 +958,6 @@ export default function GrayCouchPillowsArticlePage() {
               </div>
             </section>
 
-            
-
             {/* Final CTA */}
             <section className="text-center py-10 mt-10 bg-gradient-to-br from-primary to-primary-dark rounded-2xl text-white">
               <h3 className="font-cormorant text-3xl font-bold mb-3">Ready to Style Your Gray Sofa?</h3>
@@ -975,7 +992,6 @@ export default function GrayCouchPillowsArticlePage() {
                     { href: "#common-mistakes", label: "Common Mistakes" },
                     { href: "#care-maintenance", label: "Care & Maintenance" },
                     { href: "#faqs", label: "FAQs" },
-                    { href: "#newsletter", label: "Newsletter" },
                     { href: "#related-articles", label: "Related Articles" },
                   ].map((item) => (
                     <li key={item.href}>
@@ -993,7 +1009,6 @@ export default function GrayCouchPillowsArticlePage() {
         </div>
       </article>
 
- 
       {/* Related Articles */}
       <section id="related-articles" className="py-16 bg-surface-muted">
         <div className="container-custom">
