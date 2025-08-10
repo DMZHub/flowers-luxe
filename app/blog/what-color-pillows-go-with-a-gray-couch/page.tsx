@@ -2,7 +2,7 @@ import React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import type { Metadata } from 'next'
-import { FiCalendar, FiClock, FiTag, FiShare2, FiArrowRight, FiArrowLeft, FiChevronRight } from "react-icons/fi"
+import { FiCalendar, FiClock, FiTag, FiArrowRight, FiArrowLeft, FiChevronRight } from "react-icons/fi"
 import Breadcrumbs from "../../../components/Breadcrumbs"
 import SchemaMarkup from "../../../components/SchemaMarkup"
 
@@ -352,8 +352,8 @@ const StickyTocStyles = () => (
 export default function GrayCouchPillowsArticlePage() {
   const currentUrl = `https://flowersluxe.com/blog/${ARTICLE.slug}`
   
-  const articleSchema = React.useMemo(() => getArticleSchema(currentUrl), [currentUrl])
-  const faqSchema = React.useMemo(() => getFAQSchema(currentUrl), [currentUrl])
+  const articleSchema = getArticleSchema(currentUrl)
+  const faqSchema = getFAQSchema(currentUrl)
 
   const breadcrumbItems = [
     { name: "Blog", url: "/blog" },
@@ -407,22 +407,7 @@ export default function GrayCouchPillowsArticlePage() {
             In this expert guide, we'll map undertones, translate color theory into easy choices, and give you copy‑and‑paste formulas that work on real couches (not just mood boards). You'll see <strong>8 full-width examples</strong> with floral pillows, learn arrangement sizes for sectionals vs loveseats, get seasonal palettes to go from idea → cart with confidence.
           </p>
 
-          {/* Share */}
-          <div className="flex items-center gap-3 mb-6">
-            <ShareButton />
-          </div>
-
-          <div className="relative rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-            <Image
-              src={ARTICLE.hero.src}
-              alt={ARTICLE.hero.alt}
-              width={ARTICLE.hero.width}
-              height={ARTICLE.hero.height}
-              priority
-              sizes="(max-width: 1024px) 100vw, 1024px"
-              className="w-full h-auto object-cover"
-            />
-          </div>
+     
         </div>
       </header>
 
