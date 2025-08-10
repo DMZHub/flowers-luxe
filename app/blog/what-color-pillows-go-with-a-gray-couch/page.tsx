@@ -156,6 +156,7 @@ const PRODUCT_IMAGES: Array<{
 ]
 
 // Client Component for Share functionality
+{/*
 function ShareButton() {
   const [isSharing, setIsSharing] = React.useState(false)
 
@@ -195,7 +196,7 @@ function ShareButton() {
     </button>
   )
 }
-
+*/}
 // JSON-LD Schema Objects
 function getArticleSchema(currentUrl: string) {
   return {
