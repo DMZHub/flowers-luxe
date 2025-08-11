@@ -2,7 +2,7 @@ import React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import type { Metadata } from 'next'
-import { FiCalendar, FiClock, FiTag, FiArrowRight, FiArrowLeft, FiChevronRight, FiHeart, FiShare2, FiBookmark } from "react-icons/fi"
+import { FiCalendar, FiClock, FiTag, FiArrowRight, FiArrowLeft, FiChevronRight, } from "react-icons/fi"
 import Breadcrumbs from "../../../components/Breadcrumbs"
 import SchemaMarkup from "../../../components/SchemaMarkup"
 
@@ -279,10 +279,6 @@ const OptimizedStyles = () => (
         .content-spacing > *{margin-bottom:2rem}
         .content-spacing > *:last-child{margin-bottom:0}
         
-        /* Social Share Buttons */
-        .social-share{display:flex;gap:8px;margin:20px 0}
-        .share-btn{padding:8px 16px;border-radius:8px;border:none;cursor:pointer;transition:all 0.2s ease;font-weight:500}
-        .share-btn:hover{transform:translateY(-2px)}
         
         /* Mobile Optimizations */
         @media (max-width: 768px){
@@ -350,18 +346,7 @@ export default function CreamSofaPillowsArticlePage() {
             {ARTICLE.title}
           </h1>
 
-          {/* Social Share */}
-          <div className="social-share mb-8">
-            <button className="share-btn bg-blue-500 text-white hover:bg-blue-600" style={{display: 'flex', alignItems: 'center', gap: '8px'}}>
-              <FiShare2 size={16} /> Share
-            </button>
-            <button className="share-btn bg-red-500 text-white hover:bg-red-600" style={{display: 'flex', alignItems: 'center', gap: '8px'}}>
-              <FiHeart size={16} /> Save
-            </button>
-            <button className="share-btn bg-gray-500 text-white hover:bg-gray-600" style={{display: 'flex', alignItems: 'center', gap: '8px'}}>
-              <FiBookmark size={16} /> Bookmark
-            </button>
-          </div>
+  
 
           {/* Hero Image */}
           <figure className="product-card mb-12 fade-in">
@@ -1099,46 +1084,6 @@ export default function CreamSofaPillowsArticlePage() {
               </div>
             </section>
 
-            {/* Internal Linking Section */}
-            <section className="prose prose-xl max-w-none my-12">
-              <div className="bg-gradient-to-r from-blue-50 to-purple-50 border-2 border-blue-200 rounded-16 p-8">
-                <h3 className="font-cormorant text-2xl font-bold mb-6 text-blue-900">Related Styling Guides You'll Love</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-semibold text-blue-800 mb-2">
-                      <Link href="/blog/what-color-pillows-go-with-navy-blue-couch" className="hover:text-blue-600 transition-colors">
-                        What Color Pillows Go With a Navy Blue Couch?
-                      </Link>
-                    </h4>
-                    <p className="text-blue-700 text-sm">Discover how to style darker sofas with complementary colors and patterns.</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-blue-800 mb-2">
-                      <Link href="/blog/what-color-pillows-go-with-gray-couch" className="hover:text-blue-600 transition-colors">
-                        What Color Pillows Go With a Gray Couch?
-                      </Link>
-                    </h4>
-                    <p className="text-blue-700 text-sm">Master the art of styling modern gray furniture with perfect pillow pairings.</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-blue-800 mb-2">
-                      <Link href="/blog/what-kind-of-pillows-go-with-leather-couch" className="hover:text-blue-600 transition-colors">
-                        What Kind of Pillows Go With a Leather Couch?
-                      </Link>
-                    </h4>
-                    <p className="text-blue-700 text-sm">Learn special techniques for styling leather furniture with the right textures and colors.</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-blue-800 mb-2">
-                      <Link href="/flower-throw-pillows" className="hover:text-blue-600 transition-colors">
-                        Complete Floral Pillow Collection
-                      </Link>
-                    </h4>
-                    <p className="text-blue-700 text-sm">Browse our curated selection of designer floral throw pillows for every style.</p>
-                  </div>
-                </div>
-              </div>
-            </section>
 
             {/* FAQs */}
             <section id="faqs" className="prose prose-xl max-w-none section-anchor">
@@ -1183,6 +1128,48 @@ export default function CreamSofaPillowsArticlePage() {
                 <div className="bg-white border border-gray-200 rounded-12 p-6 hover:shadow-lg transition-shadow">
                   <h3 className="font-semibold text-gray-800 mb-3">What's the biggest mistake people make with cream sofa styling?</h3>
                   <p className="text-gray-700">The biggest mistake is playing it too safe with all-neutral pillows that disappear into the sofa. Cream furniture can handle much more color than people think. Don't be afraid to add personality with coral, sage green, or dusty blue accents — these colors enhance rather than overwhelm cream's natural elegance.</p>
+                </div>
+              </div>
+            </section>
+
+            
+            {/* Internal Linking Section */}
+            <section className="prose prose-xl max-w-none my-12">
+              <div className="bg-gradient-to-r from-blue-50 to-purple-50 border-2 border-blue-200 rounded-16 p-8">
+                <h3 className="font-cormorant text-2xl font-bold mb-6 text-blue-900">Related Styling Guides You'll Love</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-blue-800 mb-2">
+                      <Link href="/blog/what-color-pillows-go-with-a-navy-blue-couch" className="hover:text-blue-600 transition-colors">
+                        What Color Pillows Go With a Navy Blue Couch?
+                      </Link>
+                    </h4>
+                    <p className="text-blue-700 text-sm">Discover how to style darker sofas with complementary colors and patterns.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-blue-800 mb-2">
+                      <Link href="/blog/what-color-pillows-go-with-a-gray-couch" className="hover:text-blue-600 transition-colors">
+                        What Color Pillows Go With a Gray Couch?
+                      </Link>
+                    </h4>
+                    <p className="text-blue-700 text-sm">Master the art of styling modern gray furniture with perfect pillow pairings.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-blue-800 mb-2">
+                      <Link href="/blog/what-kind-of-pillows-go-with-a-leather-couch" className="hover:text-blue-600 transition-colors">
+                        What Kind of Pillows Go With a Leather Couch?
+                      </Link>
+                    </h4>
+                    <p className="text-blue-700 text-sm">Learn special techniques for styling leather furniture with the right textures and colors.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-blue-800 mb-2">
+                      <Link href="/flower-throw-pillows" className="hover:text-blue-600 transition-colors">
+                        Complete Floral Pillow Collection
+                      </Link>
+                    </h4>
+                    <p className="text-blue-700 text-sm">Browse our curated selection of designer floral throw pillows for every style.</p>
+                  </div>
                 </div>
               </div>
             </section>
