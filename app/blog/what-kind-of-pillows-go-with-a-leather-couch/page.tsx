@@ -371,7 +371,7 @@ export default function LeatherCouchPillowsArticlePage() {
             </p>
             
             <p className="text-gray-700">
-              The secret isn't about expensive throws or trending colors — it's about understanding texture contrast, complementary tones, and strategic placement. In this comprehensive guide, we'll show you exactly which fabrics, colors, and patterns work best with different leather types, plus 10+ stunning real examples you can copy in your own home.
+              The secret isn't about expensive throws or trending colors — it's about understanding texture contrast, complementary tones, and strategic placement. In this comprehensive guide, we'll show you exactly which fabrics, colors, and patterns work best with different leather types, plus 5+ stunning real examples you can copy in your own home.
             </p>
           </div>
         </div>
@@ -553,7 +553,7 @@ export default function LeatherCouchPillowsArticlePage() {
 
             {/* 10 Stunning Examples */}
             <section id="pillow-examples" className="prose prose-lg max-w-none section-anchor">
-              <h2 className="font-cormorant text-3xl font-bold mb-6">10 Stunning Real-World Examples</h2>
+              <h2 className="font-cormorant text-3xl font-bold mb-6">5 Stunning Real-World Examples</h2>
               <p className="text-lg text-gray-700 mb-8 leading-relaxed">
                 Ready to see these principles in action? Here are ten gorgeous examples of leather couches styled with floral and patterned pillows that you can recreate in your own home. Each look demonstrates specific color and texture relationships that work beautifully together.
               </p>
