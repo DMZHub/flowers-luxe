@@ -1160,7 +1160,7 @@ export default function NavyCouchPillowsArticlePage() {
               <Link href="/blog/what-color-pillows-go-with-a-gray-couch" className="group block bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all">
                 <div className="relative h-48 overflow-hidden">
                   <Image 
-                    src="/images/blog/gray-couch/gray-couch-usa-flag-floral-pillows.webp" 
+                    src="/images/blog/navy-blue-couch/gray-couch-usa-flag-floral-pillows.webp" 
                     alt="Gray couch with floral pillows" 
                     fill 
                     className="object-cover group-hover:scale-105 transition-transform duration-300" 
@@ -1175,7 +1175,7 @@ export default function NavyCouchPillowsArticlePage() {
               <Link href="/blog/what-color-pillows-go-with-cream-sofa" className="group block bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all">
                 <div className="relative h-48 overflow-hidden">
                   <Image 
-                    src="/images/blog/cream-sofa/cream-sofa-pillow-ideas.webp" 
+                    src="/images/blog/cream-sofa-decor/cream-sofa-with-orange-floral-pillows.webp" 
                     alt="Cream sofa with floral pillows" 
                     fill 
                     className="object-cover group-hover:scale-105 transition-transform duration-300" 
@@ -1190,7 +1190,7 @@ export default function NavyCouchPillowsArticlePage() {
               <Link href="/blog/what-kind-of-pillows-go-with-a-leather-couch" className="group block bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all">
                 <div className="relative h-48 overflow-hidden">
                   <Image 
-                    src="/images/blog/leather-couch/leather-couch-pillow-ideas.webp" 
+                    src="/images/blog/leather-couch/cognac-pillow-leather-sectional.webp" 
                     alt="Leather couch with pillows" 
                     fill 
                     className="object-cover group-hover:scale-105 transition-transform duration-300" 
