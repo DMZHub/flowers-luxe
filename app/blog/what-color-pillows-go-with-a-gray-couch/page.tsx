@@ -1015,7 +1015,7 @@ export default function GrayCouchPillowsArticlePage() {
               </Link>
               <Link href="/blog/what-color-pillows-go-with-cream-sofa" className="group block bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
                 <div className="relative h-40">
-                  <Image src="/images/blog/cream-sofa-decor/ccream-sofa-with-orange-floral-pillows.webp" alt="Cream sofa with floral pillows" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+                  <Image src="/images/blog/cream-sofa-decor/cream-sofa-with-orange-floral-pillows.webp" alt="Cream sofa with floral pillows" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
                 </div>
                 <div className="p-4">
                   <h3 className="font-medium group-hover:text-primary transition-colors">What Color Pillows Go With a Cream Sofa?</h3>
