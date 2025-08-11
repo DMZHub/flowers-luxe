@@ -11,7 +11,7 @@ const ARTICLE = {
   title: "What Kind of Pillows Go With a Leather Couch?",
   slug: "what-kind-of-pillows-go-with-a-leather-couch",
   description:
-    "Discover the perfect pillows for leather couches with expert styling tips, 10+ stunning examples, fabric guides, and seasonal decorating ideas. Transform your leather sofa into a cozy, stylish centerpiece.",
+    "Discover the perfect pillows for leather couches with expert styling tips, 5+ stunning examples, fabric guides, and seasonal decorating ideas. Transform your leather sofa into a cozy, stylish centerpiece.",
   category: "Home Decor",
   categorySlug: "home-decor",
   author: "FlowersLuxe Editorial Team",
@@ -262,7 +262,7 @@ const TableOfContents = () => (
           </a>
           <a href="#pillow-examples" className="toc-link">
             <span className="toc-bullet"></span>
-            <span>10 Stunning Examples</span>
+            <span>5 Stunning Examples</span>
           </a>
           <a href="#styling-formulas" className="toc-link">
             <span className="toc-bullet"></span>
@@ -551,7 +551,7 @@ export default function LeatherCouchPillowsArticlePage() {
               </div>
             </section>
 
-            {/* 10 Stunning Examples */}
+            {/* 5 Stunning Examples */}
             <section id="pillow-examples" className="prose prose-lg max-w-none section-anchor">
               <h2 className="font-cormorant text-3xl font-bold mb-6">5 Stunning Real-World Examples</h2>
               <p className="text-lg text-gray-700 mb-8 leading-relaxed">
