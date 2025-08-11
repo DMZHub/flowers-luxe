@@ -1172,7 +1172,7 @@ export default function NavyCouchPillowsArticlePage() {
                   <p className="text-gray-600 leading-relaxed">Master undertone matching and discover 8 gorgeous examples for styling gray furniture with confidence.</p>
                 </div>
               </Link>
-              <Link href="/blog/what-color-pillows-go-with-a-cream-sofa" className="group block bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all">
+              <Link href="/blog/what-color-pillows-go-with-cream-sofa" className="group block bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all">
                 <div className="relative h-48 overflow-hidden">
                   <Image 
                     src="/images/blog/cream-sofa/cream-sofa-pillow-ideas.webp" 
@@ -1187,7 +1187,7 @@ export default function NavyCouchPillowsArticlePage() {
                   <p className="text-gray-600 leading-relaxed">Learn the warm vs cool color balance secrets for styling neutral cream and beige furniture perfectly.</p>
                 </div>
               </Link>
-              <Link href="/blog/what-kind-of-pillows-go-with-leather-couch" className="group block bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all">
+              <Link href="/blog/what-kind-of-pillows-go-with-a-leather-couch" className="group block bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all">
                 <div className="relative h-48 overflow-hidden">
                   <Image 
                     src="/images/blog/leather-couch/leather-couch-pillow-ideas.webp" 
