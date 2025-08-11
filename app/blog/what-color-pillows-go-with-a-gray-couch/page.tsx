@@ -1006,7 +1006,7 @@ export default function GrayCouchPillowsArticlePage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Link href="/blog/what-color-pillows-go-with-a-navy-blue-couch" className="group block bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
                 <div className="relative h-40">
-                  <Image src="/images/blog/navy-couch/ navy-blue-couch-pillow-ideas.webp" alt="Navy couch with floral pillows" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+                  <Image src="/images/blog/navy-blue-couch/navy-blue-couch-pillow-ideas.webp" alt="Navy couch with floral pillows" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
                 </div>
                 <div className="p-4">
                   <h3 className="font-medium group-hover:text-primary transition-colors">What Color Pillows Go With a Navy Blue Couch?</h3>
@@ -1015,16 +1015,16 @@ export default function GrayCouchPillowsArticlePage() {
               </Link>
               <Link href="/blog/what-color-pillows-go-with-cream-sofa" className="group block bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
                 <div className="relative h-40">
-                  <Image src="/images/blog/cream-sofa/ccream-sofa-with-orange-floral-pillows.webp" alt="Cream sofa with floral pillows" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+                  <Image src="/images/blog/cream-sofa-decor/ccream-sofa-with-orange-floral-pillows.webp" alt="Cream sofa with floral pillows" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
                 </div>
                 <div className="p-4">
                   <h3 className="font-medium group-hover:text-primary transition-colors">What Color Pillows Go With a Cream Sofa?</h3>
                   <p className="text-sm text-gray-600 mt-1">Warm/cool balance and undertone-safe palettes</p>
                 </div>
               </Link>
-              <Link href="/blog/what-kind-of-pillows-go-with-a-leather-couch" className="group block bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
+              <Link href="/blog/cognac-pillow-leather-sectional.webp" className="group block bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
                 <div className="relative h-40">
-                  <Image src="/images/blog/cognac-pillow-leather-sectional.webp" alt="Leather couch with pillows" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+                  <Image src="/images/blog/leather-couch/cognac-pillow-leather-sectional.webp" alt="Leather couch with pillows" fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
                 </div>
                 <div className="p-4">
                   <h3 className="font-medium group-hover:text-primary transition-colors">What Kind of Pillows Go With a Leather Couch?</h3>
