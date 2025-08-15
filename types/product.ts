@@ -75,6 +75,11 @@ export type FlowerType =
   | 'bougainvillea'
   | 'ranunculus'
   | 'quicksand-rose'
+  | 'amaryllis'
+  | 'Protea'
+  | 'Chamomile'
+  | 'mixed florals'
+  | 'bird-of-paradise'
   | 'pampas-grass';
 
 
