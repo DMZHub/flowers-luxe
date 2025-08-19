@@ -813,6 +813,811 @@ export const products: Product[] = [
   dateAdded: '2025-07-05',
   inStock: true,
   category: 'Flower Throw Pillows'
+},
+
+
+
+{
+id: 'white-orchid-impasto-pillow',
+title: 'White Orchid Impasto Pillow',
+slug: 'white-orchid-impasto-pillow',
+style: 'abstract',
+flowerType: 'orchid',
+colors: ['white', 'lavender', 'charcoal', 'gold'],
+price: 25.00,
+featured: true,
+mainImage: 'white-orchid-impasto-pillow-white-background.webp',
+images: [
+{
+src: '/images/white-orchid-impasto-pillow-white-background.webp',
+alt: 'White orchid pillow with textured impasto petals in cool silver and lavender tones on charcoal background',
+title: 'White Orchid Impasto Pillow - Oil Impasto Floral Art'
+},
+{
+src: '/images/white-orchid-impasto-pillow-on-sofa.webp',
+alt: 'White orchid impasto pillow on charcoal grey sofa with emerald leaves and subtle gold undertones',
+title: 'White Orchid Impasto Pillow - Modern Sofa Styling'
+},
+{
+src: '/images/white-orchid-impasto-pillow-on-bed.webp',
+alt: 'White orchid impasto pillow on neutral bedding, glowing white blooms with icy blue highlights and gold shimmer',
+title: 'White Orchid Impasto Pillow - Bedroom Decor'
+}
+],
+description: 'Decorative throw pillow featuring a radiant arrangement of white orchids painted in bold, sculptural oil impasto strokes. Pure white petals glow with pearlescent highlights in soft silver, lavender, and icy blue, complemented by vivid emerald and moss-green leaves. The background is a deep charcoal grey with subtle diffused gold, creating a dramatic gallery-like contrast. A luxurious floral accent that blends modern abstract artistry with timeless elegance.',
+shortDescription: 'Decorative white orchid pillow in sculptural oil impasto style.',
+specifications: generateProductSpecifications(),
+externalUrl: 'https://store.flowersluxe.com/products/78900178-white-orchid-impasto-abstract-floral-throw-pillow',
+metaTitle: 'White Orchid Impasto Pillow – Abstract Floral Oil Art',
+metaDescription: 'White orchid impasto pillow with sculpted petals in silver and lavender on a charcoal background. A modern abstract floral throw pillow with gold accents.',
+keywords: [
+'orchid pillow',
+'white orchid cushion',
+'floral impasto pillow',
+'orchid throw pillow',
+'white flower pillow',
+'modern floral pillow',
+'abstract orchid pillow',
+'charcoal grey pillow',
+'luxury floral cushion',
+'botanical art pillow',
+'impasto floral cushion',
+'elegant decor pillow'
+],
+dateAdded: '2025-08-16',
+inStock: true,
+category: 'Flower Throw Pillows'
+},
+{
+id: 'king-protea-watercolor-pillow',
+title: 'King Protea Watercolor Pillow',
+slug: 'king-protea-watercolor-pillow',
+style: 'watercolor',
+flowerType: 'protea',
+colors: ['red', 'white', 'green', 'gray'],
+price: 25.00,
+featured: true,
+mainImage: 'king-protea-watercolor-pillow-white-background.webp',
+images: [
+{
+src: '/images/king-protea-watercolor-pillow-white-background.webp',
+alt: 'King Protea watercolor pillow with coral-pink petals, ivory crown, and deep green leaves on dark grey.',
+title: 'King Protea Watercolor Pillow - Fine Art Botanical'
+},
+{
+src: '/images/king-protea-watercolor-pillow-on-sofa.webp',
+alt: 'King Protea floral watercolor pillow featuring blush and coral petals with creamy white tips on a dark grey wash.',
+title: 'King Protea Watercolor Pillow - Modern Sofa Styling'
+},
+{
+src: '/images/king-protea-watercolor-pillow-on-bed.webp',
+alt: 'Watercolor King Protea pillow showcasing coral blush petals, ivory center, and bold green leaves on charcoal.',
+title: 'King Protea Watercolor Pillow - Bedroom Decor'
+}
+],
+description: 'Decorative throw pillow featuring a fine art watercolor King Protea. Outer petals glow in coral-pink and blush, fading to creamy white tips around a layered ivory crown. Sculpted leaves in deep forest and olive greens sit over a crisp, hand-painted dark grey wash that shows subtle brush textures without blur. The balanced palette and precise detailing create a polished, gallery-quality botanical accent that pairs beautifully with neutral or deep-toned seating.',
+shortDescription: 'Fine art watercolor King Protea floral pillow on a dark grey wash.',
+specifications: generateProductSpecifications(),
+externalUrl: 'https://store.flowersluxe.com/products/78905771-king-protea-watercolor-flower-botanical-art-throw-pillow',
+metaTitle: 'King Protea Watercolor Throw Pillow – Fine Art Floral',
+metaDescription: 'King Protea watercolor throw pillow with coral-pink petals, creamy white tips, ivory crown, and deep green leaves on a dark grey wash. Elegant fine art decor.',
+keywords: [
+'king protea pillow',
+'protea watercolor pillow',
+'pink floral pillow',
+'blush coral pillow',
+'botanical throw pillow',
+'dark grey floral pillow',
+'fine art floral pillow',
+'protea flower cushion',
+'watercolor botanical pillow',
+'modern floral decor',
+'green leaves pillow',
+'gallery quality pillow'
+],
+dateAdded: '2025-08-16',
+inStock: true,
+category: 'Flower Throw Pillows'
+},
+{
+id: 'orange-dahlia-impasto-pillow',
+title: 'Orange Dahlia Impasto Pillow',
+slug: 'orange-dahlia-impasto-pillow',
+style: 'abstract',
+flowerType: 'dahlia',
+colors: ['Yellow/Gold', 'Green', 'Gray'],
+price: 25.00,
+featured: true,
+mainImage: 'orange-dahlia-impasto-pillow-white-background.webp',
+images: [
+{
+src: '/images/orange-dahlia-impasto-pillow-white-background.webp',
+alt: 'Orange dahlia impasto pillow with fiery tangerine and amber petals, emerald leaves, charcoal background',
+title: 'Orange Dahlia Impasto Pillow - Impasto Oil Art'
+},
+{
+src: '/images/orange-dahlia-impasto-pillow-on-sofa.webp',
+alt: 'Orange dahlia abstract oil pillow on charcoal sofa with golden undertones and lush green leaves',
+title: 'Orange Dahlia Impasto Pillow - Modern Sofa Styling'
+},
+{
+src: '/images/orange-dahlia-impasto-pillow-on-bed.webp',
+alt: 'Orange dahlia impasto throw pillow on light bed, glowing petals with warm gold and emerald foliage',
+title: 'Orange Dahlia Impasto Pillow - Bedroom Decor'
+}
+],
+description: 'Radiant abstract dahlia arrangement painted in thick oil impasto with glowing tangerine and amber petals. Fresh emerald foliage and a smooth charcoal backdrop add contrast and depth, creating a warm, gallery-ready accent for modern interiors.',
+shortDescription: 'Glowing orange dahlia impasto floral pillow on charcoal grey.',
+specifications: generateProductSpecifications(),
+externalUrl: 'https://store.flowersluxe.com/products/78930032-orange-dahlia-impasto-abstract-oil-floral-throw-pillow',
+metaTitle: 'Orange Dahlia Impasto Pillow – Abstract Oil Floral Cushion',
+metaDescription: 'Orange dahlia impasto pillow in tangerine and amber with green leaves on charcoal grey. Bold abstract oil texture adds warm, gallery-ready depth.',
+keywords: [
+'orange dahlia pillow',
+'dahlia throw pillow',
+'abstract floral cushion',
+'impasto oil pillow',
+'warm floral pillow',
+'charcoal grey decor',
+'tangerine amber dahlia',
+'modern floral pillow',
+'gallery art cushion',
+'bright flower pillow'
+],
+dateAdded: '2025-08-16',
+inStock: true,
+category: 'Flower Throw Pillows'
+},
+{
+id: 'cobalt-iris-impasto-pillow',
+title: 'Cobalt Iris Impasto Pillow',
+slug: 'cobalt-iris-impasto-pillow',
+style: 'abstract',
+flowerType: 'iris',
+colors: ['Blue', 'Green', 'Gray'],
+price: 25.00,
+featured: true,
+mainImage: 'cobalt-iris-impasto-pillow-white-background.webp',
+images: [
+{
+src: '/images/cobalt-iris-impasto-pillow-white-background.webp',
+alt: 'Cobalt blue iris impasto pillow with jewel-like indigo petals and emerald leaves on charcoal',
+title: 'Cobalt Iris Impasto Pillow - Impasto Oil Art'
+},
+{
+src: '/images/cobalt-iris-impasto-pillow-on-sofa.webp',
+alt: 'Cobalt iris abstract oil pillow styled on dark sofa, subtle gold undertones and silver accents',
+title: 'Cobalt Iris Impasto Pillow - Modern Sofa Styling'
+},
+{
+src: '/images/cobalt-iris-impasto-pillow-on-bed.webp',
+alt: 'Cobalt iris impasto throw pillow on neutral bed with luminous indigo petals and soft halo',
+title: 'Cobalt Iris Impasto Pillow - Bedroom Decor'
+}
+],
+description: 'Luminous cobalt irises with indigo, violet, and turquoise highlights, sculpted in thick impasto. Emerald leaves arc from the base, set against velvety charcoal gradients with restrained metallic warmth. A refined, modern floral statement.',
+shortDescription: 'Cobalt blue iris pillow with luminous indigo impasto on charcoal.',
+specifications: generateProductSpecifications(),
+externalUrl: 'https://store.flowersluxe.com/products/78930599-cobalt-iris-impasto-abstract-floral-throw-pillow',
+metaTitle: 'Cobalt Blue Iris Impasto Pillow – Abstract Oil Cushion',
+metaDescription: 'Cobalt blue iris impasto pillow with jewel-like indigo highlights and emerald leaves. Charcoal gradients and metallic accents deliver a refined modern look.',
+keywords: [
+'cobalt iris pillow',
+'blue iris cushion',
+'abstract oil floral pillow',
+'impasto pillow',
+'modern charcoal decor',
+'indigo violet iris',
+'gallery-worthy pillow',
+'blue botanical cushion',
+'luxury floral pillow',
+'statement floral decor'
+],
+dateAdded: '2025-08-16',
+inStock: true,
+category: 'Flower Throw Pillows'
+},
+{
+id: 'king-protea-impasto-pillow',
+title: 'King Protea Impasto Pillow',
+slug: 'king-protea-impasto-pillow',
+style: 'abstract',
+flowerType: 'protea',
+colors: ['Red', 'Green', 'Gray'],
+price: 25.00,
+featured: true,
+mainImage: 'king-protea-impasto-pillow-white-background.webp',
+images: [
+{
+src: '/images/king-protea-impasto-pillow-white-background.webp',
+alt: 'Bold pink-fuchsia king protea floral impasto pillow on deep charcoal background with rich emerald leaves',
+title: 'King Protea Impasto Pillow - Impasto Oil Art'
+},
+{
+src: '/images/king-protea-impasto-pillow-on-sofa.webp',
+alt: 'King protea impasto floral pillow styled on deep charcoal sofa, pink petals with lush emerald leaves',
+title: 'King Protea Impasto Pillow - Modern Sofa Styling'
+},
+{
+src: '/images/king-protea-impasto-pillow-on-bed.webp',
+alt: 'King protea floral impasto throw pillow on light neutral bedding, vivid pink petals and moss-green leaves',
+title: 'King Protea Impasto Pillow - Bedroom Decor'
+}
+],
+description: 'Decorative throw pillow featuring 3–4 king protea blooms with saturated pink-fuchsia petals and emerald leaves, painted in bold impasto on a refined charcoal background with subtle metallic accents. The sculpted brushwork adds dimensional depth while maintaining crisp petal edges for a striking, modern floral statement that pairs well with neutral and dark sofas.',
+shortDescription: 'King protea floral impasto pillow on charcoal with crisp, saturated petals.',
+specifications: generateProductSpecifications(),
+externalUrl: 'https://store.flowersluxe.com/products/78941426-king-protea-impasto-throw-pillow',
+metaTitle: 'King Protea Pillow – Impasto Floral Art on Charcoal',
+metaDescription: 'King Protea pillow with saturated pink-fuchsia petals and emerald leaves, painted in bold impasto on a charcoal background with subtle silver and gold haze.',
+keywords: [
+'king protea pillow',
+'protea floral pillow',
+'pink protea cushion',
+'impasto oil pillow',
+'charcoal decor pillow',
+'modern floral cushion',
+'botanical throw pillow',
+'magenta flower pillow',
+'gallery wall decor',
+'statement pillow',
+'luxury floral pillow',
+'green leaves pillow'
+],
+dateAdded: '2025-08-17',
+inStock: true,
+category: 'Flower Throw Pillows'
+},
+{
+id: 'royal-purple-orchid-impasto-pillow',
+title: 'Royal Purple Orchid Impasto Pillow',
+slug: 'royal-purple-orchid-impasto-pillow',
+style: 'abstract',
+flowerType: 'orchid',
+colors: ['purple', 'green', 'charcoal'],
+price: 25.00,
+featured: true,
+mainImage: 'royal-purple-orchid-impasto-pillow-white-background.webp',
+images: [
+{
+src: '/images/royal-purple-orchid-impasto-pillow-white-background.webp',
+alt: 'Abstract royal purple orchid blooms with green stems on charcoal background in impasto style',
+title: 'Royal Purple Orchid Impasto Pillow - Oil Art Design'
+},
+{
+src: '/images/royal-purple-orchid-impasto-pillow-on-sofa.webp',
+alt: 'Royal purple orchid throw pillow on a modern charcoal sofa with bold impasto petals and green leaves',
+title: 'Royal Purple Orchid Impasto Pillow - Sofa Styling'
+},
+{
+src: '/images/royal-purple-orchid-impasto-pillow-on-bed.webp',
+alt: 'Purple orchid floral impasto pillow styled on light bedding with green leaves and charcoal accents',
+title: 'Royal Purple Orchid Impasto Pillow - Bedroom Decor'
+}
+],
+description: 'Decorative throw pillow featuring radiant royal purple orchid blooms painted in bold impasto strokes. The petals blend violet, amethyst, and lavender tones with indigo edges for depth. Vivid green stems and leaves contrast against a moody charcoal background enhanced with soft silver gradients. A refined, exotic floral design that complements modern interiors with elegance and vibrancy.',
+shortDescription: 'Decorative pillow featuring royal purple orchids in expressive impasto art style.',
+specifications: generateProductSpecifications(),
+externalUrl: 'https://store.flowersluxe.com/products/78942160-royal-purple-orchid-throw-pillow',
+metaTitle: 'Royal Purple Orchid Impasto Floral Throw Pillow',
+metaDescription: 'Decorative throw pillow featuring royal purple orchids with green leaves in bold impasto oil art style on charcoal background.',
+keywords: [
+'orchid throw pillow',
+'purple orchid pillow',
+'floral impasto cushion',
+'orchid decor pillow',
+'purple flower pillow',
+'orchid art cushion',
+'modern floral throw pillow',
+'orchid impasto art pillow'
+],
+dateAdded: '2025-08-15',
+inStock: true,
+category: 'Flower Throw Pillows'
+},
+{
+id: 'red-amaryllis-impasto-pillow',
+title: 'Red Amaryllis Impasto Pillow',
+slug: 'red-amaryllis-impasto-pillow',
+style: 'abstract',
+flowerType: 'amaryllis',
+colors: ['red', 'green', 'charcoal'],
+price: 25.00,
+featured: true,
+mainImage: 'red-amaryllis-impasto-pillow-white-background.webp',
+images: [
+{
+src: '/images/red-amaryllis-impasto-pillow-white-background.webp',
+alt: 'Abstract red amaryllis blooms with green leaves on charcoal background in impasto art style',
+title: 'Red Amaryllis Impasto Pillow - Oil Art Design'
+},
+{
+src: '/images/red-amaryllis-impasto-pillow-on-sofa.webp',
+alt: 'Red amaryllis floral impasto pillow styled on a modern charcoal grey sofa with green leaves',
+title: 'Red Amaryllis Impasto Pillow - Sofa Styling'
+},
+{
+src: '/images/red-amaryllis-impasto-pillow-on-bed.webp',
+alt: 'Decorative red amaryllis impasto throw pillow with green stems on neutral bedding',
+title: 'Red Amaryllis Impasto Pillow - Bedroom Decor'
+}
+],
+description: 'Decorative throw pillow featuring bold red amaryllis flowers painted in textured impasto strokes. The trumpet-shaped blooms glow in crimson, scarlet, and ruby tones with golden reflections. Vibrant green stems and leaves provide balance against a charcoal background enriched with warm bronze and silver highlights. A luminous floral design that adds elegance and warmth to modern living spaces.',
+shortDescription: 'Decorative pillow with bold red amaryllis blooms in expressive impasto oil painting style.',
+specifications: generateProductSpecifications(),
+externalUrl: 'https://store.flowersluxe.com/products/78942503-red-amaryllis-abstract-impasto-floral-throw-pillow',
+metaTitle: 'Red Amaryllis Impasto Floral Throw Pillow',
+metaDescription: 'Decorative throw pillow featuring bold red amaryllis blooms with green leaves in impasto oil art style on charcoal background.',
+keywords: [
+'amaryllis throw pillow',
+'red floral pillow',
+'flower cushion red',
+'amaryllis decor pillow',
+'red flower pillow',
+'floral impasto art pillow',
+'modern floral throw pillow',
+'amaryllis impasto pillow'
+],
+dateAdded: '2025-08-15',
+inStock: true,
+category: 'Flower Throw Pillows'
+},
+{
+id: 'bird-of-paradise-impasto-pillow',
+title: 'Bird of Paradise Impasto Pillow',
+slug: 'bird-of-paradise-impasto-pillow',
+style: 'abstract',
+flowerType: 'bird of paradise',
+colors: ['orange', 'blue', 'green', 'gray'],
+price: 25.00,
+featured: true,
+mainImage: 'bird-of-paradise-impasto-pillow-white-background.webp',
+images: [
+{
+src: '/images/bird-of-paradise-impasto-pillow-white-background.webp',
+alt: 'Bird of Paradise impasto pillow with fiery orange and sapphire blue petals on dark charcoal background',
+title: 'Bird of Paradise Impasto Pillow - Impasto Oil Art'
+},
+{
+src: '/images/bird-of-paradise-impasto-pillow-on-sofa.webp',
+alt: 'Bird of Paradise impasto pillow on charcoal sofa with vibrant orange and blue blooms, emerald leaves',
+title: 'Bird of Paradise Impasto Pillow - Modern Sofa Styling'
+},
+{
+src: '/images/bird-of-paradise-impasto-pillow-on-bed.webp',
+alt: 'Bird of Paradise impasto throw pillow on light bedding, orange and ultramarine blooms with foliage glow',
+title: 'Bird of Paradise Impasto Pillow - Bedroom Decor'
+}
+],
+description: '"Bring tropical energy to your living room with this Bird of Paradise floral throw pillow. Featuring vivid orange and sapphire blue petals with lush green leaves on a deep charcoal background, this pillow adds a bold, modern accent to any sofa or bedroom. Perfect as a decorative tropical pillow, it blends artistic oil impasto style with versatile home décor design.',
+shortDescription: 'Bird of Paradise floral pillow in bold impasto with vivid orange, blue, and fresh greens on charcoal.',
+specifications: generateProductSpecifications(),
+externalUrl: 'https://store.flowersluxe.com/products/78944467-bird-of-paradise-floral-throw-pillow',
+metaTitle: 'Bird of Paradise Throw Pillow – Impasto Floral Art',
+metaDescription: 'Bird of Paradise throw pillow featuring tropical orange and sapphire blue flowers with green leaves on charcoal. A bold, modern decorative accent for living rooms or bedrooms.',
+keywords: [
+'bird of paradise pillow',
+'tropical floral pillow',
+'impasto oil floral',
+'orange blue pillow',
+'modern abstract pillow',
+'charcoal grey decor',
+'modern decorative pillow',
+'emerald green leaves',
+'sapphire blue accents',
+'vibrant floral decor',
+'gallery wall pillow',
+'tropical decor pillow'
+],
+dateAdded: '2025-08-17',
+inStock: true,
+category: 'Flower Throw Pillows'
+},
+{
+id: 'white-calla-lily-impasto-pillow',
+title: 'White Calla Lily Impasto Pillow',
+slug: 'white-calla-lily-impasto-pillow',
+style: 'abstract',
+flowerType: 'calla lily',
+colors: ['white', 'green', 'gray', 'yellow/gold'],
+price: 25.00,
+featured: true,
+mainImage: 'white-calla-lily-impasto-pillow-white-background.webp',
+images: [
+{
+src: '/images/white-calla-lily-impasto-pillow-white-background.webp',
+alt: 'White calla lily bouquet in impasto oil, pearl and champagne-gold highlights on dark charcoal background',
+title: 'White Calla Lily Impasto Pillow - Impasto Oil Art'
+},
+{
+src: '/images/white-calla-lily-impasto-pillow-on-sofa.webp',
+alt: 'White calla lily impasto pillow on charcoal sofa with emerald leaves and metallic gold brush accents',
+title: 'White Calla Lily Impasto Pillow - Modern Sofa Styling'
+},
+{
+src: '/images/white-calla-lily-impasto-pillow-on-bed.webp',
+alt: 'White calla lily impasto throw pillow on light bedding with emerald leaves and soft charcoal gradients',
+title: 'White Calla Lily Impasto Pillow - Bedroom Decor'
+}
+],
+description: 'Decorative throw pillow showcasing elegant white calla lilies rendered in bold, layered impasto. Crisp ivory petals glow with pearl and champagne-gold accents above saturated emerald greens, set against a deep charcoal backdrop with tasteful metallic gold streaks for a refined, high-contrast centerpiece.',
+shortDescription: 'Elegant white calla lily pillow with pearl and gold highlights, rich greens, and a dramatic charcoal ground.',
+specifications: generateProductSpecifications(),
+externalUrl: 'https://store.flowersluxe.com/products/78945888-white-calla-lily-impasto-floral-throw-pillow',
+metaTitle: 'White Calla Lily Throw Pillow – Impasto Floral Art',
+metaDescription: 'White calla lily pillow with crisp ivory petals and champagne-gold highlights in bold impasto. Vibrant greens on charcoal for an elegant, modern focal piece.',
+keywords: [
+'white calla lily pillow',
+'calla lily throw pillow',
+'impasto floral pillow',
+'ivory flower cushion',
+'champagne gold highlights',
+'charcoal grey decor',
+'modern floral art',
+'botanical cushion',
+'elegant white pillow',
+'emerald green leaves',
+'metallic gold accents',
+'gallery style pillow'
+],
+dateAdded: '2025-08-17',
+inStock: true,
+category: 'Flower Throw Pillows'
+},
+{
+id: 'coral-peonies-impasto-pillow',
+title: 'Coral Peonies Impasto Pillow',
+slug: 'coral-peonies-impasto-pillow',
+style: 'abstract',
+flowerType: 'peonies',
+colors: ['Red', 'Blue', 'Green', 'Yellow/Gold'],
+price: 25.00,
+featured: true,
+mainImage: 'coral-peonies-impasto-pillow-white-background.webp',
+images: [
+{
+src: '/images/coral-peonies-impasto-pillow-white-background.webp',
+alt: 'Coral peony pillow with oil-impasto petals, deep blue teal background, golden accents, and green leaves details',
+title: 'Coral Peonies Impasto Pillow - Impasto Oil Art'
+},
+{
+src: '/images/coral-peonies-impasto-pillow-on-sofa.webp',
+alt: 'Coral peony impasto pillow on charcoal sofa with blue background tones, layered petals, green leaves details',
+title: 'Coral Peonies Impasto Pillow - Modern Sofa Styling'
+},
+{
+src: '/images/coral-peonies-impasto-pillow-on-bed.webp',
+alt: 'Coral peony oil-impasto throw pillow on light bedding, blue-teal backdrop with golden highlights and green leaves',
+title: 'Coral Peonies Impasto Pillow - Bedroom Decor'
+}
+],
+description: 'Peony pillow in rich coral tones, painted in bold oil impasto over deep blue and teal. Layered petals and fresh green leaves create dimensional texture. A modern decorative pillow for floral home decor, perfect for adding color to sofas or bedding.',
+shortDescription: 'Peony pillow in coral oil impasto with deep blue backdrop; vibrant, modern decorative pillow.',
+specifications: generateProductSpecifications(),
+externalUrl: 'https://store.flowersluxe.com/products/78946803-coral-peonies-impasto-throw-pillow',
+metaTitle: 'Peony Pillow – Coral Oil Impasto Floral Throw Cushion',
+metaDescription: 'Peony pillow with coral impasto petals on deep blue. A modern decorative pillow for floral home decor with bold texture and luminous color.',
+keywords: [
+'peony pillow',
+'coral peony pillow',
+'blue and coral throw pillow',
+'floral home decor',
+'modern decorative pillow',
+'impasto oil floral pillow',
+'teal blue pillow',
+'peony cushion',
+'flower art pillow',
+'bright floral cushion',
+'living room pillow',
+'bedroom accent pillow'
+],
+dateAdded: '2025-08-17',
+inStock: true,
+category: 'Flower Throw Pillows'
+},
+{
+id: 'golden-sunflowers-impasto-pillow',
+title: 'Golden Sunflowers Impasto Pillow',
+slug: 'golden-sunflowers-impasto-pillow',
+style: 'abstract',
+flowerType: 'sunflowers',
+colors: ['Yellow/Gold', 'Blue', 'Green'],
+price: 25.00,
+featured: true,
+mainImage: 'golden-sunflowers-impasto-pillow-white-background.webp',
+images: [
+{
+src: '/images/golden-sunflowers-impasto-pillow-white-background.webp',
+alt: 'Golden sunflower pillow with oil-impasto petals, navy background, bronze centers, rich green leaves adding lively contrast',
+title: 'Golden Sunflowers Impasto Pillow - Impasto Oil Art'
+},
+{
+src: '/images/golden-sunflowers-impasto-pillow-on-sofa.webp',
+alt: 'Sunflower impasto pillow on charcoal sofa; glowing yellow petals, textured brown centers, emerald and moss leaves',
+title: 'Golden Sunflowers Impasto Pillow - Modern Sofa Styling'
+},
+{
+src: '/images/golden-sunflowers-impasto-pillow-on-bed.webp',
+alt: 'Sunflower oil-impasto throw pillow on light bedding with navy backdrop tones and green stems and leaves',
+title: 'Golden Sunflowers Impasto Pillow - Bedroom Decor'
+}
+],
+description: 'Sunflower pillow featuring saturated golden petals and textured centers on a deep navy field. Thick oil impasto brushwork adds sculptural depth, while emerald leaves bring freshness. A bold floral home decor accent for modern sofas and bedrooms.',
+shortDescription: 'Sunflower pillow with golden impasto petals on navy; bold modern floral pillow.',
+specifications: generateProductSpecifications(),
+externalUrl:  'https://store.flowersluxe.com/products/78954014-golden-sunflowers-impasto-throw-pillow',
+metaTitle: 'Sunflower Pillow – Golden Oil Impasto Floral Throw Cushion',
+metaDescription: 'Sunflower pillow with golden impasto petals and navy backdrop. A modern decorative pillow that adds bright floral energy to sofas and bedding.',
+keywords: [
+'sunflower pillow',
+'yellow floral pillow',
+'navy blue throw pillow',
+'golden flower cushion',
+'impasto oil pillow',
+'modern floral decor',
+'botanical throw pillow',
+'sunflower cushion',
+'living room accent pillow',
+'bright yellow pillow',
+'blue and yellow pillow',
+'floral art cushion'
+],
+dateAdded: '2025-08-17',
+inStock: true,
+category: 'Flower Throw Pillows'
+},
+{
+id: 'blue-hydrangea-impasto-pillow-charcoal',
+title: 'Blue Hydrangea Impasto Pillow – Charcoal',
+slug: 'blue-hydrangea-impasto-pillow-charcoal',
+style: 'abstract',
+flowerType: 'hydrangea',
+colors: ['Blue', 'Gray', 'Green'],
+price: 25.00,
+featured: true,
+mainImage: 'blue-hydrangea-impasto-pillow-charcoal-white-background.webp',
+images: [
+{
+src: '/images/blue-hydrangea-impasto-pillow-charcoal-white-background.webp',
+alt: 'Blue hydrangea pillow with impasto petals against dark grey background, metallic silver streaks and green foliage',
+title: 'Blue Hydrangea Impasto Pillow - Charcoal Background'
+},
+{
+src: '/images/blue-hydrangea-impasto-pillow-charcoal-on-sofa.webp',
+alt: 'Blue hydrangea impasto pillow on charcoal sofa with dark grey backdrop, silver accents and green leaves',
+title: 'Blue Hydrangea Impasto Pillow - Modern Sofa Styling'
+},
+{
+src: '/images/blue-hydrangea-impasto-pillow-charcoal-on-bed.webp',
+alt: 'Blue hydrangea oil-impasto throw pillow on light bedding with charcoal background tones and textured green leaves',
+title: 'Blue Hydrangea Impasto Pillow - Bedroom Decor'
+}
+],
+description: 'Hydrangea pillow in saturated cobalt and cerulean, sculpted with thick impasto over a dramatic charcoal field. Metallic silver notes add polish while bold green leaves provide contrast. A gallery-style blue floral pillow that makes a striking statement.',
+shortDescription: 'Hydrangea pillow in vivid blue impasto on charcoal; bold modern floral pillow.',
+specifications: generateProductSpecifications(),
+externalUrl: 'https://store.flowersluxe.com/products/78954885-blue-hydrangea-impasto-throw-pillow',
+metaTitle: 'Hydrangea Pillow – Blue Impasto Floral on Charcoal',
+metaDescription: 'Hydrangea pillow with cobalt impasto blooms on a charcoal background. A modern blue floral decorative pillow with metallic highlights and rich texture.',
+keywords: [
+'hydrangea pillow',
+'blue floral throw pillow',
+'charcoal sofa pillow',
+'cobalt blue cushion',
+'impasto oil pillow',
+'modern floral decor',
+'botanical cushion blue',
+'dark gray pillow',
+'statement floral pillow',
+'textured flower pillow',
+'blue couch pillow',
+'gallery wall decor pillow'
+],
+dateAdded: '2025-08-17',
+inStock: true,
+category: 'Flower Throw Pillows'
+},
+{
+id: 'lavender-bouquet-abstract-pillow',
+title: 'Lavender Bouquet Abstract Pillow',
+slug: 'lavender-bouquet-abstract-pillow',
+style: 'abstract',
+flowerType: 'lavender',
+colors: ['Purple', 'Blue', 'Green'],
+price: 25.00,
+featured: true,
+mainImage: 'lavender-bouquet-abstract-pillow-white-background.webp',
+images: [
+{
+src: '/images/lavender-bouquet-abstract-pillow-white-background.webp',
+alt: 'Abstract lavender pillow in purple and lilac tones with fresh green stems on deep blue and teal background',
+title: 'Lavender Bouquet Abstract Pillow - Oil Impasto Art'
+},
+{
+src: '/images/lavender-bouquet-abstract-pillow-on-sofa.webp',
+alt: 'Purple lavender bouquet pillow styled on dark sofa with teal and gold impasto background',
+title: 'Lavender Bouquet Abstract Pillow - Modern Sofa Styling'
+},
+{
+src: '/images/lavender-bouquet-abstract-pillow-on-bed.webp',
+alt: 'Lavender bouquet throw pillow on neutral bedding with saturated purple and green floral impasto design',
+title: 'Lavender Bouquet Abstract Pillow - Bedroom Accent'
+}
+],
+description: 'Decorative lavender pillow featuring a bouquet of stems painted in vibrant purples—deep violet to glowing lilac—against a radiant blue-teal background with subtle gold streaks. The impasto oil style creates a three-dimensional textured effect, while the fresh green stems and leaves add natural balance. This modern abstract floral pillow enhances sofas, beds, and lounge spaces with a bold pop of color and artistic flair.',
+shortDescription: 'Lavender pillow with abstract bouquet in vibrant purple and blue-teal impasto oil style.',
+specifications: generateProductSpecifications(),
+externalUrl: 'https://store.flowersluxe.com/products/78956280-lavender-bouquet-abstract-impasto-oil-floral-throw-pillow',
+metaTitle: 'Lavender Pillow – Abstract Impasto Oil Bouquet Design',
+metaDescription: 'Lavender pillow in vibrant purple and lilac shades with green stems on a bold blue-teal impasto background. Modern floral décor for sofas or beds.',
+keywords: [
+'lavender pillow',
+'purple abstract pillow',
+'floral throw pillow',
+'modern floral cushion',
+'blue and purple pillow',
+'impasto oil pillow',
+'decorative botanical pillow',
+'lavender bouquet cushion',
+'purple lilac pillow',
+'floral home decor pillow',
+'teal floral pillow',
+'bedroom accent pillow'
+],
+dateAdded: '2025-08-17',
+inStock: true,
+category: 'Flower Throw Pillows'
+},
+{
+id: 'golden-daisy-impasto-pillow',
+title: 'Golden Daisy Impasto Pillow',
+slug: 'golden-daisy-impasto-pillow',
+style: 'abstract',
+flowerType: 'daisy',
+colors: ['Yellow/Gold', 'Blue', 'Green'],
+price: 25.00,
+featured: true,
+mainImage: 'golden-daisy-impasto-pillow-white-background.webp',
+images: [
+{
+src: '/images/golden-daisy-impasto-pillow-white-background.webp',
+alt: 'Abstract golden daisy pillow, impasto petals in honey gold on teal-emerald background with deep green leaves',
+title: 'Golden Daisy Impasto Pillow - Abstract Oil Floral'
+},
+{
+src: '/images/golden-daisy-impasto-pillow-on-sofa.webp',
+alt: 'Golden daisy floral pillow on modern sofa with textured oil impasto and teal and turquoise abstract backdrop',
+title: 'Golden Daisy Impasto Pillow - Modern Sofa Styling'
+},
+{
+src: '/images/golden-daisy-impasto-pillow-on-bed.webp',
+alt: 'Yellow daisy impasto throw pillow on light bedding with teal and emerald abstract background and bronze centers',
+title: 'Golden Daisy Impasto Pillow - Bedroom Decor'
+}
+],
+description: 'Golden daisy pillow in rich yellow-gold tones, painted in bold oil impasto over teal and emerald. This abstract floral design features sculpted petals and deep bronze centers for dimensional texture. A modern decorative pillow that layers easily with blue or green accents and adds warm color to sofas, chairs, or beds. Ideal for floral home decor, modern interiors, and statement accents.',
+shortDescription: 'Golden daisy throw pillow — oil impasto, teal/emerald backdrop, modern floral.',
+specifications: generateProductSpecifications(),
+externalUrl: 'https://store.flowersluxe.com/products/78958361-green-orchid-impasto-throw-pillow',
+metaTitle: 'Golden Daisy Oil Impasto Throw Pillow – Abstract Floral',
+metaDescription: 'Golden daisy throw pillow in textured oil impasto on teal and emerald. This abstract floral daisy pillow adds warm yellow depth and crisp detail to modern décor.',
+keywords: [
+'daisy pillow',
+'golden daisy pillow',
+'yellow floral pillow',
+'abstract floral pillow',
+'impasto oil pillow',
+'modern decorative pillow',
+'teal sofa pillow',
+'emerald green pillow',
+'botanical throw pillow',
+'flower art cushion',
+'blue and yellow pillow',
+'textured floral pillow'
+],
+dateAdded: '2025-08-18',
+inStock: true,
+category: 'Flower Throw Pillows'
+},
+{
+id: 'green-orchid-impasto-pillow',
+title: 'Green Orchid Impasto Pillow',
+slug: 'green-orchid-impasto-pillow',
+style: 'abstract',
+flowerType: 'orchid',
+colors: ['Green', 'Blue', 'Purple', 'Yellow/Gold'],
+price: 25.00,
+featured: true,
+mainImage: 'green-orchid-impasto-pillow-white-background.webp',
+images: [
+{
+src: '/images/green-orchid-impasto-pillow-white-background.webp',
+alt: 'Green orchid impasto pillow with lime and emerald petals on teal and purple abstract background',
+title: 'Green Orchid Impasto Pillow - Abstract Floral Art'
+},
+{
+src: '/images/green-orchid-impasto-pillow-on-sofa.webp',
+alt: 'Green orchid impasto pillow on charcoal sofa with lime, emerald, and gold accents, teal-purple backdrop',
+title: 'Green Orchid Impasto Pillow - Modern Sofa Styling'
+},
+{
+src: '/images/green-orchid-impasto-pillow-on-bed.webp',
+alt: 'Green orchid decorative pillow on light bedding; impasto petals with teal and purple abstract background',
+title: 'Green Orchid Impasto Pillow - Bedroom Decor'
+}
+],
+description: 'Green orchid pillow featuring bold impasto oil texture with lime and emerald petals and warm golden centers. The design sits on a teal and purple abstract background with subtle metallic accents, blending modern decorative style with fine-art detail. A versatile floral home decor accent that pairs beautifully with charcoal, navy, or neutral sofas.',
+shortDescription: 'Green orchid pillow in impasto oil on teal and purple abstract background.',
+specifications: generateProductSpecifications(),
+externalUrl: 'https://www.flowersluxe.com/products/green-orchid-impasto-pillow',
+metaTitle: 'Green Orchid Throw Pillow – Impasto Abstract Floral',
+metaDescription: 'Green orchid pillow in rich impasto with lime and emerald petals on teal and purple abstract background. Modern floral accent for sofa or bed.',
+keywords: [
+'green orchid pillow',
+'orchid throw pillow',
+'abstract floral pillow',
+'impasto oil pillow',
+'lime green pillow',
+'modern decorative pillow',
+'teal purple pillow',
+'botanical cushion',
+'orchid art pillow',
+'luxury floral decor'
+],
+dateAdded: '2025-08-18',
+inStock: true,
+category: 'Flower Throw Pillows'
+},
+{
+id: 'yellow-tulip-impasto-pillow',
+title: 'Yellow Tulip Impasto Pillow',
+slug: 'yellow-tulip-impasto-pillow',
+style: 'abstract',
+flowerType: 'tulips',
+colors: ['Yellow/Gold', 'Blue', 'Green'],
+price: 25.00,
+featured: true,
+mainImage: 'yellow-tulip-impasto-pillow-white-background.webp',
+images: [
+{
+src: '/images/yellow-tulip-impasto-pillow-white-background.webp',
+alt: 'Yellow tulip pillow with impasto petals in marigold and amber on deep-teal and turquoise abstract backdrop',
+title: 'Yellow Tulip Impasto Pillow - Impasto Oil Art'
+},
+{
+src: '/images/yellow-tulip-impasto-pillow-on-sofa.webp',
+alt: 'Abstract yellow tulip impasto pillow on a charcoal sofa, teal and emerald background with gold accents',
+title: 'Yellow Tulip Impasto Pillow - Modern Sofa Styling'
+},
+{
+src: '/images/yellow-tulip-impasto-pillow-on-bed.webp',
+alt: 'Golden yellow tulip impasto throw pillow on light bedding, turquoise and teal backdrop with subtle gold',
+title: 'Yellow Tulip Impasto Pillow - Bedroom Decor'
+}
+],
+description: 'Yellow tulip pillow painted in bold oil impasto for rich texture and depth. Golden marigold and amber petals glow against a saturated teal–turquoise and emerald background with refined gold accents. This modern abstract floral pillow adds sculptural interest to living rooms and bedrooms, pairing easily with light neutrals or dark sofas—perfect for floral home decor and contemporary decorative styling.',
+shortDescription: 'Yellow tulip pillow in abstract oil impasto with teal and emerald background; bold, modern decorative cushion.',
+specifications: generateProductSpecifications(),
+externalUrl: 'https://www.flowersluxe.com/products/yellow-tulip-impasto-pillow',
+metaTitle: 'Yellow Tulip Pillow – Abstract Oil Impasto Floral Decor',
+metaDescription: 'Yellow tulip pillow in bold oil impasto with teal and emerald background. Modern decorative cushion with luminous marigold petals, ideal for floral home decor.',
+keywords: [
+'yellow tulip pillow',
+'tulip throw pillow',
+'abstract floral pillow',
+'impasto oil pillow',
+'teal and green pillow',
+'modern decorative pillow',
+'floral home decor',
+'turquoise pillow',
+'yellow flower cushion',
+'botanical art pillow',
+'contemporary floral cushion',
+'gallery wall pillow'
+],
+dateAdded: '2025-08-18',
+inStock: true,
+category: 'Flower Throw Pillows'
 }
 
 ];
