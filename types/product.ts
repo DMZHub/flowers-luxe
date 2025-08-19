@@ -76,8 +76,8 @@ export type FlowerType =
   | 'ranunculus'
   | 'quicksand-rose'
   | 'amaryllis'
-  | 'Protea'
-  | 'Chamomile'
+  | 'protea'
+  | 'chamomile'
   | 'mixed florals'
   | 'bird-of-paradise'
   | 'pampas-grass';
