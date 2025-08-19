@@ -17,7 +17,7 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
   },
   
-  // Add this section to fix the indexing issue
+  // Headers section - updated to include sitemap headers
   async headers() {
     return [
       {
@@ -26,6 +26,20 @@ const nextConfig = {
           {
             key: 'X-Robots-Tag',
             value: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+          }
+        ]
+      },
+      // Add sitemap headers specifically
+      {
+        source: '/sitemap.xml',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'application/xml; charset=utf-8'
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, s-maxage=3600'
           }
         ]
       }
