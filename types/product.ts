@@ -78,7 +78,7 @@ export type FlowerType =
   | 'amaryllis'
   | 'protea'
   | 'chamomile'
-  | 'mixed florals'
+  | 'mixed-florals'
   | 'bird-of-paradise'
   | 'pampas-grass';
 
