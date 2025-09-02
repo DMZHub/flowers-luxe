@@ -80,6 +80,9 @@ export type FlowerType =
   | 'chamomile'
   | 'mixed-florals'
   | 'bird-of-paradise'
+  | 'anthurium'
+  | 'calceolaria'
+  | 'christmas'
   | 'pampas-grass';
 
 
@@ -124,6 +127,7 @@ export type ProductColor =
   | 'sand'
   | 'ivory'
   | 'mauve'
+  | 'magenta'
   | 'rust';
 
 
