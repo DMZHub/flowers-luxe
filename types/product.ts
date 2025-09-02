@@ -83,6 +83,7 @@ export type FlowerType =
   | 'anthurium'
   | 'calceolaria'
   | 'christmas'
+  | 'passiflora'
   | 'pampas-grass';
 
 
