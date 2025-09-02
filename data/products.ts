@@ -1620,9 +1620,6 @@ category: 'Flower Throw Pillows'
 
 
 
-import { generateProductSpecifications } from './utils'; // تأكد من أن المسار صحيح
-
-export const products = [
   {
     id: 'floral-throw-pillow-anthurium-crystallinum-modern',
     title: 'Floral Throw Pillow – Anthurium Crystallinum Modern Cushion',
