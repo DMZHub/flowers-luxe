@@ -1619,6 +1619,7 @@ category: 'Flower Throw Pillows'
 },
 
 
+
 {
 id: 'floral-throw-pillow-anthurium-crystallinum-modern',
 title: 'Floral Throw Pillow – Anthurium Crystallinum Modern Cushion',
@@ -1762,7 +1763,7 @@ id: 'floral-throw-pillow-checkered-lily-botanical',
 title: 'Floral Throw Pillow – Checkered Lily Botanical Cushion',
 slug: 'checkered-lily-floral-pillow',
 style: 'floral',
-flowerType: 'checkered-lily',
+flowerType: 'lily',
 colors: ['purple', 'green', 'white'],
 price: 25.00,
 featured: true,
@@ -1808,7 +1809,7 @@ category: 'Flower Throw Pillows'
   title: 'Floral Throw Pillow – Christmas Cactus Modern Cushion',
   slug: 'christmas-cactus-modern-pillow',
   style: 'modern',
-  flowerType: 'christmas-cactus',
+  flowerType: 'christmas',
   colors: ['purple', 'magenta', 'green'],
   price: 25.00,
   featured: true,
@@ -1971,7 +1972,7 @@ title: 'Floral Throw Pillow – Purple Orchid Oil Impasto Cushion on Bed'
 description: 'Floral throw pillow featuring an elegant purple orchid oil impasto abstract painting on a clean dark blue background. Thick, vibrant brushstrokes, soft highlights, and rich artistic depth create a striking, gallery-worthy accent for modern interiors. Crafted from premium poly twill with a double-sided print, concealed zipper, and included insert. Handmade in America for durability and comfort, this decorative cushion elevates living rooms, bedrooms, and office lounges with bold color and refined style.',
 shortDescription: 'Floral throw pillow with purple orchid oil impasto abstract art on a dark blue background—perfect for modern living rooms and bedroom decor.',
 specifications: generateProductSpecifications(),
-externalUrl: https://store.flowersluxe.com/products/79648080-floral-purple-orchid-abstract-throw-pillow
+externalUrl: 'https://store.flowersluxe.com/products/79648080-floral-purple-orchid-abstract-throw-pillow',
 ',
 metaTitle: 'Floral Throw Pillow – Purple Orchid Oil Impasto Modern Abstract Cushion',
 metaDescription: 'Floral throw pillow featuring purple orchid oil impasto abstract art on a dark blue background. A bold, modern decorative cushion for living rooms and bedrooms.',
@@ -2034,6 +2035,7 @@ category: 'Flower Throw Pillows'
   inStock: true,
   category: 'Flower Throw Pillows'
 }
+
 
 ];
 
