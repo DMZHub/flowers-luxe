@@ -2455,7 +2455,7 @@ category: 'Flower Throw Pillows'
   title: 'Floral Throw Pillow – Trumpet Gentian Botanical Cushion',
   slug: 'trumpet-gentian-pillow',
   style: 'floral',
-  flowerType: 'trumpet-gentian',
+  flowerType: 'gentian',
   colors: ['blue', 'white', 'green'],
   price: 25.00,
   featured: true,
