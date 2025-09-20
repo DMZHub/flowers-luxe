@@ -89,6 +89,7 @@ export type FlowerType =
   | 'nigella'
   | 'ranunculus'
   | 'gentian'
+  | 'eustoma'
   | 'craspedia'
   | 'foxglove'
   | 'freesia'
