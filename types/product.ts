@@ -88,7 +88,7 @@ export type FlowerType =
   | 'hellebore'
   | 'nigella'
   | 'ranunculus'
-  | 'trumpet-gentia'
+  | 'gentian'
   | 'craspedia'
   | 'foxglove'
   | 'freesia'
