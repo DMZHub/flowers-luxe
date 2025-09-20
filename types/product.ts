@@ -43,6 +43,7 @@ export type ProductStyle =
   | 'watercolor'
   | 'floral'
   | 'abstract'
+  | 'solid-color'
   | 'vintage'
   | 'modern'
   | 'boho'
