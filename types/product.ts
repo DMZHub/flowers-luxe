@@ -84,6 +84,18 @@ export type FlowerType =
   | 'calceolaria'
   | 'christmas'
   | 'passiflora'
+  | 'begonia'
+  | 'hellebore'
+  | 'nigella'
+  | 'ranunculus'
+  | 'trumpet-gentia'
+  | 'craspedia'
+  | 'foxglove'
+  | 'freesia'
+  | 'gloriosa'
+  | 'showy-ladys'
+  | 'streptocarpus'
+  | 'ceropegia'
   | 'pampas-grass';
 
 
