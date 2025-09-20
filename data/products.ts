@@ -2547,7 +2547,7 @@ category: 'Flower Throw Pillows'
   title: 'Floral Throw Pillow – Calla Lily Watercolor Cushion',
   slug: 'calla-lily-watercolor-pillow',
   style: 'watercolor',
-  flowerType: 'calla-lily',
+  flowerType: 'lily',
   colors: ['purple', 'lavender', 'green', 'white'],
   price: 25.00,
   featured: true,
