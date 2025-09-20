@@ -2958,7 +2958,6 @@ inStock: true,
 category: 'Flower Throw Pillows'
 }
 
-
   
 ];
 
