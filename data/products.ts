@@ -2502,7 +2502,7 @@ category: 'Flower Throw Pillows'
   slug: 'billy-buttons-watercolor-pillow',
   style: 'watercolor',
   flowerType: 'craspedia',
-  colors: ['yellow', 'wreen', 'white'],
+  colors: ['yellow', 'white'],
   price: 25.00,
   featured: true,
   mainImage: 'floral-throw-pillow-billy-buttons-watercolor.webp',
