@@ -42,7 +42,6 @@ export interface Product {
 export type ProductStyle = 
   | 'watercolor'
   | 'floral'
-  | 'solid-color'
   | 'abstract'
   | 'vintage'
   | 'modern'
