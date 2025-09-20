@@ -2043,7 +2043,7 @@ category: 'Flower Throw Pillows'
   slug: 'anemone-watercolor-pillow',
   style: 'watercolor',
   flowerType: 'anemone',
-  colors: ['Blue', 'Pink', 'White', 'Green', 'Black'],
+  colors: ['blue', 'Pink', 'White', 'Green', 'Black'],
   price: 25.00,
   featured: true,
   mainImage: 'floral-throw-pillow-anemone-watercolor.webp',
