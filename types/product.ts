@@ -96,6 +96,7 @@ export type FlowerType =
   | 'showy-ladys'
   | 'streptocarpus'
   | 'ceropegia'
+  | 'sweet-pea'
   | 'pampas-grass';
 
 
