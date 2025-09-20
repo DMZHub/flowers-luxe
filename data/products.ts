@@ -2033,9 +2033,932 @@ category: 'Flower Throw Pillows'
     dateAdded: '2025-09-01',
     inStock: true,
     category: 'Flower Throw Pillows'
-  }
+  },
 
+  // NEW20
 
+ {
+  id: 'floral-throw-pillow-anemone-watercolor-cushion',
+  title: 'Floral Throw Pillow – Anemone Watercolor Cushion',
+  slug: 'anemone-watercolor-pillow',
+  style: 'watercolor',
+  flowerType: 'anemone',
+  colors: ['Blue', 'Pink', 'White', 'Green', 'Black'],
+  price: 25.00,
+  featured: true,
+  mainImage: 'floral-throw-pillow-anemone-watercolor.webp',
+  images: [
+    {
+      src: '/images/floral-throw-pillow-anemone-watercolor.webp',
+      alt: 'Floral throw pillow with Anemone Coronaria watercolor design in blue, fuchsia, white, and blush pink',
+      title: 'Floral Throw Pillow – Anemone Watercolor Cushion Pattern Design'
+    },
+    {
+      src: '/images/floral-throw-pillow-anemone-watercolor-sofa.webp',
+      alt: 'Anemone watercolor floral throw pillow styled on a sofa with cozy modern decor',
+      title: 'Floral Throw Pillow – Anemone Watercolor Cushion on Sofa'
+    },
+    {
+      src: '/images/floral-throw-pillow-anemone-watercolor-bed.webp',
+      alt: 'Decorative Anemone watercolor throw pillow layered on a bed with elegant linens',
+      title: 'Floral Throw Pillow – Anemone Watercolor Cushion on Bed'
+    }
+  ],
+  description: 'Floral throw pillow designed with the striking elegance of Anemone Coronaria, painted in a refined watercolor style for a bold and sophisticated accent. The open-faced blooms feature silky, slightly ruffled petals in radiant shades of deep indigo blue, vibrant fuchsia, pure white, and blush pink, each surrounding a dramatic navy or jet-black center. Graceful green stems and delicate foliage flow naturally across the seamless pattern, creating a harmonious botanical design. Layered washes, smooth blending, and visible brushstrokes add depth and vibrancy, while the vivid colors ensure this decorative cushion stands out as a statement piece. Perfect for adding artistic charm to living rooms, bedrooms, or stylish office spaces, this watercolor throw pillow blends luxury with comfort. Crafted from premium poly twill with a double-sided print, concealed zipper, and included insert, it offers both durability and coziness. An ideal decorative cushion for floral décor lovers, this pillow elevates sofas, chairs, and beds with timeless botanical beauty.',
+  shortDescription: 'Floral throw pillow featuring Anemone watercolor design—bold, elegant, and perfect for modern living room or bedroom decor.',
+  specifications: generateProductSpecifications(),
+  externalUrl: 'https://store.flowersluxe.com/products/80524026-anemone-watercolor-floral-pattern-throw-pillow',
+  metaTitle: 'Floral Throw Pillow – Anemone Watercolor Cushion',
+  metaDescription: 'Floral throw pillow featuring Anemone watercolor design. A bold decorative cushion perfect for modern floral living room or bedroom decor.',
+  keywords: [
+    'floral throw pillow',
+    'watercolor throw pillow',
+    'anemone pillow',
+    'decorative cushion',
+    'botanical pillow',
+    'luxury floral pillow',
+    'living room decor',
+    'modern floral decor'
+  ],
+  dateAdded: '2025-09-17',
+  inStock: true,
+  category: 'Flower Throw Pillows'
+},
+{
+  id: 'floral-throw-pillow-begonia-rex-modern-cushion',
+  title: 'Floral Throw Pillow – Begonia Rex Modern Cushion',
+  slug: 'begonia-rex-modern-pillow',
+  style: 'modern',
+  flowerType: 'begonia',
+  colors: ['green', 'pink'],
+  price: 25.00,
+  featured: true,
+  mainImage: 'floral-throw-pillow-begonia-rex-modern.webp',
+  images: [
+    {
+      src: '/images/floral-throw-pillow-begonia-rex-modern.webp',
+      alt: 'Floral throw pillow featuring Begonia Rex leaf design in green, pink, and turquoise tones',
+      title: 'Floral Throw Pillow – Begonia Rex Modern Cushion'
+    },
+    {
+      src: '/images/floral-throw-pillow-begonia-rex-modern-sofa.webp',
+      alt: 'Modern floral throw pillow with Begonia Rex pattern styled on a neutral sofa',
+      title: 'Floral Throw Pillow – Begonia Rex Modern Cushion on Sofa'
+    },
+    {
+      src: '/images/floral-throw-pillow-begonia-rex-modern-bed.webp',
+      alt: 'Begonia Rex floral throw pillow with glossy green and pink leaves on a cozy bed',
+      title: 'Floral Throw Pillow – Begonia Rex Modern Cushion on Bed'
+    }
+  ],
+  description: 'Floral throw pillow featuring the striking Begonia Rex leaf design, crafted for modern home interiors with a bold and stylish touch. This decorative cushion showcases ultra-realistic foliage with vibrant green, bright pink, and turquoise tones, capturing the intricate veining and velvety textures of Begonia Rex in extraordinary detail. The luminous highlights and natural reflections give the design a lifelike depth that enhances the overall aesthetic of your living room or bedroom. Perfect for adding a statement accent to neutral sofas, minimalist decor, or eclectic interiors, this modern floral pillow blends vivid artistry with everyday comfort. Made with premium poly twill fabric, double-sided print, and a concealed zipper, this decorative cushion combines durability and sophistication. Complete with a plush insert, it’s an ideal piece for elevating your living room decor, refreshing your bedroom look, or gifting to plant and art lovers. Bring a bold botanical statement into your home with this high-end floral throw pillow.',
+  shortDescription: 'Floral throw pillow featuring Begonia Rex leaf design in vivid green, pink, and turquoise for a bold modern accent.',
+  specifications: generateProductSpecifications(),
+  externalUrl: 'https://store.flowersluxe.com/products/80526949-begonia-rex-modern-floral-throw-pillow',
+  metaTitle: 'Floral Throw Pillow – Begonia Rex Modern Cushion',
+  metaDescription: 'Floral throw pillow with Begonia Rex leaf design in green, pink, and turquoise. A bold modern decorative cushion for living rooms and bedrooms.',
+  keywords: [
+    'floral throw pillow',
+    'modern floral pillow',
+    'begonia throw pillow',
+    'decorative cushion',
+    'living room decor',
+    'botanical pillow',
+    'plant-inspired pillow'
+  ],
+  dateAdded: '2025-09-17',
+  inStock: true,
+  category: 'Flower Throw Pillows'
+},
+{
+  id: 'floral-throw-pillow-begonia-rex-vibrant-modern-cushion',
+  title: 'Floral Throw Pillow – Begonia Rex Vibrant Modern Cushion',
+  slug: 'begonia-rex-vibrant-pillow',
+  style: 'modern',
+  flowerType: 'begonia',
+  colors: ['green', 'pink', 'turquoise'],
+  price: 25.00,
+  featured: true,
+  mainImage: 'floral-throw-pillow-begonia-rex-vibrant-modern.webp',
+  images: [
+    {
+      src: '/images/floral-throw-pillow-begonia-rex-vibrant-modern.webp',
+      alt: 'Floral throw pillow with Begonia Rex leaf design in vivid green, bright pink, and turquoise highlights',
+      title: 'Floral Throw Pillow – Begonia Rex Vibrant Modern Cushion'
+    },
+    {
+      src: '/images/floral-throw-pillow-begonia-rex-vibrant-modern-sofa.webp',
+      alt: 'Modern floral throw pillow with Begonia Rex vibrant foliage styled on a sofa',
+      title: 'Floral Throw Pillow – Begonia Rex Vibrant Cushion on Sofa'
+    },
+    {
+      src:'/images/floral-throw-pillow-begonia-rex-vibrant-modern-bed.webp',
+      alt: 'Decorative cushion featuring Begonia Rex foliage in green, pink, and turquoise placed on a cozy bed',
+      title: 'Floral Throw Pillow – Begonia Rex Vibrant Cushion on Bed'
+    }
+  ],
+  description: 'Bring a bold botanical statement into your home with this floral throw pillow featuring the stunning Begonia Rex. Known for its artistic foliage, the design captures vivid green, bright pink, and striking turquoise highlights with ultra-realistic velvety textures and intricate vein details. Naturally luminous reflections add a lifelike depth that makes the pattern stand out against its pastel background. Perfect for modern interiors, this decorative cushion is a stylish way to refresh neutral sofas, accent armchairs, or elevate bedroom decor with vibrant natural beauty. The seamless botanical pattern flows harmoniously across the pillow, giving it a polished, gallery-like quality. Crafted from premium poly twill fabric, the cushion includes a double-sided print, concealed zipper, and a plush insert for comfort and durability. Whether used as a standalone accent or layered with other botanical designs, this Begonia Rex pillow infuses any space with color, sophistication, and luxury. A thoughtful gift for plant lovers or interior design enthusiasts, it blends modern artistry with practical comfort, creating a centerpiece for your living room or bedroom.',
+  shortDescription: 'Floral throw pillow featuring Begonia Rex foliage in vivid green, pink, and turquoise highlights.',
+  specifications: generateProductSpecifications(),
+  externalUrl: 'https://store.flowersluxe.com/products/80525090-begonia-rex-vibrant-modern-floral-throw-pillow',
+  metaTitle: 'Floral Throw Pillow – Begonia Rex Vibrant Modern Cushion',
+  metaDescription:'Floral throw pillow with Begonia Rex foliage in vivid green, pink, and turquoise. A modern decorative cushion for stylish living room or bedroom decor.',
+  keywords: [
+    'floral throw pillow',
+    'begonia pillow',
+    'modern floral pillow',
+    'decorative cushion',
+    'living room decor',
+    'botanical pillow',
+    'colorful floral pillow'
+  ],
+  dateAdded: '2025-09-17',
+  inStock: true,
+  category: 'Flower Throw Pillows'
+},
+{
+  id: 'floral-throw-pillow-times-square-neon-watercolor',
+  title: 'Floral Throw Pillow – Times Square Neon Watercolor Flowers',
+  slug: 'floral-throw-pillow-times-square-neon-watercolor',
+  style: 'abstract',
+  flowerType: 'mixed-florals',
+  colors: ['pink', 'blue', 'orange', 'purple'],
+  price: 25.00,
+  featured: true,
+  mainImage: 'floral-throw-pillow-times-square-neon-watercolor.webp',
+  images: [
+    {
+      src: '/images/floral-throw-pillow-times-square-neon-watercolor.webp',
+      alt: 'Abstract watercolor floral throw pillow with neon Times Square lights and glowing flowers',
+      title: 'Floral Throw Pillow – Times Square Neon Watercolor Cushion'
+    },
+    {
+      src: '/images/floral-throw-pillow-times-square-neon-watercolor-sofa.webp',
+      alt: 'Times Square neon floral watercolor throw pillow styled on a modern sofa',
+      title: 'Floral Throw Pillow – Times Square Neon Floral Cushion on Sofa'
+    },
+    {
+      src: '/images/floral-throw-pillow-times-square-neon-watercolor-bed.webp',
+      alt: 'Decorative abstract floral throw pillow with neon glow flowers styled on a bed',
+      title: 'Floral Throw Pillow – Times Square Neon Watercolor Cushion on Bed'
+    }
+  ],
+  description: 'Floral throw pillow designed with a vibrant abstract watercolor composition inspired by Times Square at night. Featuring glowing sunflowers, peonies, and wild roses illuminated by neon reflections, this decorative cushion captures the energy of New York nightlife with an artistic floral twist. The design blends bold brushstrokes, ink splash textures, and luminous watercolor effects, giving the flowers a radiant, glowing quality against the backdrop of Times Square’s iconic neon lights. Perfect for modern living rooms, loft apartments, or stylish bedrooms, this pillow adds a youthful and energetic vibe to any decor. The electric palette of hot pink, neon magenta, turquoise blue, vibrant orange, and deep purple ensures it stands out as a statement accent. Crafted from premium fabric with a concealed zipper and durable insert, this high-quality throw pillow combines contemporary art with cozy comfort, making it a must-have for modern American homes.',
+  shortDescription: 'Floral throw pillow with neon Times Square watercolor flowers, bold and modern for stylish home decor.',
+  specifications: generateProductSpecifications(),
+  externalUrl: 'https://store.flowersluxe.com/products/80524500-times-square-neon-floral-throw-pillow',
+  metaTitle: 'Floral Throw Pillow – Times Square Neon Watercolor Flowers',
+  metaDescription: 'Floral throw pillow with neon Times Square watercolor design. A bold decorative cushion for modern living rooms, bedrooms, and stylish interiors.',
+  keywords: [
+    'floral throw pillow',
+    'abstract throw pillow',
+    'watercolor throw pillow',
+    'Times Square pillow',
+    'neon floral cushion',
+    'modern home decor',
+    'living room pillow'
+  ],
+  dateAdded: '2025-09-17',
+  inStock: true,
+  category: 'Flower Throw Pillows'
+},
+{
+id: 'floral-throw-pillow-hellebore-floral-pattern',
+title: 'Floral Throw Pillow – Hellebore Floral Pattern',
+slug: 'hellebore-floral-pillow',
+style: 'floral',
+flowerType: 'hellebore',
+colors: ['Purple', 'Pink', 'Ivory', 'Green', 'Beige'],
+price: 25.00,
+featured: false,
+mainImage: 'floral-throw-pillow-hellebore-floral-beige.webp',
+images: [
+{
+src: '/images/floral-throw-pillow-hellebore-floral-beige.webp',
+alt: 'Floral throw pillow with Hellebore flowers in lilac, plum, and blush on warm beige',
+title: 'Floral Throw Pillow – Hellebore Lilac and Blush on Beige'
+},
+{
+src: '/images/floral-throw-pillow-hellebore-floral-sofa.webp',
+alt: 'Hellebore floral cushion styled on a soft neutral sofa',
+title: 'Floral Throw Pillow – Hellebore Cushion on Sofa'
+},
+{
+src: '/images/floral-throw-pillow-hellebore-floral-bed.webp',
+alt: 'Hellebore floral pillow layered with cozy throws in a modern bedroom',
+title: 'Floral Throw Pillow – Hellebore Cushion on Bed'
+}
+],
+description: 'Floral throw pillow in an elegant Hellebore pattern designed for premium home styling. Featuring layered petals in lilac purple, deep plum, blush pink, and soft ivory, this decorative cushion creates a refined focal point without overpowering your space. The warm beige backdrop and subtle texture add a designer touch, while the crisp linework and seamless flow keep the look polished and modern. Ideal for living room decor, reading corners, and elevated bedrooms, this pillow offers a smooth, durable cover, concealed zipper, and a plush insert for comfort and longevity. Pair with neutral linens or soft metallic accents for a calm, luxurious vibe.',
+shortDescription: 'Floral throw pillow with Hellebore pattern in lilac and plum for luxe spaces.',
+specifications: generateProductSpecifications(),
+externalUrl: 'https://store.flowersluxe.com/products/80526393-hellebore-lilac-and-blush-floral-pattern-throw-pillow',
+metaTitle: 'Floral Throw Pillow – Hellebore Pattern',
+metaDescription: 'Floral throw pillow with Hellebore flowers in lilac and plum. A refined decorative cushion for premium living room decor. Shop now.',
+keywords: [
+'floral throw pillow',
+'decorative cushion',
+'living room decor',
+'hellebore pillow',
+'purple floral pillow',
+'luxury pillow'
+],
+dateAdded: '2025-09-17',
+inStock: true,
+category: 'Flower Throw Pillows'
+},
+{
+  id: 'floral-throw-pillow-brooklyn-bridge-sunflower-rose',
+  title: 'Floral Throw Pillow – Brooklyn Bridge Sunflower & Rose Art',
+  slug: 'floral-throw-pillow-brooklyn-bridge-sunflower-rose',
+  style: 'modern',
+  flowerType: 'mixed-florals',
+  colors: ['blue', 'yellow', 'pink', 'beige'],
+  price: 25.00,
+  featured: true,
+  mainImage: 'floral-throw-pillow-brooklyn-bridge-sunflower-rose.webp',
+  images: [
+    {
+      src: '/images/floral-throw-pillow-brooklyn-bridge-sunflower-rose.webp',
+      alt: 'Floral throw pillow featuring Brooklyn Bridge with sunflower and rose design in modern fine-art style',
+      title: 'Floral Throw Pillow – Brooklyn Bridge Sunflower & Rose Modern Art'
+    },
+    {
+      src: '/images/floral-throw-pillow-brooklyn-bridge-sunflower-rose-sofa.webp',
+      alt: 'Modern floral throw pillow with Brooklyn Bridge, sunflowers, and roses styled on a sofa',
+      title: 'Floral Throw Pillow – Brooklyn Bridge Sunflower & Rose Cushion on Sofa'
+    },
+    {
+      src: '/images/floral-throw-pillow-brooklyn-bridge-sunflower-rose-bed.webp',
+      alt: 'Brooklyn Bridge sunflower and rose decorative pillow styled on a modern bed',
+      title: 'Floral Throw Pillow – Brooklyn Bridge Sunflower & Rose Cushion on Bed'
+    }
+  ],
+  description: 'Floral throw pillow featuring a luxurious Brooklyn Bridge design fused with vibrant sunflowers and soft pink roses. Painted in modern fine-art style with textured oil impasto details, this decorative cushion brings a touch of New York City charm and botanical beauty into your home. The elegant composition highlights the Brooklyn Bridge silhouette as floral vines gracefully weave into its iconic structure, creating a balanced and dreamlike atmosphere. With its refined palette of deep navy, warm terracotta, muted peach, pale gold, and pastel pinks, this cushion complements modern and classic interiors alike. Perfect for living room decor, bedroom styling, or as a statement piece for those who love NYC-inspired artistry. Crafted with premium fabric, concealed zipper, and durable poly insert, this floral throw pillow offers both luxury and comfort — a gallery-worthy accent for stylish home spaces.',
+  shortDescription: 'Floral throw pillow with Brooklyn Bridge, sunflower, and rose design for modern, stylish home decor.',
+  specifications: generateProductSpecifications(),
+  externalUrl: 'https://store.flowersluxe.com/products/80525426-brooklyn-bridge-floral-sunflowers-and-roses-modern-throw-pillow',
+  metaTitle: 'Floral Throw Pillow – Brooklyn Bridge Sunflower & Rose',
+  metaDescription: 'Floral throw pillow with Brooklyn Bridge sunflower and rose design. A luxury decorative cushion for modern living rooms and stylish interiors.',
+  keywords: [
+    'floral throw pillow',
+    'modern throw pillow',
+    'Brooklyn Bridge pillow',
+    'sunflower pillow',
+    'rose decorative cushion',
+    'NYC home decor',
+    'living room pillow'
+  ],
+  dateAdded: '2025-09-17',
+  inStock: true,
+  category: 'Flower Throw Pillows'
+},
+{
+id: 'floral-throw-pillow-nigella-abstract-modern-watercolor',
+title: 'Floral Throw Pillow – Nigella Abstract Modern Watercolor',
+slug: 'nigella-abstract-pillow',
+style: 'abstract',
+flowerType: 'nigella',
+colors: ['Blue', 'Turquoise', 'Purple', 'Ivory', 'Gold', 'Beige', 'Green'],
+price: 25.00,
+featured: false,
+mainImage: 'floral-throw-pillow-nigella-abstract-cream.webp',
+images: [
+{
+src: '/images/floral-throw-pillow-nigella-abstract-cream.webp',
+alt: 'Floral throw pillow with abstract Nigella watercolor bloom in blue, turquoise, and lilac on creamy beige',
+title: 'Floral Throw Pillow – Abstract Nigella Watercolor on Cream'
+},
+{
+src: '/images/floral-throw-pillow-nigella-abstract-sofa.webp',
+alt: 'Abstract Nigella decorative cushion with golden highlights on a modern sofa',
+title: 'Floral Throw Pillow – Nigella Abstract Cushion on Sofa'
+},
+{
+src: '/images/floral-throw-pillow-nigella-abstract-bed.webp',
+alt: 'Bold Nigella abstract floral pillow on an accent chair with minimal decor',
+title: 'Floral Throw Pillow – Nigella Abstract Cushion on Chair'
+}
+],
+description: 'Floral throw pillow with a modern abstract take on Nigella damascena, designed as a single statement bloom. Royal blue and electric turquoise petals blend into vivid lilac with soft ivory and subtle golden highlights, achieved through high-end watercolor washes and refined digital brushstrokes. The creamy beige backdrop keeps the composition clean, while delicate accents around the flower add depth and movement. Ideal for living room decor and premium interior styling, this decorative cushion offers a gallery-ready look and plush comfort. Finished with a smooth, durable cover, concealed zipper, and soft insert, it brings artful color and contemporary elegance to any space.',
+shortDescription: 'Floral throw pillow with abstract Nigella bloom in blue and lilac on creamy beige.',
+specifications: generateProductSpecifications(),
+externalUrl: 'https://store.flowersluxe.com/products/80525769-nigella-abstract-watercolor-bloom-throw-pillow',
+metaTitle: 'Floral Throw Pillow – Nigella Abstract Watercolor',
+metaDescription: 'Floral throw pillow with an abstract Nigella watercolor bloom. Add a premium decorative cushion to elevate modern living room decor.',
+keywords: [
+'floral throw pillow',
+'abstract pillow',
+'decorative cushion',
+'living room decor',
+'nigella pillow',
+'watercolor floral pillow'
+],
+dateAdded: '2025-09-17',
+inStock: true,
+category: 'Flower Throw Pillows'
+},
+{
+  id: 'floral-throw-pillow-ranunculus-abstract-oil-luxury',
+  title: 'Floral Throw Pillow – Ranunculus Abstract Oil Luxury Design',
+  slug: 'ranunculus-abstract-oil-pillow',
+  style: 'abstract',
+  flowerType: 'ranunculus',
+  colors: ['pink', 'white', 'yellow', 'green', 'gray'],
+  price: 25.00,
+  featured: true,
+  mainImage: 'floral-throw-pillow-ranunculus-abstract-oil.webp',
+  images: [
+    {
+      src: '/images/floral-throw-pillow-ranunculus-abstract-oil.webp',
+      alt: 'Floral throw pillow with ranunculus abstract oil painting pattern in blush pink, ivory, and terracotta',
+      title: 'Floral Throw Pillow – Ranunculus Abstract Oil Luxury Cushion'
+    },
+    {
+      src: '/images/floral-throw-pillow-ranunculus-abstract-oil-sofa.webp',
+      alt: 'Luxury floral throw pillow with ranunculus abstract oil design styled on modern grey sofa',
+      title: 'Floral Throw Pillow – Ranunculus Abstract Oil Luxury Cushion on Sofa'
+    },
+    {
+      src: '/images/floral-throw-pillow-ranunculus-abstract-oil-bed.webp',
+      alt: 'Abstract oil floral throw pillow with ranunculus design on a luxury bed with layered decor',
+      title: 'Floral Throw Pillow – Ranunculus Abstract Oil Luxury Cushion on Bed'
+    }
+  ],
+  description: 'Floral throw pillow showcasing an abstract oil painting design of ranunculus flowers with layered petals and rich impasto textures. Painted in soft apricot, blush pink, ivory, pale yellow, and muted terracotta, the blooms radiate a dreamy fine-art aesthetic. Muted olive and dusty sage leaves blend into a warm taupe-gray background, making it the perfect accent for modern grey sofas and upscale interiors. This decorative cushion adds sophistication and artistic depth to living rooms, bedrooms, and gallery-inspired spaces. Crafted with premium poly twill, double-sided print, concealed zipper, and plush insert, this luxury pillow offers comfort and timeless elegance. Ideal for elevating contemporary home décor, its seamless design ensures a balanced, harmonious look for high-end pillows, wallpapers, or fabrics.',
+  shortDescription: 'Floral throw pillow with ranunculus abstract oil design, perfect for modern grey sofas and elegant interiors.',
+  specifications: generateProductSpecifications(),
+  externalUrl: 'https://store.flowersluxe.com/products/80526605-ranunculus-abstract-oil-luxury-design-throw-pillow',
+  metaTitle: 'Floral Throw Pillow – Ranunculus Abstract Oil Luxury Design',
+  metaDescription: 'Floral throw pillow featuring ranunculus in an abstract oil design. A luxury decorative cushion for modern sofas and elegant interiors.',
+  keywords: [
+    'floral throw pillow',
+    'abstract oil pillow',
+    'ranunculus pillow',
+    'luxury floral cushion',
+    'modern living room decor',
+    'fine art pillow',
+    'decorative cushion'
+  ],
+  dateAdded: '2025-09-17',
+  inStock: true,
+  category: 'Flower Throw Pillows'
+},
+{
+  id: 'floral-throw-pillow-sweet-pea-watercolor-gouache-cushion',
+  title: 'Floral Throw Pillow – Sweet Pea Watercolor Gouache Cushion',
+  slug: 'sweet-pea-watercolor-pillow',
+  style: 'floral',
+  flowerType: 'sweet-pea',
+  colors: ['pink', 'purple', 'blue', 'white', 'green'],
+  price: 25.00,
+  featured: true,
+  mainImage: 'floral-throw-pillow-sweet-pea-watercolor-gouache.webp',
+  images: [
+    {
+      src: '/images/floral-throw-pillow-sweet-pea-watercolor-gouache.webp',
+      alt: 'Floral throw pillow with sweet pea watercolor gouache botanical design on ivory background',
+      title: 'Floral Throw Pillow – Sweet Pea Watercolor Gouache Cushion Ivory Background'
+    },
+    {
+      src: '/images/floral-throw-pillow-sweet-pea-watercolor-gouache-sofa.webp',
+      alt: 'Sweet pea floral throw pillow styled on a modern sofa with pastel accents',
+      title: 'Floral Throw Pillow – Sweet Pea Watercolor Gouache Cushion on Sofa'
+    },
+    {
+      src: '/images/floral-throw-pillow-sweet-pea-watercolor-gouache-bed.webp',
+      alt: 'Decorative sweet pea watercolor gouache floral throw pillow on a cozy bed',
+      title: 'Floral Throw Pillow – Sweet Pea Watercolor Gouache Cushion on Bed'
+    }
+  ],
+  description: 'Floral throw pillow featuring Lathyrus odoratus (sweet pea) blossoms in a seamless, luxurious botanical pattern. Painted in refined watercolor and gouache, the design showcases pastel pinks, radiant lavender purples, glowing sky blues, and creamy whites, enhanced with luminous highlights and vibrant saturation. Each ruffled petal is rendered with silky translucency and sharp micro-details, balanced with curling tendrils, slender stems, and glossy green leaves that create an elegant flow. This decorative cushion brings botanical artistry into your home, perfect for both contemporary and classic interiors. Ideal for adding freshness and sophistication to living rooms, bedrooms, sunlit lounges, and creative spaces, the sweet pea pillow blends natural charm with high-end craftsmanship. Made with premium poly twill fabric, double-sided printing, concealed zipper, and a plush insert, it combines comfort and durability with artistic beauty. A masterpiece-quality accessory that enhances home décor with color, texture, and botanical elegance.',
+  shortDescription: 'Floral throw pillow with sweet pea watercolor gouache design, a vivid decorative cushion for luxury living rooms and cozy bedrooms.',
+  specifications: generateProductSpecifications(),
+  externalUrl: 'https://store.flowersluxe.com/products/80524760-sweet-pea-watercolor-gouache-floral-pattern-throw-pillow',
+  metaTitle: 'Floral Throw Pillow – Sweet Pea Watercolor Gouache Cushion',
+  metaDescription: 'Floral throw pillow featuring sweet pea watercolor gouache design. A luminous decorative cushion for stylish living rooms and bedrooms.',
+  keywords: [
+    'floral throw pillow',
+    'sweet pea pillow',
+    'watercolor throw pillow',
+    'decorative cushion',
+    'living room pillow',
+    'botanical pillow',
+    'luxury home decor'
+  ],
+  dateAdded: '2025-09-17',
+  inStock: true,
+  category: 'Flower Throw Pillows'
+},
+{
+  id: 'floral-throw-pillow-trumpet-gentian-botanical-cushion',
+  title: 'Floral Throw Pillow – Trumpet Gentian Botanical Cushion',
+  slug: 'trumpet-gentian-pillow',
+  style: 'floral',
+  flowerType: 'trumpet-gentian',
+  colors: ['blue', 'white', 'green'],
+  price: 25.00,
+  featured: true,
+  mainImage: 'floral-throw-pillow-trumpet-gentian-botanical.webp',
+  images: [
+    {
+      src: '/images/floral-throw-pillow-trumpet-gentian-botanical.webp',
+      alt: 'Floral throw pillow with trumpet gentian botanical design in deep royal blue with white centers and green leaves',
+      title: 'Floral Throw Pillow – Trumpet Gentian Botanical Cushion Blue and White Design'
+    },
+    {
+      src: '/images/floral-throw-pillow-trumpet-gentian-botanical-sofa.webp',
+      alt: 'Trumpet gentian floral throw pillow styled on a sofa with blue accent décor',
+      title: 'Floral Throw Pillow – Trumpet Gentian Botanical Cushion on Sofa'
+    },
+    {
+      src: '/images/floral-throw-pillow-trumpet-gentian-botanical-bed.webp',
+      alt: 'Decorative trumpet gentian botanical throw pillow on a cozy layered bed',
+      title: 'Floral Throw Pillow – Trumpet Gentian Botanical Cushion on Bed'
+    }
+  ],
+  description: 'Floral throw pillow featuring Gentiana acaulis (Trumpet Gentian) in a seamless, ultra-detailed botanical pattern. Painted in deep royal blue with delicate natural gradient transitions, the trumpet-shaped petals are finished with soft white star-shaped centers for contrast and luminous appeal. Glossy green leaves with crisp vein textures frame the blossoms in a harmonious, balanced layout that flows elegantly across the pillow. This decorative cushion captures both bold vibrancy and natural grace, perfect for enhancing modern living rooms, bedrooms, or refined study spaces. The rich blue tones add a sense of calm and luxury while blending beautifully with both neutral and colorful décor schemes. Made with premium poly twill fabric, concealed zipper, and a plush insert, this masterpiece-quality floral pillow combines comfort and durability with sophisticated botanical artistry. A striking accent for those who love exotic blooms and nature-inspired interior design.',
+  shortDescription: 'Floral throw pillow with trumpet gentian design in deep royal blue and white, a striking decorative cushion for luxury living rooms and bedrooms.',
+  specifications: generateProductSpecifications(),
+  externalUrl: 'https://store.flowersluxe.com/products/80526791-trumpet-gentian-botanical-floral-pattern-throw-pillow',
+  metaTitle: 'Floral Throw Pillow – Trumpet Gentian Botanical Cushion',
+  metaDescription: 'Floral throw pillow featuring trumpet gentian design in deep royal blue with white centers. A bold decorative cushion for luxury home interiors.',
+  keywords: [
+    'floral throw pillow',
+    'trumpet gentian pillow',
+    'blue floral cushion',
+    'botanical pillow',
+    'decorative pillow',
+    'living room pillow',
+    'luxury home decor'
+  ],
+  dateAdded: '2025-09-17',
+  inStock: true,
+  category: 'Flower Throw Pillows'
+},
+{
+  id: 'floral-throw-pillow-billy-buttons-watercolor-cushion',
+  title: 'Floral Throw Pillow – Billy Buttons Watercolor Cushion',
+  slug: 'billy-buttons-watercolor-pillow',
+  style: 'watercolor',
+  flowerType: 'craspedia',
+  colors: ['Yellow', 'Green', 'White'],
+  price: 25.00,
+  featured: true,
+  mainImage: 'floral-throw-pillow-billy-buttons-watercolor.webp',
+  images: [
+    {
+      src: '/images/floral-throw-pillow-billy-buttons-watercolor.webp',
+      alt: 'Floral throw pillow with Billy Buttons (Craspedia) watercolor design on cream background',
+      title: 'Floral Throw Pillow – Billy Buttons Watercolor Cushion Cream Background'
+    },
+    {
+      src: '/images/floral-throw-pillow-billy-buttons-watercolor-sofa.webp',
+      alt: 'Decorative cushion featuring Billy Buttons watercolor styled on a modern sofa',
+      title: 'Floral Throw Pillow – Billy Buttons Watercolor Cushion on Sofa'
+    },
+    {
+      src: '/images/floral-throw-pillow-billy-buttons-watercolor-bed.webp',
+      alt: 'Billy Buttons watercolor floral throw pillow layered on a cozy bed',
+      title: 'Floral Throw Pillow – Billy Buttons Watercolor Cushion on Bed'
+    }
+  ],
+  description: 'Floral throw pillow crafted from a hyper-realistic watercolor illustration of Craspedia globosa, also known as Billy Buttons. This decorative cushion showcases perfectly rounded golden-yellow blooms on slender green stems, painted with layered washes and delicate gradients for a luminous, art-studio finish. The crisp texture of each velvety flower head pops against a clean flat backdrop, making this piece a standout accent for living room decor, bedroom styling, or a sunlit reading nook. Vivid colors and fine details deliver gallery-quality appeal while staying soft and inviting, ideal for modern botanical interiors and nature-inspired spaces. Whether you pair it with neutral linens or mix it into a colorful couch scheme, this watercolor throw pillow adds cheerful energy and refined texture. Made with premium poly twill, a double-sided print, concealed zipper, and included insert, it balances comfort with durability for everyday lounging. Elevate your home with a stylish floral throw pillow that feels cozy, fresh, and beautifully designed—perfect as a gift or as the finishing touch to your own curated aesthetic.',
+  shortDescription: 'Floral throw pillow featuring a luminous Billy Buttons watercolor—cheerful, modern, and perfect for cozy living room decor.',
+  specifications: generateProductSpecifications(),
+  externalUrl: 'https://store.flowersluxe.com/products/80586489-billy-buttons-watercolor-floral-pattern-throw-pillow',
+  metaTitle: 'Floral Throw Pillow – Billy Buttons Watercolor Cushion',
+  metaDescription: 'Floral throw pillow with Billy Buttons watercolor design. Add a bright, modern decorative cushion to elevate your living room decor.',
+  keywords: [
+    'floral throw pillow',
+    'watercolor throw pillow',
+    'decorative cushion',
+    'billy buttons pillow',
+    'botanical pillow',
+    'living room decor',
+    'modern floral pillow'
+  ],
+  dateAdded: '2025-09-17',
+  inStock: true,
+  category: 'Flower Throw Pillows'
+},
+{
+  id: 'floral-throw-pillow-calla-lily-watercolor-cushion',
+  title: 'Floral Throw Pillow – Calla Lily Watercolor Cushion',
+  slug: 'calla-lily-watercolor-pillow',
+  style: 'watercolor',
+  flowerType: 'calla-lily',
+  colors: ['Purple', 'Lavender', 'Green', 'White'],
+  price: 25.00,
+  featured: true,
+  mainImage: 'floral-throw-pillow-calla-lily-watercolor.webp',
+  images: [
+    {
+      src: '/images/floral-throw-pillow-calla-lily-watercolor.webp',
+      alt: 'Floral throw pillow with Calla Lily watercolor design in purple, plum, and lavender',
+      title: 'Floral Throw Pillow – Calla Lily Watercolor Cushion Pattern Design'
+    },
+    {
+      src: '/images/floral-throw-pillow-calla-lily-watercolor-sofa.webp',
+      alt: 'Calla Lily watercolor floral throw pillow styled on a sofa with elegant decor',
+      title: 'Floral Throw Pillow – Calla Lily Watercolor Cushion on Sofa'
+    },
+    {
+      src: '/images/floral-throw-pillow-calla-lily-watercolor-bed.webp',
+      alt: 'Decorative Calla Lily watercolor floral throw pillow layered on a bed with cozy linens',
+      title: 'Floral Throw Pillow – Calla Lily Watercolor Cushion on Bed'
+    }
+  ],
+  description: 'Floral throw pillow featuring the timeless elegance of Zantedeschia aethiopica, also known as the Calla Lily, painted in a refined watercolor style. This seamless pattern showcases trumpet-shaped blooms in rich royal purple, deep plum, and soft lavender hues, complemented by glossy green leaves and graceful slender stems. The design is painted with layered washes, smooth blending, and soft visible brushstrokes, resulting in luminous vibrancy and exceptional realism. Perfect for elevating living room decor, adding sophistication to bedrooms, or styling artistic workspaces, this decorative cushion combines luxury with natural beauty. The vibrant colors and fluid arrangement create a balanced botanical accent that feels modern yet classic. Crafted from premium poly twill fabric, featuring a double-sided print, concealed zipper, and included insert, this pillow ensures comfort and durability. An ideal choice for floral décor lovers and design enthusiasts, the Calla Lily watercolor pillow is both a stylish home accessory and a cozy everyday piece, bringing artistic charm to sofas, beds, and reading corners.',
+  shortDescription: 'Floral throw pillow featuring Calla Lily watercolor design—vivid, elegant, and perfect for modern living room or bedroom decor.',
+  specifications: generateProductSpecifications(),
+  externalUrl: 'https://store.flowersluxe.com/products/80584392-calla-lily-watercolor-floral-pattern-throw-pillow',
+  metaTitle: 'Floral Throw Pillow – Calla Lily Watercolor Cushion',
+  metaDescription: 'Floral throw pillow featuring Calla Lily watercolor design. A luxury decorative cushion for elegant living rooms, bedrooms, and home decor.',
+  keywords: [
+    'floral throw pillow',
+    'watercolor throw pillow',
+    'calla lily pillow',
+    'decorative cushion',
+    'botanical pillow',
+    'luxury floral pillow',
+    'modern botanical decor',
+    'living room pillow'
+  ],
+  dateAdded: '2025-09-17',
+  inStock: true,
+  category: 'Flower Throw Pillows'
+},
+{
+  id: 'floral-throw-pillow-cymbidium-orchid-watercolor-cushion',
+  title: 'Floral Throw Pillow – Cymbidium Orchid Pastel Botanical Cushion',
+  slug: 'cymbidium-orchid-pillow',
+  style: 'floral',
+  flowerType: 'orchid',
+  colors: ['pink', 'white', 'yellow', 'green'],
+  price: 25.00,
+  featured: true,
+  mainImage: 'floral-throw-pillow-cymbidium-orchid-botanical.webp',
+  images: [
+    {
+      src: '/images/floral-throw-pillow-cymbidium-orchid-botanical.webp',
+      alt: 'Floral throw pillow with cymbidium orchid botanical design in pastel tones on ivory background',
+      title: 'Floral Throw Pillow – Cymbidium Orchid Pastel Botanical Cushion Ivory Background'
+    },
+    {
+      src: '/images/floral-throw-pillow-cymbidium-orchid-botanical-sofa.webp',
+      alt: 'Cymbidium orchid floral throw pillow styled on a sofa with soft pastel décor',
+      title: 'Floral Throw Pillow – Cymbidium Orchid Pastel Botanical Cushion on Sofa'
+    },
+    {
+      src: '/images/floral-throw-pillow-cymbidium-orchid-botanical-bed.webp',
+      alt: 'Decorative cymbidium orchid floral throw pillow on a cozy layered bed',
+      title: 'Floral Throw Pillow – Cymbidium Orchid Pastel Botanical Cushion on Bed'
+    }
+  ],
+  description: 'Floral throw pillow featuring Cymbidium Orchid blossoms arranged in a luxurious seamless botanical pattern. Painted in soft pastel hues of pink, creamy white, pale yellow, and lime green, the petals glow with natural translucency and subtle gradients. Fine vein details and natural gloss create lifelike realism, while glossy green leaves complete the elegant design. This decorative cushion is perfect for modern and classic interiors alike, adding sophistication and softness to living rooms, bedrooms, or creative spaces. Crafted with premium poly twill fabric, a concealed zipper, and a plush insert, this pillow blends durability with artistry. The pastel orchid design provides a serene yet vibrant energy, making it ideal for uplifting spaces with floral charm. A masterpiece-quality home accent for luxury décor lovers who appreciate botanical artistry and harmonious color palettes.',
+  shortDescription: 'Floral throw pillow with cymbidium orchid pastel design, a refined decorative cushion for elegant living rooms, bedrooms, and cozy interiors.',
+  specifications: generateProductSpecifications(),
+  externalUrl: 'https://store.flowersluxe.com/products/80585666-cymbidium-orchid-pastel-floral-pattern-throw-pillow',
+  metaTitle: 'Floral Throw Pillow – Cymbidium Orchid Pastel Botanical Cushion',
+  metaDescription: 'Floral throw pillow featuring cymbidium orchid design in pastel tones. A decorative cushion for stylish living rooms, bedrooms, and elegant interiors.',
+  keywords: [
+    'floral throw pillow',
+    'cymbidium orchid pillow',
+    'orchid floral cushion',
+    'pastel throw pillow',
+    'botanical pillow',
+    'decorative pillow',
+    'living room pillow'
+  ],
+  dateAdded: '2025-09-17',
+  inStock: true,
+  category: 'Flower Throw Pillows'
+},
+{
+id: 'floral-throw-pillow-eustoma-floral-pattern',
+title: 'Floral Throw Pillow – Eustoma Floral Pattern',
+slug: 'eustoma-floral-pillow',
+style: 'floral',
+flowerType: 'eustoma',
+colors: ['Peach', 'Ivory', 'Green', 'Beige'],
+price: 25.00,
+featured: false,
+mainImage: 'floral-throw-pillow-eustoma-floral-beige.webp',
+images: [
+{
+src: '/images/floral-throw-pillow-eustoma-floral-beige.webp',
+alt: 'Floral throw pillow with Eustoma (Lisianthus) in lilac, blush, ivory, and peach on beige',
+title: 'Floral Throw Pillow – Eustoma Lisianthus on Beige'
+},
+{
+src: '/images/floral-throw-pillow-eustoma-floral-sofa.webp',
+alt: 'Eustoma floral decorative cushion styled on a modern sofa',
+title: 'Floral Throw Pillow – Eustoma Cushion on Sofa'
+},
+{
+src: '/images/floral-throw-pillow-eustoma-floral-bed.webp',
+alt: 'Lilac and ivory Eustoma pillow on an accent chair with neutral textures',
+title: 'Floral Throw Pillow – Eustoma Cushion on Chair'
+}
+],
+description: 'Floral throw pillow celebrating the soft, romantic beauty of Eustoma blooms. The seamless pattern blends lilac, blush pink, creamy ivory, and pastel peach on a refined beige-toned background, creating a balanced, airy look for modern interiors. This decorative cushion offers crisp botanical linework, gentle gradients, and lifelike textures that feel both serene and luxurious. Perfect for living room decor, bedroom layering, and calm reading corners, the pillow includes a sleek, durable cover, concealed zipper, and plush insert for everyday comfort. Style with light woods, linen throws, or minimalist art for a polished, contemporary finish.',
+shortDescription: 'Floral throw pillow with Eustoma pattern in lilac, blush, and ivory on beige.',
+specifications: generateProductSpecifications(),
+externalUrl: 'https://store.flowersluxe.com/products/80584859-eustoma-pastel-floral-pattern-throw-pillow',
+metaTitle: 'Floral Throw Pillow – Eustoma Pattern',
+metaDescription: 'Floral throw pillow featuring elegant Eustoma in lilac and ivory. Upgrade living room decor with a premium decorative cushion.',
+keywords: [
+'floral throw pillow',
+'decorative cushion',
+'living room decor',
+'eustoma pillow',
+'lisianthus pillow',
+'pastel floral pillow'
+],
+dateAdded: '2025-09-17',
+inStock: true,
+category: 'Flower Throw Pillows'
+},
+{
+  id: 'floral-throw-pillow-foxglove-watercolor-cushion',
+  title: 'Floral Throw Pillow – Foxglove Watercolor Cushion',
+  slug: 'foxglove-watercolor-pillow',
+  style: 'watercolor',
+  flowerType: 'foxglove',
+  colors: ['pink', 'purple', 'green', 'white'],
+  price: 25.00,
+  featured: true,
+  mainImage: 'floral-throw-pillow-foxglove-watercolor-cream.webp',
+  images: [
+    {
+      src: '/images/floral-throw-pillow-foxglove-watercolor-cream.webp',
+      alt: 'Floral throw pillow with foxglove watercolor botanical design on cream background',
+      title: 'Floral Throw Pillow – Foxglove Watercolor Cushion Cream Background'
+    },
+    {
+      src: '/images/floral-throw-pillow-foxglove-watercolor-sofa.webp',
+      alt: 'Foxglove floral throw pillow styled on a modern sofa with soft blush accents',
+      title: 'Floral Throw Pillow – Foxglove Watercolor Cushion on Sofa'
+    },
+    {
+      src: '/images/floral-throw-pillow-foxglove-watercolor-bed.webp',
+      alt: 'Decorative foxglove watercolor floral throw pillow on a cozy layered bed',
+      title: 'Floral Throw Pillow – Foxglove Watercolor Cushion on Bed'
+    }
+  ],
+  description: 'Floral throw pillow featuring Digitalis purpurea (foxglove) in an ultra-detailed, seamless watercolor pattern designed for premium interiors. Elegant tubular blooms cascade in clusters of vibrant magenta, deep violet, soft lilac, and blush pink, each petal finished with delicate speckles for botanical authenticity. Glossy emerald-green leaves with crisp vein textures add refreshing contrast, while the clean cream ground keeps the composition airy and sophisticated. This decorative cushion brings gallery-worthy artistry into everyday spaces—perfect for living room decor, bedroom styling, reading nooks, and serene lounge corners. The harmonious repeating layout makes it easy to pair with neutrals, boucle textures, and modern wood tones, adding a cozy yet elevated touch. Crafted for comfort and durability, this watercolor throw pillow includes a double-sided print, concealed zipper, and plush insert, making it a ready-to-style accent. Whether you love botanical art, cottage-inspired charm, or refined modern styling, this foxglove pillow delivers luminous color, ultra-sharp micro-details, and timeless elegance. Elevate your home with a statement piece that blends luxury textile design with nature’s graceful geometry.',
+  shortDescription: 'Floral throw pillow with foxglove watercolor design—a vivid decorative cushion for elegant living room decor and cozy bedroom styling.',
+  specifications: generateProductSpecifications(),
+  externalUrl: 'https://store.flowersluxe.com/products/80585169-foxglove-watercolor-floral-pattern-throw-pillow',
+  metaTitle: 'Floral Throw Pillow – Foxglove Watercolor Cushion',
+  metaDescription: 'Floral throw pillow with foxglove watercolor design. Add a vivid decorative cushion to your living room decor or bedroom. Shop the luxury look.',
+  keywords: [
+    'floral throw pillow',
+    'watercolor throw pillow',
+    'foxglove pillow',
+    'decorative cushion',
+    'living room decor',
+    'botanical pillow',
+    'pink floral pillow'
+  ],
+  dateAdded: '2025-09-17',
+  inStock: true,
+  category: 'Flower Throw Pillows'
+},
+{
+  id: 'floral-throw-pillow-freesia-watercolor-cushion',
+  title: 'Floral Throw Pillow – Freesia Watercolor Cushion',
+  slug: 'freesia-watercolor-pillow',
+  style: 'watercolor',
+  flowerType: 'freesia',
+  colors: ['yellow', 'green', 'white'],
+  price: 25.00,
+  featured: true,
+  mainImage: 'floral-throw-pillow-freesia-watercolor-cream.webp',
+  images: [
+    {
+      src: '/images/floral-throw-pillow-freesia-watercolor-cream.webp',
+      alt: 'Floral throw pillow with freesia watercolor botanical design on cream background',
+      title: 'Floral Throw Pillow – Freesia Watercolor Cushion Cream Background'
+    },
+    {
+      src: '/images/floral-throw-pillow-freesia-watercolor-sofa.webp',
+      alt: 'Freesia floral throw pillow styled on a modern sofa with yellow accents',
+      title: 'Floral Throw Pillow – Freesia Watercolor Cushion on Sofa'
+    },
+    {
+      src: '/images/floral-throw-pillow-freesia-watercolor-bed.webp',
+      alt: 'Decorative freesia watercolor floral throw pillow on a cozy layered bed',
+      title: 'Floral Throw Pillow – Freesia Watercolor Cushion on Bed'
+    }
+  ],
+  description: 'Floral throw pillow featuring Freesia Refracta blossoms in a luxurious seamless watercolor pattern designed for high-end décor. Graceful clusters of bright golden yellow, pastel lemon, and creamy ivory blooms are carefully illustrated with silky translucent petals and subtle layered textures. Glossy emerald-green leaves and slender stems provide natural balance, creating an elegant botanical flow. This luminous decorative cushion adds warmth and vibrancy to any space—perfect for brightening living rooms, bedrooms, sunrooms, or lounge areas. With its ultra-detailed design and harmonious composition, it suits modern interiors as well as timeless classic styling. Crafted with premium poly twill, double-sided print, concealed zipper, and a plush insert, this freesia throw pillow combines durability with comfort. Whether paired with neutral-toned furniture or bold color palettes, this botanical pillow brings a refreshing, cheerful energy to your home. A masterpiece-quality home accent for those who love floral art and luxury textile design.',
+  shortDescription: 'Floral throw pillow with freesia watercolor design in luminous yellow tones, perfect for elegant living rooms and cheerful bedroom décor.',
+  specifications: generateProductSpecifications(),
+  externalUrl: 'https://store.flowersluxe.com/products/80585314-freesia-watercolor-floral-pattern-throw-pillow',
+  metaTitle: 'Floral Throw Pillow – Freesia Watercolor Cushion',
+  metaDescription: 'Floral throw pillow with freesia watercolor design in golden yellow. Elegant decorative cushion for luxury living rooms and cozy bedroom décor.',
+  keywords: [
+    'floral throw pillow',
+    'watercolor throw pillow',
+    'freesia pillow',
+    'yellow floral cushion',
+    'botanical pillow',
+    'living room pillow',
+    'decorative pillow'
+  ],
+  dateAdded: '2025-09-17',
+  inStock: true,
+  category: 'Flower Throw Pillows'
+},
+{
+  id: 'floral-throw-pillow-gloriosa-watercolor-gouache-cushion',
+  title: 'Floral Throw Pillow – Gloriosa Superba Watercolor Gouache Cushion',
+  slug: 'gloriosa-superba-pillow',
+  style: 'floral',
+  flowerType: 'gloriosa',
+  colors: ['purple', 'blue', 'orange', 'green'],
+  price: 25.00,
+  featured: true,
+  mainImage: 'floral-throw-pillow-gloriosa-superba-watercolor-gouache.webp',
+  images: [
+    {
+      src: '/images/floral-throw-pillow-gloriosa-superba-watercolor-gouache.webp',
+      alt: 'Floral throw pillow with gloriosa superba botanical watercolor gouache design on pastel ivory background',
+      title: 'Floral Throw Pillow – Gloriosa Superba Watercolor Gouache Cushion Ivory Background'
+    },
+    {
+      src: '/images/floral-throw-pillow-gloriosa-superba-watercolor-gouache-sofa.webp',
+      alt: 'Gloriosa superba floral throw pillow styled on a sofa with soft lavender décor',
+      title: 'Floral Throw Pillow – Gloriosa Superba Watercolor Gouache Cushion on Sofa'
+    },
+    {
+      src: '/images/floral-throw-pillow-gloriosa-superba-watercolor-gouache-bed.webp',
+      alt: 'Decorative gloriosa superba watercolor gouache floral throw pillow on a layered bed',
+      title: 'Floral Throw Pillow – Gloriosa Superba Watercolor Gouache Cushion on Bed'
+    }
+  ],
+  description: 'Floral throw pillow featuring Gloriosa Superba in a vivid, seamless square botanical pattern. Flame-shaped petals are painted in deep rich purple, vibrant royal blue, and brilliant fiery orange, each rendered with silky gradients, luminous highlights, and natural translucency. Glossy green leaves and curling stems add dynamic balance, creating a composition that flows elegantly across the cushion. Designed in a hybrid watercolor and gouache style, this piece blends artistic texture with lifelike realism for a striking effect. Perfect for premium interiors, the gloriosa pillow adds drama and elegance to modern living rooms, cozy bedrooms, or curated lounge spaces. With its bold color palette and meticulous detail, this cushion complements both neutral backdrops and colorful décor schemes. Made with premium poly twill fabric, a concealed zipper, and double-sided print with insert included, it offers durability as well as artistry. This gloriosa floral throw pillow is a masterpiece-quality home accessory for lovers of exotic blooms and luxury botanical design.',
+  shortDescription: 'Floral throw pillow with gloriosa superba watercolor gouache design, a vivid decorative cushion for luxury living rooms and artistic interiors.',
+  specifications: generateProductSpecifications(),
+  externalUrl: 'https://store.flowersluxe.com/products/80585421-gloriosa-superba-watercolor-floral-pattern-throw-pillow',
+  metaTitle: 'Floral Throw Pillow – Gloriosa Superba Watercolor Gouache Cushion',
+  metaDescription: 'Floral throw pillow with gloriosa superba watercolor gouache design. A bold decorative cushion for artistic interiors and luxury living rooms.',
+  keywords: [
+    'floral throw pillow',
+    'gloriosa superba pillow',
+    'exotic flower cushion',
+    'watercolor floral pillow',
+    'decorative cushion',
+    'luxury home decor',
+    'living room pillow'
+  ],
+  dateAdded: '2025-09-17',
+  inStock: true,
+  category: 'Flower Throw Pillows'
+},
+{
+id: 'floral-throw-pillow-showy-ladys-slipper-seamless-pattern',
+title: 'Floral Throw Pillow – Showy Lady’s Slipper Seamless Botanical Cushion',
+slug: 'showy-ladys-slipper-seamless-pillow',
+style: 'floral',
+flowerType: 'showy-ladys',
+colors: ['pink', 'white', 'green'],
+price: 25.00,
+featured: true,
+mainImage: 'floral-throw-pillow-showy-ladys-slipper-seamless-white.webp',
+images: [
+{
+src: '/images/floral-throw-pillow-showy-ladys-slipper-seamless-white.webp',
+alt: 'Floral throw pillow with seamless Showy Lady’s Slipper orchid botanical design in pink and white on bright background',
+title: 'Floral Throw Pillow – Showy Lady’s Slipper Seamless Botanical Cushion White Background'
+},
+{
+src: '/images/floral-throw-pillow-showy-ladys-slipper-seamless-sofa.webp',
+alt: 'Decorative cushion featuring seamless Showy Lady’s Slipper orchid floral pattern styled on a sofa',
+title: 'Floral Throw Pillow – Showy Lady’s Slipper Seamless Botanical Cushion on Sofa'
+},
+{
+src: '/images/floral-throw-pillow-showy-ladys-slipper-seamless-bed.webp',
+alt: 'Seamless Showy Lady’s Slipper orchid botanical floral throw pillow styled on a luxury bed',
+title: 'Floral Throw Pillow – Showy Lady’s Slipper Seamless Botanical Cushion on Bed'
+}
+],
+description: 'Floral throw pillow featuring a seamless botanical pattern of Cypripedium reginae, the Showy Lady’s Slipper Orchid. This decorative cushion captures the vibrant rich pink petals accented by luminous white highlights, paired with glossy green leaves detailed with hyper-realistic fine veins. Naturally curved stems and perfectly balanced arrangements bring structure and harmony, while the seamless repeat ensures a flawless, professional finish. The vivid, high-saturation colors and crystal-clear textures create a luxurious statement piece for modern interiors. Ideal for premium home styling, this pillow adds elegance and depth to sofas, bedrooms, and lounge spaces. The clean background and precise details enhance its contemporary aesthetic, making it suitable for luxury interiors, botanical art lovers, and anyone who values sophisticated floral decor. Durable yet cozy, this cushion is crafted to blend artistry with function, transforming your living space into a refined botanical retreat.',
+shortDescription: 'Floral throw pillow with seamless Showy Lady’s Slipper orchid design in vivid pink and white, perfect for modern luxury decor.',
+specifications: generateProductSpecifications(),
+externalUrl: 'https://store.flowersluxe.com/products/80586301-showy-lady-s-slipper-seamless-botanical-cushion-throw-pillow',
+metaTitle: 'Floral Throw Pillow – Showy Lady’s Slipper Seamless Botanical Cushion',
+metaDescription: 'Floral throw pillow featuring seamless Showy Lady’s Slipper orchid design in pink and white. Perfect decorative cushion for luxury modern decor.',
+keywords: [
+'floral throw pillow',
+'showy lady’s slipper pillow',
+'orchid pillow',
+'seamless floral pillow',
+'luxury home decor',
+'botanical pattern pillow',
+'modern floral pillow'
+],
+dateAdded: '2025-09-17',
+inStock: true,
+category: 'Flower Throw Pillows'
+},
+{
+  id: 'floral-throw-pillow-streptocarpus-cape-primrose-floral-cushion',
+  title: 'Floral Throw Pillow – Streptocarpus Cape Primrose Floral Cushion',
+  slug: 'streptocarpus-floral-pillow',
+  style: 'floral',
+  flowerType: 'streptocarpus',
+  colors: ['Purple', 'Pink', 'Green'],
+  price: 25.00,
+  featured: true,
+  mainImage: 'floral-throw-pillow-streptocarpus-cape-primrose-purple-pink-green.webp',
+  images: [
+    {
+      src: '/images/floral-throw-pillow-streptocarpus-cape-primrose-purple-pink-green.webp',
+      alt: 'Floral throw pillow featuring Streptocarpus Cape Primrose blossoms in violet, lavender, and pink shades with green leaves',
+      title: 'Floral Throw Pillow – Streptocarpus Cape Primrose Botanical Cushion (Purple, Pink, Green)'
+    },
+    {
+      src: '/images/floral-throw-pillow-streptocarpus-cape-primrose-sofa.webp',
+      alt: 'Decorative cushion with Streptocarpus Cape Primrose floral pattern styled on a sofa for elegant living room decor',
+      title: 'Floral Throw Pillow – Streptocarpus Cape Primrose Cushion on Sofa'
+    },
+    {
+      src: '/images/floral-throw-pillow-streptocarpus-cape-primrose-bed.webp',
+      alt: 'Streptocarpus Cape Primrose floral throw pillow placed on a cozy bed with neutral linens',
+      title: 'Floral Throw Pillow – Streptocarpus Cape Primrose Cushion in Bedroom'
+    }
+  ],
+  description: 'Floral throw pillow designed with a seamless Streptocarpus Cape Primrose botanical pattern, showcasing blossoms in striking violet, lavender, and soft pink tones. Each flower is illustrated in hyper-realistic detail, complete with delicate natural stripes, subtle glossy highlights, and finely rendered stamens and pistils. The lush green leaves are drawn with crisp vein textures, creating a rich and balanced composition. Perfect for modern living rooms, stylish bedrooms, or plant-inspired spaces, this decorative cushion brings a touch of elegance and vibrant energy to your home. The vivid colors, luminous detailing, and pastel background give the design a fresh and refined look that complements both minimal and eclectic interiors. Crafted with premium poly fabric, a concealed zipper, and an included insert, this floral throw pillow blends comfort and style seamlessly. It makes an excellent accent piece for sofas, armchairs, or beds, and a thoughtful gift for anyone who loves botanical-inspired home decor. Elevate your living space with this masterpiece-quality floral cushion that radiates charm and natural sophistication.',
+  shortDescription: 'Floral throw pillow with Streptocarpus Cape Primrose blossoms in violet, lavender, and pink, perfect for modern botanical interiors.',
+  specifications: generateProductSpecifications(),
+  externalUrl: 'https://store.flowersluxe.com/products/80585846-streptocarpus-cape-primrose-botanical-pattern-throw-pillow',
+  metaTitle: 'Floral Throw Pillow – Streptocarpus Cape Primrose Floral Cushion',
+  metaDescription: 'Floral throw pillow featuring Streptocarpus Cape Primrose blossoms in violet, lavender, and pink. A premium decorative cushion for stylish interiors.',
+  keywords: [
+    'floral throw pillow',
+    'streptocarpus pillow',
+    'cape primrose pillow',
+    'decorative cushion',
+    'botanical pillow',
+    'purple floral pillow',
+    'modern home decor',
+    'living room pillow'
+  ],
+  dateAdded: '2025-09-17',
+  inStock: true,
+  category: 'Flower Throw Pillows'
+},
+{
+id: 'floral-throw-pillow-string-of-hearts-botanical',
+title: 'Floral Throw Pillow – String of Hearts Botanical Cushion',
+slug: 'string-of-hearts-floral-pillow',
+style: 'floral',
+flowerType: 'ceropegia',
+colors: ['green', 'white', 'purple', 'pink'],
+price: 25.00,
+featured: true,
+mainImage: 'floral-throw-pillow-string-of-hearts-botanical-white.webp',
+images: [
+{
+src: '/images/floral-throw-pillow-string-of-hearts-botanical-white.webp',
+alt: 'Floral throw pillow featuring Ceropegia woodii String of Hearts botanical illustration on bright white background',
+title: 'Floral Throw Pillow – String of Hearts Botanical Cushion White Background'
+},
+{
+src: '/images/floral-throw-pillow-string-of-hearts-botanical-sofa.webp',
+alt: 'Decorative cushion with String of Hearts floral illustration styled on a modern sofa for living room decor',
+title: 'Floral Throw Pillow – String of Hearts Botanical Cushion on Sofa'
+},
+{
+src: '/images/floral-throw-pillow-string-of-hearts-botanical-bed.webp',
+alt: 'String of Hearts floral throw pillow layered on a cozy bed for elegant bedroom styling',
+title: 'Floral Throw Pillow – String of Hearts Botanical Cushion on Bed'
+}
+],
+description: 'Floral throw pillow that turns your love for plants into effortless living room decor. Centered around the iconic Ceropegia woodii—also known as String of Hearts—this decorative cushion showcases heart-shaped variegated leaves in soft green with creamy accents and delicate purple-pink blooms, rendered in a modern botanical art style. The crisp white ground, sharp edges, and ultra-detailed textures give this botanical pillow gallery-worthy clarity while staying soothing and cozy for everyday spaces. Whether you’re refreshing a neutral sofa, adding a calm accent to a reading chair, or finishing a serene bedroom, this floral throw pillow blends naturally with minimalist, Scandinavian, or biophilic interiors. The vivid yet refined colors add just the right pop without overwhelming the room. Crafted for comfort and durability, it’s perfect as a statement piece or paired in twos for symmetry. Ideal for plant lovers and design enthusiasts alike, this premium decorative cushion elevates couches, beds, and window seats with peaceful elegance. If you search for floral throw pillow inspiration that feels fresh, polished, and authentically botanical, this String of Hearts design brings modern home decor charm to every corner.',
+shortDescription: 'Floral throw pillow with String of Hearts botanical art—crisp, modern, and perfect for serene living room decor.',
+specifications: generateProductSpecifications(),
+externalUrl: 'https://store.flowersluxe.com/products/80586029-string-of-hearts-botanical-cushion-throw-pillow',
+metaTitle: 'Floral Throw Pillow – String of Hearts Botanical Cushion',
+metaDescription: 'Floral throw pillow featuring String of Hearts botanical art. Add a modern decorative cushion to elevate your living room decor.',
+keywords: [
+'floral throw pillow',
+'decorative cushion',
+'living room decor',
+'botanical pillow',
+'string of hearts pillow',
+'modern home decor',
+'plant lover gift'
+],
+dateAdded: '2025-09-17',
+inStock: true,
+category: 'Flower Throw Pillows'
+}
+
+  
 ];
 
 export const getProductsByStyle = (style: string) => {
