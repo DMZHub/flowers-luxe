@@ -71,8 +71,19 @@ export const blogPosts: BlogPost[] = [
   readTime: '14 min read',
   imageSrc: '/images/blog/navy-blue-couch/navy-blue-couch-pillow-ideas.webp',
   featured: true
+},
+{
+  id: '6',
+  title: 'Best Pillow Colors for a Cream Couch: 17 Designer Combinations',
+  excerpt: 'Discover 17 expert-approved pillow colors for cream couches backed by 2025 trends, color psychology research, and proven styling formulas. Transform your neutral sofa with data-driven design strategies.',
+  slug: 'best-pillow-colors-cream-couch',
+  category: 'Home Decor',
+  categorySlug: 'home-decor',
+  date: 'October 7, 2025',
+  readTime: '19 min read',
+  imageSrc: '/images/blog/cream-sofa-decor/pillow-ideas-for-cream-cuches.webp',
+  featured: true
 }
-
 ]
 
 // Helper functions
@@ -96,4 +107,5 @@ export const getBlogCategoryCount = (categorySlug: string) => {
   return blogPosts.filter(post => post.categorySlug === categorySlug).length
 
 }
+
 
