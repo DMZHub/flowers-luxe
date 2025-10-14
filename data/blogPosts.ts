@@ -105,7 +105,7 @@ export const blogPosts: BlogPost[] = [
     categorySlug: 'home-decor',
     date: 'January 13, 2025',
     readTime: '12 min read',
-    imageSrc: '/images/blog/how-to-use-the-60-30-10-rule-with-a-cream-couch',
+    imageSrc: '/images/blog/how-to-use-the-60-30-10-rule-with-a-cream-couch.webp',
     featured: true
   },  
 ]
@@ -131,6 +131,7 @@ export const getBlogCategoryCount = (categorySlug: string) => {
   return blogPosts.filter(post => post.categorySlug === categorySlug).length
 
 }
+
 
 
 
