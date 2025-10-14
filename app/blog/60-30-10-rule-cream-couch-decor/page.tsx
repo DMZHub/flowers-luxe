@@ -18,7 +18,7 @@ const ARTICLE = {
   publishDateHuman: "January 13, 2025",
   readTime: "12 min read",
   hero: {
-    src: "/images/blog/how-to-use-the-60-30-10-rule-with-a-cream-couch",
+    src: "/images/blog/how-to-use-the-60-30-10-rule-with-a-cream-couch.webp",
     alt: "Cream sofa styled using 60-30-10 rule with neutral base, sage green secondary color, and coral floral accent pillows",
     width: 1200,
     height: 800,
