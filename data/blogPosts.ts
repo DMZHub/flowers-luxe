@@ -83,7 +83,31 @@ export const blogPosts: BlogPost[] = [
   readTime: '19 min read',
   imageSrc: '/images/blog/cream-sofa-decor/pillow-ideas-for-cream-cuches.webp',
   featured: true
-}
+},
+ {
+    id: '7',
+    title: 'How to Clean & Style a Cream Couch Like a Pro — Stain Solutions + Design Tricks',
+    excerpt: 'Master cream couch maintenance with proven stain removal methods,  and strategic styling tricks to hide wear.',
+    slug: 'cream-couch-stain-solutions-styling-tips',
+    category: 'Care Guides',
+    categorySlug: 'care-guides',
+    date: 'January 13, 2025',
+    readTime: '15 min read',
+    imageSrc: '/images/blog/easy-tricks-to-remove-sofa-stains.webp',
+    featured: true
+  },
+  {
+    id: '8',
+    title: 'Transform Your Cream Couch with the 60-30-10 Color Formula Designers Swear By',
+    excerpt: 'Learn how to use the 60-30-10 color rule with a cream couch to create a balanced, designer-approved living room palette.',
+    slug: '60-30-10-rule-cream-couch-decor',
+    category: 'Home Decor',
+    categorySlug: 'home-decor',
+    date: 'January 13, 2025',
+    readTime: '12 min read',
+    imageSrc: '/images/blog/how-to-use-the-60-30-10-rule-with-a-cream-couch',
+    featured: true
+  },  
 ]
 
 // Helper functions
@@ -107,5 +131,6 @@ export const getBlogCategoryCount = (categorySlug: string) => {
   return blogPosts.filter(post => post.categorySlug === categorySlug).length
 
 }
+
 
 
