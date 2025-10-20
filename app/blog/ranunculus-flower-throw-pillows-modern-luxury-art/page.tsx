@@ -21,7 +21,7 @@ const ARTICLE = {
   publishDateHuman: "October 20, 2025",
   readTime: "15 min read",
   hero: {
-    src: "/images/blog/flower-pillow-ranunculus/modern-luxe-living-room-flower-pillow-decor-scene.webp",
+    src: "/images/blog/flower-pillow-ranunculus/modern-coastal-living-room-flower-pillow-decor-scene.webp",
     alt: "Modern luxe living room featuring elegant Ranunculus flower pillows on Greige Taupe sofa with refined neutral tones and brass accents",
     width: 1200,
     height: 800,
