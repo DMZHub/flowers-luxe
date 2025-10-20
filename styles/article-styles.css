@@ -1,0 +1,331 @@
+/* ===================================
+   ARTICLE STYLES - FlowersLuxe Blog
+   Performance-optimized external CSS
+   =================================== */
+
+/* Sticky TOC Navigation */
+.toc-sticky {
+  position: sticky;
+  top: 96px;
+  will-change: transform;
+  z-index: 10;
+}
+
+@media (max-width: 1023px) {
+  .toc-sticky {
+    position: static;
+  }
+}
+
+/* Section Anchors - Smooth scroll offset */
+.section-anchor,
+.scroll-mt-32 {
+  scroll-margin-top: 120px;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #fff, #f9fafb);
+  margin: 30px 0;
+}
+
+th,
+td {
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+thead th {
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+  font-weight: 700;
+  color: #1f2937;
+}
+
+tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Lifestyle Image Cards */
+.lifestyle-card {
+  background: #fff;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  margin: 3rem 0;
+}
+
+.lifestyle-card:hover {
+  box-shadow: 0 20px 64px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  border-color: #f59e0b;
+}
+
+.lifestyle-card img {
+  transition: transform 0.4s ease;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.lifestyle-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Image Captions */
+.image-caption {
+  background: linear-gradient(135deg, #1f2937, #374151);
+  color: #fff;
+  padding: 16px 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.image-caption:hover {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #1f2937;
+}
+
+/* Color Swatches */
+.color-swatch {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin: 4px;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Tip Boxes */
+.blue-tip {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  border: 2px solid #3b82f6;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.green-tip {
+  background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+  border: 2px solid #10b981;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.pink-tip {
+  background: linear-gradient(135deg, #fce7f3, #fbcfe8);
+  border: 2px solid #ec4899;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.tropical-highlight,
+.product-highlight {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border: 2px solid #f59e0b;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 30px 0;
+}
+
+/* CTA Buttons */
+.cta-button {
+  background: linear-gradient(135deg, #ec4899, #be123c);
+  color: #fff;
+  padding: 18px 36px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(236, 72, 153, 0.4);
+  background: linear-gradient(135deg, #be123c, #9f1239);
+}
+
+/* Rounded corners utilities */
+.rounded-r-12 {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.rounded-r-16 {
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.rounded-xl {
+  border-radius: 12px;
+}
+
+.rounded-2xl {
+  border-radius: 16px;
+}
+
+.rounded-20 {
+  border-radius: 20px;
+}
+
+/* Shadow utilities */
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Transition utilities */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-colors {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-shadow {
+  transition-property: box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Duration utilities */
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+/* Transform utilities */
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+.hover\:-translate-y-1:hover {
+  transform: translateY(-0.25rem);
+}
+
+/* Border utilities */
+.border {
+  border-width: 1px;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-l-4 {
+  border-left-width: 4px;
+}
+
+/* Link styles for better accessibility */
+a {
+  transition: all 0.2s ease;
+}
+
+a:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Improve link contrast (Accessibility fix) */
+.toc-link {
+  color: #500724; /* Darker for better contrast */
+}
+
+.toc-link:hover {
+  background: rgba(236, 72, 153, 0.15);
+  color: #500724;
+  transform: translateX(4px);
+}
+
+/* Image optimization */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Prevent layout shift */
+.aspect-ratio-3-2 {
+  aspect-ratio: 3 / 2;
+}
+
+/* Print styles */
+@media print {
+  .toc-sticky,
+  .cta-button,
+  nav {
+    display: none;
+  }
+
+  .lifestyle-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .lifestyle-card {
+    border: 3px solid currentColor;
+  }
+
+  .cta-button {
+    border: 2px solid currentColor;
+  }
+}
+
+
