@@ -108,6 +108,80 @@ export const blogPosts: BlogPost[] = [
     imageSrc: '/images/blog/how-to-use-the-60-30-10-rule-with-a-cream-couch.webp',
     featured: true
   },  
+   {
+    id: '9',
+    title: 'Vibrant Begonia Rex Flower Throw Pillows: A Pop of Botanical Energy for Modern Interiors',
+    excerpt: 'Transform your space with Begonia Rex throw pillows featuring bold magenta and green botanical patterns. Discover 8 styling formulas.',
+    slug: 'begonia-rex-flower-throw-pillows-botanical-energy-modern-interiors',
+    category: 'Home Decor',
+    categorySlug: 'home-decor',
+    date: 'October  19, 2025',
+    readTime: '12 min read',
+    imageSrc: '/images/blog/flowers-pillow-begonia-rex/modern-living-room-flower-pillow-decor.webp',
+    featured: true
+  }, 
+
+  {
+    id: '10',
+    title: 'Discover the Brooklyn Bridge Flower Pillow: The Artful Touch Every Modern Luxe Living Room Needs',
+    excerpt: 'Elevate your living room with the Brooklyn Bridge flower pillow — a Modern Luxe accent blending iconic architecture, sunflowers, roses, and timeless urban elegance.',
+    slug: 'brooklyn-bridge-flower-pillow-modern-luxe-urban-art',
+    category: 'Home Decor',
+    categorySlug: 'home-decor',
+    date: 'October 21, 2025',
+    readTime: '12 min read',
+    imageSrc: '/images/blog/brooklyn-bridge-flower-pillow/brooklyn-bridge-sunflowers-roses-modern-luxe-living-room-flower-pillow.webp',
+    featured: true
+  }, 
+  {
+    id: '11',
+    title: 'Modern Elegance Meets Nature: The Hellebore Flower Pillow That Redefines Contemporary Home Decor',
+    excerpt: ' Add a touch of modern luxury with the Hellebore Flower Pillow — a painterly blend of plum, blush, and moss tones that elevates any contemporary living room.',
+    slug: 'hellebore-flower-pillow-modern-luxury-decor',
+    category: 'Home Decor',
+    categorySlug: 'home-decor',
+    date: 'October 21, 2025',
+    readTime: '14 min read',
+    imageSrc: '/images/blog/flower-pillow-hellebores/modern-flower-pillow-living-room-decor.webp',
+    featured: true
+  }, 
+ {
+    id: '12',
+    title: 'Bring Modern Luxury Home with the Nigella Floral Pillow – Watercolor Elegance for Contemporary Spaces',
+    excerpt: 'Discover how Nigella flower throw pillows in ethereal blues and violets transform contemporary interiors. Explore 9 luxury styling formulas.',
+    slug: 'nigella-flower-pillow-modern-luxury-watercolor',
+    category: 'Home Decor',
+    categorySlug: 'home-decor',
+    date: 'October 21, 2025',
+    readTime: '15 min read',
+    imageSrc: '/images/blog/nigella-flower-pillow/modern-living-room-nigella-flower-pillow-scene.webp',
+    featured: true
+  }, 
+  {
+    id: '13',
+    title: 'Bring Art into Your Home with Ranunculus Flower Throw Pillows – Modern Luxury for Every Space',
+    excerpt: 'Add a touch of modern luxury with the Hellebore Flower Pillow — a painterly blend of plum, blush, and moss tones that elevates any contemporary living room.',
+    slug: 'ranunculus-flower-throw-pillows-modern-luxury-art',
+    category: 'Home Decor',
+    categorySlug: 'home-decor',
+    date: 'October 20, 2025',
+    readTime: '15 min read',
+    imageSrc: '/images/blog/flower-pillow-ranunculus/modern-coastal-living-room-flower-pillow-decor-scene.webp',
+    featured: true
+  }, 
+  {
+    id: '14',
+    title: 'Trumpet Gentian Flower Throw Pillows – Bold Blue Botanical Accents for Your Living Room',
+    excerpt: 'Transform your living room with trumpet gentian flower pillows. Discover why blue botanicals reduce stress by 35%, plus 12 designer styling formulas backed by color psychology research',
+    slug: 'trumpet-gentian-flower-throw-pillows-blue-botanical-accents',
+    category: 'Home Decor',
+    categorySlug: 'home-decor',
+    date: 'October 18, 2025',
+    readTime: '16 min read',
+    imageSrc: '/images/blog/pillows-flower-trumpet-gentian/luxury-modern-living-room-flower-pillow-design.webp',
+    featured: true
+  }, 
+
 ]
 
 // Helper functions
@@ -131,6 +205,7 @@ export const getBlogCategoryCount = (categorySlug: string) => {
   return blogPosts.filter(post => post.categorySlug === categorySlug).length
 
 }
+
 
 
 
