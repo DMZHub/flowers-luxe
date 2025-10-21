@@ -20,7 +20,7 @@ const ARTICLE = {
   publishDateHuman: "August 11, 2025",
   readTime: "16 min read",
   hero: {
-    src: "/images/blog/cream-sofa-decor/cream-sofa-with-orange-floral-pillows.webp",
+    src: "/images/blog/cream-sofa-decor/pink-peony-pillows-cream-sofa.webp",
     alt: "Cream-colored sofa with orange and floral accent pillows in a cozy, sunlit living room featuring matching orange decor and botanical wall art.",
     width: 1200,
     height: 800,
