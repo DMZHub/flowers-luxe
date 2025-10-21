@@ -574,39 +574,97 @@
   </url>
 
   <!-- Blog Posts -->
-  <url>
-<loc>https://flowersluxe.com/blog/how-to-style-flower-throw-pillows-living-room</loc>
-<lastmod>2025-03-15</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.6</priority>
+<url>
+  <loc>https://flowersluxe.com/blog/how-to-style-flower-throw-pillows-living-room</loc>
+  <lastmod>2025-03-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://flowersluxe.com/blog/what-color-pillows-go-with-a-navy-blue-couch</loc>
-<lastmod>2025-04-10</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+  <loc>https://flowersluxe.com/blog/what-color-pillows-go-with-a-navy-blue-couch</loc>
+  <lastmod>2025-04-10</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
 </url>
 
 <url>
-<loc>https://flowersluxe.com/blog/what-color-pillows-go-with-a-gray-couch</loc>
-<lastmod>2025-08-08</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+  <loc>https://flowersluxe.com/blog/what-color-pillows-go-with-a-gray-couch</loc>
+  <lastmod>2025-08-08</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
 </url>
 
 <url>
-<loc>https://flowersluxe.com/blog/what-kind-of-pillows-go-with-a-leather-couch</loc>
-<lastmod>2025-08-11</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+  <loc>https://flowersluxe.com/blog/what-kind-of-pillows-go-with-a-leather-couch</loc>
+  <lastmod>2025-08-11</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
 </url>
 
 <url>
-<loc>https://flowersluxe.com/blog/what-color-pillows-go-with-cream-sofa</loc>
-<lastmod>2025-08-11</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
+  <loc>https://flowersluxe.com/blog/what-color-pillows-go-with-cream-sofa</loc>
+  <lastmod>2025-08-11</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
 </url>
+
+<url>
+  <loc>https://flowersluxe.com/blog/best-pillow-colors-cream-couch</loc>
+  <lastmod>2025-01-07</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://flowersluxe.com/blog/cream-couch-stain-solutions-styling-tips</loc>
+  <lastmod>2025-01-13</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<!-- Flower Pillow Collection (October 2025) -->
+<url>
+  <loc>https://flowersluxe.com/blog/trumpet-gentian-flower-throw-pillows-blue-botanical-accents</loc>
+  <lastmod>2025-10-18</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://flowersluxe.com/blog/begonia-rex-flower-throw-pillows-botanical-energy-modern-interiors</loc>
+  <lastmod>2025-10-19</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://flowersluxe.com/blog/ranunculus-flower-throw-pillows-modern-luxury-art</loc>
+  <lastmod>2025-10-20</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://flowersluxe.com/blog/brooklyn-bridge-flower-pillow-modern-luxe-urban-art</loc>
+  <lastmod>2025-10-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://flowersluxe.com/blog/hellebore-flower-pillow-modern-luxury-decor</loc>
+  <lastmod>2025-10-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://flowersluxe.com/blog/nigella-flower-pillow-modern-luxury-watercolor</loc>
+  <lastmod>2025-10-21</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
+</url>
+
 
 </urlset>
