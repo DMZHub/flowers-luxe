@@ -10,7 +10,7 @@ import '../../../styles/article-styles.css'
 // Article Configuration
 const ARTICLE = {
   title: "Discover the Brooklyn Bridge Flower Pillow: The Artful Touch Every Modern Luxe Living Room Needs",
-  slug: "brooklyn-bridge-sunflowers-roses-boho-chic-flower-pillow",
+  slug: "brooklyn-bridge-flower-pillow-modern-luxe-urban-art",
   description:
     "Elevate your living room with the Brooklyn Bridge flower pillow — a Modern Luxe accent blending iconic architecture, sunflowers, roses, and timeless urban elegance. Discover 9 styling formulas and why this architectural botanical art piece is 2025's must-have for sophisticated city living.",
   category: "Home Decor",
@@ -21,7 +21,7 @@ const ARTICLE = {
   publishDateHuman: "October 21, 2025",
   readTime: "15 min read",
   hero: {
-    src: "/images/blog/brooklyn-bridge-flower-pillow/brooklyn-bridge-sunflowers-roses-modern-luxe-living-room-flower-pillow.webp",
+    src: "/images/blog/brooklyn-bridge-flower-pillow/brooklyn-bridge-sunflowers-roses-boho-chic-flower-pillow.webp",
     alt: "A luxurious Modern Luxe living room featuring two decorative pillows with a painterly Brooklyn Bridge surrounded by sunflowers and roses, styled on a cream velvet sofa beside marble and brass accents under soft natural light.",
     width: 1200,
     height: 800,
