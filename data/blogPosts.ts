@@ -57,7 +57,7 @@ export const blogPosts: BlogPost[] = [
   categorySlug: 'home-decor',
   date: 'August  11, 2025',
   readTime: '16 min read',
-  imageSrc: '/images/blog/cream-sofa-decor/cream-sofa-with-orange-floral-pillows.webp',
+  imageSrc: '/images/blog/cream-sofa-decor/pink-peony-pillows-cream-sofa.webp',
   featured: true
 },
 {
@@ -205,6 +205,7 @@ export const getBlogCategoryCount = (categorySlug: string) => {
   return blogPosts.filter(post => post.categorySlug === categorySlug).length
 
 }
+
 
 
 
