@@ -351,7 +351,7 @@ export default function SweetPeaFlowerPillowArticle() {
               </p>
 
               <p className="text-lg text-gray-800 leading-relaxed mb-6">
-                When you choose Sweet Pea flower throw pillows for your space, you're not simply adding decorative accents—you're introducing meaningful Victorian-era symbolism, artistic craftsmanship, and a dreamy aesthetic that transforms ordinary seating into romantic focal points. According to <a href="https://www.houzz.com/magazine/2025-interior-design-trends-report" className="text-pink-600 hover:underline" target="_blank" rel="noopener">Houzz's 2025 Interior Design Trends Report</a>, 67% of homeowners now prioritize "meaningful decor with emotional resonance" over purely aesthetic choices—making symbolically rich flower throw pillows increasingly valuable.
+                When you choose Sweet Pea flower throw pillows for your space, you're not simply adding decorative accents—you're introducing meaningful Victorian-era symbolism, artistic craftsmanship, and a dreamy aesthetic that transforms ordinary seating into romantic focal points. According to <a href="https://www.houzz.com/magazine/2025-interior-design-trends-report" className="text-pink-600 hover:underline" target="_blank" rel="noopener">Trend insights from Houzz’s 2025 Fall Design Trends report</a>, indicate a growing preference among homeowners and designers for décor that feels unique, emotionally expressive, and resonant beyond pure appearance.
               </p>
 
               <figure className="rounded-2xl overflow-hidden shadow-2xl my-10">
