@@ -287,60 +287,51 @@ export default function SweetPeaFlowerPillowArticle() {
             </div>
           </aside>
 
-          {/* Main Content */}
-          <div className="lg:col-span-9 space-y-16">
+         {/* Main Content */}
+          <div className="lg:col-span-8 max-w-4xl">
+            
+            {/* Quick Answer */}
+            <section id="quick-answer" className="scroll-mt-32 mb-16">
+              <h2 className="font-cormorant text-4xl font-bold mb-8 text-gray-900">Quick Answer: Why Sweet Pea Flower Throw Pillows Work</h2>
+              
+              <table className="w-full border-collapse border-2 border-gray-200 rounded-xl overflow-hidden">
+                <thead>
+                  <tr className="bg-gradient-to-r from-amber-100 to-yellow-100">
+                    <th className="p-4 text-left font-bold text-amber-900 border-b-2 border-gray-200">Design Element</th>
+                    <th className="p-4 text-left font-bold text-amber-900 border-b-2 border-gray-200">Sweet Pea Advantage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="hover:bg-amber-50 transition-colors">
+                    <td className="p-4 font-semibold border-b border-gray-200">Artistic Technique</td>
+                    <td className="p-4 border-b border-gray-200">Watercolor & gouache creates soft, painterly textures with translucent petal details—photographs beautifully in natural light</td>
+                  </tr>
+                  <tr className="hover:bg-amber-50 transition-colors">
+                    <td className="p-4 font-semibold border-b border-gray-200">Color Versatility</td>
+                    <td className="p-4 border-b border-gray-200">Pink, blue, yellow & purple watercolors work in both cool and warm schemes—from coastal to modern farmhouse</td>
+                  </tr>
+                  <tr className="hover:bg-amber-50 transition-colors">
+                    <td className="p-4 font-semibold border-b border-gray-200">Design Aesthetic</td>
+                    <td className="p-4 border-b border-gray-200">Romantic yet sophisticated—bridges vintage garden charm with contemporary artistic restraint</td>
+                  </tr>
+                  <tr className="hover:bg-amber-50 transition-colors">
+                    <td className="p-4 font-semibold border-b border-gray-200">Style Compatibility</td>
+                    <td className="p-4 border-b border-gray-200">Works in modern luxe, coastal, boho chic, Scandinavian, farmhouse & nature-inspired interiors</td>
+                  </tr>
+                  <tr className="hover:bg-amber-50 transition-colors">
+                    <td className="p-4 font-semibold border-b border-gray-200">Symbolic Depth</td>
+                    <td className="p-4 border-b border-gray-200">Victorian meaning: blissful pleasure, gratitude, delicate beauty—adds emotional storytelling to spaces</td>
+                  </tr>
+                  <tr className="hover:bg-amber-50 transition-colors">
+                    <td className="p-4 font-semibold border-b border-gray-200">Year-Round Use</td>
+                    <td className="p-4 border-b border-gray-200">Seasonal versatility through texture swaps: linen in spring/summer, velvet in fall/winter</td>
+                  </tr>
+                </tbody>
+              </table>
 
-            {/* Quick Answer Section */}
-            <section id="quick-answer" className="scroll-mt-32">
-              <div className="bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 border-2 border-pink-300 rounded-2xl p-8 shadow-xl">
-                <h2 className="font-cormorant text-3xl font-bold text-purple-900 mb-6 flex items-center gap-3">
-                  <span className="bg-gradient-to-r from-pink-600 to-purple-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-xl">✓</span>
-                  Quick Answer: Why Sweet Pea Flower Throw Pillows Work
-                </h2>
-                
-                <div className="overflow-x-auto">
-                  <table className="w-full border-collapse">
-                    <thead>
-                      <tr className="bg-white bg-opacity-70">
-                        <th className="border-2 border-pink-200 px-4 py-3 text-left font-bold text-purple-900">Design Element</th>
-                        <th className="border-2 border-pink-200 px-4 py-3 text-left font-bold text-purple-900">Sweet Pea Advantage</th>
-                      </tr>
-                    </thead>
-                    <tbody className="text-gray-800">
-                      <tr className="bg-white bg-opacity-40">
-                        <td className="border-2 border-pink-200 px-4 py-3 font-semibold">Artistic Technique</td>
-                        <td className="border-2 border-pink-200 px-4 py-3">Watercolor & gouache creates soft, painterly textures with translucent petal details—photographs beautifully in natural light</td>
-                      </tr>
-                      <tr className="bg-white bg-opacity-40">
-                        <td className="border-2 border-pink-200 px-4 py-3 font-semibold">Color Versatility</td>
-                        <td className="border-2 border-pink-200 px-4 py-3">Pink, blue, yellow & purple watercolors work in both cool and warm schemes—from coastal to modern farmhouse</td>
-                      </tr>
-                      <tr className="bg-white bg-opacity-40">
-                        <td className="border-2 border-pink-200 px-4 py-3 font-semibold">Design Aesthetic</td>
-                        <td className="border-2 border-pink-200 px-4 py-3">Romantic yet sophisticated—bridges vintage garden charm with contemporary artistic restraint</td>
-                      </tr>
-                      <tr className="bg-white bg-opacity-40">
-                        <td className="border-2 border-pink-200 px-4 py-3 font-semibold">Style Compatibility</td>
-                        <td className="border-2 border-pink-200 px-4 py-3">Works in modern luxe, coastal, boho chic, Scandinavian, farmhouse & nature-inspired interiors</td>
-                      </tr>
-                      <tr className="bg-white bg-opacity-40">
-                        <td className="border-2 border-pink-200 px-4 py-3 font-semibold">Symbolic Depth</td>
-                        <td className="border-2 border-pink-200 px-4 py-3">Victorian meaning: blissful pleasure, gratitude, delicate beauty—adds emotional storytelling to spaces</td>
-                      </tr>
-                      <tr className="bg-white bg-opacity-40">
-                        <td className="border-2 border-pink-200 px-4 py-3 font-semibold">Year-Round Use</td>
-                        <td className="border-2 border-pink-200 px-4 py-3">Seasonal versatility through texture swaps: linen in spring/summer, velvet in fall/winter</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                <div className="mt-6 p-5 bg-white bg-opacity-80 rounded-xl border-2 border-pink-200">
-                  <p className="text-purple-900 font-semibold mb-2">🎯 Bottom Line for Buyers:</p>
-                  <p className="text-gray-800 leading-relaxed">
-                    Sweet Pea watercolor flower throw pillows deliver romantic botanical elegance without overwhelming sophisticated interiors. Their soft painterly quality and versatile pink-blue-yellow palette make them ideal for design-conscious buyers seeking artistic floral accents that balance nostalgic charm with contemporary sophistication. Unlike graphic florals, Sweet Pea designs offer delicate refinement that works across multiple styles while carrying meaningful Victorian symbolism.
-                  </p>
-                </div>
+              <div className="bg-gradient-to-br from-amber-50 to-yellow-50 border-2 border-amber-300 rounded-xl p-8 mt-8">
+                <h3 className="font-semibold text-amber-900 mb-3 text-xl">🎯 Bottom Line for Buyers:</h3>
+                <p className="text-amber-800 mb-3">Sweet Pea watercolor flower throw pillows deliver romantic botanical elegance without overwhelming sophisticated interiors. Their soft painterly quality and versatile pink-blue-yellow palette make them ideal for design-conscious buyers seeking artistic floral accents that balance nostalgic charm with contemporary sophistication. Unlike graphic florals, Sweet Pea designs offer delicate refinement that works across multiple styles while carrying meaningful Victorian symbolism.</p>
               </div>
             </section>
 
@@ -354,20 +345,22 @@ export default function SweetPeaFlowerPillowArticle() {
                 When you choose Sweet Pea flower throw pillows for your space, you're not simply adding decorative accents—you're introducing meaningful Victorian-era symbolism, artistic craftsmanship, and a dreamy aesthetic that transforms ordinary seating into romantic focal points. According to <a href="https://www.houzz.com/magazine/2025-interior-design-trends-report" className="text-pink-600 hover:underline" target="_blank" rel="noopener">Trend insights from Houzz’s 2025 Fall Design Trends report</a>, indicate a growing preference among homeowners and designers for décor that feels unique, emotionally expressive, and resonant beyond pure appearance.
               </p>
 
-              <figure className="rounded-2xl overflow-hidden shadow-2xl my-10">
-                <Image
-                  src={LIFESTYLE_IMAGES[1].src}
-                  alt={LIFESTYLE_IMAGES[1].alt}
-                  width={1200}
-                  height={800}
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 800px"
-                  className="w-full h-auto"
-                />
-                <figcaption className="bg-gradient-to-r from-green-700 to-blue-700 text-white p-4 font-semibold">
-                  {LIFESTYLE_IMAGES[1].caption}
-                </figcaption>
-              </figure>
+         
+            {/* Hero Image */}
+            <figure className="rounded-2xl overflow-hidden shadow-2xl mb-16">
+              <Image
+                src={LIFESTYLE_IMAGES[0].src}
+                alt={LIFESTYLE_IMAGES[0].alt}
+                width={1200}
+                height={800}
+                priority
+                sizes="(max-width: 768px) 100vw, 800px"
+                className="w-full h-auto"
+              />
+              <figcaption className="bg-gradient-to-r from-amber-900 to-yellow-900 text-white p-4 font-semibold">
+                {LIFESTYLE_IMAGES[0].caption}
+              </figcaption>
+            </figure>
 
               <p className="text-lg text-gray-800 leading-relaxed mb-6">
                 Unlike bold tropical flower pillows or graphic geometric florals that command attention through contrast and saturation, Sweet Pea flower throw pillows work their magic through subtlety and sophistication. The watercolor technique creates natural color gradients where soft pink bleeds into powder blue, where gentle yellows fade into cream, where purple edges dissolve into white space. This organic color transition mimics how light interacts with real Sweet Pea petals, creating a sense of botanical authenticity that resonates deeply with nature-inspired interior enthusiasts.
