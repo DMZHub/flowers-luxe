@@ -181,7 +181,7 @@ function getFAQSchema(currentUrl: string) {
         name: "What makes Begonia Rex pillows different from other floral pillows?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Begonia Rex pillows feature the plant's stunning foliage patterns—not flowers. The vibrant magenta, pink, and emerald green leaves create bold, tropical statements that work year-round. Unlike seasonal floral patterns, these foliage designs offer continuous visual interest with striking color combinations that add energy to any space."
+          text: "Begonia Rex pillows feature the plant's stunning foliage patterns-not flowers. The vibrant magenta, pink, and emerald green leaves create bold, tropical statements that work year-round. Unlike seasonal floral patterns, these foliage designs offer continuous visual interest with striking color combinations that add energy to any space."
         }
       },
       {
@@ -197,7 +197,7 @@ function getFAQSchema(currentUrl: string) {
         name: "Do bold tropical pillows work in small living rooms?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Absolutely. Bold patterns create focal points that actually organize visual space. Start with 2 Begonia Rex pillows on neutral furniture, keeping 70% of other pillows solid neutrals. The key is strategic placement—bold patterns draw the eye intentionally, making rooms feel curated rather than cluttered."
+          text: "Absolutely. Bold patterns create focal points that actually organize visual space. Start with 2 Begonia Rex pillows on neutral furniture, keeping 70% of other pillows solid neutrals. The key is strategic placement-bold patterns draw the eye intentionally, making rooms feel curated rather than cluttered."
         }
       },
       {
@@ -221,7 +221,7 @@ function getFAQSchema(currentUrl: string) {
         name: "Can Begonia Rex pillows work year-round or are they seasonal?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Begonia Rex pillows work beautifully year-round because they feature foliage, not seasonal flowers. The magenta and green palette feels fresh in spring/summer and jewel-toned in fall/winter. Simply adjust surrounding accent colors seasonally—pair with coral in summer, burgundy in winter—while keeping the Begonia Rex pillows constant."
+          text: "Begonia Rex pillows work beautifully year-round because they feature foliage, not seasonal flowers. The magenta and green palette feels fresh in spring/summer and jewel-toned in fall/winter. Simply adjust surrounding accent colors seasonally-pair with coral in summer, burgundy in winter-while keeping the Begonia Rex pillows constant."
         }
       }
     ],
@@ -310,16 +310,16 @@ export default function BegoniaRexArticle() {
 
           <div className="text-xl leading-relaxed">
             <p className="text-gray-700 mb-6">
-              Let me tell you something most people don't realize about <strong>Begonia Rex pillows</strong>—they're not actually featuring flowers at all. Those stunning magenta and emerald patterns? They're the plant's <em>leaves</em>. And that's exactly why they work so brilliantly in modern interiors where you want year-round botanical energy without seasonal limitations.
+              Let me tell you something most people don't realize about <strong>Begonia Rex pillows</strong>-they're not actually featuring flowers at all. Those stunning magenta and emerald patterns? They're the plant's <em>leaves</em>. And that's exactly why they work so brilliantly in modern interiors where you want year-round botanical energy without seasonal limitations.
             </p>
             
             <p className="text-gray-700 mb-6">
-              I've watched these bold tropical foliage pillows transform countless neutral living rooms from "safe and boring" to "confident and curated" in under 15 minutes. The secret isn't just the vibrant pink-magenta and green color combo—it's how those colors tap into something deeper about how we respond to nature-inspired patterns in our personal spaces.
+              I've watched these bold tropical foliage pillows transform countless neutral living rooms from "safe and boring" to "confident and curated" in under 15 minutes. The secret isn't just the vibrant pink-magenta and green color combo-it's how those colors tap into something deeper about how we respond to nature-inspired patterns in our personal spaces.
             </p>
 
             <div className="pink-tip">
               <h3 className="font-semibold text-pink-900 mb-3">Why This Guide Is Different</h3>
-              <p className="text-pink-800">Unlike generic botanical pillow advice, this guide focuses on <em>why</em> Begonia Rex specifically works—the psychology of bold tropical patterns, how to style them without overwhelming your space, and proven formulas that create magazine-worthy results even if you've never studied interior design.</p>
+              <p className="text-pink-800">Unlike generic botanical pillow advice, this guide focuses on <em>why</em> Begonia Rex specifically works-the psychology of bold tropical patterns, how to style them without overwhelming your space, and proven formulas that create magazine-worthy results even if you've never studied interior design.</p>
             </div>
           </div>
         </div>
@@ -381,11 +381,11 @@ export default function BegoniaRexArticle() {
                   </tr>
                   <tr>
                     <td className="font-semibold">Pattern intensity?</td>
-                    <td>Bold statement—keep 70% other pillows neutral</td>
+                    <td>Bold statement-keep 70% other pillows neutral</td>
                   </tr>
                   <tr>
                     <td className="font-semibold">2025 trend status?</td>
-                    <td>High—tropical maximalism & bold botanicals trending</td>
+                    <td>High-tropical maximalism & bold botanicals trending</td>
                   </tr>
                   <tr>
                     <td className="font-semibold">Best season?</td>
@@ -396,7 +396,7 @@ export default function BegoniaRexArticle() {
 
               <div className="tropical-highlight mt-8">
                 <h3 className="font-semibold text-amber-900 mb-3">🌿 Bottom Line Up Front</h3>
-                <p className="text-amber-800 mb-3">Begonia Rex pillows work because they offer bold, nature-inspired color (magenta + green) that's backed by botanical authenticity. Unlike generic florals, these foliage patterns feel fresh, tropical, and modern—perfect for 2025's move toward maximalist, personality-driven interiors.</p>
+                <p className="text-amber-800 mb-3">Begonia Rex pillows work because they offer bold, nature-inspired color (magenta + green) that's backed by botanical authenticity. Unlike generic florals, these foliage patterns feel fresh, tropical, and modern-perfect for 2025's move toward maximalist, personality-driven interiors.</p>
                 <p className="text-sm text-amber-700"><strong>Best for:</strong> Anyone tired of bland neutrals who wants instant personality without repainting walls or buying new furniture. Perfect if you love plants but want low-maintenance botanical impact.</p>
               </div>
             </section>
@@ -423,7 +423,7 @@ export default function BegoniaRexArticle() {
               <h2 className="font-cormorant text-4xl font-bold mb-8 text-gray-900">Why Begonia Rex Patterns Hit Different</h2>
               
               <p className="text-xl text-gray-700 mb-6">
-                Most people think they're getting flower pillows when they choose Begonia Rex patterns. But here's the fascinating botanical truth: <a href="https://flowernames.flowersluxe.com/flower-meanings/begonia-meaning-symbolism" className="text-pink-600 hover:underline">Begonia Rex is celebrated for its spectacular foliage, not its flowers</a>. Those vibrant magenta, pink, silver, and emerald patterns are all <em>leaves</em>—and that distinction matters more than you'd think for interior design.
+                Most people think they're getting flower pillows when they choose Begonia Rex patterns. But here's the fascinating botanical truth: <a href="https://flowernames.flowersluxe.com/flower-meanings/begonia-meaning-symbolism" className="text-pink-600 hover:underline">Begonia Rex is celebrated for its spectacular foliage, not its flowers</a>. Those vibrant magenta, pink, silver, and emerald patterns are all <em>leaves</em>-and that distinction matters more than you'd think for interior design.
               </p>
 
               <h3 className="font-cormorant text-2xl font-semibold mb-6 text-gray-800">The Foliage Advantage</h3>
@@ -432,24 +432,24 @@ export default function BegoniaRexArticle() {
                 <div className="bg-green-50 border-l-4 border-green-500 pl-6 py-4 rounded-r-12">
                   <h4 className="font-semibold text-green-900 mb-2">Year-Round Visual Interest</h4>
                   <p className="text-green-800 mb-3">Unlike seasonal flowers that feel dated outside their bloom period, foliage patterns work 365 days a year. You're not stuck with "spring roses" in December or "autumn dahlias" in June. Tropical leaves transcend seasons.</p>
-                  <p className="text-sm text-green-700"><strong>Real-world benefit:</strong> Buy once, style forever—no seasonal swaps required</p>
+                  <p className="text-sm text-green-700"><strong>Real-world benefit:</strong> Buy once, style forever-no seasonal swaps required</p>
                 </div>
 
                 <div className="bg-pink-50 border-l-4 border-pink-500 pl-6 py-4 rounded-r-12">
                   <h4 className="font-semibold text-pink-900 mb-2">Authentic Botanical Impact</h4>
-                  <p className="text-pink-800 mb-3">Begonia Rex leaves actually look like those dramatic patterns in real life. This isn't artistic interpretation—it's botanical reality. That authenticity creates unconscious trust and connection. Your brain recognizes it as "real nature," not decoration.</p>
+                  <p className="text-pink-800 mb-3">Begonia Rex leaves actually look like those dramatic patterns in real life. This isn't artistic interpretation-it's botanical reality. That authenticity creates unconscious trust and connection. Your brain recognizes it as "real nature," not decoration.</p>
                   <p className="text-sm text-pink-700"><strong>Why it matters:</strong> Biophilic design works better when patterns mirror actual nature</p>
                 </div>
 
                 <div className="bg-purple-50 border-l-4 border-purple-500 pl-6 py-4 rounded-r-12">
                   <h4 className="font-semibold text-purple-900 mb-2">Natural Color Combination Genius</h4>
                   <p className="text-purple-800 mb-3">Magenta + emerald green is a complementary color pairing (opposite sides of the color wheel). Nature already solved the "what colors work together" problem. You're getting professional color theory built into the plant's DNA.</p>
-                  <p className="text-sm text-purple-700"><strong>Design shortcut:</strong> No guessing about color combinations—nature's already perfected it</p>
+                  <p className="text-sm text-purple-700"><strong>Design shortcut:</strong> No guessing about color combinations-nature's already perfected it</p>
                 </div>
 
                 <div className="bg-orange-50 border-l-4 border-orange-500 pl-6 py-4 rounded-r-12">
                   <h4 className="font-semibold text-orange-900 mb-2">Maximalist Moment Timing</h4>
-                  <p className="text-orange-800 mb-3">After years of beige minimalism, we're seeing a cultural shift toward personality-driven, expressive interiors. Bold tropical patterns aren't "too much" anymore—they're exactly what spaces need to feel alive. Begonia Rex captures this moment perfectly.</p>
+                  <p className="text-orange-800 mb-3">After years of beige minimalism, we're seeing a cultural shift toward personality-driven, expressive interiors. Bold tropical patterns aren't "too much" anymore-they're exactly what spaces need to feel alive. Begonia Rex captures this moment perfectly.</p>
                   <p className="text-sm text-orange-700"><strong>Trend context:</strong> Bold botanicals align with 2025's maximalist, joyful design movement</p>
                 </div>
               </div>
@@ -476,7 +476,7 @@ export default function BegoniaRexArticle() {
               <h2 className="font-cormorant text-4xl font-bold mb-8 text-gray-900">The Psychology Behind Magenta + Green</h2>
               
               <p className="text-xl text-gray-700 mb-6">
-                Let's talk about why this specific color combination feels so energizing yet balanced. It's not random—there's actual color theory and psychology at work.
+                Let's talk about why this specific color combination feels so energizing yet balanced. It's not random-there's actual color theory and psychology at work.
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -502,7 +502,7 @@ export default function BegoniaRexArticle() {
                     <div className="color-swatch" style={{backgroundColor: '#059669'}}></div>
                     <div className="color-swatch" style={{backgroundColor: '#047857'}}></div>
                   </div>
-                  <p className="text-green-800 mb-3">Green represents nature, growth, and renewal. As the most restful color for human eyes, it reduces stress and promotes balance—the perfect counterpoint to magenta's energy.</p>
+                  <p className="text-green-800 mb-3">Green represents nature, growth, and renewal. As the most restful color for human eyes, it reduces stress and promotes balance-the perfect counterpoint to magenta's energy.</p>
                   <ul className="text-green-700 space-y-2 text-sm">
                     <li><strong>Stress reduction:</strong> Proven calming effects through nature connection</li>
                     <li><strong>Visual rest:</strong> Eyes process green with minimal strain</li>
@@ -515,7 +515,7 @@ export default function BegoniaRexArticle() {
                 <h3 className="font-semibold text-amber-900 mb-4">Why This Combo Works: Complementary Color Magic</h3>
                 <p className="text-amber-800 mb-3">Magenta (warm) and green (cool) sit opposite on the color wheel, creating natural visual tension that's exciting but balanced. This is the same principle professional designers use for harmonious-yet-dynamic color schemes.</p>
                 <p className="text-amber-700 mb-3"><strong>The result:</strong> Spaces feel energized but not chaotic, bold but not overwhelming. Your eye naturally balances the warm-cool contrast, creating unconscious comfort.</p>
-                <p className="text-sm text-amber-600"><strong>Pro insight:</strong> This is why tropical patterns work so well in modern spaces—nature already solved complementary color theory</p>
+                <p className="text-sm text-amber-600"><strong>Pro insight:</strong> This is why tropical patterns work so well in modern spaces-nature already solved complementary color theory</p>
               </div>
             </section>
 
@@ -594,7 +594,7 @@ export default function BegoniaRexArticle() {
                     <div className="color-swatch" style={{backgroundColor: '#E07A5F'}}></div>
                     <div className="color-swatch" style={{backgroundColor: '#F4A460'}}></div>
                   </div>
-                  <p className="text-orange-800 mb-4"><strong>The Ratio:</strong> Mix freely—3-4 patterns in warm tones</p>
+                  <p className="text-orange-800 mb-4"><strong>The Ratio:</strong> Mix freely-3-4 patterns in warm tones</p>
                   <p className="text-orange-700 mb-4"><strong>For a 7-pillow sectional:</strong> 2 terracotta + 2 Begonia Rex + 1 mustard + 1 patterned + 1 fringe</p>
                   <ul className="text-orange-700 space-y-2 text-sm">
                     <li><strong>Furniture:</strong> <Link href="/blog/what-kind-of-pillows-go-with-a-leather-couch" className="text-orange-900 hover:underline">Leather sofas</Link>, vintage finds, low-profile seating</li>
@@ -687,25 +687,25 @@ export default function BegoniaRexArticle() {
 
                 <div className="bg-gradient-to-r from-gray-50 to-slate-50 border-l-4 border-gray-400 pl-6 py-5 rounded-r-16">
                   <h3 className="font-semibold text-gray-900 mb-3 text-lg">✓ Gray & Charcoal (Modern Edge)</h3>
-                  <p className="text-gray-800 mb-3">Cool grays create striking contrast with warm magenta. The combination feels contemporary and intentional—like urban jungle meets modern minimalism. Works especially well with warm-toned grays.</p>
+                  <p className="text-gray-800 mb-3">Cool grays create striking contrast with warm magenta. The combination feels contemporary and intentional-like urban jungle meets modern minimalism. Works especially well with warm-toned grays.</p>
                   <p className="text-sm text-gray-700"><strong>Pro tip:</strong> Add brass or copper accents to warm the cool palette</p>
                 </div>
 
                 <div className="bg-gradient-to-r from-orange-50 to-red-50 border-l-4 border-orange-400 pl-6 py-5 rounded-r-16">
                   <h3 className="font-semibold text-orange-900 mb-3 text-lg">✓ Brown Leather & Wood (Organic Warmth)</h3>
-                  <p className="text-orange-800 mb-3">Natural materials + tropical patterns = instant boho-organic vibe. Cognac leather, walnut, teak—all create grounded warmth that balances tropical energy. The pairing feels collected and worldly.</p>
+                  <p className="text-orange-800 mb-3">Natural materials + tropical patterns = instant boho-organic vibe. Cognac leather, walnut, teak-all create grounded warmth that balances tropical energy. The pairing feels collected and worldly.</p>
                   <p className="text-sm text-orange-700"><strong>Pro tip:</strong> Layer with natural textures like jute, rattan, and woven materials</p>
                 </div>
 
                 <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-400 pl-6 py-5 rounded-r-16">
                   <h3 className="font-semibold text-blue-900 mb-3 text-lg">✓ Navy & Deep Blues (Unexpected Depth)</h3>
-                  <p className="text-blue-800 mb-3">While less obvious, navy creates sophisticated contrast with magenta and green. The combo feels jewel-toned and luxurious—think tropical glamour rather than casual beach house.</p>
+                  <p className="text-blue-800 mb-3">While less obvious, navy creates sophisticated contrast with magenta and green. The combo feels jewel-toned and luxurious-think tropical glamour rather than casual beach house.</p>
                   <p className="text-sm text-blue-700"><strong>Pro tip:</strong> Add gold or brass accents to enhance the luxe factor</p>
                 </div>
 
                 <div className="bg-gradient-to-r from-red-50 to-rose-50 border-l-4 border-red-400 pl-6 py-5 rounded-r-16">
                   <h3 className="font-semibold text-red-900 mb-3 text-lg">⚠ Avoid: Bright Primary Colors</h3>
-                  <p className="text-red-800 mb-3">Red, bright yellow, or primary blue furniture competes with Begonia Rex patterns instead of complementing them. Too many bold colors create visual chaos—nobody knows where to look.</p>
+                  <p className="text-red-800 mb-3">Red, bright yellow, or primary blue furniture competes with Begonia Rex patterns instead of complementing them. Too many bold colors create visual chaos-nobody knows where to look.</p>
                   <p className="text-sm text-red-700"><strong>The fix:</strong> If you have bright furniture, stick with neutral botanical pillows instead</p>
                 </div>
 
@@ -738,7 +738,7 @@ export default function BegoniaRexArticle() {
               <h2 className="font-cormorant text-4xl font-bold mb-8 text-gray-900">Interior Styles That Love Begonia Rex</h2>
               
               <p className="text-xl text-gray-700 mb-8">
-                Begonia Rex pillows aren't one-size-fits-all. Here are the interior styles where they absolutely shine—and one where they struggle.
+                Begonia Rex pillows aren't one-size-fits-all. Here are the interior styles where they absolutely shine-and one where they struggle.
               </p>
 
               <div className="space-y-10">
@@ -761,7 +761,7 @@ export default function BegoniaRexArticle() {
                     </figcaption>
                   </figure>
                   <div className="bg-green-50 border-2 border-green-200 rounded-12 p-6">
-                    <p className="text-green-800 mb-4"><strong>Why it works:</strong> Biophilic design is literally about bringing nature indoors. Begonia Rex patterns are authentic botanical elements that satisfy our biological need for nature connection—especially powerful in urban environments.</p>
+                    <p className="text-green-800 mb-4"><strong>Why it works:</strong> Biophilic design is literally about bringing nature indoors. Begonia Rex patterns are authentic botanical elements that satisfy our biological need for nature connection-especially powerful in urban environments.</p>
                     <p className="text-green-700 mb-4"><strong>The formula:</strong> 2-3 neutral linen + 2 Begonia Rex + lots of real houseplants</p>
                     <ul className="text-green-700 space-y-2 text-sm">
                       <li><strong>Key elements:</strong> Natural wood, stone, abundant greenery, organic shapes</li>
@@ -792,7 +792,7 @@ export default function BegoniaRexArticle() {
                   </figure>
                   <div className="bg-orange-50 border-2 border-orange-200 rounded-12 p-6">
                     <p className="text-orange-800 mb-4"><strong>Why it works:</strong> Boho thrives on collected, global-inspired patterns. Begonia Rex adds tropical flair that feels traveled and intentional. The bold colors play well with typical boho warm palettes (rust, terracotta, mustard).</p>
-                    <p className="text-orange-700 mb-4"><strong>The formula:</strong> Mix freely—3-4 different patterns in coordinating warm tones</p>
+                    <p className="text-orange-700 mb-4"><strong>The formula:</strong> Mix freely-3-4 different patterns in coordinating warm tones</p>
                     <ul className="text-orange-700 space-y-2 text-sm">
                       <li><strong>Key elements:</strong> Layered textiles, macrame, global textiles, vintage finds</li>
                       <li><strong>Color palette:</strong> Terracotta, ochre, rust, deep teal, warm neutrals</li>
@@ -827,7 +827,7 @@ export default function BegoniaRexArticle() {
                       <li><strong>Key elements:</strong> Clean lines, negative space, quality over quantity</li>
                       <li><strong>Color palette:</strong> White, gray, black, one accent color maximum</li>
                       <li><strong>Textures:</strong> Simple linen, concrete, metal, glass</li>
-                      <li><strong>Pro tip:</strong> Treat Begonia Rex pillows as artwork—use sparingly for maximum impact</li>
+                      <li><strong>Pro tip:</strong> Treat Begonia Rex pillows as artwork-use sparingly for maximum impact</li>
                     </ul>
                   </div>
                 </div>
@@ -879,7 +879,7 @@ export default function BegoniaRexArticle() {
               <h2 className="font-cormorant text-4xl font-bold mb-8 text-gray-900">Year-Round Styling Strategy</h2>
               
               <p className="text-xl text-gray-700 mb-6">
-                Here's the beautiful thing about foliage patterns—they work every season. No "packing away" spring florals in October. But you can still update seasonally by swapping accent colors around your Begonia Rex pillows.
+                Here's the beautiful thing about foliage patterns-they work every season. No "packing away" spring florals in October. But you can still update seasonally by swapping accent colors around your Begonia Rex pillows.
               </p>
 
               <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -935,7 +935,7 @@ export default function BegoniaRexArticle() {
               <div className="text-center bg-gradient-to-br from-pink-100 via-rose-100 to-fuchsia-100 border-2 border-pink-400 rounded-20 p-10">
                 <h3 className="font-cormorant text-3xl font-bold text-pink-900 mb-4">Transform Your Space Today</h3>
                 <p className="text-pink-800 text-lg mb-6 max-w-2xl mx-auto">
-                  Stop settling for bland neutrals. Our Begonia Rex collection brings authentic tropical energy to any interior—bold enough to make a statement, versatile enough to work year-round.
+                  Stop settling for bland neutrals. Our Begonia Rex collection brings authentic tropical energy to any interior-bold enough to make a statement, versatile enough to work year-round.
                 </p>
                 <a 
                   href="https://store.flowersluxe.com/products/80525090-begonia-rex-vibrant-modern-floral-throw-pillow" 
@@ -961,7 +961,7 @@ export default function BegoniaRexArticle() {
               <div className="space-y-6">
                 <div className="border-l-4 border-pink-400 pl-6 bg-pink-50 py-4 rounded-r-12">
                   <h4 className="font-semibold text-pink-900 mb-2">1. Let the Pattern Breathe</h4>
-                  <p className="text-pink-800">Bold botanical patterns need space. Pair with simple solids rather than competing patterns. Think of Begonia Rex pillows as artwork—they deserve a clean backdrop to shine.</p>
+                  <p className="text-pink-800">Bold botanical patterns need space. Pair with simple solids rather than competing patterns. Think of Begonia Rex pillows as artwork-they deserve a clean backdrop to shine.</p>
                 </div>
 
                 <div className="border-l-4 border-green-400 pl-6 bg-green-50 py-4 rounded-r-12">
@@ -971,7 +971,7 @@ export default function BegoniaRexArticle() {
 
                 <div className="border-l-4 border-purple-400 pl-6 bg-purple-50 py-4 rounded-r-12">
                   <h4 className="font-semibold text-purple-900 mb-2">3. Embrace Asymmetry</h4>
-                  <p className="text-purple-800">Don't center your Begonia Rex pillows perfectly. Slightly off-center or clustered to one side feels more organic and intentional—like a curated collection rather than a furniture store display.</p>
+                  <p className="text-purple-800">Don't center your Begonia Rex pillows perfectly. Slightly off-center or clustered to one side feels more organic and intentional-like a curated collection rather than a furniture store display.</p>
                 </div>
 
                 <div className="border-l-4 border-orange-400 pl-6 bg-orange-50 py-4 rounded-r-12">
@@ -986,7 +986,7 @@ export default function BegoniaRexArticle() {
 
                 <div className="border-l-4 border-yellow-400 pl-6 bg-yellow-50 py-4 rounded-r-12">
                   <h4 className="font-semibold text-yellow-900 mb-2">6. Pull Colors from the Room</h4>
-                  <p className="text-yellow-800">Echo either the magenta or green from Begonia Rex in another room element—curtains, rug, artwork. This creates intentional cohesion that says "I know what I'm doing."</p>
+                  <p className="text-yellow-800">Echo either the magenta or green from Begonia Rex in another room element-curtains, rug, artwork. This creates intentional cohesion that says "I know what I'm doing."</p>
                 </div>
 
                 <div className="border-l-4 border-teal-400 pl-6 bg-teal-50 py-4 rounded-r-12">
@@ -1006,7 +1006,7 @@ export default function BegoniaRexArticle() {
 
                 <div className="border-l-4 border-gray-400 pl-6 bg-gray-50 py-4 rounded-r-12">
                   <h4 className="font-semibold text-gray-900 mb-2">10. Trust Your Instincts</h4>
-                  <p className="text-gray-800">If a combination feels "off" to you, it probably is—regardless of rules. Your home should reflect your personality. Bold tropical patterns attract bold personalities. Own it.</p>
+                  <p className="text-gray-800">If a combination feels "off" to you, it probably is-regardless of rules. Your home should reflect your personality. Bold tropical patterns attract bold personalities. Own it.</p>
                 </div>
               </div>
 
@@ -1087,7 +1087,7 @@ export default function BegoniaRexArticle() {
               <div className="space-y-6">
                 <div className="bg-white border-2 border-pink-200 rounded-12 p-6 hover:shadow-lg transition-shadow">
                   <h3 className="font-semibold text-pink-900 mb-3">What makes Begonia Rex pillows different from other floral pillows?</h3>
-                  <p className="text-gray-700">Begonia Rex pillows feature the plant's stunning foliage patterns—not flowers. The vibrant magenta, pink, and emerald green leaves create bold, tropical statements that work year-round. Unlike seasonal floral patterns (roses in spring, sunflowers in summer), these foliage designs offer continuous visual interest with striking color combinations that add energy to any space without feeling dated or seasonal.</p>
+                  <p className="text-gray-700">Begonia Rex pillows feature the plant's stunning foliage patterns-not flowers. The vibrant magenta, pink, and emerald green leaves create bold, tropical statements that work year-round. Unlike seasonal floral patterns (roses in spring, sunflowers in summer), these foliage designs offer continuous visual interest with striking color combinations that add energy to any space without feeling dated or seasonal.</p>
                 </div>
 
                 <div className="bg-white border-2 border-green-200 rounded-12 p-6 hover:shadow-lg transition-shadow">
@@ -1097,7 +1097,7 @@ export default function BegoniaRexArticle() {
 
                 <div className="bg-white border-2 border-purple-200 rounded-12 p-6 hover:shadow-lg transition-shadow">
                   <h3 className="font-semibold text-purple-900 mb-3">Do bold tropical pillows work in small living rooms?</h3>
-                  <p className="text-gray-700">Absolutely. Bold patterns actually help organize visual space by creating intentional focal points. Start with 2 Begonia Rex pillows on neutral furniture, keeping 70% of other pillows solid neutrals. The key is strategic placement—bold patterns draw the eye to specific areas, making small rooms feel curated and designed rather than cluttered. They add personality without requiring square footage.</p>
+                  <p className="text-gray-700">Absolutely. Bold patterns actually help organize visual space by creating intentional focal points. Start with 2 Begonia Rex pillows on neutral furniture, keeping 70% of other pillows solid neutrals. The key is strategic placement-bold patterns draw the eye to specific areas, making small rooms feel curated and designed rather than cluttered. They add personality without requiring square footage.</p>
                 </div>
 
                 <div className="bg-white border-2 border-orange-200 rounded-12 p-6 hover:shadow-lg transition-shadow">
@@ -1107,22 +1107,22 @@ export default function BegoniaRexArticle() {
 
                 <div className="bg-white border-2 border-blue-200 rounded-12 p-6 hover:shadow-lg transition-shadow">
                   <h3 className="font-semibold text-blue-900 mb-3">How do I style bold botanical pillows without overwhelming my space?</h3>
-                  <p className="text-gray-700">Follow the 70-30 rule: keep 70% of pillows neutral or subtle, use 30% bold botanical patterns maximum. On a 5-pillow sofa, use 2 Begonia Rex pillows plus 3 neutral solids in varied textures (linen, velvet, boucle). This ratio creates impact without visual chaos. <Link href="/blog/how-to-style-flower-throw-pillows-living-room" className="text-blue-600 hover:underline">Let the botanical pattern be the star</Link>—everything else should support, not compete.</p>
+                  <p className="text-gray-700">Follow the 70-30 rule: keep 70% of pillows neutral or subtle, use 30% bold botanical patterns maximum. On a 5-pillow sofa, use 2 Begonia Rex pillows plus 3 neutral solids in varied textures (linen, velvet, boucle). This ratio creates impact without visual chaos. <Link href="/blog/how-to-style-flower-throw-pillows-living-room" className="text-blue-600 hover:underline">Let the botanical pattern be the star</Link>-everything else should support, not compete.</p>
                 </div>
 
                 <div className="bg-white border-2 border-pink-200 rounded-12 p-6 hover:shadow-lg transition-shadow">
                   <h3 className="font-semibold text-pink-900 mb-3">Can Begonia Rex pillows work year-round or are they seasonal?</h3>
-                  <p className="text-gray-700">Begonia Rex pillows work beautifully year-round because they feature foliage, not seasonal flowers. The magenta and green palette feels fresh and tropical in spring/summer, then shifts to jewel-toned richness in fall/winter. Simply adjust surrounding accent colors seasonally—pair with yellow/white in summer, burgundy/copper in winter—while keeping the Begonia Rex pillows constant. Foliage patterns transcend seasons.</p>
+                  <p className="text-gray-700">Begonia Rex pillows work beautifully year-round because they feature foliage, not seasonal flowers. The magenta and green palette feels fresh and tropical in spring/summer, then shifts to jewel-toned richness in fall/winter. Simply adjust surrounding accent colors seasonally-pair with yellow/white in summer, burgundy/copper in winter-while keeping the Begonia Rex pillows constant. Foliage patterns transcend seasons.</p>
                 </div>
 
                 <div className="bg-white border-2 border-green-200 rounded-12 p-6 hover:shadow-lg transition-shadow">
                   <h3 className="font-semibold text-green-900 mb-3">What furniture colors work best with Begonia Rex pillows?</h3>
-                  <p className="text-gray-700"><Link href="/blog/best-pillow-colors-cream-couch" className="text-green-600 hover:underline">Cream and beige couches</Link> are ideal neutral canvases. <Link href="/blog/what-color-pillows-go-with-a-gray-couch" className="text-green-600 hover:underline">Gray sofas</Link> create modern contrast. Brown leather and warm woods (walnut, cognac) provide organic balance. Even navy blue works for jewel-tone luxury. Avoid: bright primary color furniture (red, bright yellow) or busy patterned upholstery—these compete rather than complement.</p>
+                  <p className="text-gray-700"><Link href="/blog/best-pillow-colors-cream-couch" className="text-green-600 hover:underline">Cream and beige couches</Link> are ideal neutral canvases. <Link href="/blog/what-color-pillows-go-with-a-gray-couch" className="text-green-600 hover:underline">Gray sofas</Link> create modern contrast. Brown leather and warm woods (walnut, cognac) provide organic balance. Even navy blue works for jewel-tone luxury. Avoid: bright primary color furniture (red, bright yellow) or busy patterned upholstery-these compete rather than complement.</p>
                 </div>
 
                 <div className="bg-white border-2 border-purple-200 rounded-12 p-6 hover:shadow-lg transition-shadow">
                   <h3 className="font-semibold text-purple-900 mb-3">How many Begonia Rex pillows should I use on my sofa?</h3>
-                  <p className="text-gray-700">For standard 3-seat sofas, use 2 Begonia Rex pillows (20-22" size) plus 3 neutral solids for a 5-pillow arrangement. For large sectionals, 2-3 Begonia Rex maximum among 7-9 total pillows. Never exceed 30-40% of total pillow count with bold patterns. Remember: bold botanicals need breathing room. Less is more when patterns are this striking—let each piece make its statement.</p>
+                  <p className="text-gray-700">For standard 3-seat sofas, use 2 Begonia Rex pillows (20-22" size) plus 3 neutral solids for a 5-pillow arrangement. For large sectionals, 2-3 Begonia Rex maximum among 7-9 total pillows. Never exceed 30-40% of total pillow count with bold patterns. Remember: bold botanicals need breathing room. Less is more when patterns are this striking-let each piece make its statement.</p>
                 </div>
               </div>
             </section>
@@ -1273,7 +1273,7 @@ export default function BegoniaRexArticle() {
                 </p>
                 
                 <p className="text-pink-700 mb-8 max-w-2xl mx-auto">
-                  Stop settling for boring beige. Begonia Rex pillows bring authentic tropical energy that works year-round—bold enough to transform any space, versatile enough to adapt to your style.
+                  Stop settling for boring beige. Begonia Rex pillows bring authentic tropical energy that works year-round-bold enough to transform any space, versatile enough to adapt to your style.
                 </p>
                 
                 <a 
@@ -1300,7 +1300,7 @@ export default function BegoniaRexArticle() {
                 </p>
                 
                 <p className="text-green-700 mb-6">
-                  You're not just buying throw pillows—you're investing in proven color psychology (complementary warm-cool balance), year-round versatility (foliage transcends seasons), and instant personality injection that takes 10 minutes to implement but transforms how your space feels every single day.
+                  You're not just buying throw pillows-you're investing in proven color psychology (complementary warm-cool balance), year-round versatility (foliage transcends seasons), and instant personality injection that takes 10 minutes to implement but transforms how your space feels every single day.
                 </p>
 
                 <p className="text-green-700 mb-6">
@@ -1315,13 +1315,13 @@ export default function BegoniaRexArticle() {
                     <li><strong>3. Start with 2 Begonia Rex pillows</strong> (20-22" size for proper impact)</li>
                     <li><strong>4. Add 3 neutral solids</strong> in varied textures (70% rule)</li>
                     <li><strong>5. Include one metallic accent</strong> (brass lamp, copper tray) for sophistication</li>
-                    <li><strong>6. Test in your lighting</strong>—magenta looks different in daylight vs. evening</li>
+                    <li><strong>6. Test in your lighting</strong>-magenta looks different in daylight vs. evening</li>
                     <li><strong>7. Update seasonally</strong> by swapping just 1 accent pillow color twice yearly</li>
                   </ol>
                 </div>
                 
                 <p className="text-green-700 mb-6">
-                  The best interiors aren't about following every rule perfectly—they're about understanding principles and trusting your instincts. Begonia Rex pillows give you both: botanical authenticity backed by color theory, with enough versatility to express your unique personality. That's the kind of intentional design that transforms spaces from "nice enough" to "I never want to leave."
+                  The best interiors aren't about following every rule perfectly-they're about understanding principles and trusting your instincts. Begonia Rex pillows give you both: botanical authenticity backed by color theory, with enough versatility to express your unique personality. That's the kind of intentional design that transforms spaces from "nice enough" to "I never want to leave."
                 </p>
 
                 <p className="text-green-700">
