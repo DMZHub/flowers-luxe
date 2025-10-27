@@ -152,20 +152,20 @@ export default function Page() {
     }
   }
 
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Blog", url: "/blog" },
+    { name: ARTICLE.category, url: `/blog/${ARTICLE.categorySlug}` },
+    { name: ARTICLE.title, url: `/blog/${ARTICLE.slug}` },
+  ];
+
   return (
     <>
       <SchemaMarkup schema={articleSchema} />
 
       <article className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="space-y-8">
-          <Breadcrumbs 
-            items={[
-              { label: "Home", href: "/" },
-              { label: "Blog", href: "/blog" },
-              { label: ARTICLE.category, href: `/blog/${ARTICLE.categorySlug}` },
-              { label: ARTICLE.title },
-            ]}
-          />
+          <Breadcrumbs items={breadcrumbItems} />
 
           {/* Hero Section */}
           <div className="space-y-6">
