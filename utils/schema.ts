@@ -22,6 +22,7 @@ export const generateProductSchema = (product: Product, baseUrl: string = 'https
       "url": `${baseUrl}/flower-throw-pillows/${product.style}/${product.slug}`,
       "priceCurrency": "USD",
       "price": currentPrice.toFixed(2),
+      "priceValidUntil": "2026-12-31",
       "availability": "https://schema.org/InStock",
       "itemCondition": "https://schema.org/NewCondition",
   "shippingDetails": {
