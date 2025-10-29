@@ -24,6 +24,42 @@ export const generateProductSchema = (product: Product, baseUrl: string = 'https
       "price": currentPrice.toFixed(2),
       "availability": "https://schema.org/InStock",
       "itemCondition": "https://schema.org/NewCondition",
+      "itemCondition": "https://schema.org/NewCondition",
+  "shippingDetails": {
+    "@type": "OfferShippingDetails",
+    "shippingRate": {
+      "@type": "MonetaryAmount",
+      "value": "0",
+      "currency": "USD"
+    },
+    "shippingDestination": {
+      "@type": "DefinedRegion",
+      "addressCountry": "US"
+    },
+    "deliveryTime": {
+      "@type": "ShippingDeliveryTime",
+      "handlingTime": {
+        "@type": "QuantitativeValue",
+        "minValue": 1,
+        "maxValue": 3,
+        "unitCode": "d"
+      },
+      "transitTime": {
+        "@type": "QuantitativeValue",
+        "minValue": 3,
+        "maxValue": 7,
+        "unitCode": "d"
+      }
+    }
+  },
+  "hasMerchantReturnPolicy": {
+    "@type": "MerchantReturnPolicy",
+    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+    "merchantReturnDays": 30,
+    "returnMethod": "https://schema.org/ReturnByMail",
+    "returnFees": "https://schema.org/FreeReturn",
+    "applicableCountry": "US"
+  },
       "seller": {
         "@type": "Organization",
         "name": "FlowersLuxe",
