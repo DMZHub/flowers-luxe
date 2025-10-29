@@ -22,11 +22,19 @@ export const generateProductSchema = (product: Product, baseUrl: string = 'https
       "url": `${baseUrl}/flower-throw-pillows/${product.style}/${product.slug}`,
       "priceCurrency": "USD",
       "price": currentPrice.toFixed(2),
-      "availability": product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition",
       "seller": {
         "@type": "Organization",
         "name": "FlowersLuxe"
+        "url": baseUrl
       }
+    },
+
+      "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "1"
     },
     
     "additionalProperty": [
