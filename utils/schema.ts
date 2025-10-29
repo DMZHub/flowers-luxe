@@ -24,7 +24,7 @@ export const generateProductSchema = (product: Product, baseUrl: string = 'https
       "price": currentPrice.toFixed(2),
       "availability": "https://schema.org/InStock",
       "itemCondition": "https://schema.org/NewCondition",
-      "itemCondition": "https://schema.org/NewCondition"
+      "itemCondition": "https://schema.org/NewCondition",
   "shippingDetails": {
     "@type": "OfferShippingDetails",
     "shippingRate": {
