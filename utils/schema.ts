@@ -26,7 +26,7 @@ export const generateProductSchema = (product: Product, baseUrl: string = 'https
       "itemCondition": "https://schema.org/NewCondition",
       "seller": {
         "@type": "Organization",
-        "name": "FlowersLuxe"
+        "name": "FlowersLuxe",
         "url": baseUrl
       }
     },
