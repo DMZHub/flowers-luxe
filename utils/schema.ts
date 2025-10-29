@@ -166,14 +166,22 @@ export const generateCollectionPageSchema = (
     "mainEntity": {
       "@type": "ItemList",
       "numberOfItems": products.length,
-      "itemListElement": products.map((product, index) => ({
-        "@type": "Product",
-        "position": index + 1,
-        "name": product.title,
-        "url": `${baseUrl}/flower-throw-pillows/${product.style}/${product.slug}`,
-        "image": `${baseUrl}/images/${product.mainImage}`,
-        "description": product.shortDescription || product.description.substring(0, 160)
-      }))
+     "itemListElement": products.map((product, index) => ({
+  "@type": "Product",
+  "position": index + 1,
+  "name": product.title,
+  "url": `${baseUrl}/flower-throw-pillows/${product.style}/${product.slug}`,
+  "image": `${baseUrl}/images/${product.mainImage}`,
+  "description": product.shortDescription || product.description.substring(0, 160),
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": product.price.toFixed(2),
+    "availability": product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+    "itemCondition": "https://schema.org/NewCondition"
+  }
+}))
+
     }
   };
 };
