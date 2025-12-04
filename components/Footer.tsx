@@ -197,6 +197,7 @@ export default function Footer() {
                   About
                 </Link>
               </li>
+              <li>
                    <a 
                   href="https://tools.flowersluxe.com/" 
                   target="_blank" 
@@ -206,6 +207,7 @@ export default function Footer() {
                   Pillows Tools
                 </a>
               </li>
+              <li>
                  <a 
                   href="https://flowernames.flowersluxe.com/" 
                   target="_blank" 
