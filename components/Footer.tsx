@@ -197,6 +197,24 @@ export default function Footer() {
                   About
                 </Link>
               </li>
+                   <a 
+                  href="https://tools.flowersluxe.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-primary transition-colors hover:underline text-sm"
+                >
+                  Pillows Tools
+                </a>
+              </li>
+                 <a 
+                  href="https://flowernames.flowersluxe.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-primary transition-colors hover:underline text-sm"
+                >
+                  Flower Meanings
+                </a>
+              </li>
               <li>
                 <a 
                   href="https://store.flowersluxe.com/" 
@@ -207,6 +225,7 @@ export default function Footer() {
                   TeePublic Store
                 </a>
               </li>
+            
             </ul>
           </div>
 
