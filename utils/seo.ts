@@ -47,7 +47,7 @@ export const generateProductMetadata = (product: Product, baseUrl: string = 'htt
 export const generateStylePageMetadata = (style: string, productCount: number, baseUrl: string = 'https://flowersluxe.com') => {
   const styleDisplayName = style.charAt(0).toUpperCase() + style.slice(1).replace('-', ' ');
   const title = `${styleDisplayName} Flower Throw Pillows | Premium Floral Home Decor`;
-  const description = `Discover our collection of ${styleDisplayName.toLowerCase()} flower throw pillows. ${productCount} unique designs featuring premium quality materials and handcrafted details. Free shipping available.`;
+  const description = `Discover our collection of ${styleDisplayName.toLowerCase()} flower throw pillows. ${productCount} unique designs featuring premium quality materials and handcrafted details.`;
   const pageUrl = `${baseUrl}/flower-throw-pillows/${style}`;
 
   return {
@@ -84,7 +84,7 @@ export const generateStylePageMetadata = (style: string, productCount: number, b
 
 export const generateShopPageMetadata = (baseUrl: string = 'https://flowersluxe.com') => {
   const title = 'Shop Flower Throw Pillows | Premium Floral Home Decor | FlowersLuxe';
-  const description = 'Shop our complete collection of premium flower throw pillows. Featuring unique botanical designs, handcrafted quality, and various styles from vintage to modern. Free shipping available.';
+  const description = 'Shop our complete collection of premium flower throw pillows. Featuring unique botanical designs, handcrafted quality, and various styles from vintage to modern.';
   const pageUrl = `${baseUrl}/shop`;
 
   return {
