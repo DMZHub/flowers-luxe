@@ -1133,6 +1133,41 @@ export default function CreamSofaPillowsArticlePage() {
             </section>
 
             
+            {/* Store Widget Section */}
+            <section className="prose prose-xl max-w-none my-12">
+              <div className="bg-gradient-to-br from-pink-50 to-purple-50 border-2 border-pink-200 rounded-16 p-8">
+                <h2 className="font-cormorant text-3xl font-bold mb-6 text-pink-900">Shop Our Floral Pillow Collection</h2>
+                <p className="text-pink-800 mb-6">
+                  Browse our curated collection of designer floral throw pillows, perfect for styling your cream sofa. Each pillow is carefully designed to complement cream furniture beautifully.
+                </p>
+                
+                <div className="mb-6">
+                  <p className="text-sm text-pink-700 mb-3 font-semibold">
+                    🛍️ Visit our store: <a href="https://store.flowersluxe.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-pink-600">store.flowersluxe.com</a>
+                  </p>
+                </div>
+
+                {/* Widget Embed */}
+                <div className="bg-white rounded-12 p-4 shadow-lg">
+                  <iframe 
+                    src="https://store.flowersluxe.com/embed/v1/carousel?wmode=opaque" 
+                    width="100%" 
+                    height="400px" 
+                    style={{border: 'none', borderRadius: '8px'}}
+                    title="FlowersLuxe Store Widget"
+                  />
+                </div>
+
+                <div className="mt-6 text-center">
+                  <Link href="https://store.flowersluxe.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-pink-600 hover:bg-pink-700 text-white font-semibold py-4 px-8 rounded-12 transition-all duration-300 hover:scale-105">
+                    <span>View Full Collection</span>
+                    <FiArrowRight size={20} />
+                  </Link>
+                </div>
+              </div>
+            </section>
+
+            
             {/* Internal Linking Section */}
             <section className="prose prose-xl max-w-none my-12">
               <div className="bg-gradient-to-r from-blue-50 to-purple-50 border-2 border-blue-200 rounded-16 p-8">
